@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="D9 Harlem Votes® — Harlem Youth Registered & Ready To Vote campaign, school resources, first-time voter information, community impact and civic engagement in Harlem.">
   <title>D9 Harlem Votes® | Harlem Youth Registered & Ready To Vote</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="script.js?v=2" defer></script>
 </head>
 <body>
 
@@ -16,12 +16,13 @@
     <div class="nav-inner">
       <a class="brand-link" href="#home">
         <img src="assets/d9-logo-transparent.png" alt="D9 Harlem Votes® logo">
-        <span>D9 Harlem Votes®</span>
+        <span class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes®</span></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <div class="nav-links" id="nav-links">
         <a href="#for-schools">For Schools</a>
         <a href="#first-time-voter">First-Time Voters</a>
+        <a href="#voter-education">Voter Education</a>
         <a href="#about">About Us</a>
         <a href="#impact">Community Impact</a>
         <a href="#events">Past Events</a>
@@ -37,8 +38,8 @@
         <div class="hero-brand">
           <img class="hero-logo" src="assets/d9-logo-transparent.png" alt="D9 Harlem Votes® logo">
           <div>
-            <p class="org-name">D9 Harlem Votes®</p>
-            <p class="org-description">A nonpartisan civic education coalition comprised of members of historically Black fraternities and sororities serving Harlem, NY.</p>
+            <p class="org-name brand-wordmark hero-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes®</span></p>
+            <p class="org-description">A nonpartisan civic education coalition comprised of members of historically Black fraternities and sororities serving Harlem, New York.</p>
           </div>
         </div>
 
@@ -61,10 +62,16 @@
         </div>
       </div>
 
-      <div class="hero-photo-wrap">
-        <img src="assets/hero-registration.jpg" alt="Young person completing a voter registration form with a D9 Harlem Votes® volunteer">
-        <div class="hero-note note-top">16–17?<br>Pre-Register<br>to Vote!</div>
-        <div class="hero-note note-bottom">From First Vote<br>to Lifelong Voter</div>
+      <div class="hero-photo-shell">
+        <div class="hero-photo-wrap">
+          <img src="assets/hero-registration.jpg" alt="Young person completing a voter registration form with a D9 Harlem Votes® volunteer">
+        </div>
+
+        <aside class="hero-note-rail" aria-label="Campaign highlights">
+          <div class="hero-note note-top">16–17?<br>Pre-Register<br>to Vote!</div>
+          <div class="hero-note-divider" aria-hidden="true"></div>
+          <div class="hero-note note-bottom">From First Vote<br>to Lifelong Voter</div>
+        </aside>
       </div>
     </div>
     <div class="hero-motto">YOUR CHOICE. YOUR VOICE. YOUR VOTE.</div>
@@ -109,6 +116,22 @@
           <div class="basic"><b>Keep forms secure</b><span>Until D9 Harlem Votes® pickup.</span></div>
         </div>
 
+        <div class="campaign-frame-feature">
+          <div class="campaign-frame-copy">
+            <p class="mini-label">OPTIONAL CAMPAIGN PHOTO FRAME</p>
+            <h3>Harlem Youth Registered &amp; Ready To Vote</h3>
+            <p>
+              Participating schools may use the campaign photo frame for approved student photos
+              and school promotion. Use is optional and always subject to each school’s photo,
+              media-release, and parental/guardian consent policies.
+            </p>
+          </div>
+
+          <div class="campaign-frame-image">
+            <img src="assets/youth-frame.png" alt="Harlem Youth Registered & Ready To Vote campaign photo frame">
+          </div>
+        </div>
+
         <div class="school-cta">
           <a class="btn btn-red" href="https://forms.gle/TbifMfgdr1giTw6B9" target="_blank" rel="noopener noreferrer">School Participation Form</a>
         </div>
@@ -131,18 +154,108 @@
       </div>
     </section>
 
+    <section class="section training-section" id="voter-education">
+      <div class="section-inner">
+        <div class="section-title compact">
+          <p class="kicker">VOTER EDUCATION</p>
+          <h2>Voter Registration: Self-Training</h2>
+          <p>
+            D9 Harlem Votes® offers a nonpartisan self-training covering voter registration essentials,
+            ballot literacy, civic participation, and peer-to-peer learning so volunteers and coalition
+            participants can support Harlem voters with clear, practical information.
+          </p>
+        </div>
+
+        <div class="training-grid">
+          <article class="training-card training-primary">
+            <p class="mini-label">ONLINE SELF-TRAINING</p>
+            <h3>Learn the essentials before serving.</h3>
+            <ul class="training-points">
+              <li>Voter registration essentials</li>
+              <li>Ballot literacy</li>
+              <li>Civic participation beyond the ballot box</li>
+              <li>Peer-to-peer voter education</li>
+            </ul>
+            <a class="btn btn-red training-button"
+               href="mailto:d9harlemvotes@gmail.com?subject=Voter%20Registration%20Self-Training%20Request">
+              Request Self-Training Link
+            </a>
+            <p class="training-note">Online Self-Training link available upon request.</p>
+          </article>
+
+          <article class="training-card curriculum-card">
+            <p class="mini-label">CIVIC EDUCATION CURRICULUM TEAM</p>
+            <h3>Built by the D9 Harlem Votes® team.</h3>
+            <p>
+              The team develops and tests voter education resources and training materials using
+              curriculum design, civics and election research, editing, beta testing, and agency coordination.
+            </p>
+
+            <details class="curriculum-details">
+              <summary>View Curriculum Team</summary>
+              <ul>
+                <li><strong>Erika L. Ewing, M.F.A.</strong> — Lead Curriculum Developer</li>
+                <li><strong>Gilda D. Gillim, M.A.</strong></li>
+                <li><strong>Lisa White-Tingling, MPA</strong></li>
+                <li><strong>Aaliyah L. Brown</strong></li>
+                <li><strong>Michael Daley</strong></li>
+                <li><strong>Darrick Robinson</strong></li>
+                <li><strong>Lawrence Winslow</strong></li>
+              </ul>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section about-section" id="about">
       <div class="section-inner about-grid">
-        <div class="about-photo"><img src="assets/about-coalition.jpg" alt="D9 Harlem Votes® coalition members in Harlem"></div>
+        <div class="about-photo">
+          <img src="assets/about-coalition.jpg" alt="D9 Harlem Votes® coalition members serving Harlem">
+        </div>
+
         <div class="about-copy">
           <p class="kicker">ABOUT US</p>
-          <h2>D9 Harlem Votes®</h2>
-          <p class="about-lead">A nonpartisan civic education coalition comprised of members of historically Black fraternities and sororities serving Harlem, NY.</p>
-          <p>We bring civic education, voter registration, public forums and community-centered engagement directly to Harlem.</p>
+          <h2>We Serve Harlem First.</h2>
+
+          <p class="about-lead">
+            Established in 2024, D9 Harlem Votes® is a nonpartisan civic education coalition
+            comprised of members of historically Black fraternities and sororities serving Harlem, New York.
+          </p>
+
+          <p>
+            D9 Harlem Votes® is an individual-based civic coalition, not a chapter-based council.
+            Our shared focus is Harlem: educating, engaging, and registering voters while strengthening
+            civic participation across the community.
+          </p>
+
           <div class="leadership-mini">
             <div><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></div>
             <div><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></div>
           </div>
+        </div>
+      </div>
+
+      <div class="section-inner history-feature">
+        <div class="history-copy">
+          <p class="kicker">HOW IT STARTED</p>
+          <h3>A Harlem call to civic duty and social action.</h3>
+          <p>
+            D9 Harlem Votes® grew from a call convened by <strong>Rev. Michael A. Walrond, Jr.</strong>,
+            Senior Pastor of First Corinthian Baptist Church (FCBC) in Harlem, New York and a member
+            of Omega Psi Phi Fraternity, Inc., and <strong>Kercena A. Dozier, Esq.</strong>,
+            Chair of FCBC's Social Justice Ministry.
+          </p>
+          <p>
+            Harlem residents and members of Harlem-based historically Black Greek-letter organizations
+            were called together to renew a commitment to civic duty and social action — to
+            <strong>educate, engage, and register Harlem voters.</strong>
+          </p>
+        </div>
+
+        <div class="history-photo">
+          <img src="assets/history-first-convening.jpg" alt="Community members gathered at an early D9 Harlem Votes® civic engagement event in Harlem">
+          <p>One of the earliest D9 Harlem Votes® community gatherings in Harlem.</p>
         </div>
       </div>
 
@@ -164,20 +277,19 @@
 <li><strong>Athena Moore</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
 <li><strong>Dominic Boyce</strong><span>Omega Psi Phi Fraternity, Inc.</span></li></ul>
         </details>
+
         <details>
-          <summary>Coalition Members <span>14 members</span></summary>
+          <summary>Coalition Members <span>12 members</span></summary>
           <ul class="people-list"><li><strong>Lawrence Winslow</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
 <li><strong>Darrick Robinson</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
 <li><strong>Gilda Dawn Gillim</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
 <li><strong>James V. Vanderburg</strong><span>Alpha Phi Alpha Fraternity, Inc.</span></li>
 <li><strong>James Keith Felton</strong><span>Kappa Alpha Psi Fraternity, Inc.</span></li>
-<li><strong>Isaiah Jones</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
-<li><strong>Philip Pierre</strong><span>Kappa Alpha Psi Fraternity, Inc.</span></li>
 <li><strong>Lisa White-Tingling</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
 <li><strong>Akeem Hill</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
 <li><strong>Dimitri Pinnock</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
 <li><strong>Travis Brown</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
-<li><strong>Aliyah Brown</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
+<li><strong>Aaliyah L. Brown</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
 <li><strong>Michael Daley</strong><span>Phi Beta Sigma Fraternity, Inc.</span></li>
 <li><strong>Stephen A. Davis</strong><span>Omega Psi Phi Fraternity, Inc.</span></li></ul>
         </details>
@@ -188,7 +300,16 @@
       <div class="section-inner impact-grid">
         <div class="impact-copy">
           <p class="kicker light">COMMUNITY IMPACT</p>
-          <h2>Showing up. Engaging Harlem. Building participation.</h2>
+          <div class="impact-period">JUNE–AUGUST 2026 SNAPSHOT</div>
+          <h2>Boots on the Ground Voter Registration Activation</h2>
+
+          <p class="impact-intro">
+            These figures reflect the June–August 2026 results of D9 Harlem Votes®
+            <strong>Boots on the Ground Voter Registration Activation</strong> — our coordinated
+            voter-registration blitz. Street teams mobilize on the same day, at the same time,
+            bringing voter-registration support directly to Harlem residents.
+          </p>
+
           <div class="counter-grid" aria-label="D9 Harlem Votes community impact statistics">
             <div class="counter-card red-top"><strong class="counter" data-target="864">0</strong><span>Net Voter-Engagement Actions</span></div>
             <div class="counter-card black-top"><strong class="counter" data-target="64">0</strong><span>Completed Voter-Registration Submissions</span></div>
@@ -196,6 +317,7 @@
             <div class="counter-card gold-top"><strong class="counter" data-target="30">0</strong><span>Volunteers from Coalition Members &amp; Community Volunteers</span></div>
           </div>
           <p class="impact-foot">5 field dates <i class="dot red"></i> 8 community locations <i class="dot black"></i> 167 prospective voters identified for continued outreach</p>
+          <p class="impact-scope"><strong>June–August 2026 Boots on the Ground results only.</strong> These figures are a documented summer activation snapshot and do not represent D9 Harlem Votes®’ cumulative impact since 2024.</p>
         </div>
         <div class="impact-photo"><img src="assets/impact-community.jpg" alt="D9 Harlem Votes® volunteers at a community voter engagement activation"></div>
       </div>
@@ -241,14 +363,17 @@
     <section class="section contact-section" id="contact">
       <div class="section-inner contact-grid">
         <div>
-          <p class="kicker light">CONTACT</p>
+          <p class="kicker light">LEADERSHIP &amp; CONTACT</p>
           <h2>Connect with D9 Harlem Votes®</h2>
           <p class="contact-email"><a href="mailto:d9harlemvotes@gmail.com">d9harlemvotes@gmail.com</a></p>
         </div>
+
         <div class="contact-cards">
-          <div class="contact-card"><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></div>
-          <div class="contact-card"><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></div>
-          <div class="contact-card"><span>Press Contact</span><strong>Shana Harmongoff</strong></div>
+          <div class="contact-card contact-red"><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></div>
+          <div class="contact-card contact-green"><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></div>
+          <div class="contact-card contact-gold"><span>Volunteer and Member Recruitment Lead</span><strong>Aaliyah L. Brown</strong></div>
+          <div class="contact-card contact-green"><span>Volunteer and Member Engagement Lead</span><strong>Jasmine G. McFarlane-White</strong></div>
+          <div class="contact-card contact-red"><span>Press Contact</span><strong>Shana Harmongoff</strong></div>
         </div>
       </div>
     </section>

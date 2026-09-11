@@ -3,492 +3,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="D9 Harlem Votes® Harlem Youth Registered & Ready To Vote Campaign">
+  <meta name="description" content="D9 Harlem Votes® — Harlem Youth Registered & Ready To Vote campaign, school resources, first-time voter information, community impact and civic engagement in Harlem.">
   <title>D9 Harlem Votes® | Harlem Youth Registered & Ready To Vote</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-  <div class="brand-stripe" aria-hidden="true">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="brand-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
 
-  <!-- SIMPLE SITE NAVIGATION -->
   <nav class="site-nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <a class="nav-brand" href="#home">D9 Harlem Votes®</a>
-      <div class="nav-links">
+      <a class="brand-link" href="#home">
+        <img src="assets/d9-logo-transparent.png" alt="D9 Harlem Votes® logo">
+        <span>D9 Harlem Votes®</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
         <a href="#for-schools">For Schools</a>
-        <a href="#first-time-voter">First-Time Voter</a>
-        <a class="nav-cta"
-           href="https://forms.gle/TbifMfgdr1giTw6B9"
-           target="_blank"
-           rel="noopener noreferrer">Join the Campaign</a>
+        <a href="#first-time-voter">First-Time Voters</a>
+        <a href="#about">About Us</a>
+        <a href="#impact">Community Impact</a>
+        <a href="#events">Past Events</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-join" href="https://forms.gle/TbifMfgdr1giTw6B9" target="_blank" rel="noopener noreferrer">Join the Campaign</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero" id="home">
     <div class="hero-inner">
-
-      <section class="hero-copy">
-
-        <div class="identity-row">
-          <img src="assets/d9-logo.png" alt="D9 Harlem Votes® logo" class="main-logo">
-
-          <div class="identity-text">
-            <strong>D9 Harlem Votes®</strong>
-            <span>
-              A nonpartisan civic education coalition comprised of members of historically
-              Black fraternities and sororities serving Harlem, NY.
-            </span>
+      <div class="hero-copy">
+        <div class="hero-brand">
+          <img class="hero-logo" src="assets/d9-logo-transparent.png" alt="D9 Harlem Votes® logo">
+          <div>
+            <p class="org-name">D9 Harlem Votes®</p>
+            <p class="org-description">A nonpartisan civic education coalition comprised of members of historically Black fraternities and sororities serving Harlem, NY.</p>
           </div>
         </div>
 
         <p class="eyebrow">
-          EDUCATE <b>•</b> ENGAGE <b>•</b> EMPOWER <b>•</b> VOTE
+          EDUCATE <i class="dot red"></i> ENGAGE <i class="dot black"></i> EMPOWER <i class="dot green"></i> VOTE
         </p>
 
-        <h1>
-          <span>HARLEM YOUTH</span>
-          <span class="gold">REGISTERED</span>
-          <span>&amp; READY TO <span class="gold-inline">VOTE</span></span>
-        </h1>
+        <h1>HARLEM YOUTH <span>REGISTERED</span> &amp; READY TO <span>VOTE</span></h1>
+        <p class="campaign-tagline">Voter-Eligible. Voter-Educated. Voter-Ready.</p>
+        <p class="hero-summary">Helping Central Harlem high schools register and pre-register eligible students — and prepare first-time voters for November 3, 2026.</p>
 
-        <p class="campaign-tagline">
-          Voter-Eligible. Voter-Educated. Voter-Ready.
-        </p>
-
-        <p class="hero-description">
-          Through the <strong>Harlem Youth Registered &amp; Ready To Vote Campaign</strong>,
-          we are inviting Central Harlem high schools to partner with us in helping eligible
-          students pre-register or register to vote, prepare first-time voters for the
-          <strong>Tuesday, November 3, 2026 General Election</strong>, and build the knowledge,
-          confidence, and habits to participate in every election throughout their lives.
-        </p>
-
-        <p class="lifelong">From First Vote to Lifelong Voter</p>
-
-        <div class="hero-buttons">
-
-          <a class="btn btn-red"
-             href="https://e-register.vote.nyc/registration"
-             target="_blank"
-             rel="noopener noreferrer">
-            Register / Pre-Register Online
-          </a>
-
-          <a class="btn btn-green" href="#first-time-voter">
-            First-Time Voter? Get Ready
-          </a>
-
-          <a class="btn btn-gold"
-             href="https://forms.gle/TbifMfgdr1giTw6B9"
-             target="_blank"
-             rel="noopener noreferrer">
-            Schools: Join the Campaign
-          </a>
-
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://forms.gle/TbifMfgdr1giTw6B9" target="_blank" rel="noopener noreferrer">Schools: Join the Campaign</a>
+          <a class="btn btn-outline" href="https://e-register.vote.nyc/registration" target="_blank" rel="noopener noreferrer">Register / Pre-Register Online</a>
         </div>
 
-      </section>
-
-      <section class="hero-visual">
-        <div class="photo-card">
-          <img src="assets/hero-registration.jpg"
-               alt="Young person completing a voter registration form with a D9 Harlem Votes® volunteer">
-          <div class="photo-caption">
-            <span>HARLEM YOUTH</span>
-            <strong>REGISTERED &amp; READY</strong>
-          </div>
+        <div class="deadline-row">
+          <span><b>16–17?</b> Pre-register now.</span>
+          <span><b>NY Registration Deadline:</b> October 24, 2026</span>
         </div>
-      </section>
+      </div>
 
+      <div class="hero-photo-wrap">
+        <img src="assets/hero-registration.jpg" alt="Young person completing a voter registration form with a D9 Harlem Votes® volunteer">
+        <div class="hero-note note-top">16–17?<br>Pre-Register<br>to Vote!</div>
+        <div class="hero-note note-bottom">From First Vote<br>to Lifelong Voter</div>
+      </div>
     </div>
-
-    <div class="hero-footer">
-      <div class="rgb-line" aria-hidden="true"></div>
-      <p>YOUR CHOICE. YOUR VOICE. YOUR VOTE.</p>
-      <div class="rgb-line" aria-hidden="true"></div>
-    </div>
+    <div class="hero-motto">YOUR CHOICE. YOUR VOICE. YOUR VOTE.</div>
   </header>
 
-
   <main>
-
-    <!-- ======================================================
-         FOR SCHOOLS
-         ====================================================== -->
-    <section id="for-schools" class="section section-light">
-
+    <section class="section school-section" id="for-schools">
       <div class="section-inner">
-
-        <div class="section-heading">
-          <p class="section-kicker">FOR CENTRAL HARLEM HIGH SCHOOLS</p>
-          <h2>Choose the campaign schedule that works for your school.</h2>
-          <p>
-            D9 Harlem Votes® will work with your existing staff, departments, clubs, or programs
-            already engaged in civic education, student leadership, or community engagement.
-            Schools do not need to create a new program to participate.
-          </p>
+        <div class="section-title compact">
+          <p class="kicker">FOR SCHOOLS</p>
+          <h2>Simple to launch. Easy to manage.</h2>
         </div>
 
-        <div class="launch-grid">
-
-          <article class="launch-card">
-            <span class="number-badge">1</span>
-            <p class="card-label">EARLY LAUNCH</p>
-            <h3>National Voter Registration Day</h3>
-            <p class="date-line">Tuesday, September 15, 2026</p>
-            <p>
-              Launch in recognition of National Voter Registration Day and continue through
-              <strong>Monday, October 5, 2026</strong>.
-            </p>
-          </article>
-
-          <article class="launch-card">
-            <span class="number-badge">2</span>
-            <p class="card-label">LATER LAUNCH</p>
-            <h3>National Voter Education Week</h3>
-            <p class="date-line">Monday, October 5–Friday, October 9, 2026</p>
-            <p>
-              Schools needing more planning time may launch during National Voter Education Week
-              and continue through <strong>Tuesday, October 20, 2026</strong>.
-            </p>
-          </article>
-
+        <div class="steps-grid">
+          <article class="step-card"><span>01</span><h3>Identify a Liaison</h3><p>Choose one school point person.</p></article>
+          <article class="step-card"><span>02</span><h3>Pick Your Timeline</h3><p>Launch Sept. 15–Oct. 5 or Oct. 5–9 through Oct. 20.</p></article>
+          <article class="step-card"><span>03</span><h3>Paper or Online</h3><p>Students may use paper forms, the official online portal, or both.</p></article>
+          <article class="step-card"><span>04</span><h3>We Collect &amp; Track</h3><p>D9 Harlem Votes® picks up paper forms; schools report aggregate online totals.</p></article>
         </div>
 
-        <div class="participation-header">
-          <p class="section-kicker">TWO WAYS FOR STUDENTS TO PARTICIPATE</p>
-          <h2>Paper at school or online through the official voter-registration portal.</h2>
-        </div>
-
-        <div class="method-grid">
-
-          <article class="method-card method-paper">
-            <div class="method-top">
-              <span class="method-number">01</span>
-              <div>
-                <p class="card-label">OPTION ONE</p>
-                <h3>Complete a Paper Application</h3>
-              </div>
-            </div>
-
-            <p>
-              D9 Harlem Votes® provides official voter registration/pre-registration forms.
-              The school makes the forms available, keeps completed applications secure,
-              and D9 Harlem Votes® coordinates pickup.
-            </p>
-
-            <ul class="clean-list">
-              <li>Schools may request the number of forms they need.</li>
-              <li>Available official language versions can be coordinated with the school liaison.</li>
-              <li>D9 Harlem Votes® collects completed applications on the agreed pickup date.</li>
-            </ul>
-
-            <a class="text-link" href="#liaison-toolkit">
-              See paper-form instructions ↓
-            </a>
-          </article>
-
-          <article class="method-card method-online">
-            <div class="method-top">
-              <span class="method-number">02</span>
-              <div>
-                <p class="card-label">OPTION TWO</p>
-                <h3>Register / Pre-Register Online</h3>
-              </div>
-            </div>
-
-            <p>
-              Students may complete an application online using the official voter-registration
-              portal on a school computer, tablet, phone, or their own device.
-            </p>
-
-            <ul class="clean-list">
-              <li>Students ages 16 and 17 may pre-register if otherwise eligible.</li>
-              <li>The online application is submitted directly through the official system.</li>
-              <li>Students should report only that they completed the online application to the school liaison so the school can include them in its campaign count.</li>
-            </ul>
-
-            <a class="btn btn-green btn-card"
-               href="https://e-register.vote.nyc/registration"
-               target="_blank"
-               rel="noopener noreferrer">
-              Official Online Registration
-            </a>
-          </article>
-
-        </div>
-
-        <div class="tracking-box">
-          <div>
-            <p class="section-kicker">CAMPAIGN TRACKING</p>
-            <h3>We count participation without collecting unnecessary student voter data.</h3>
+        <div class="school-options">
+          <div class="option-block">
+            <p class="mini-label">PAPER APPLICATIONS</p>
+            <h3>Forms at school</h3>
+            <p>D9 Harlem Votes® provides official forms. The school keeps completed applications secure until pickup.</p>
           </div>
-
-          <p>
-            The school liaison can report aggregate totals to D9 Harlem Votes®:
-            <strong>paper applications completed, online applications reported by students,
-            first-time General Election voters identified, and total students engaged.</strong>
-            Student names, addresses, dates of birth, political-party information, and voter ID
-            information are not needed for the D9 Harlem Votes® campaign count.
-          </p>
-        </div>
-
-        <div class="frame-row">
-          <div class="frame-copy">
-            <p class="section-kicker">CAMPAIGN VISIBILITY</p>
-            <h3>Harlem Youth Registered &amp; Ready To Vote</h3>
-            <p>
-              Participating schools will receive campaign graphics and the social-media/profile frame.
-              D9 Harlem Votes® will follow each school's policies regarding student photographs,
-              media releases, parental/guardian consent, and social-media participation.
-            </p>
-          </div>
-
-          <div class="campaign-frame-wrap">
-            <img src="assets/youth-frame.png"
-                 alt="Harlem Youth Registered & Ready To Vote campaign social media frame">
+          <div class="option-block">
+            <p class="mini-label">ONLINE APPLICATIONS</p>
+            <h3>Official online registration</h3>
+            <p>Students can register or pre-register online and tell the liaison only that they completed it for the school’s aggregate campaign count.</p>
+            <a class="inline-link" href="https://e-register.vote.nyc/registration" target="_blank" rel="noopener noreferrer">Open official online registration →</a>
           </div>
         </div>
 
-        <div class="center-cta">
-          <a class="btn btn-gold btn-large"
-             href="https://forms.gle/TbifMfgdr1giTw6B9"
-             target="_blank"
-             rel="noopener noreferrer">
-            School Participation Form
-          </a>
+        <div class="basics-strip" id="registration-basics">
+          <div class="basics-heading"><strong>REGISTRATION BASICS</strong><span>A few things to remember</span></div>
+          <div class="basic"><b>Blue or black ink</b><span>Paper forms only.</span></div>
+          <div class="basic"><b>Use a fresh form</b><span>For significant errors.</span></div>
+          <div class="basic"><b>16–17 may pre-register</b><span>If otherwise eligible.</span></div>
+          <div class="basic"><b>Party choice matters for primaries</b><span>Not required for the General Election.</span></div>
+          <div class="basic"><b>Complete address information</b><span>Include mailing address when needed.</span></div>
+          <div class="basic"><b>Keep forms secure</b><span>Until D9 Harlem Votes® pickup.</span></div>
         </div>
 
+        <div class="school-cta">
+          <a class="btn btn-red" href="https://forms.gle/TbifMfgdr1giTw6B9" target="_blank" rel="noopener noreferrer">School Participation Form</a>
+        </div>
       </div>
     </section>
 
-
-    <!-- ======================================================
-         SCHOOL LIAISON TOOLKIT
-         ====================================================== -->
-    <section id="liaison-toolkit" class="section section-blue">
-
+    <section class="section first-voter" id="first-time-voter">
       <div class="section-inner">
-
-        <div class="section-heading section-heading-light">
-          <p class="section-kicker gold-kicker">SCHOOL LIAISON TOOLKIT</p>
-          <h2>Paper Voter Registration Form Basics</h2>
-          <p>
-            Use these basic quality-control steps when students complete paper applications.
-            Schools will receive more detailed instructions with the form drop-off.
-          </p>
+        <div class="section-title compact">
+          <p class="kicker">FIRST-TIME VOTERS</p>
+          <h2>Registered? Now get ready to vote.</h2>
+          <p>Early Voting: October 24–November 1 &nbsp;•&nbsp; Election Day: November 3, 2026</p>
         </div>
-
-        <div class="toolkit-grid">
-
-          <article class="toolkit-card">
-            <span>01</span>
-            <h3>Blue or Black Ink</h3>
-            <p>
-              Print clearly and complete paper applications in blue or black ink.
-            </p>
-          </article>
-
-          <article class="toolkit-card">
-            <span>02</span>
-            <h3>Use a Clean Form</h3>
-            <p>
-              If a student makes a significant mistake, D9 Harlem Votes® recommends starting a
-              fresh application rather than making multiple cross-outs or scratch-outs.
-            </p>
-          </article>
-
-          <article class="toolkit-card">
-            <span>03</span>
-            <h3>Complete Required Address Information</h3>
-            <p>
-              Enter the residential address where the student lives. If mail is received somewhere
-              else, include a reliable mailing address in the mailing-address section.
-            </p>
-          </article>
-
-          <article class="toolkit-card">
-            <span>04</span>
-            <h3>Political Party Enrollment Is Optional</h3>
-            <p>
-              A student does not have to select a political party to vote in a General Election.
-              In general, a voter must be enrolled in a political party to vote in that party's
-              primary election.
-            </p>
-          </article>
-
-          <article class="toolkit-card">
-            <span>05</span>
-            <h3>Ages 16–17 May Pre-Register</h3>
-            <p>
-              Eligible 16- and 17-year-olds may pre-register. Their registration remains pending
-              until they become eligible to vote at age 18.
-            </p>
-          </article>
-
-          <article class="toolkit-card">
-            <span>06</span>
-            <h3>Review, Sign &amp; Date</h3>
-            <p>
-              Before the form is turned in, review required fields and make sure the student signs
-              and dates the application.
-            </p>
-          </article>
-
-          <article class="toolkit-card">
-            <span>07</span>
-            <h3>Keep Completed Forms Secure</h3>
-            <p>
-              Completed applications contain personal information. Schools should keep them in the
-              designated secure location until D9 Harlem Votes® pickup.
-            </p>
-          </article>
-
-          <article class="toolkit-card">
-            <span>08</span>
-            <h3>Track Online Participation Separately</h3>
-            <p>
-              Students registering online should tell the liaison only that they completed the
-              online application so the school can report an aggregate campaign count.
-            </p>
-          </article>
-
-        </div>
-
-        <div class="official-info">
-          <p>
-            <strong>Official voter-registration information:</strong>
-            Always rely on the current New York State and New York City Boards of Elections
-            instructions for legal requirements and form processing.
-          </p>
-
-          <div class="official-links">
-            <a href="https://elections.ny.gov/new-york-state-voter-registration-form-english-2025"
-               target="_blank"
-               rel="noopener noreferrer">NYS Voter Registration Form</a>
-
-            <a href="https://elections.ny.gov/voter-registration-process"
-               target="_blank"
-               rel="noopener noreferrer">NYS Registration Process</a>
-
-            <a href="https://e-register.vote.nyc/registration"
-               target="_blank"
-               rel="noopener noreferrer">Register Online</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================
-         FIRST-TIME VOTER
-         ====================================================== -->
-    <section id="first-time-voter" class="section section-light">
-
-      <div class="section-inner">
-
-        <div class="section-heading">
-          <p class="section-kicker">FIRST-TIME VOTER? GET READY.</p>
-          <h2>Being registered is the first step. Be ready before you cast your first ballot.</h2>
-          <p>
-            Students who will be eligible to vote in the Tuesday, November 3, 2026 General Election
-            should know where to vote, when to vote, what to expect at the polls, and what is on
-            their ballot before Election Day.
-          </p>
-        </div>
-
         <div class="voter-grid">
-
-          <a class="voter-card"
-             href="https://www.vote.nyc/page/find-your-poll-site"
-             target="_blank"
-             rel="noopener noreferrer">
-            <span>01</span>
-            <h3>Find Your Poll Site</h3>
-            <p>Use your home address to find your Election Day and Early Voting locations.</p>
-            <strong>Find My Poll Site →</strong>
-          </a>
-
-          <a class="voter-card"
-             href="https://www.vote.nyc/page/voter-id"
-             target="_blank"
-             rel="noopener noreferrer">
-            <span>02</span>
-            <h3>First-Time Voter ID</h3>
-            <p>Learn when identification may be requested and what options first-time voters have.</p>
-            <strong>Learn About Voter ID →</strong>
-          </a>
-
-          <a class="voter-card"
-             href="https://findmypollsite.vote.nyc/?lang=en"
-             target="_blank"
-             rel="noopener noreferrer">
-            <span>03</span>
-            <h3>See Your Sample Ballot</h3>
-            <p>Use the NYC poll-site tool to view election information and your sample ballot when available.</p>
-            <strong>See What's on My Ballot →</strong>
-          </a>
-
-          <a class="voter-card"
-             href="https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/"
-             target="_blank"
-             rel="noopener noreferrer">
-            <span>04</span>
-            <h3>Flip the Ballot</h3>
-            <p>Learn about the five 2026 NYC Charter ballot proposals and what a Yes or No vote means.</p>
-            <strong>View the 5 Ballot Proposals →</strong>
-          </a>
-
+          <a class="voter-card accent-green" href="https://www.vote.nyc/page/find-your-poll-site" target="_blank" rel="noopener noreferrer"><span>01</span><h3>Find Your Poll Site</h3><p>Know where you vote.</p><b>Find it →</b></a>
+          <a class="voter-card accent-red" href="https://www.vote.nyc/page/voter-id" target="_blank" rel="noopener noreferrer"><span>02</span><h3>First-Time Voter ID</h3><p>Know when ID may be requested.</p><b>Learn more →</b></a>
+          <a class="voter-card accent-gold" href="https://findmypollsite.vote.nyc/?lang=en" target="_blank" rel="noopener noreferrer"><span>03</span><h3>See Your Sample Ballot</h3><p>Know what will be on your ballot.</p><b>View ballot info →</b></a>
+          <a class="voter-card accent-blue" href="https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/" target="_blank" rel="noopener noreferrer"><span>04</span><h3>Flip the Ballot</h3><p>Understand the five 2026 ballot proposals.</p><b>View the 5 proposals →</b></a>
         </div>
-
-        <div class="flip-banner">
-          <div>
-            <p class="section-kicker gold-kicker">FLIPPING THE BALLOT</p>
-            <h3>Know who — and what — you are voting for.</h3>
-          </div>
-
-          <div class="flip-copy">
-            <p>
-              D9 Harlem Votes® is nonpartisan. Our goal is to help first-time voters understand the
-              offices, candidates, and ballot questions they will see so they can make their own
-              informed choices.
-            </p>
-
-            <a class="btn btn-gold flip-button"
-               href="https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/"
-               target="_blank"
-               rel="noopener noreferrer">
-              View the 5 Ballot Proposals
-            </a>
-          </div>
-        </div>
-
       </div>
     </section>
 
+    <section class="section about-section" id="about">
+      <div class="section-inner about-grid">
+        <div class="about-photo"><img src="assets/about-coalition.jpg" alt="D9 Harlem Votes® coalition members in Harlem"></div>
+        <div class="about-copy">
+          <p class="kicker">ABOUT US</p>
+          <h2>D9 Harlem Votes®</h2>
+          <p class="about-lead">A nonpartisan civic education coalition comprised of members of historically Black fraternities and sororities serving Harlem, NY.</p>
+          <p>We bring civic education, voter registration, public forums and community-centered engagement directly to Harlem.</p>
+          <div class="leadership-mini">
+            <div><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></div>
+            <div><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-inner member-accordions">
+        <details>
+          <summary>Founding Members <span>14 members</span></summary>
+          <ul class="people-list"><li><strong>Kercena Dozier</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
+<li><strong>Steve Miller</strong><span>Phi Beta Sigma Fraternity, Inc.</span></li>
+<li><strong>Muhammad Bilal</strong><span>Phi Beta Sigma Fraternity, Inc.</span></li>
+<li><strong>Drew K. Gabriel</strong><span>Alpha Phi Alpha Fraternity, Inc.</span></li>
+<li><strong>Donnell Bolden</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
+<li><strong>Hope Maddox</strong><span>Sigma Gamma Rho Sorority, Inc.</span></li>
+<li><strong>Keith Tubbs</strong><span>Kappa Alpha Psi Fraternity, Inc.</span></li>
+<li><strong>Shana Harmongoff</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
+<li><strong>Pascale Bernard</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
+<li><strong>Erika L. Ewing</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
+<li><strong>Nakim Bey</strong><span>Alpha Phi Alpha Fraternity, Inc.</span></li>
+<li><strong>TaShana Pace</strong><span>Zeta Phi Beta Sorority, Inc.</span></li>
+<li><strong>Athena Moore</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
+<li><strong>Dominic Boyce</strong><span>Omega Psi Phi Fraternity, Inc.</span></li></ul>
+        </details>
+        <details>
+          <summary>Coalition Members <span>14 members</span></summary>
+          <ul class="people-list"><li><strong>Lawrence Winslow</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
+<li><strong>Darrick Robinson</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
+<li><strong>Gilda Dawn Gillim</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
+<li><strong>James V. Vanderburg</strong><span>Alpha Phi Alpha Fraternity, Inc.</span></li>
+<li><strong>James Keith Felton</strong><span>Kappa Alpha Psi Fraternity, Inc.</span></li>
+<li><strong>Isaiah Jones</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
+<li><strong>Philip Pierre</strong><span>Kappa Alpha Psi Fraternity, Inc.</span></li>
+<li><strong>Lisa White-Tingling</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
+<li><strong>Akeem Hill</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
+<li><strong>Dimitri Pinnock</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
+<li><strong>Travis Brown</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
+<li><strong>Aliyah Brown</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
+<li><strong>Michael Daley</strong><span>Phi Beta Sigma Fraternity, Inc.</span></li>
+<li><strong>Stephen A. Davis</strong><span>Omega Psi Phi Fraternity, Inc.</span></li></ul>
+        </details>
+      </div>
+    </section>
+
+    <section class="section impact-section" id="impact">
+      <div class="section-inner impact-grid">
+        <div class="impact-copy">
+          <p class="kicker light">COMMUNITY IMPACT</p>
+          <h2>Showing up. Engaging Harlem. Building participation.</h2>
+          <div class="counter-grid" aria-label="D9 Harlem Votes community impact statistics">
+            <div class="counter-card red-top"><strong class="counter" data-target="864">0</strong><span>Net Voter-Engagement Actions</span></div>
+            <div class="counter-card black-top"><strong class="counter" data-target="64">0</strong><span>Completed Voter-Registration Submissions</span></div>
+            <div class="counter-card green-top"><strong class="counter" data-target="525">0</strong><span>Documented Voting Plans</span></div>
+            <div class="counter-card gold-top"><strong class="counter" data-target="30">0</strong><span>Volunteers from Coalition Members &amp; Community Volunteers</span></div>
+          </div>
+          <p class="impact-foot">5 field dates <i class="dot red"></i> 8 community locations <i class="dot black"></i> 167 prospective voters identified for continued outreach</p>
+        </div>
+        <div class="impact-photo"><img src="assets/impact-community.jpg" alt="D9 Harlem Votes® volunteers at a community voter engagement activation"></div>
+      </div>
+    </section>
+
+    <section class="section recognition-section" id="recognition">
+      <div class="section-inner">
+        <div class="section-title compact">
+          <p class="kicker">RECOGNITION</p>
+          <h2>D9 Harlem Votes® Honored During Harlem Week 2026</h2>
+          <p>On August 16, 2026, D9 Harlem Votes® received the <strong>Divine 9 Festival Legacy Award</strong> and a <strong>Certificate of Recognition from New York State Senator Cordell Cleare</strong> for service, leadership and civic engagement in Harlem.</p>
+        </div>
+        <div class="award-grid">
+          <figure class="award-card"><img src="assets/award-legacy.jpg" alt="Divine 9 Festival Legacy Award presented to D9 Harlem Votes"><figcaption>Divine 9 Festival Legacy Award</figcaption></figure>
+          <figure class="award-card"><img src="assets/award-cleare.jpg" alt="Certificate of Recognition presented to D9 Harlem Votes by New York State Senator Cordell Cleare"><figcaption>Certificate of Recognition — Senator Cordell Cleare</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section events-section" id="events">
+      <div class="section-inner">
+        <div class="section-title compact light-title">
+          <p class="kicker light">PAST EVENTS</p>
+          <h2>Civic conversations built for the community.</h2>
+        </div>
+        <div class="event-grid">
+          <article class="event-card">
+            <img src="assets/event-mayoral-forum.jpg" alt="Group photo from the 2025 NYC Mayoral Candidates Forum">
+            <div class="event-copy"><span>2025</span><h3>NYC Mayoral Candidates Forum</h3><p>Community-centered candidate forum held at Mother AME Zion Church in Harlem.</p><a href="https://amsterdamnews.com/news/2025/05/29/divine-nine-harlem-votes-hosts-mayoral-candidates-forum/" target="_blank" rel="noopener noreferrer">Read coverage →</a><small>Photo associated with New York Amsterdam News coverage.</small></div>
+          </article>
+          <article class="event-card">
+            <img src="assets/event-pace.jpg" alt="D9 Harlem Votes group at Pace University Social Justice Week">
+            <div class="event-copy"><span>October 29, 2025</span><h3>PACE Social Justice Week</h3><p>“Rapid Fire Chat: Whose House?” focused on affordability, economics and ballot initiatives.</p><a href="https://amsterdamnews.com/news/2025/11/13/d9-harlem-votes-partners-with-pace-university/" target="_blank" rel="noopener noreferrer">Read coverage →</a><small>Photo courtesy of D9 Harlem Votes Planning Committee.</small></div>
+          </article>
+          <article class="event-card">
+            <img src="assets/event-mayor-townhall.jpg" alt="D9 Harlem Votes members at the 2026 Harlem mayoral town hall">
+            <div class="event-copy"><span>April 13, 2026</span><h3>Harlem Mayor’s Town Hall</h3><p>A town hall at the Schomburg Center focused on issues affecting Black New Yorkers.</p><a href="https://amsterdamnews.com/news/2026/04/16/are-black-new-yorkers-still-feeling-nyc-mayor-mamdani/" target="_blank" rel="noopener noreferrer">Read coverage →</a><small>Photo associated with New York Amsterdam News coverage.</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-inner contact-grid">
+        <div>
+          <p class="kicker light">CONTACT</p>
+          <h2>Connect with D9 Harlem Votes®</h2>
+          <p class="contact-email"><a href="mailto:d9harlemvotes@gmail.com">d9harlemvotes@gmail.com</a></p>
+        </div>
+        <div class="contact-cards">
+          <div class="contact-card"><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></div>
+          <div class="contact-card"><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></div>
+          <div class="contact-card"><span>Press Contact</span><strong>Shana Harmongoff</strong></div>
+        </div>
+      </div>
+    </section>
   </main>
 
-
   <footer class="site-footer">
+    <div class="footer-stripe"><span></span><span></span><span></span></div>
     <div class="footer-inner">
-      <img src="assets/d9-logo.png" alt="D9 Harlem Votes® logo">
+      <img src="assets/d9-logo-transparent.png" alt="D9 Harlem Votes® logo">
       <div>
         <strong>D9 Harlem Votes®</strong>
-        <p>
-          A nonpartisan civic education coalition comprised of members of historically Black
-          fraternities and sororities serving Harlem, NY.
-        </p>
-        <p class="footer-tagline">We Serve Harlem First. &nbsp; | &nbsp; Your Choice. Your Voice. Your Vote.</p>
+        <p>We Serve Harlem First. &nbsp;|&nbsp; Your Choice. Your Voice. Your Vote.</p>
+        <small>© 2026 D9 Harlem Votes®. All rights reserved. The D9 Harlem Votes® name, logo, campaign graphics and related branding may not be used without permission.</small>
       </div>
     </div>
   </footer>
-
 </body>
 </html>

@@ -1,19 +1,28 @@
 D9 Harlem Votes® — Harlem Youth Registered & Ready To Vote
+WEBSITE VERSION 5
 
-READY TO PREVIEW:
-1. Open this folder.
-2. Double-click index.html.
-3. It will open in your web browser.
+WHAT CHANGED
+- Official transparent D9 Harlem Votes® logo
+- Red / black / green branding reinforced throughout
+- Shorter, school-friendly For Schools section
+- Paper + online registration options
+- Registration basics strip
+- First-Time Voter cards, including direct link to the five 2026 ballot proposals
+- About Us section with real coalition photo
+- Founding Members and Coalition Members in expandable lists
+- Community Impact section with animated counters
+- Recognition section with the two real award images
+- Past Events section with three real event photos
+- Contact section with Co-Chairs and Press Contact
+- Responsive mobile navigation
 
-BUTTONS:
-- Register / Pre-Register -> official NYC Board of Elections online registration
-- First-Time Voter? Get Ready -> scrolls to the voter-readiness section we will build next
-- Schools: Join the Campaign -> your live Google Form
-
-READY TO UPLOAD:
-Upload these items together:
+FILES TO REPLACE / ADD IN GITHUB
+Root:
 - index.html
 - styles.css
-- assets folder
+- script.js
 
-Important: keep the assets folder beside index.html and styles.css.
+Assets folder:
+- upload every file in assets/ (they are optimized web copies)
+
+Your GitHub Pages URL stays the same.

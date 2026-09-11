@@ -1236,6 +1236,410 @@
       }
     }
 
+
+    /* Strong page rebuild: Voter Education, About Us, Contact */
+    .training-section,
+    .about-section,
+    .contact-section {
+      background:
+        radial-gradient(circle at 18% 18%, rgba(243, 194, 28, 0.08), transparent 28%),
+        radial-gradient(circle at 80% 52%, rgba(14, 143, 88, 0.12), transparent 34%),
+        linear-gradient(180deg, var(--d9-blue-bright) 0%, var(--d9-blue) 62%, var(--d9-blue-deep) 100%) !important;
+      color: var(--d9-white) !important;
+      border-top: 6px solid var(--d9-red);
+      border-bottom: 6px solid var(--d9-green);
+    }
+
+    .training-section .section-inner,
+    .about-section .section-inner,
+    .contact-section .section-inner {
+      max-width: 1280px;
+    }
+
+    .training-section .kicker,
+    .training-section h2,
+    .training-section h3,
+    .training-section h4,
+    .training-section p,
+    .training-section li,
+    .about-section .kicker,
+    .about-section h2,
+    .about-section h3,
+    .about-section h4,
+    .about-section p,
+    .about-section strong,
+    .contact-section .kicker,
+    .contact-section h2,
+    .contact-section h3,
+    .contact-section h4,
+    .contact-section p,
+    .contact-section strong,
+    .contact-section span {
+      color: var(--d9-white) !important;
+    }
+
+    .training-section .section-title h2,
+    .about-section h2,
+    .contact-section h2 {
+      color: var(--d9-white) !important;
+      font-size: clamp(3.1rem, 6.8vw, 5.8rem);
+      line-height: 0.94;
+      text-shadow: 0 3px 0 rgba(0,0,0,0.25);
+    }
+
+    .training-section .section-title h2::after,
+    .about-section h2::after,
+    .contact-section h2::after {
+      content: "";
+      display: block;
+      width: min(280px, 30vw);
+      height: 9px;
+      margin: 0.45rem 0 0;
+      border-radius: 999px;
+      background: var(--d9-gold);
+      transform: rotate(-2deg);
+    }
+
+    .page-brand-panel {
+      background:
+        linear-gradient(90deg, var(--d9-red) 0 33%, var(--d9-black) 33% 66%, var(--d9-green) 66% 100%) top / 100% 9px no-repeat,
+        rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255,255,255,0.28);
+      border-radius: 24px;
+      box-shadow: 0 20px 38px rgba(0,0,0,0.22);
+      padding: clamp(1.2rem, 2.2vw, 1.75rem);
+    }
+
+    .training-grid.strong-training-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.35rem;
+      align-items: stretch;
+    }
+
+    .training-card.strong-training-card {
+      background: rgba(255,255,255,0.08) !important;
+      border: 2px solid rgba(255,255,255,0.32);
+      border-top: 8px solid var(--d9-red);
+      color: var(--d9-white);
+      box-shadow: 0 18px 34px rgba(0,0,0,0.22);
+    }
+
+    .training-card.strong-training-card.curriculum-card {
+      border-top-color: var(--d9-green);
+    }
+
+    .training-card.strong-training-card .mini-label {
+      color: var(--d9-gold) !important;
+    }
+
+    .large-page-icon {
+      width: clamp(110px, 11vw, 150px);
+      height: clamp(110px, 11vw, 150px);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 7px solid var(--d9-white);
+      box-shadow:
+        0 0 0 3px var(--d9-gold),
+        0 14px 28px rgba(0,0,0,0.26);
+      margin-bottom: 1rem;
+    }
+
+    .large-page-icon svg {
+      width: 78%;
+      height: 78%;
+      overflow: visible;
+    }
+
+    .large-page-icon.red { background: var(--d9-red); }
+    .large-page-icon.green { background: var(--d9-green); }
+    .large-page-icon.black { background: var(--d9-black); }
+    .large-page-icon.gold { background: var(--d9-gold); }
+
+    .large-page-icon .stroke-white,
+    .large-page-icon .stroke-black,
+    .large-page-icon .stroke-red,
+    .large-page-icon .stroke-green,
+    .large-page-icon .stroke-gold {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .large-page-icon .stroke-white { stroke: var(--d9-white); }
+    .large-page-icon .stroke-black { stroke: var(--d9-black); }
+    .large-page-icon .stroke-red { stroke: var(--d9-red); }
+    .large-page-icon .stroke-green { stroke: var(--d9-green); }
+    .large-page-icon .stroke-gold { stroke: var(--d9-gold); }
+    .large-page-icon .fill-white { fill: var(--d9-white); }
+    .large-page-icon .fill-black { fill: var(--d9-black); }
+    .large-page-icon .fill-red { fill: var(--d9-red); }
+    .large-page-icon .fill-green { fill: var(--d9-green); }
+    .large-page-icon .fill-gold { fill: var(--d9-gold); }
+
+    .training-points.strong-icon-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+      padding: 0;
+      margin: 1rem 0 1.25rem;
+      list-style: none;
+    }
+
+    .training-points.strong-icon-points li {
+      background: rgba(255,255,255,0.10);
+      border-left: 5px solid var(--d9-gold);
+      padding: 0.7rem 0.75rem;
+      color: var(--d9-white);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .training-card.strong-training-card .btn,
+    .training-card.strong-training-card .accordion-trigger {
+      border: 2px solid var(--d9-white);
+      box-shadow: 0 0 0 3px var(--d9-gold);
+    }
+
+    .about-grid.strong-about-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+      align-items: center;
+      gap: clamp(1.75rem, 4vw, 3.5rem);
+    }
+
+    .about-photo.strong-photo-frame {
+      background: var(--d9-black);
+      border: 8px solid var(--d9-white);
+      box-shadow:
+        0 0 0 5px var(--d9-gold),
+        0 0 0 10px var(--d9-red),
+        0 22px 40px rgba(0,0,0,0.28);
+    }
+
+    .about-copy.strong-about-copy {
+      background:
+        linear-gradient(90deg, var(--d9-red) 0 33%, var(--d9-black) 33% 66%, var(--d9-green) 66% 100%) top / 100% 9px no-repeat,
+        rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.28);
+      border-radius: 24px;
+      padding: clamp(1.25rem, 2.4vw, 2rem);
+      box-shadow: 0 20px 38px rgba(0,0,0,0.22);
+    }
+
+    .about-copy.strong-about-copy .lead {
+      font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+      line-height: 1.35;
+    }
+
+    .about-leaders.strong-leaders {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.25rem;
+    }
+
+    .about-leader-card {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.9rem;
+      background: rgba(0,0,0,0.24);
+      border: 2px solid rgba(255,255,255,0.25);
+      border-top: 6px solid var(--d9-green);
+      border-radius: 16px;
+    }
+
+    .about-leader-card:nth-child(2) {
+      border-top-color: var(--d9-red);
+    }
+
+    .small-circle-icon {
+      display: inline-flex;
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid var(--d9-white);
+      background: var(--d9-gold);
+      color: var(--d9-black);
+      box-shadow: 0 0 0 2px var(--d9-gold);
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    .about-leader-card:nth-child(2) .small-circle-icon {
+      background: var(--d9-red);
+      color: var(--d9-white);
+    }
+
+    .about-leader-card .mini-label {
+      color: var(--d9-gold) !important;
+      margin-bottom: 0.15rem;
+    }
+
+    .about-focus-strip {
+      margin-top: 1.1rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: rgba(0,0,0,0.22);
+      border: 2px solid rgba(255,255,255,0.24);
+    }
+
+    .contact-section.strong-contact-section {
+      background:
+        radial-gradient(circle at 18% 18%, rgba(243, 194, 28, 0.08), transparent 28%),
+        radial-gradient(circle at 82% 54%, rgba(14, 143, 88, 0.12), transparent 34%),
+        linear-gradient(180deg, var(--d9-blue-bright) 0%, var(--d9-blue) 60%, var(--d9-blue-deep) 100%) !important;
+      border-top: 6px solid var(--d9-red);
+      border-bottom: 6px solid var(--d9-green);
+      color: var(--d9-white);
+    }
+
+    .contact-grid.strong-contact-grid {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: center;
+    }
+
+    .contact-copy.strong-contact-copy {
+      background:
+        linear-gradient(90deg, var(--d9-red) 0 33%, var(--d9-black) 33% 66%, var(--d9-green) 66% 100%) top / 100% 9px no-repeat,
+        rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.28);
+      border-radius: 24px;
+      padding: clamp(1.25rem, 2.4vw, 2rem);
+      box-shadow: 0 20px 38px rgba(0,0,0,0.22);
+    }
+
+    .contact-email a {
+      color: var(--d9-gold) !important;
+      font-weight: 950;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+    }
+
+    .contact-cards.strong-contact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .contact-card.strong-contact-card {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      gap: 0.8rem;
+      min-height: 110px;
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(0,0,0,0.28) !important;
+      border: 2px solid rgba(255,255,255,0.28);
+      border-top: 7px solid var(--d9-red);
+      color: var(--d9-white);
+      box-shadow: 0 14px 26px rgba(0,0,0,0.20);
+    }
+
+    .contact-card.strong-contact-card:nth-child(2),
+    .contact-card.strong-contact-card:nth-child(4) {
+      border-top-color: var(--d9-green);
+    }
+
+    .contact-card.strong-contact-card:nth-child(3) {
+      border-top-color: var(--d9-gold);
+    }
+
+    .contact-card.strong-contact-card::before {
+      content: "★";
+      display: inline-flex;
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 4px solid var(--d9-white);
+      background: var(--d9-red);
+      color: var(--d9-white);
+      box-shadow: 0 0 0 2px var(--d9-gold);
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .contact-card.strong-contact-card:nth-child(2)::before,
+    .contact-card.strong-contact-card:nth-child(4)::before {
+      content: "✓";
+      background: var(--d9-green);
+    }
+
+    .contact-card.strong-contact-card:nth-child(3)::before {
+      content: "✦";
+      background: var(--d9-gold);
+      color: var(--d9-black);
+    }
+
+    .contact-card.strong-contact-card span {
+      color: rgba(255,255,255,0.78) !important;
+      font-size: 0.82rem;
+      line-height: 1.05;
+    }
+
+    .contact-card.strong-contact-card strong {
+      color: var(--d9-white) !important;
+      font-size: 1.1rem;
+      line-height: 1.12;
+    }
+
+    .site-footer {
+      background:
+        linear-gradient(90deg, var(--d9-red) 0 33%, var(--d9-black) 33% 66%, var(--d9-green) 66% 100%) top / 100% 12px no-repeat,
+        var(--d9-blue-deep) !important;
+      border-top: 6px solid var(--d9-white);
+    }
+
+    .site-footer .footer-inner {
+      max-width: 1280px;
+      gap: 1.25rem;
+    }
+
+    .site-footer img {
+      width: clamp(98px, 10vw, 150px) !important;
+      height: auto;
+    }
+
+    .site-footer p,
+    .site-footer .footer-service,
+    .site-footer .footer-motto {
+      color: var(--d9-white) !important;
+    }
+
+    .site-footer .footer-divider {
+      color: var(--d9-gold) !important;
+      font-weight: 950;
+      padding: 0 0.35rem;
+    }
+
+    @media (max-width: 980px) {
+      .training-grid.strong-training-grid,
+      .about-grid.strong-about-grid,
+      .contact-grid.strong-contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .training-points.strong-icon-points,
+      .about-leaders.strong-leaders,
+      .contact-cards.strong-contact-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
   <script src="script.js?v=2" defer></script>
 </head>
@@ -1660,145 +2064,91 @@
         <div class="section-title compact">
           <p class="kicker">VOTER EDUCATION</p>
           <h2>Voter Registration: Self-Training</h2>
-          <p>
-            D9 Harlem Votes® offers a nonpartisan self-training covering voter registration essentials,
-            ballot literacy, civic participation, and peer-to-peer learning so volunteers and coalition
-            participants can support Harlem voters with clear, practical information.
-          </p>
+          <p>Clear, nonpartisan voter registration essentials for volunteers, coalition participants, and school partners.</p>
         </div>
 
-        <div class="training-grid icon-training-grid">
-          <article class="training-card training-primary icon-training-card">
-            <span class="toolkit-icon" aria-hidden="true">🎓</span>
+        <div class="training-grid strong-training-grid">
+          <article class="training-card training-primary strong-training-card">
+            <div class="large-page-icon red" aria-hidden="true">
+              <svg viewBox="0 0 120 120" focusable="false">
+                <path class="fill-gold" d="M60 18 20 39l40 21 40-21Z"/>
+                <path class="stroke-white" stroke-width="7" d="M60 18 20 39l40 21 40-21Z"/>
+                <path class="stroke-white" stroke-width="7" d="M37 51v21c10 11 36 11 46 0V51"/>
+                <path class="stroke-black" stroke-width="7" d="M100 39v30"/>
+              </svg>
+            </div>
             <p class="mini-label">ONLINE SELF-TRAINING</p>
             <h3>Learn before serving.</h3>
-            <ul class="training-points icon-points">
+            <ul class="training-points strong-icon-points">
               <li>Voter registration essentials</li>
               <li>Ballot literacy</li>
-              <li>Civic participation beyond the ballot box</li>
+              <li>Civic participation</li>
               <li>Peer-to-peer voter education</li>
             </ul>
-            <a class="btn btn-red training-button"
-               href="mailto:d9harlemvotes@gmail.com?subject=Voter%20Registration%20Self-Training%20Request">
-              Email d9harlemvotes@gmail.com
-            </a>
-            <p class="training-note">
-              Request the Voter Registration Self-Training link by email.
-              <a href="mailto:d9harlemvotes@gmail.com?subject=Voter%20Registration%20Self-Training%20Request">d9harlemvotes@gmail.com</a>
-            </p>
+            <a class="btn btn-red" href="mailto:d9harlemvotes@gmail.com?subject=Voter%20Registration%20Self-Training%20Link">Email d9harlemvotes@gmail.com</a>
+            <p class="training-note">Request the Voter Registration Self-Training link by email.</p>
           </article>
 
-          <article class="training-card curriculum-card icon-training-card">
-            <span class="toolkit-icon" aria-hidden="true">📚</span>
-            <p class="mini-label">CIVIC EDUCATION CURRICULUM TEAM</p>
-            <h3>Built by our team.</h3>
-            <p>
-              The team develops and tests voter education resources and training materials using
-              curriculum design, civics and election research, editing, beta testing, and agency coordination.
-            </p>
-
-            <details class="curriculum-details">
-              <summary>View Curriculum Team</summary>
+          <article class="training-card curriculum-card strong-training-card">
+            <div class="large-page-icon green" aria-hidden="true">
+              <svg viewBox="0 0 120 120" focusable="false">
+                <path class="fill-gold" d="M22 34c15-6 28-5 38 4v58c-10-9-23-10-38-4Z"/>
+                <path class="stroke-white" stroke-width="7" d="M22 34c15-6 28-5 38 4v58c-10-9-23-10-38-4Z"/>
+                <path class="fill-red" d="M60 38c10-9 23-10 38-4v58c-15-6-28-5-38 4Z"/>
+                <path class="stroke-white" stroke-width="7" d="M60 38c10-9 23-10 38-4v58c-15-6-28-5-38 4Z"/>
+                <path class="stroke-black" stroke-width="5" d="M36 54h12M36 68h12M74 54h12M74 68h12"/>
+              </svg>
+            </div>
+            <p class="mini-label">CURRICULUM TEAM</p>
+            <h3>Built by the D9 Harlem Votes® team.</h3>
+            <p>Curriculum design, civics research, editing, beta testing, and agency coordination.</p>
+            <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="curriculum-team-list">
+              View Curriculum Team <span>+</span>
+            </button>
+            <div class="accordion-panel" id="curriculum-team-list" hidden>
               <ul>
-                <li><strong>Erika L. Ewing, M.F.A.</strong> — Lead Curriculum Developer</li>
-                <li><strong>Gilda D. Gillim, M.A.</strong></li>
-                <li><strong>Lisa White-Tingling, MPA</strong></li>
-                <li><strong>Aaliyah L. Brown</strong></li>
-                <li><strong>Michael Daley</strong></li>
-                <li><strong>Darrick Robinson</strong></li>
-                <li><strong>Lawrence Winslow</strong></li>
+                <li>Erika L. Ewing — Curriculum Design, Content Writing and Editing</li>
+                <li>Aaliyah L. Brown — Curriculum Review and Volunteer Coordination</li>
+                <li>Jasmine G. McFarlane-White — Volunteer Engagement and Beta Testing</li>
+                <li>Drew K. Gabriel — Strategic Review and Community Partnerships</li>
+                <li>Shana Harmongoff — Press and Communications Coordination</li>
               </ul>
-            </details>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section about-section" id="about">
-      <div class="section-inner about-grid">
-        <div class="about-photo">
-          <img src="assets/about-coalition.jpg" alt="D9 Harlem Votes® coalition members serving Harlem">
-        </div>
+      <div class="section-inner">
+        <div class="about-grid strong-about-grid">
+          <div class="about-photo strong-photo-frame">
+            <img src="assets/about-d9-harlem.jpg" alt="D9 Harlem Votes volunteers serving the Harlem community">
+          </div>
 
-        <div class="about-copy">
-          <p class="kicker">ABOUT US</p>
-          <h2>We Serve Harlem First.</h2>
+          <div class="about-copy strong-about-copy">
+            <p class="kicker">ABOUT US</p>
+            <h2>We Serve Harlem First.</h2>
+            <p class="lead">Established in 2024, D9 Harlem Votes® is a nonpartisan civic education coalition comprised of members of historically Black fraternities and sororities serving Harlem, New York.</p>
+            <p>D9 Harlem Votes® is an individual-based civic coalition, not a chapter-based council. Our shared focus is Harlem: educating, engaging, and registering voters while strengthening civic participation across the community.</p>
 
-          <p class="about-lead">
-            Established in 2024, D9 Harlem Votes® is a nonpartisan civic education coalition
-            comprised of members of historically Black fraternities and sororities serving Harlem, New York.
-          </p>
+            <div class="about-leaders strong-leaders">
+              <div class="about-leader-card">
+                <span class="small-circle-icon" aria-hidden="true">★</span>
+                <div><span class="mini-label">CO-CHAIR</span><strong>Drew K. Gabriel</strong></div>
+              </div>
+              <div class="about-leader-card">
+                <span class="small-circle-icon" aria-hidden="true">✓</span>
+                <div><span class="mini-label">CO-CHAIR</span><strong>Erika L. Ewing</strong></div>
+              </div>
+            </div>
 
-          <p>
-            D9 Harlem Votes® is an individual-based civic coalition, not a chapter-based council.
-            Our shared focus is Harlem: educating, engaging, and registering voters while strengthening
-            civic participation across the community.
-          </p>
-
-          <div class="leadership-mini">
-            <div><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></div>
-            <div><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></div>
+            <div class="about-focus-strip">
+              <p class="mini-label">OUR FOCUS</p>
+              <p><strong>Educate. Engage. Empower. Vote.</strong> D9 Harlem Votes® is rooted in service, civic education, and Harlem-first community participation.</p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="section-inner history-feature">
-        <div class="history-copy">
-          <p class="kicker">HOW IT STARTED</p>
-          <h3>A Harlem call to civic duty and social action.</h3>
-          <p>
-            D9 Harlem Votes® grew from a call convened by <strong>Rev. Michael A. Walrond, Jr.</strong>,
-            Senior Pastor of First Corinthian Baptist Church (FCBC) in Harlem, New York and a member
-            of Omega Psi Phi Fraternity, Inc., and <strong>Kercena A. Dozier, Esq.</strong>,
-            Chair of FCBC's Social Justice Ministry.
-          </p>
-          <p>
-            Harlem residents and members of Harlem-based historically Black Greek-letter organizations
-            were called together to renew a commitment to civic duty and social action — to
-            <strong>educate, engage, and register Harlem voters.</strong>
-          </p>
-        </div>
-
-        <div class="history-photo">
-          <img src="assets/history-first-convening.jpg" alt="Community members gathered at an early D9 Harlem Votes® civic engagement event in Harlem">
-          <p>D9 Harlem Votes® gathers at the Harriet Tubman Memorial in Harlem. Photo: Ariama C. Long.</p>
-        </div>
-      </div>
-
-      <div class="section-inner member-accordions">
-        <details>
-          <summary>Founding Members <span>14 members</span></summary>
-          <ul class="people-list"><li><strong>Kercena Dozier</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
-<li><strong>Steve Miller</strong><span>Phi Beta Sigma Fraternity, Inc.</span></li>
-<li><strong>Muhammad Bilal</strong><span>Phi Beta Sigma Fraternity, Inc.</span></li>
-<li><strong>Drew K. Gabriel</strong><span>Alpha Phi Alpha Fraternity, Inc.</span></li>
-<li><strong>Donnell Bolden</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
-<li><strong>Hope Maddox</strong><span>Sigma Gamma Rho Sorority, Inc.</span></li>
-<li><strong>Keith Tubbs</strong><span>Kappa Alpha Psi Fraternity, Inc.</span></li>
-<li><strong>Shana Harmongoff</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
-<li><strong>Pascale Bernard</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
-<li><strong>Erika L. Ewing</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
-<li><strong>Nakim Bey</strong><span>Alpha Phi Alpha Fraternity, Inc.</span></li>
-<li><strong>TaShana Pace</strong><span>Zeta Phi Beta Sorority, Inc.</span></li>
-<li><strong>Athena Moore</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
-<li><strong>Dominic Boyce</strong><span>Omega Psi Phi Fraternity, Inc.</span></li></ul>
-        </details>
-
-        <details>
-          <summary>Coalition Members <span>12 members</span></summary>
-          <ul class="people-list"><li><strong>Lawrence Winslow</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
-<li><strong>Darrick Robinson</strong><span>Omega Psi Phi Fraternity, Inc.</span></li>
-<li><strong>Gilda Dawn Gillim</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
-<li><strong>James V. Vanderburg</strong><span>Alpha Phi Alpha Fraternity, Inc.</span></li>
-<li><strong>James Keith Felton</strong><span>Kappa Alpha Psi Fraternity, Inc.</span></li>
-<li><strong>Lisa White-Tingling</strong><span>Alpha Kappa Alpha Sorority, Inc.</span></li>
-<li><strong>Akeem Hill</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
-<li><strong>Dimitri Pinnock</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
-<li><strong>Travis Brown</strong><span>Iota Phi Theta Fraternity, Inc.</span></li>
-<li><strong>Aaliyah L. Brown</strong><span>Delta Sigma Theta Sorority, Inc.</span></li>
-<li><strong>Michael Daley</strong><span>Phi Beta Sigma Fraternity, Inc.</span></li>
-<li><strong>Stephen A. Davis</strong><span>Omega Psi Phi Fraternity, Inc.</span></li></ul>
-        </details>
       </div>
     </section>
 
@@ -1872,20 +2222,23 @@
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="section-inner contact-grid">
-        <div>
-          <p class="kicker light">LEADERSHIP &amp; CONTACT</p>
-          <h2>Connect with D9 Harlem Votes®</h2>
-          <p class="contact-email"><a href="mailto:d9harlemvotes@gmail.com">d9harlemvotes@gmail.com</a></p>
-        </div>
+    <section class="section contact-section strong-contact-section" id="contact">
+      <div class="section-inner">
+        <div class="contact-grid strong-contact-grid">
+          <div class="contact-copy strong-contact-copy">
+            <p class="kicker">LEADERSHIP &amp; CONTACT</p>
+            <h2>Connect with D9 Harlem Votes®</h2>
+            <p class="contact-email"><a href="mailto:d9harlemvotes@gmail.com">d9harlemvotes@gmail.com</a></p>
+            <p>Questions about school participation, voter education, volunteer engagement, or community partnerships can start here.</p>
+          </div>
 
-        <div class="contact-cards">
-          <div class="contact-card contact-red"><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></div>
-          <div class="contact-card contact-green"><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></div>
-          <div class="contact-card contact-gold"><span>Volunteer and Member Recruitment Lead</span><strong>Aaliyah L. Brown</strong></div>
-          <div class="contact-card contact-green"><span>Volunteer and Member Engagement Lead</span><strong>Jasmine G. McFarlane-White</strong></div>
-          <div class="contact-card contact-red"><span>Press Contact</span><strong>Shana Harmongoff</strong></div>
+          <div class="contact-cards strong-contact-cards">
+            <div class="contact-card strong-contact-card contact-red"><span>CO-CHAIR</span><strong>Drew K. Gabriel</strong></div>
+            <div class="contact-card strong-contact-card contact-green"><span>CO-CHAIR</span><strong>Erika L. Ewing</strong></div>
+            <div class="contact-card strong-contact-card contact-gold"><span>RECRUITMENT</span><strong>Aaliyah L. Brown</strong></div>
+            <div class="contact-card strong-contact-card contact-green"><span>ENGAGEMENT</span><strong>Jasmine G. McFarlane-White</strong></div>
+            <div class="contact-card strong-contact-card contact-red"><span>PRESS</span><strong>Shana Harmongoff</strong></div>
+          </div>
         </div>
       </div>
     </section>

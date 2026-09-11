@@ -6,6 +6,69 @@
   <meta name="description" content="D9 Harlem Votes® — Harlem Youth Registered & Ready To Vote campaign, school resources, first-time voter information, community impact and civic engagement in Harlem.">
   <title>D9 Harlem Votes® | Harlem Youth Registered & Ready To Vote</title>
   <link rel="stylesheet" href="styles.css?v=8">
+
+  <style>
+    /* Youth-vote landing update: graphic-first school steps */
+    .graphic-steps .step-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 0.55rem;
+      min-height: 185px;
+      padding: 1.75rem 1.15rem;
+    }
+
+    .graphic-steps .step-number {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.1rem;
+      background: #082e6f;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.86rem;
+      letter-spacing: 0.04em;
+    }
+
+    .graphic-steps .step-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 4.65rem;
+      height: 4.65rem;
+      border-radius: 1.4rem;
+      background: #f5f1e8;
+      box-shadow: inset 0 0 0 2px rgba(8, 46, 111, 0.12);
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+
+    .graphic-steps .step-card h3 {
+      margin-top: 0.35rem;
+      margin-bottom: 0;
+      font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+    }
+
+    .graphic-steps .step-card p {
+      margin: 0;
+      max-width: 13rem;
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+
+    .school-section .section-title.compact .section-note {
+      max-width: 54rem;
+      margin-top: 0.65rem;
+      font-size: 1.05rem;
+      color: #4b4b4b;
+    }
+  </style>
   <script src="script.js?v=2" defer></script>
 </head>
 <body>
@@ -83,13 +146,34 @@
         <div class="section-title compact">
           <p class="kicker">FOR SCHOOLS</p>
           <h2>Simple to launch. Easy to manage.</h2>
+          <p class="section-note">A clear, student-friendly setup with quick steps, visual cues, and flexible paper or online options.</p>
         </div>
 
-        <div class="steps-grid">
-          <article class="step-card"><span>01</span><h3>Identify a Liaison</h3><p>Choose one school point person.</p></article>
-          <article class="step-card"><span>02</span><h3>Pick Your Timeline</h3><p>Launch Sept. 15–Oct. 5 or Oct. 5–9 through Oct. 20.</p></article>
-          <article class="step-card"><span>03</span><h3>Paper or Online</h3><p>Students may use paper forms, the official online portal, or both.</p></article>
-          <article class="step-card"><span>04</span><h3>We Collect &amp; Track</h3><p>D9 Harlem Votes® picks up paper forms; schools report aggregate online totals.</p></article>
+        <div class="steps-grid graphic-steps" aria-label="School campaign launch steps">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon" aria-hidden="true">👥</div>
+            <h3>School Liaison</h3>
+            <p>Choose one point person.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon" aria-hidden="true">📅</div>
+            <h3>Campaign Window</h3>
+            <p>Pick your launch timeline.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon" aria-hidden="true">📝</div>
+            <h3>Paper + Online</h3>
+            <p>Offer both registration paths.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">04</span>
+            <div class="step-icon" aria-hidden="true">📊</div>
+            <h3>Collect + Count</h3>
+            <p>Secure forms. Track totals.</p>
+          </article>
         </div>
 
         <div class="school-options">

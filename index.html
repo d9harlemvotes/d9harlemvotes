@@ -8,247 +8,106 @@
   <link rel="stylesheet" href="styles.css?v=8">
 
   <style>
-    /* Youth-vote landing update: bold, school-friendly for-schools section */
-    .school-section .section-inner {
-      max-width: 1200px;
+    :root {
+      --d9-blue: #062c6c;
+      --d9-blue-deep: #041b43;
+      --d9-blue-bright: #0b3b8c;
+      --d9-red: #e31c24;
+      --d9-green: #0e8f58;
+      --d9-black: #111111;
+      --d9-gold: #f3c21c;
+      --d9-cream: #f7f5f0;
+      --d9-white: #ffffff;
     }
 
-    .school-launch-band {
-      position: relative;
-      overflow: hidden;
-      margin-top: 0.5rem;
-      margin-bottom: 2rem;
-      padding: 1.35rem 1.25rem 2rem;
-      border-top: 4px solid #e31c24;
-      border-bottom: 4px solid #0e8f58;
-      background: linear-gradient(180deg, #0b3b8c 0%, #082e6f 100%);
-      border-radius: 0;
-      box-shadow: 0 18px 34px rgba(8, 46, 111, 0.18);
-      color: #fff;
+    body {
+      background: var(--d9-cream);
     }
 
-    .school-launch-band::before,
-    .school-launch-band::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: #e31c24;
-    }
-    .school-launch-band::before { top: 0; }
-    .school-launch-band::after {
-      bottom: 10px;
-      background: #0e8f58;
-      opacity: 0.75;
+    /* Keep the name from appearing as blue text */
+    .brand-wordmark,
+    .hero-wordmark,
+    .site-footer strong,
+    .contact-section h2 {
+      color: var(--d9-white);
     }
 
-    .school-launch-band .launch-motto {
-      text-align: center;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
+    .brand-wordmark .brand-red { color: var(--d9-red) !important; }
+    .brand-wordmark .brand-green { color: var(--d9-green) !important; }
+    .brand-wordmark .brand-black {
+      color: var(--d9-black) !important;
+      text-shadow:
+        1px 0 0 var(--d9-white),
+        -1px 0 0 var(--d9-white),
+        0 1px 0 var(--d9-white),
+        0 -1px 0 var(--d9-white);
     }
 
-    .school-launch-band .launch-kicker {
-      margin: 0;
-      color: rgba(255,255,255,0.95);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-size: 0.98rem;
-      font-weight: 800;
+    .hero-wordmark .brand-black,
+    .site-footer .brand-wordmark .brand-black,
+    .contact-section .brand-wordmark .brand-black {
+      color: var(--d9-white) !important;
+      text-shadow: none;
     }
 
-    .school-launch-band h2 {
-      margin: 0.35rem 0 0.6rem;
-      color: #fff;
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      line-height: 0.96;
-      max-width: 13ch;
-      text-wrap: balance;
+    /* Navigation should feel connected to the campaign frame */
+    .site-nav {
+      background: var(--d9-blue-deep);
+      border-bottom: 4px solid var(--d9-green);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
     }
 
-    .school-launch-band .launch-subhead {
-      margin: 0 0 1.25rem;
-      max-width: 46rem;
-      color: rgba(255,255,255,0.92);
-      font-size: 1.05rem;
-      line-height: 1.45;
+    .site-nav .nav-inner {
+      max-width: 1280px;
     }
 
-    .launch-accent-line {
-      width: 170px;
-      height: 8px;
-      border-radius: 999px;
-      background: #f3c21c;
-      margin: 0.4rem 0 1.4rem;
+    .site-nav .brand-link img {
+      width: clamp(64px, 7vw, 92px);
+      height: auto;
     }
 
-    .launch-steps-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1.2rem;
-      align-items: start;
+    .site-nav .brand-wordmark,
+    .site-nav .nav-links a {
+      color: var(--d9-white) !important;
     }
 
-    .launch-step {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.55rem;
+    .site-nav .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--d9-gold) !important;
     }
 
-    .launch-icon-wrap {
-      position: relative;
-      padding-top: 0.2rem;
-    }
-
-    .launch-icon-circle {
-      width: clamp(116px, 12vw, 160px);
-      height: clamp(116px, 12vw, 160px);
-      border-radius: 50%;
-      border: 7px solid #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-    }
-
-    .launch-icon-circle .icon-emoji {
-      font-size: clamp(3rem, 5vw, 4.5rem);
-      line-height: 1;
-      filter: saturate(1.1);
-    }
-
-    .launch-step:nth-child(1) .launch-icon-circle { background: #f3c21c; color: #111; }
-    .launch-step:nth-child(2) .launch-icon-circle { background: #e31c24; color: #fff; }
-    .launch-step:nth-child(3) .launch-icon-circle { background: #111; color: #fff; }
-    .launch-step:nth-child(4) .launch-icon-circle { background: #0e8f58; color: #fff; }
-
-    .launch-step-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 86px;
-      padding: 0.35rem 1rem;
-      border-radius: 999px;
-      border: 5px solid #fff;
+    .nav-links a[aria-current="page"] {
       font-weight: 900;
-      font-size: clamp(1.1rem, 2vw, 1.55rem);
-      line-height: 1;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      text-decoration: underline;
+      text-underline-offset: 0.35em;
+      text-decoration-thickness: 3px;
     }
 
-    .launch-step:nth-child(1) .launch-step-number { background: #f3c21c; color: #111; }
-    .launch-step:nth-child(2) .launch-step-number { background: #e31c24; color: #fff; }
-    .launch-step:nth-child(3) .launch-step-number { background: #111; color: #fff; }
-    .launch-step:nth-child(4) .launch-step-number { background: #0e8f58; color: #fff; }
-
-    .launch-step h3 {
-      margin: 0.2rem 0 0;
-      color: #fff;
-      font-size: clamp(1.25rem, 2.15vw, 1.95rem);
-      line-height: 1.08;
-      text-wrap: balance;
+    .nav-join {
+      background: var(--d9-red) !important;
+      color: var(--d9-white) !important;
+      border: 2px solid var(--d9-white);
     }
 
-    .launch-step p {
-      margin: 0;
-      color: rgba(255,255,255,0.95);
-      font-size: 1rem;
-      line-height: 1.35;
-      max-width: 14rem;
-    }
-
-    .school-options.compact-school-options {
+    .brand-stripe,
+    .footer-stripe {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.2rem;
-      margin-bottom: 1.35rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 12px;
+      background: var(--d9-white);
+      gap: 4px;
     }
 
-    .compact-school-options .option-block {
-      min-height: 100%;
-      padding: 1.25rem 1.15rem 1.15rem;
-      border-radius: 18px;
-      background: #fff;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      border-top: 6px solid #e31c24;
+    .brand-stripe span:nth-child(1),
+    .footer-stripe span:nth-child(1) { background: var(--d9-red); }
+    .brand-stripe span:nth-child(2),
+    .footer-stripe span:nth-child(2) {
+      background: var(--d9-black);
+      outline: 2px solid var(--d9-white);
+      z-index: 1;
     }
-    .compact-school-options .option-block:last-child {
-      border-top-color: #0e8f58;
-    }
-    .compact-school-options .option-block p:last-child {
-      margin-bottom: 0;
-    }
-
-    .compact-basics {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.85rem;
-      margin-bottom: 2rem;
-    }
-
-    .compact-basic {
-      padding: 0.95rem 1rem;
-      border-radius: 16px;
-      background: #f7f8fb;
-      border: 2px solid rgba(8, 46, 111, 0.08);
-    }
-
-    .compact-basic b {
-      display: block;
-      margin-bottom: 0.25rem;
-      color: #082e6f;
-      font-size: 0.98rem;
-    }
-
-    .compact-basic span {
-      display: block;
-      color: #4b4b4b;
-      font-size: 0.92rem;
-      line-height: 1.35;
-    }
-
-    @media (max-width: 980px) {
-      .launch-steps-row,
-      .compact-basics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 720px) {
-      .school-launch-band {
-        padding: 1rem 0.95rem 1.5rem;
-      }
-      .school-launch-band .launch-motto {
-        font-size: 0.78rem;
-        letter-spacing: 0.12em;
-        margin-bottom: 1.35rem;
-      }
-      .school-launch-band h2 {
-        font-size: clamp(2.2rem, 10vw, 3.2rem);
-      }
-      .school-launch-band .launch-subhead {
-        font-size: 0.98rem;
-      }
-      .launch-accent-line {
-        width: 128px;
-        height: 6px;
-        margin-bottom: 1rem;
-      }
-      .launch-steps-row,
-      .school-options.compact-school-options,
-      .compact-basics {
-        grid-template-columns: 1fr;
-      }
-      .launch-step p {
-        max-width: 16rem;
-      }
-    }
+    .brand-stripe span:nth-child(3),
+    .footer-stripe span:nth-child(3) { background: var(--d9-green); }
 
     /* Tab-style page behavior: show one major section group at a time */
     body.tabbed-site main > section.section[hidden],
@@ -260,12 +119,810 @@
       min-height: 55vh;
     }
 
-    .nav-links a[aria-current="page"] {
-      color: #0e8f58;
+    /* Hero: bigger logo and bigger image, less empty white space */
+    .hero {
+      color: var(--d9-white);
+      background:
+        radial-gradient(circle at 65% 34%, rgba(14, 143, 88, 0.16), transparent 34%),
+        radial-gradient(circle at 20% 15%, rgba(243, 194, 28, 0.12), transparent 26%),
+        linear-gradient(180deg, var(--d9-blue-bright) 0%, var(--d9-blue) 60%, var(--d9-blue-deep) 100%);
+      border-bottom: 6px solid var(--d9-red);
+    }
+
+    .hero-inner {
+      max-width: 1280px;
+      grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: center;
+      padding-top: clamp(2rem, 4vw, 4rem);
+      padding-bottom: clamp(2rem, 4vw, 4rem);
+    }
+
+    .hero-brand {
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .hero-logo {
+      width: clamp(118px, 13vw, 190px) !important;
+      height: auto;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.28));
+    }
+
+    .org-name,
+    .org-description,
+    .eyebrow,
+    .hero-summary,
+    .deadline-row,
+    .campaign-tagline {
+      color: var(--d9-white) !important;
+    }
+
+    .hero h1 {
+      color: var(--d9-white);
+      font-size: clamp(3rem, 6.8vw, 6rem);
+      line-height: 0.92;
+      text-shadow: 0 3px 0 rgba(0,0,0,0.28);
+    }
+
+    .hero h1 span {
+      color: var(--d9-gold);
+    }
+
+    .hero-photo-shell {
+      min-height: clamp(360px, 42vw, 610px);
+    }
+
+    .hero-photo-wrap {
+      min-height: clamp(340px, 40vw, 590px);
+      border: 8px solid var(--d9-white);
+      box-shadow:
+        0 0 0 5px var(--d9-gold),
+        0 18px 38px rgba(0,0,0,0.28);
+      overflow: hidden;
+    }
+
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: clamp(340px, 40vw, 590px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-note {
+      border: 3px solid var(--d9-white);
+      background: var(--d9-black);
+      color: var(--d9-white);
+    }
+
+    .hero-motto {
+      color: var(--d9-white);
+      background: var(--d9-blue-deep);
+      border-top: 5px solid var(--d9-green);
+      border-bottom: 5px solid var(--d9-red);
+      font-size: clamp(1rem, 1.6vw, 1.4rem);
+      letter-spacing: 0.18em;
+    }
+
+    /* Shared bold launch bands */
+    .school-section,
+    .first-voter {
+      background: var(--d9-cream);
+    }
+
+    .school-section .section-inner,
+    .first-voter .section-inner,
+    .recognition-section .section-inner {
+      max-width: 1280px;
+    }
+
+    .school-launch-band,
+    .voter-launch-band {
+      position: relative;
+      overflow: hidden;
+      margin: 0.5rem 0 2rem;
+      padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 3vw, 2.2rem) clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--d9-white);
+      background:
+        radial-gradient(circle at 25% 30%, rgba(29, 86, 165, 0.48), transparent 38%),
+        radial-gradient(circle at 70% 62%, rgba(0, 0, 0, 0.22), transparent 42%),
+        linear-gradient(180deg, var(--d9-blue-bright) 0%, var(--d9-blue) 100%);
+      border-top: 6px solid var(--d9-red);
+      border-bottom: 6px solid var(--d9-green);
+      box-shadow: 0 22px 44px rgba(8, 46, 111, 0.18);
+    }
+
+    .school-launch-band::before,
+    .school-launch-band::after,
+    .voter-launch-band::before,
+    .voter-launch-band::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 5px;
+      pointer-events: none;
+    }
+
+    .school-launch-band::before,
+    .voter-launch-band::before {
+      top: 42px;
+      background: var(--d9-green);
+    }
+
+    .school-launch-band::after,
+    .voter-launch-band::after {
+      bottom: 24px;
+      background: var(--d9-red);
+      box-shadow: 0 16px 0 var(--d9-green);
+    }
+
+    .launch-motto {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin: 0 0 clamp(2rem, 4vw, 3rem);
+      color: var(--d9-white);
       font-weight: 900;
-      text-decoration: underline;
-      text-underline-offset: 0.35em;
-      text-decoration-thickness: 3px;
+      font-size: clamp(1rem, 1.6vw, 1.35rem);
+      line-height: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .launch-heading {
+      position: relative;
+      z-index: 1;
+      max-width: 78rem;
+      margin: 0 0 clamp(1.8rem, 3vw, 2.35rem);
+    }
+
+    .launch-kicker {
+      margin: 0 0 0.45rem;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 900;
+      font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .launch-heading h2 {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      color: var(--d9-white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 900;
+      font-size: clamp(3.05rem, 7vw, 5.9rem);
+      line-height: 0.94;
+      letter-spacing: -0.045em;
+      text-shadow: 0 3px 0 rgba(0, 0, 0, 0.22);
+      text-wrap: balance;
+    }
+
+    .launch-heading h2::after {
+      content: "";
+      display: block;
+      width: min(310px, 34vw);
+      height: 10px;
+      margin: 0.35rem auto 0;
+      border-radius: 999px;
+      background: var(--d9-gold);
+      transform: rotate(-2deg);
+    }
+
+    .launch-subhead {
+      position: relative;
+      z-index: 1;
+      margin: -1.25rem 0 1.75rem;
+      max-width: 52rem;
+      color: rgba(255,255,255,0.95);
+      font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+      line-height: 1.35;
+    }
+
+    .launch-steps-row {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(1rem, 2.2vw, 2rem);
+      align-items: start;
+    }
+
+    .launch-step {
+      min-width: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--d9-white);
+      text-decoration: none;
+    }
+
+    a.launch-step:hover h3,
+    a.launch-step:focus h3 {
+      color: var(--d9-gold);
+    }
+
+    .launch-icon-wrap {
+      position: relative;
+      width: clamp(150px, 17vw, 220px);
+      height: clamp(150px, 17vw, 220px);
+      margin-bottom: 0.55rem;
+    }
+
+    .launch-icon-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: clamp(7px, 0.8vw, 11px) solid var(--d9-white);
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.18),
+        0 14px 28px rgba(0, 0, 0, 0.28);
+    }
+
+    .launch-icon-circle svg {
+      width: 78%;
+      height: 78%;
+      overflow: visible;
+    }
+
+    .launch-icon-circle .stroke-white,
+    .launch-icon-circle .stroke-black,
+    .launch-icon-circle .stroke-red,
+    .launch-icon-circle .stroke-green,
+    .launch-icon-circle .stroke-gold {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .launch-icon-circle .stroke-white { stroke: var(--d9-white); }
+    .launch-icon-circle .stroke-black { stroke: var(--d9-black); }
+    .launch-icon-circle .stroke-red { stroke: var(--d9-red); }
+    .launch-icon-circle .stroke-green { stroke: var(--d9-green); }
+    .launch-icon-circle .stroke-gold { stroke: var(--d9-gold); }
+    .launch-icon-circle .fill-white { fill: var(--d9-white); }
+    .launch-icon-circle .fill-black { fill: var(--d9-black); }
+    .launch-icon-circle .fill-red { fill: var(--d9-red); }
+    .launch-icon-circle .fill-green { fill: var(--d9-green); }
+    .launch-icon-circle .fill-gold { fill: var(--d9-gold); }
+    .launch-icon-circle .fill-blue { fill: var(--d9-blue); }
+
+    .launch-step.gold .launch-icon-circle { background: var(--d9-gold); }
+    .launch-step.red .launch-icon-circle { background: var(--d9-red); }
+    .launch-step.black .launch-icon-circle { background: var(--d9-black); }
+    .launch-step.green .launch-icon-circle { background: var(--d9-green); }
+
+    .launch-icon-burst {
+      position: absolute;
+      inset: -16px;
+      pointer-events: none;
+    }
+
+    .launch-icon-burst span {
+      position: absolute;
+      display: block;
+      width: clamp(22px, 3vw, 36px);
+      height: clamp(7px, 0.8vw, 11px);
+      border-radius: 999px;
+      background: var(--d9-white);
+    }
+
+    .launch-step.gold .launch-icon-burst span,
+    .launch-step.green .launch-icon-burst span {
+      background: var(--d9-gold);
+    }
+
+    .launch-step.red .launch-icon-burst span {
+      background: #ff3434;
+    }
+
+    .launch-step.black .launch-icon-burst span {
+      background: var(--d9-white);
+    }
+
+    .launch-icon-burst span:nth-child(1) { left: -3%; top: 22%; transform: rotate(48deg); }
+    .launch-icon-burst span:nth-child(2) { right: -2%; top: 28%; transform: rotate(-52deg); }
+    .launch-icon-burst span:nth-child(3) { right: 3%; bottom: 12%; transform: rotate(45deg); }
+
+    .launch-step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: clamp(62px, 6vw, 86px);
+      padding: 0.35rem 0.8rem;
+      margin: 0 0 0.65rem;
+      border-radius: 999px;
+      border: 5px solid var(--d9-white);
+      color: var(--d9-white);
+      font-weight: 950;
+      font-size: clamp(1.15rem, 2.1vw, 1.85rem);
+      line-height: 1;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+    }
+
+    .launch-step.gold .launch-step-number { background: var(--d9-gold); color: var(--d9-black); }
+    .launch-step.red .launch-step-number { background: var(--d9-red); color: var(--d9-white); }
+    .launch-step.black .launch-step-number { background: var(--d9-black); color: var(--d9-white); }
+    .launch-step.green .launch-step-number { background: var(--d9-green); color: var(--d9-white); }
+
+    .launch-step h3 {
+      margin: 0 0 0.35rem;
+      color: var(--d9-white);
+      font-weight: 950;
+      font-size: clamp(1.55rem, 2.6vw, 2.35rem);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+      text-shadow: 0 2px 0 rgba(0, 0, 0, 0.22);
+      text-wrap: balance;
+    }
+
+    .launch-step p {
+      margin: 0;
+      max-width: 16rem;
+      color: rgba(255, 255, 255, 0.97);
+      font-size: clamp(1.02rem, 1.35vw, 1.32rem);
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+
+    .launch-action {
+      display: inline-block;
+      margin-top: 0.65rem;
+      color: var(--d9-gold);
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    /* Secondary school details: icon-first, same family as the approved launch badges */
+    .school-methods-band {
+      position: relative;
+      overflow: hidden;
+      margin: 2rem 0 1.4rem;
+      padding: clamp(1rem, 2vw, 1.35rem);
+      background:
+        linear-gradient(90deg, var(--d9-red) 0 33%, var(--d9-black) 33% 66%, var(--d9-green) 66% 100%) top / 100% 6px no-repeat,
+        linear-gradient(180deg, var(--d9-blue-bright) 0%, var(--d9-blue) 100%);
+      border: 3px solid var(--d9-white);
+      box-shadow: 0 16px 30px rgba(8, 46, 111, 0.16);
+      color: var(--d9-white);
+    }
+
+    .school-methods-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 0.4rem 0 1.1rem;
+    }
+
+    .school-methods-heading p {
+      margin: 0;
+      color: var(--d9-white);
+    }
+
+    .school-methods-heading .mini-label {
+      color: var(--d9-gold);
+    }
+
+    .school-methods-heading h3 {
+      margin: 0.2rem 0 0;
+      color: var(--d9-white);
+      font-size: clamp(1.5rem, 3vw, 2.35rem);
+      line-height: 1;
+    }
+
+    .school-methods-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .school-method-card {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.32);
+      color: var(--d9-white);
+    }
+
+    .school-method-card .mini-label,
+    .school-method-card h3,
+    .school-method-card p {
+      color: var(--d9-white);
+    }
+
+    .school-method-card .mini-label {
+      margin-bottom: 0.25rem;
+      color: var(--d9-gold);
+    }
+
+    .school-method-card h3 {
+      margin-bottom: 0.25rem;
+      font-size: clamp(1.25rem, 2vw, 1.7rem);
+    }
+
+    .school-method-card p {
+      margin: 0;
+      line-height: 1.32;
+      font-size: 1rem;
+    }
+
+    .school-method-card .inline-link {
+      display: inline-block;
+      margin-top: 0.45rem;
+      color: var(--d9-gold) !important;
+      font-weight: 900;
+    }
+
+    .mini-badge {
+      width: clamp(82px, 8vw, 108px);
+      height: clamp(82px, 8vw, 108px);
+      flex: 0 0 auto;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 6px solid var(--d9-white);
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.22);
+    }
+
+    .mini-badge svg {
+      width: 74%;
+      height: 74%;
+      overflow: visible;
+    }
+
+    .mini-badge.gold { background: var(--d9-gold); }
+    .mini-badge.red { background: var(--d9-red); }
+    .mini-badge.black { background: var(--d9-black); }
+    .mini-badge.green { background: var(--d9-green); }
+
+    .mini-badge .stroke-white,
+    .mini-badge .stroke-black,
+    .mini-badge .stroke-red,
+    .mini-badge .stroke-green,
+    .mini-badge .stroke-gold {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .mini-badge .stroke-white { stroke: var(--d9-white); }
+    .mini-badge .stroke-black { stroke: var(--d9-black); }
+    .mini-badge .stroke-red { stroke: var(--d9-red); }
+    .mini-badge .stroke-green { stroke: var(--d9-green); }
+    .mini-badge .stroke-gold { stroke: var(--d9-gold); }
+    .mini-badge .fill-white { fill: var(--d9-white); }
+    .mini-badge .fill-black { fill: var(--d9-black); }
+    .mini-badge .fill-red { fill: var(--d9-red); }
+    .mini-badge .fill-green { fill: var(--d9-green); }
+    .mini-badge .fill-gold { fill: var(--d9-gold); }
+
+    .basics-badge-strip {
+      margin: 1rem 0 0;
+      padding-top: 1rem;
+      border-top: 2px solid rgba(255,255,255,0.24);
+    }
+
+    .basics-badge-strip h4 {
+      margin: 0 0 0.85rem;
+      color: var(--d9-white);
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+    }
+
+    .basics-badge-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .basics-badge {
+      text-align: center;
+      color: var(--d9-white);
+    }
+
+    .basics-badge .mini-badge {
+      width: clamp(66px, 6.5vw, 86px);
+      height: clamp(66px, 6.5vw, 86px);
+      margin: 0 auto 0.45rem;
+      border-width: 5px;
+    }
+
+    .basics-badge b {
+      display: block;
+      margin: 0;
+      color: var(--d9-white);
+      font-size: clamp(0.86rem, 1.2vw, 1rem);
+      line-height: 1.1;
+    }
+
+    .basics-badge span {
+      display: block;
+      margin-top: 0.15rem;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.78rem;
+      line-height: 1.18;
+    }
+
+    .toolkit-asset-card,
+    .training-card {
+      border-top-width: 8px;
+    }
+
+    .toolkit-icon {
+      display: inline-flex;
+      width: 76px;
+      height: 76px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      border-radius: 999px;
+      border: 5px solid var(--d9-white);
+      background: var(--d9-blue);
+      color: var(--d9-white);
+      box-shadow: 0 0 0 3px var(--d9-gold);
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    .training-points.icon-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .training-points.icon-points li {
+      display: flex;
+      gap: 0.45rem;
+      align-items: flex-start;
+      margin: 0;
+    }
+
+    .training-points.icon-points li::before {
+      content: "●";
+      color: var(--d9-gold);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .contact-card::before {
+      content: "★";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 3px solid var(--d9-white);
+      background: var(--d9-gold);
+      color: var(--d9-black);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .contact-card.contact-red::before { background: var(--d9-red); color: var(--d9-white); }
+    .contact-card.contact-green::before { content: "✓"; background: var(--d9-green); color: var(--d9-white); }
+    .contact-card.contact-gold::before { content: "✦"; background: var(--d9-gold); color: var(--d9-black); }
+
+    @media (max-width: 980px) {
+      .school-methods-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .basics-badge-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .school-methods-heading {
+        display: block;
+      }
+
+      .school-method-card {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .basics-badge-grid,
+      .training-points.icon-points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Mature recognition / awards treatment */
+    .recognition-section {
+      background: var(--d9-blue-deep);
+      color: var(--d9-white);
+      border-top: 6px solid var(--d9-red);
+      border-bottom: 6px solid var(--d9-green);
+    }
+
+    .recognition-section .kicker,
+    .recognition-section h2,
+    .recognition-section p {
+      color: var(--d9-white);
+    }
+
+    .recognition-section .section-title {
+      max-width: 850px;
+    }
+
+    .award-grid {
+      gap: 1.4rem;
+    }
+
+    .award-card {
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(255,255,255,0.22);
+      border-top: 8px solid var(--d9-gold);
+      box-shadow: 0 18px 34px rgba(0,0,0,0.25);
+    }
+
+    .award-card img {
+      border-bottom: 4px solid var(--d9-white);
+    }
+
+    .award-card figcaption {
+      color: var(--d9-white);
+      font-weight: 900;
+      font-size: 1.05rem;
+      padding: 1rem;
+    }
+
+    /* Contact/footer: keep black visible through white/gold separation */
+    .contact-section,
+    .site-footer {
+      background:
+        linear-gradient(90deg, var(--d9-red) 0 33%, var(--d9-black) 33% 66%, var(--d9-green) 66% 100%) top / 100% 10px no-repeat,
+        var(--d9-black);
+      color: var(--d9-white);
+      border-top: 4px solid var(--d9-white);
+    }
+
+    .contact-section .kicker,
+    .contact-section h2,
+    .contact-section p,
+    .site-footer,
+    .site-footer p,
+    .site-footer small,
+    .site-footer strong {
+      color: var(--d9-white) !important;
+    }
+
+    .contact-email a {
+      color: var(--d9-gold) !important;
+      font-weight: 900;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.08) !important;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-top-width: 6px;
+      color: var(--d9-white);
+    }
+
+    .contact-card span,
+    .contact-card strong {
+      color: var(--d9-white) !important;
+    }
+
+    .site-footer {
+      border-top: 6px solid var(--d9-white);
+    }
+
+    .site-footer .footer-inner {
+      max-width: 1280px;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .site-footer img {
+      width: clamp(95px, 10vw, 150px) !important;
+      height: auto;
+      filter: drop-shadow(0 0 0 var(--d9-white)) drop-shadow(0 8px 12px rgba(0,0,0,0.4));
+    }
+
+    .site-footer strong {
+      display: block;
+      font-size: clamp(1.35rem, 2.4vw, 2rem);
+      line-height: 1.1;
+    }
+
+    .site-footer p {
+      color: var(--d9-gold) !important;
+      font-weight: 900;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .launch-steps-row,
+      .compact-basics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .site-nav .brand-link img {
+        width: 64px;
+      }
+
+      .school-launch-band,
+      .voter-launch-band {
+        padding: 1rem 0.9rem 1.65rem;
+      }
+
+      .school-launch-band::before,
+      .voter-launch-band::before { top: 34px; }
+
+      .launch-motto {
+        font-size: 0.8rem;
+        letter-spacing: 0.11em;
+        margin-bottom: 1.4rem;
+      }
+
+      .launch-heading h2 {
+        font-size: clamp(2.35rem, 12vw, 3.55rem);
+      }
+
+      .launch-subhead {
+        margin-top: -0.75rem;
+      }
+
+      .launch-steps-row,
+      .school-options.compact-school-options,
+      .compact-basics {
+        grid-template-columns: 1fr;
+      }
+
+      .launch-step p {
+        max-width: 18rem;
+      }
+    }
+
+    /* Footer/header service line correction: gold is accent only */
+    .site-footer p {
+      color: var(--d9-white) !important;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .site-footer .footer-service,
+    .site-footer .footer-motto {
+      color: var(--d9-white) !important;
+    }
+
+    .site-footer .footer-divider {
+      color: var(--d9-gold) !important;
+      font-weight: 950;
+      padding: 0 0.35rem;
     }
 
   </style>
@@ -345,69 +1002,203 @@
       <div class="section-inner">
         <div class="school-launch-band" aria-label="School campaign launch steps">
           <div class="launch-motto">YOUR CHOICE. YOUR VOICE. YOUR VOTE.</div>
-          <p class="launch-kicker">FOR SCHOOLS</p>
-          <h2>Simple to launch. Easy to manage.</h2>
-          <div class="launch-accent-line" aria-hidden="true"></div>
-          <p class="launch-subhead">A bold, student-friendly four-step setup schools can understand at a glance.</p>
+
+          <div class="launch-heading">
+            <p class="launch-kicker">FOR SCHOOLS</p>
+            <h2>Simple to launch. Easy to manage.</h2>
+          </div>
 
           <div class="launch-steps-row">
-            <article class="launch-step">
+            <article class="launch-step gold">
               <div class="launch-icon-wrap">
-                <div class="launch-icon-circle" aria-hidden="true"><span class="icon-emoji">👥</span></div>
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <circle class="fill-white" cx="34" cy="63" r="16"/>
+                    <circle class="fill-white" cx="86" cy="63" r="16"/>
+                    <circle class="fill-black" cx="60" cy="51" r="18"/>
+                    <path class="stroke-black" stroke-width="8" d="M20 95c1-18 27-25 40-10"/>
+                    <path class="stroke-black" stroke-width="8" d="M60 85c13-15 39-8 40 10"/>
+                    <path class="stroke-white" stroke-width="8" d="M34 31v-14M17 43 7 33M103 33 93 43"/>
+                    <path class="fill-white" d="M27 103c3-25 63-25 66 0Z"/>
+                    <path class="stroke-black" stroke-width="8" d="M27 103c3-25 63-25 66 0"/>
+                  </svg>
+                </div>
               </div>
               <div class="launch-step-number">01</div>
               <h3>Identify a Liaison</h3>
               <p>Choose one school point person.</p>
             </article>
 
-            <article class="launch-step">
+            <article class="launch-step red">
               <div class="launch-icon-wrap">
-                <div class="launch-icon-circle" aria-hidden="true"><span class="icon-emoji">📅</span></div>
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <rect class="fill-white" x="25" y="29" width="64" height="65" rx="8"/>
+                    <path class="stroke-black" stroke-width="7" d="M25 48h64M42 20v21M72 20v21"/>
+                    <path class="stroke-white" stroke-width="6" d="M42 20v13M72 20v13"/>
+                    <rect class="fill-red" x="37" y="59" width="12" height="12" rx="2"/>
+                    <rect class="fill-red" x="56" y="59" width="12" height="12" rx="2"/>
+                    <rect class="fill-red" x="37" y="78" width="12" height="12" rx="2"/>
+                    <rect class="fill-red" x="56" y="78" width="12" height="12" rx="2"/>
+                    <circle class="fill-black" cx="88" cy="85" r="20"/>
+                    <path class="stroke-white" stroke-width="7" d="M88 73v13l10 6"/>
+                  </svg>
+                </div>
               </div>
               <div class="launch-step-number">02</div>
               <h3>Pick Your Timeline</h3>
               <p>Choose what works for your school.</p>
             </article>
 
-            <article class="launch-step">
+            <article class="launch-step black">
               <div class="launch-icon-wrap">
-                <div class="launch-icon-circle" aria-hidden="true"><span class="icon-emoji">📄💻</span></div>
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <rect class="fill-white" x="27" y="21" width="42" height="62" rx="5" transform="rotate(-7 48 52)"/>
+                    <path class="stroke-red" stroke-width="6" d="M39 39h25M41 55h22M43 70h14"/>
+                    <rect class="fill-green" x="59" y="60" width="42" height="28" rx="5"/>
+                    <path class="stroke-white" stroke-width="6" d="M57 93h47M84 31l7-11M96 43l12-6"/>
+                    <path class="stroke-white" stroke-width="5" d="M99 71h5"/>
+                  </svg>
+                </div>
               </div>
               <div class="launch-step-number">03</div>
               <h3>Paper or Online</h3>
-              <p>Use paper forms, online registration, or both.</p>
+              <p>Use what’s best for you.</p>
             </article>
 
-            <article class="launch-step">
+            <article class="launch-step green">
               <div class="launch-icon-wrap">
-                <div class="launch-icon-circle" aria-hidden="true"><span class="icon-emoji">✅📁</span></div>
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <path class="fill-gold" d="M24 39h28l9 9h35c6 0 10 4 10 10v31c0 6-4 10-10 10H24c-6 0-10-4-10-10V49c0-6 4-10 10-10Z"/>
+                    <path class="stroke-white" stroke-width="8" d="M24 39h28l9 9h35c6 0 10 4 10 10v31c0 6-4 10-10 10H24c-6 0-10-4-10-10V49c0-6 4-10 10-10Z"/>
+                    <path class="stroke-white" stroke-width="12" d="m42 73 14 14 29-35"/>
+                  </svg>
+                </div>
               </div>
               <div class="launch-step-number">04</div>
               <h3>We Collect &amp; Track</h3>
-              <p>Keep forms secure and report totals simply.</p>
+              <p>Keep it secure and simple.</p>
             </article>
           </div>
         </div>
 
-        <div class="school-options compact-school-options">
-          <div class="option-block">
-            <p class="mini-label">PAPER APPLICATIONS</p>
-            <h3>Forms at school</h3>
-            <p>D9 Harlem Votes® provides official forms. Schools keep completed applications secure until pickup.</p>
+        <div class="school-methods-band" id="registration-basics" aria-label="School registration options and basics">
+          <div class="school-methods-heading">
+            <div>
+              <p class="mini-label">REGISTRATION OPTIONS</p>
+              <h3>Choose the setup.</h3>
+            </div>
+            <p>Paper, online, or both — keep it simple and secure.</p>
           </div>
-          <div class="option-block">
-            <p class="mini-label">ONLINE APPLICATIONS</p>
-            <h3>Official online registration</h3>
-            <p>Students may register or pre-register online and report completion only for the school’s aggregate campaign count.</p>
-            <a class="inline-link" href="https://e-register.vote.nyc/registration" target="_blank" rel="noopener noreferrer">Open official online registration →</a>
-          </div>
-        </div>
 
-        <div class="compact-basics" id="registration-basics">
-          <div class="compact-basic"><b>Blue or black ink</b><span>Use for paper forms.</span></div>
-          <div class="compact-basic"><b>16–17 may pre-register</b><span>If otherwise eligible.</span></div>
-          <div class="compact-basic"><b>Party choice matters</b><span>Mainly for primary elections.</span></div>
-          <div class="compact-basic"><b>Keep forms secure</b><span>Until D9 Harlem Votes® pickup.</span></div>
+          <div class="school-methods-grid">
+            <article class="school-method-card">
+              <div class="mini-badge red" aria-hidden="true">
+                <svg viewBox="0 0 100 100" focusable="false">
+                  <rect class="fill-white" x="26" y="14" width="48" height="70" rx="6"/>
+                  <path class="stroke-red" stroke-width="6" d="M38 35h25M38 50h25M38 65h16"/>
+                  <path class="stroke-black" stroke-width="7" d="M31 14h38"/>
+                  <path class="stroke-white" stroke-width="7" d="M71 74l10 10 18-25"/>
+                </svg>
+              </div>
+              <div>
+                <p class="mini-label">PAPER APPLICATIONS</p>
+                <h3>Forms at school</h3>
+                <p>Official forms stay secure until pickup.</p>
+              </div>
+            </article>
+
+            <article class="school-method-card">
+              <div class="mini-badge green" aria-hidden="true">
+                <svg viewBox="0 0 100 100" focusable="false">
+                  <rect class="fill-white" x="19" y="27" width="62" height="40" rx="6"/>
+                  <rect class="fill-green" x="27" y="35" width="46" height="24" rx="3"/>
+                  <path class="stroke-white" stroke-width="7" d="M14 73h72"/>
+                  <path class="stroke-gold" stroke-width="8" d="m61 43 8 8 16-22"/>
+                </svg>
+              </div>
+              <div>
+                <p class="mini-label">ONLINE APPLICATIONS</p>
+                <h3>Official online registration</h3>
+                <p>Students complete the official form online.</p>
+                <a class="inline-link" href="https://e-register.vote.nyc/registration" target="_blank" rel="noopener noreferrer">Open registration →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="basics-badge-strip">
+            <h4>Quick reminders</h4>
+            <div class="basics-badge-grid">
+              <div class="basics-badge">
+                <div class="mini-badge gold" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" focusable="false">
+                    <path class="stroke-black" stroke-width="8" d="M70 17 84 31 38 77 20 82l5-18Z"/>
+                    <path class="stroke-white" stroke-width="6" d="M63 24 77 38"/>
+                  </svg>
+                </div>
+                <b>Ink</b><span>Blue or black.</span>
+              </div>
+
+              <div class="basics-badge">
+                <div class="mini-badge red" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" focusable="false">
+                    <rect class="fill-white" x="28" y="15" width="46" height="70" rx="6"/>
+                    <path class="stroke-red" stroke-width="6" d="M39 38h23M39 52h23M39 66h14"/>
+                  </svg>
+                </div>
+                <b>Fresh form</b><span>For major errors.</span>
+              </div>
+
+              <div class="basics-badge">
+                <div class="mini-badge green" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" focusable="false">
+                    <text x="50" y="55" text-anchor="middle" font-size="31" font-weight="900" fill="#fff">16–17</text>
+                    <path class="stroke-gold" stroke-width="6" d="M25 70h50"/>
+                  </svg>
+                </div>
+                <b>Pre-register</b><span>If eligible.</span>
+              </div>
+
+              <div class="basics-badge">
+                <div class="mini-badge black" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" focusable="false">
+                    <rect class="fill-white" x="24" y="30" width="52" height="44" rx="4"/>
+                    <path class="stroke-red" stroke-width="7" d="m37 52 10 10 20-25"/>
+                    <path class="stroke-white" stroke-width="5" d="M32 23h36"/>
+                  </svg>
+                </div>
+                <b>Party choice</b><span>For primaries.</span>
+              </div>
+
+              <div class="basics-badge">
+                <div class="mini-badge gold" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" focusable="false">
+                    <path class="fill-white" d="M18 47 50 22l32 25v35H18Z"/>
+                    <path class="stroke-black" stroke-width="7" d="M18 47 50 22l32 25v35H18Z"/>
+                    <path class="stroke-red" stroke-width="6" d="M38 82V61h24v21"/>
+                  </svg>
+                </div>
+                <b>Address</b><span>Complete fully.</span>
+              </div>
+
+              <div class="basics-badge">
+                <div class="mini-badge green" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" focusable="false">
+                    <path class="fill-gold" d="M18 35h28l8 9h28v37H18Z"/>
+                    <path class="stroke-white" stroke-width="7" d="M18 35h28l8 9h28v37H18Z"/>
+                    <path class="stroke-white" stroke-width="8" d="m39 62 9 9 18-24"/>
+                  </svg>
+                </div>
+                <b>Secure forms</b><span>Until pickup.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="toolkit-downloads">
@@ -427,6 +1218,7 @@
                      alt="Harlem Youth Registered & Ready To Vote social media photo frame">
               </div>
               <div class="toolkit-asset-copy">
+                <span class="toolkit-icon" aria-hidden="true">🖼️</span>
                 <p class="mini-label">SOCIAL MEDIA CAMPAIGN FRAME</p>
                 <h4>Harlem Youth Registered &amp; Ready To Vote</h4>
                 <p>Use for approved student and school campaign photos.</p>
@@ -444,6 +1236,7 @@
                      alt="Harlem Youth Registered & Ready To Vote school participation campaign banner">
               </div>
               <div class="toolkit-asset-copy">
+                <span class="toolkit-icon" aria-hidden="true">📣</span>
                 <p class="mini-label">SCHOOL CAMPAIGN BANNER</p>
                 <h4>School Participation Banner</h4>
                 <p>Use in approved school communications, newsletters, and campaign promotion.</p>
@@ -465,16 +1258,88 @@
 
     <section class="section first-voter" id="first-time-voter">
       <div class="section-inner">
-        <div class="section-title compact">
-          <p class="kicker">FIRST-TIME VOTERS</p>
-          <h2>Registered? Now get ready to vote.</h2>
-          <p>Early Voting: October 24–November 1 &nbsp;•&nbsp; Election Day: November 3, 2026</p>
-        </div>
-        <div class="voter-grid">
-          <a class="voter-card accent-green" href="https://www.vote.nyc/page/find-your-poll-site" target="_blank" rel="noopener noreferrer"><span>01</span><h3>Find Your Poll Site</h3><p>Know where you vote.</p><b>Find it →</b></a>
-          <a class="voter-card accent-red" href="https://www.vote.nyc/page/voter-id" target="_blank" rel="noopener noreferrer"><span>02</span><h3>First-Time Voter ID</h3><p>Know when ID may be requested.</p><b>Learn more →</b></a>
-          <a class="voter-card accent-gold" href="https://findmypollsite.vote.nyc/?lang=en" target="_blank" rel="noopener noreferrer"><span>03</span><h3>See Your Sample Ballot</h3><p>Know what will be on your ballot.</p><b>View ballot info →</b></a>
-          <a class="voter-card accent-blue" href="https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/" target="_blank" rel="noopener noreferrer"><span>04</span><h3>Flip the Ballot</h3><p>Understand the five 2026 ballot proposals.</p><b>View the 5 proposals →</b></a>
+        <div class="voter-launch-band" aria-label="First-time voter readiness steps">
+          <div class="launch-motto">FROM FIRST VOTE TO LIFELONG VOTER</div>
+
+          <div class="launch-heading">
+            <p class="launch-kicker">FIRST-TIME VOTERS</p>
+            <h2>Registered? Now get ready to vote.</h2>
+          </div>
+
+          <p class="launch-subhead">Early Voting: October 24–November 1 &nbsp;•&nbsp; Election Day: November 3, 2026</p>
+
+          <div class="launch-steps-row">
+            <a class="launch-step gold" href="https://www.vote.nyc/page/find-your-poll-site" target="_blank" rel="noopener noreferrer">
+              <div class="launch-icon-wrap">
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <path class="fill-white" d="M60 105s34-36 34-62c0-20-15-34-34-34S26 23 26 43c0 26 34 62 34 62Z"/>
+                    <path class="stroke-black" stroke-width="8" d="M60 105s34-36 34-62c0-20-15-34-34-34S26 23 26 43c0 26 34 62 34 62Z"/>
+                    <circle class="fill-black" cx="60" cy="43" r="13"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="launch-step-number">01</div>
+              <h3>Find Your Poll Site</h3>
+              <p>Know where you vote.</p>
+              <span class="launch-action">Find it →</span>
+            </a>
+
+            <a class="launch-step red" href="https://www.vote.nyc/page/voter-id" target="_blank" rel="noopener noreferrer">
+              <div class="launch-icon-wrap">
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <rect class="fill-white" x="20" y="30" width="80" height="58" rx="8"/>
+                    <path class="stroke-black" stroke-width="7" d="M20 47h80"/>
+                    <circle class="fill-black" cx="43" cy="67" r="11"/>
+                    <path class="stroke-red" stroke-width="6" d="M62 64h23M62 76h18"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="launch-step-number">02</div>
+              <h3>First-Time Voter ID</h3>
+              <p>Know when ID may be requested.</p>
+              <span class="launch-action">Learn more →</span>
+            </a>
+
+            <a class="launch-step black" href="https://findmypollsite.vote.nyc/?lang=en" target="_blank" rel="noopener noreferrer">
+              <div class="launch-icon-wrap">
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <path class="fill-white" d="M31 16h46l12 12v76H31Z"/>
+                    <path class="stroke-white" stroke-width="8" d="M31 16h46l12 12v76H31Z"/>
+                    <path class="stroke-red" stroke-width="6" d="M45 45h32M45 61h32M45 77h22"/>
+                    <path class="stroke-green" stroke-width="8" d="m72 88 9 9 18-23"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="launch-step-number">03</div>
+              <h3>See Your Sample Ballot</h3>
+              <p>Know what will be on your ballot.</p>
+              <span class="launch-action">View ballot info →</span>
+            </a>
+
+            <a class="launch-step green" href="https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/" target="_blank" rel="noopener noreferrer">
+              <div class="launch-icon-wrap">
+                <div class="launch-icon-burst" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="launch-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" focusable="false">
+                    <rect class="fill-gold" x="27" y="24" width="66" height="76" rx="7"/>
+                    <path class="stroke-white" stroke-width="8" d="M27 24h66v76H27Z"/>
+                    <path class="stroke-white" stroke-width="9" d="m43 68 14 14 28-38"/>
+                    <path class="stroke-black" stroke-width="6" d="M43 43h30"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="launch-step-number">04</div>
+              <h3>Flip the Ballot</h3>
+              <p>Understand the five 2026 ballot proposals.</p>
+              <span class="launch-action">View proposals →</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -491,11 +1356,12 @@
           </p>
         </div>
 
-        <div class="training-grid">
-          <article class="training-card training-primary">
+        <div class="training-grid icon-training-grid">
+          <article class="training-card training-primary icon-training-card">
+            <span class="toolkit-icon" aria-hidden="true">🎓</span>
             <p class="mini-label">ONLINE SELF-TRAINING</p>
             <h3>Learn the essentials before serving.</h3>
-            <ul class="training-points">
+            <ul class="training-points icon-points">
               <li>Voter registration essentials</li>
               <li>Ballot literacy</li>
               <li>Civic participation beyond the ballot box</li>
@@ -511,7 +1377,8 @@
             </p>
           </article>
 
-          <article class="training-card curriculum-card">
+          <article class="training-card curriculum-card icon-training-card">
+            <span class="toolkit-icon" aria-hidden="true">📚</span>
             <p class="mini-label">CIVIC EDUCATION CURRICULUM TEAM</p>
             <h3>Built by the D9 Harlem Votes® team.</h3>
             <p>
@@ -659,8 +1526,14 @@
           <p>On August 16, 2026, D9 Harlem Votes® received the <strong>Divine 9 Festival Legacy Award</strong> and a <strong>Certificate of Recognition from New York State Senator Cordell Cleare</strong> for service, leadership and civic engagement in Harlem.</p>
         </div>
         <div class="award-grid">
-          <figure class="award-card"><img src="assets/award-legacy.jpg" alt="Divine 9 Festival Legacy Award presented to D9 Harlem Votes"><figcaption>Divine 9 Festival Legacy Award</figcaption></figure>
-          <figure class="award-card"><img src="assets/award-cleare.jpg" alt="Certificate of Recognition presented to D9 Harlem Votes by New York State Senator Cordell Cleare"><figcaption>Certificate of Recognition — Senator Cordell Cleare</figcaption></figure>
+          <figure class="award-card">
+            <img src="assets/award-legacy.jpg" alt="Divine 9 Festival Legacy Award presented to D9 Harlem Votes">
+            <figcaption>Divine 9 Festival Legacy Award</figcaption>
+          </figure>
+          <figure class="award-card">
+            <img src="assets/award-cleare.jpg" alt="Certificate of Recognition presented to D9 Harlem Votes by New York State Senator Cordell Cleare">
+            <figcaption>Certificate of Recognition — Senator Cordell Cleare</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -712,8 +1585,8 @@
     <div class="footer-inner">
       <img src="assets/d9-logo-transparent.png" alt="D9 Harlem Votes® logo">
       <div>
-        <strong>D9 Harlem Votes®</strong>
-        <p>We Serve Harlem First. &nbsp;|&nbsp; Your Choice. Your Voice. Your Vote.</p>
+        <strong><span class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes®</span></span></strong>
+        <p><span class="footer-service">We Serve Harlem First.</span> <span class="footer-divider">|</span> <span class="footer-motto">Your Choice. Your Voice. Your Vote.</span></p>
         <small>© 2026 D9 Harlem Votes®. All rights reserved. The D9 Harlem Votes® name, logo, campaign graphics and related branding may not be used without permission.</small>
       </div>
     </div>

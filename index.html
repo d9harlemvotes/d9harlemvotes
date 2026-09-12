@@ -4312,7 +4312,98 @@
     padding: 0.75rem !important;
   }
 }
-</style></head>
+</style>
+<style id="d9-impact-documented-numbers-fix">
+#impact .locked-impact-stat-context {
+  max-width: 920px !important;
+  margin: clamp(1.45rem, 2.8vw, 2.25rem) 0 0 !important;
+}
+#impact .locked-impact-stat-heading {
+  color: #fff !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: clamp(1.65rem, 2.7vw, 2.55rem) !important;
+  line-height: 1.05 !important;
+  margin: 0 0 0.55rem !important;
+  letter-spacing: -0.02em !important;
+}
+#impact .locked-impact-total {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 0.72rem !important;
+  color: #fff !important;
+  margin: 0.15rem 0 0.7rem !important;
+}
+#impact .locked-impact-total strong {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: clamp(2.55rem, 5.6vw, 5.25rem) !important;
+  line-height: 0.95 !important;
+  color: var(--d9-gold, #f3c21c) !important;
+  letter-spacing: -0.045em !important;
+}
+#impact .locked-impact-total span {
+  color: rgba(255,255,255,0.92) !important;
+  font-weight: 900 !important;
+  font-size: clamp(1rem, 1.45vw, 1.25rem) !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.055em !important;
+}
+#impact .locked-impact-rationale {
+  max-width: 860px !important;
+  color: rgba(255,255,255,0.84) !important;
+  font-size: clamp(0.93rem, 1.05vw, 1.02rem) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+#impact .locked-stat-row {
+  max-width: 880px !important;
+  margin-top: clamp(1.25rem, 2.3vw, 1.9rem) !important;
+}
+#impact .locked-stat strong {
+  font-size: clamp(1.35rem, 2.25vw, 2.05rem) !important;
+}
+#impact .botg-card {
+  background: rgba(3, 21, 52, 0.62) !important;
+  overflow: hidden !important;
+}
+#impact .botg-card img {
+  object-fit: contain !important;
+  object-position: center top !important;
+  background: rgba(3, 21, 52, 0.62) !important;
+}
+#impact .locked-gallery-heading h3 {
+  color: #fff !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  letter-spacing: -0.015em !important;
+}
+@media (max-width: 760px) {
+  #impact .locked-impact-total {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+  }
+}
+
+
+    /* CONTACT PAGE EMAIL FIT — keep address on one line */
+    .final-contact-page .contact-email-clean a {
+      display: inline-block;
+      max-width: 100%;
+      font-size: clamp(1.05rem, 1.55vw, 1.42rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      word-break: normal !important;
+      overflow-wrap: normal !important;
+    }
+
+    @media (max-width: 520px) {
+      .final-contact-page .contact-email-clean a {
+        font-size: clamp(0.95rem, 4vw, 1.08rem) !important;
+      }
+    }
+</style>
+</head>
 <body>
 <div aria-hidden="true" class="brand-stripe"><span></span><span></span><span></span></div>
 <nav aria-label="Main navigation" class="site-nav">
@@ -4527,16 +4618,21 @@
 <p class="kicker light">COMMUNITY IMPACT</p>
 <h2>Boots on the Ground</h2>
 <p class="locked-impact-intro">D9 Harlem Votes® Boots on the Ground is our signature voter-registration activation, bringing Steering Committee Members and partner organizations together across Harlem to educate, engage, and register voters.</p>
-<div aria-label="June–August 2026 impact statistics" class="locked-stat-row">
-<div class="locked-stat locked-red"><strong class="counter locked-impact-counter" data-target="864">0</strong><span>Voter-Engagement Actions</span></div>
-<div class="locked-stat locked-gold"><strong class="counter locked-impact-counter" data-target="64">0</strong><span>Completed Voter-Registration Submissions</span></div>
+<div class="locked-impact-stat-context">
+<h3 class="locked-impact-stat-heading">Documented Impact to Date</h3>
+<p class="locked-impact-total"><strong class="counter locked-impact-counter locked-impact-total-number" data-target="1640">0</strong><span>Documented Impact Actions</span></p>
+<p class="locked-impact-rationale">D9 Harlem Votes® began organizing in 2024, was officially chartered in 2025, and began formal impact tracking in June 2026. These figures reflect documented 2025 activity and formally tracked 2026 voter engagement, registration, voting-plan, and volunteer activity.</p>
+</div>
+<div aria-label="Documented impact to date statistics" class="locked-stat-row">
+<div class="locked-stat locked-red"><strong class="counter locked-impact-counter" data-target="1030">0</strong><span>Voter-Engagement Actions</span></div>
+<div class="locked-stat locked-gold"><strong class="counter locked-impact-counter" data-target="85">0</strong><span>Completed Voter-Registration Submissions</span></div>
 <div class="locked-stat locked-green"><strong class="counter locked-impact-counter" data-target="525">0</strong><span>Documented Voting Plans</span></div>
 <div class="locked-stat locked-black"><strong class="counter locked-impact-counter" data-target="30">0</strong><span>Volunteers</span></div>
 </div>
 </div></div>
 <div aria-label="D9 Harlem Votes Boots on the Ground photo carousel" class="section-inner locked-botg-gallery">
 <div class="locked-gallery-heading">
-<h3>D9 Harlem Votes® Boots on the Ground Activation</h3>
+<h3>Activation Gallery</h3>
 <div aria-hidden="true" class="locked-gallery-rule"><span></span><span></span><span></span></div>
 </div>
 <div class="botg-carousel" data-botg-carousel="">
@@ -5031,5 +5127,70 @@
   window.addEventListener('hashchange', function () { setTimeout(setupBootsLightbox, 80); });
   setTimeout(setupBootsLightbox, 0);
 })();
-</script></body>
+</script>
+<script id="d9-impact-counter-final-override">
+(function () {
+  function visibleImpact() {
+    var impact = document.getElementById('impact');
+    if (!impact || impact.hasAttribute('hidden')) return null;
+    var style = window.getComputedStyle ? window.getComputedStyle(impact) : null;
+    if (style && style.display === 'none') return null;
+    return impact;
+  }
+
+  function animateFinalImpactCounters() {
+    var impact = visibleImpact();
+    if (!impact) return;
+    var counters = Array.prototype.slice.call(impact.querySelectorAll('.locked-impact-counter[data-target]'));
+    if (!counters.length || impact.dataset.finalImpactCountersAnimated === 'true') return;
+    impact.dataset.finalImpactCountersAnimated = 'true';
+
+    counters.forEach(function (counter) {
+      counter.dataset.done = 'false';
+      counter.textContent = '0';
+    });
+
+    var duration = 1350;
+    var start = null;
+    function tick(timestamp) {
+      if (!start) start = timestamp;
+      var progress = Math.min((timestamp - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      counters.forEach(function (counter) {
+        var target = parseInt(counter.getAttribute('data-target') || '0', 10);
+        counter.textContent = Math.round(target * eased).toLocaleString();
+      });
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        counters.forEach(function (counter) {
+          counter.textContent = parseInt(counter.getAttribute('data-target') || '0', 10).toLocaleString();
+        });
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function checkSoon() {
+    window.setTimeout(animateFinalImpactCounters, 260);
+  }
+
+  document.addEventListener('DOMContentLoaded', checkSoon);
+  window.addEventListener('hashchange', checkSoon);
+  window.addEventListener('popstate', checkSoon);
+  document.addEventListener('click', function (event) {
+    if (event.target.closest('a[href="#impact"], a[href$="#impact"], [data-target="impact"], [data-section="impact"]')) {
+      checkSoon();
+    }
+  });
+
+  var impact = document.getElementById('impact');
+  if (impact && window.MutationObserver) {
+    new MutationObserver(checkSoon).observe(impact, { attributes: true, attributeFilter: ['hidden', 'class', 'style'] });
+  }
+
+  if (document.readyState !== 'loading') checkSoon();
+}());
+</script>
+</body>
 </html>

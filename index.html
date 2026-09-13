@@ -9,9 +9,9 @@
 <link href="styles.css?v=8" rel="stylesheet"/>
 <style>
     :root {
-      --d9-blue: #062c6c;
-      --d9-blue-deep: #041b43;
-      --d9-blue-bright: #0b3b8c;
+      --d9-blue: #000f4a;
+      --d9-blue-deep: #000f4a;
+      --d9-blue-bright: #000f4a;
       --d9-red: #e31c24;
       --d9-green: #0e8f58;
       --d9-black: #111111;
@@ -850,6 +850,7 @@
       display: block;
       font-size: clamp(1.35rem, 2.4vw, 2rem);
       line-height: 1.1;
+      font-weight: 400 !important;
     }
 
     .site-footer p {
@@ -1038,10 +1039,8 @@
     }
 
     .pro-frame {
-      border: 6px solid var(--d9-white);
-      box-shadow:
-        0 0 0 5px var(--d9-gold),
-        0 18px 34px rgba(0,0,0,0.28);
+      border: none;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.16);
       background: var(--d9-black);
       overflow: hidden;
     }
@@ -1945,20 +1944,11 @@
     }
 
     .final-about-photo::before {
-      content: '';
-      position: absolute;
-      inset: -12px;
-      border: 4px solid var(--d9-gold);
-      pointer-events: none;
-      z-index: 0;
+      display: none;
     }
 
     .final-about-photo::after {
-      content: '';
-      position: absolute;
-      inset: -6px;
-      background: var(--d9-white);
-      z-index: 0;
+      display: none;
     }
 
     .final-about-photo img {
@@ -3044,6 +3034,8 @@
   font-size: clamp(2.35rem, 4.4vw, 4.45rem) !important;
   line-height: 0.95 !important;
   margin: 0 !important;
+  max-width: 20ch;
+  word-spacing: 9999px;
 }
 .youth-launch-heading h2::after {
   content: "";
@@ -4133,9 +4125,9 @@
   aspect-ratio: 1.7/1;
   box-shadow: 0 10px 24px rgba(0,0,0,0.28);
 }
-.botg-card.botg-red { box-shadow: 0 0 0 4px var(--d9-red, #e31c24), 0 10px 24px rgba(0,0,0,0.28); }
-.botg-card.botg-gold { box-shadow: 0 0 0 4px var(--d9-gold, #f3c21c), 0 10px 24px rgba(0,0,0,0.28); }
-.botg-card.botg-green { box-shadow: 0 0 0 4px var(--d9-green, #0e8f58), 0 10px 24px rgba(0,0,0,0.28); }
+.botg-card.botg-red { box-shadow: 0 10px 24px rgba(0,0,0,0.28); }
+.botg-card.botg-gold { box-shadow: 0 10px 24px rgba(0,0,0,0.28); }
+.botg-card.botg-green { box-shadow: 0 10px 24px rgba(0,0,0,0.28); }
 .botg-card img {
   display: block;
   width: 100%;

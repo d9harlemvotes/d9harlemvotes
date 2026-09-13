@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="D9 Harlem Votes® — Harlem Youth Registered &amp; Ready To Vote campaign, school resources, first-time voter information, voter education, community impact and civic engagement in Harlem." name="description"/>
 <title>D9 Harlem Votes® | Harlem Youth Registered &amp; Ready To Vote</title>
-<link href="styles.css?v=9" rel="stylesheet"/>
+<link href="styles.css?v=10" rel="stylesheet"/>
 <style>
     :root {
       --d9-blue: #000f4a;
@@ -21,7 +21,7 @@
     }
 
     body {
-      background: var(--d9-cream);
+      background: var(--d9-blue-deep);
     }
 
     /* Keep the name from appearing as blue text */
@@ -908,8 +908,7 @@
     /* Professional page pass: Community Impact style, no continuous scroll */
     .site-nav {
       background: var(--d9-blue-deep) !important;
-      border-top: 6px solid var(--d9-red);
-      border-bottom: 6px solid var(--d9-green);
+      border: 0 !important;
     }
 
     .site-nav .nav-inner {
@@ -2579,8 +2578,7 @@
     /* FINAL LOCKED NAV + FIRST PAGE REPAIR — 2026-09-11 */
     .site-nav {
       background: var(--d9-blue-deep) !important;
-      border-top: 6px solid var(--d9-red) !important;
-      border-bottom: 6px solid var(--d9-green) !important;
+      border: 0 !important;
       box-shadow: 0 8px 18px rgba(0,0,0,0.20) !important;
     }
 
@@ -3221,6 +3219,7 @@
 .natural-school-title span {
   display: block !important;
   white-space: normal !important;
+  color: var(--d9-white) !important;
 }
 .natural-school-title .gold {
   color: var(--d9-gold) !important;
@@ -4868,20 +4867,23 @@
 }
 </style>
 <style id="d9-footer-sleek-final">
-  /* Approved shared footer typography update. */
+  /* Shared footer typography: clean, light, and readable. */
   .site-footer,
   .site-footer strong,
   .site-footer p,
   .site-footer small {
-    font-family: "Avenir Next", "Segoe UI Variable", "Segoe UI", Helvetica, Arial, sans-serif !important;
+    font-family: "Helvetica Neue", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   .site-footer .footer-wordmark {
     display: block;
     margin: 0;
     font-size: clamp(1.45rem, 2.15vw, 2rem) !important;
-    font-weight: 500 !important;
-    letter-spacing: -0.035em;
+    font-weight: 400 !important;
+    letter-spacing: -0.025em;
     line-height: 1;
   }
 
@@ -4898,7 +4900,7 @@
     color: rgba(255, 255, 255, 0.82) !important;
     font-family: inherit;
     font-size: 0.31em;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1;
     vertical-align: top;
     transform: translateY(0.06em);
@@ -4907,7 +4909,7 @@
   .site-footer p {
     margin: 0.72rem 0 0.55rem !important;
     font-size: clamp(0.88rem, 1.05vw, 1rem) !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     letter-spacing: -0.012em;
     line-height: 1.35;
   }
@@ -4915,7 +4917,7 @@
   .site-footer .footer-divider {
     color: var(--d9-gold) !important;
     padding: 0 0.48rem !important;
-    font-weight: 650 !important;
+    font-weight: 400 !important;
   }
 
   .site-footer small {
@@ -4935,6 +4937,55 @@
 
     .site-footer p {
       font-size: 0.88rem !important;
+    }
+  }
+</style>
+<style id="d9-branding-cleanup-final">
+  /* Final cascade cleanup: remove legacy cream surfaces and stripe borders. */
+  html,
+  body {
+    background: var(--d9-blue-deep) !important;
+  }
+
+  body.tabbed-site main,
+  body.tabbed-site main > section.section,
+  .events-section,
+  .site-footer {
+    background-color: transparent !important;
+  }
+
+  /* Keep the navbar stripe unobstructed on every routed tab. */
+  body.tabbed-site main > section.section.tab-start {
+    border-top: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .site-nav {
+    border: 0 !important;
+  }
+
+  /* Make the organization logo a visible brand anchor. */
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img {
+    width: clamp(104px, 7.5vw, 132px) !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Only “Registered” and “Vote” use the gold accent. */
+  .natural-school-title > span {
+    color: var(--d9-white) !important;
+  }
+
+  .natural-school-title > span.gold,
+  .natural-school-title b {
+    color: var(--d9-gold) !important;
+  }
+
+  @media (max-width: 820px) {
+    .site-nav .brand-link img,
+    .site-nav .standard-logo-link img {
+      width: 88px !important;
     }
   }
 </style>
@@ -5304,7 +5355,7 @@
 <div class="footer-inner">
 <img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
 <div>
-<strong aria-label="D9 Harlem Votes, registered trademark" class="footer-wordmark"><span aria-hidden="true" class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes<span class="footer-registered">®</span></span></span></strong>
+<span aria-label="D9 Harlem Votes, registered trademark" class="footer-wordmark"><span aria-hidden="true" class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes<span class="footer-registered">®</span></span></span></span>
 <p><span class="footer-service">We Serve Harlem First.</span> <span class="footer-divider">|</span> <span class="footer-motto">Your Choice. Your Voice. Your Vote.</span></p>
 <small>© 2026 D9 Harlem Votes®. All rights reserved. The D9 Harlem Votes® name, logo, campaign graphics and related branding may not be used without permission.</small>
 </div>
@@ -5330,6 +5381,13 @@
         contact: ['contact']
       };
 
+      const stripeCleanupRoutes = new Set([
+        'impact',
+        'first-time-voter',
+        'get-involved',
+        'events'
+      ]);
+
       function routeFromHash() {
         const raw = (window.location.hash || '#home').replace('#', '').trim();
         return pageGroups[raw] ? raw : 'home';
@@ -5351,7 +5409,15 @@
 
         sections.forEach((section) => {
           section.hidden = !visibleIds.includes(section.id);
+          section.classList.remove('tab-start');
         });
+
+        if (stripeCleanupRoutes.has(route)) {
+          const firstVisibleSection = sections.find((section) => visibleIds.includes(section.id));
+          if (firstVisibleSection) {
+            firstVisibleSection.classList.add('tab-start');
+          }
+        }
 
         navLinks.forEach((link) => {
           const target = (link.getAttribute('href') || '').replace('#', '');

@@ -522,3 +522,78 @@ body.tabbed-site main > section.section.tab-start {
     width: 88px !important;
   }
 }
+
+
+/* ===== Youth Ready School Campaign — global-rule screen lock (2026-09-13) ===== */
+:root {
+  --youth-silver: #e7e9ee;
+  --youth-blue: #000f4a;
+  --youth-red: #e31c24;
+  --youth-black: #111111;
+  --youth-green: #0e8f58;
+  --youth-gold: #d9ad32;
+}
+
+/* Supporting surface: silver, with deep blue carrying structure. */
+#for-schools.youth-ready-launch-section {
+  background: var(--youth-silver) !important;
+  color: var(--youth-blue) !important;
+}
+
+/* Major campaign banner: full usable width, flat, no floating-card treatment. */
+#for-schools .school-campaign-banner-block {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+#for-schools .school-campaign-banner-block img {
+  width: 100% !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Four-step system: clean, flat, professional. */
+#for-schools .launch-icon-burst { display: none !important; }
+#for-schools .launch-icon-circle {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#for-schools .launch-step h3 {
+  color: var(--youth-blue) !important;
+  text-shadow: none !important;
+}
+#for-schools .launch-step p { color: #36415a !important; }
+
+/* Keep the desktop navigation in one line; collapse to the existing menu at tablet size. */
+@media (min-width: 821px) {
+  .site-nav .nav-inner {
+    width: min(96%, 1440px) !important;
+    max-width: 1440px !important;
+    min-height: 72px !important;
+    padding: .72rem clamp(1rem, 2vw, 2rem) !important;
+    gap: clamp(.8rem, 1.4vw, 1.5rem) !important;
+  }
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img {
+    width: clamp(76px, 5.4vw, 96px) !important;
+  }
+  .site-nav .nav-links {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    gap: clamp(.68rem, 1.05vw, 1.05rem) !important;
+  }
+  .site-nav .nav-links a {
+    font-size: clamp(.74rem, .77vw, .88rem) !important;
+    white-space: nowrap !important;
+  }
+}

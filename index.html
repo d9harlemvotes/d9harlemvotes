@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="D9 Harlem Votes® — Harlem Youth Registered &amp; Ready To Vote campaign, school resources, first-time voter information, voter education, community impact and civic engagement in Harlem." name="description"/>
 <title>D9 Harlem Votes® | Harlem Youth Registered &amp; Ready To Vote</title>
-<link href="styles.css?v=10" rel="stylesheet"/>
+<link href="styles.css?v=11" rel="stylesheet"/>
 <style>
     :root {
       --d9-blue: #000f4a;
@@ -5288,6 +5288,297 @@
       padding: 1.5rem !important;
     }
   }
+</style>
+
+
+<style id="d9-youth-ready-global-rules-20260913">
+/* Youth Ready School Campaign - aligned to the locked D9 Harlem Votes® global system. */
+:root {
+  --d9-youth-silver: #e7e9ee;
+  --d9-youth-silver-light: #f3f4f6;
+  --d9-youth-blue: #000f4a;
+  --d9-youth-red: #e31c24;
+  --d9-youth-black: #111111;
+  --d9-youth-green: #0e8f58;
+  --d9-youth-gold: #d9ad32;
+}
+
+/* Keep the campaign hero strong; its supplied Afrocentric corner artwork is intentional. */
+.natural-school-hero {
+  background: var(--d9-youth-blue) !important;
+}
+.natural-school-title::after {
+  width: min(360px, 66%) !important;
+  height: 6px !important;
+  border-radius: 0 !important;
+  background: linear-gradient(90deg,
+    var(--d9-youth-red) 0 33.333%,
+    var(--d9-youth-black) 33.333% 66.666%,
+    var(--d9-youth-green) 66.666% 100%) !important;
+}
+
+/* Supporting content returns to the global silver surface instead of reading like a second flyer. */
+body.tabbed-site main > section#for-schools.youth-ready-launch-section,
+#for-schools.youth-ready-launch-section {
+  background: var(--d9-youth-silver) !important;
+  color: var(--d9-youth-blue) !important;
+}
+#for-schools .youth-ready-launch-inner {
+  max-width: 1500px !important;
+  padding-top: clamp(1.25rem, 2.4vw, 2rem) !important;
+}
+
+/* The campaign banner is a page-width brand element, not a floating card. */
+#for-schools .school-campaign-banner-block {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 clamp(2rem, 3vw, 2.8rem) !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+#for-schools .school-campaign-banner-block img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Clear civic-site hierarchy on the silver surface. */
+#for-schools .youth-launch-heading {
+  max-width: 980px !important;
+  margin: 0 0 clamp(1.6rem, 2.6vw, 2.3rem) !important;
+  text-align: left !important;
+}
+#for-schools .youth-launch-heading .launch-kicker {
+  color: var(--d9-youth-red) !important;
+  opacity: 1 !important;
+  letter-spacing: 0.18em !important;
+}
+#for-schools .youth-launch-heading h2 {
+  color: var(--d9-youth-blue) !important;
+  font-size: clamp(2.25rem, 3.8vw, 4rem) !important;
+  line-height: 1 !important;
+}
+#for-schools .youth-launch-heading h2::after {
+  width: min(220px, 34%) !important;
+  height: 5px !important;
+  margin: 0.75rem 0 0 !important;
+  border-radius: 0 !important;
+  background: var(--d9-youth-gold) !important;
+}
+#for-schools .youth-launch-heading .launch-intro {
+  max-width: 760px !important;
+  margin: 0.9rem 0 0 !important;
+  color: #263552 !important;
+  opacity: 1 !important;
+  line-height: 1.5 !important;
+}
+
+/* Simplify the four-step system: fewer effects, no rescue rings or decorative bursts. */
+#for-schools .youth-launch-steps,
+#for-schools .launch-steps-row.youth-launch-steps {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+  border-top: 1px solid rgba(0,15,74,0.20) !important;
+  border-bottom: 1px solid rgba(0,15,74,0.20) !important;
+}
+#for-schools .youth-launch-steps .launch-step,
+#for-schools .launch-steps-row .launch-step {
+  justify-content: flex-start !important;
+  padding: clamp(1rem, 1.8vw, 1.45rem) clamp(0.9rem, 1.6vw, 1.3rem) !important;
+  color: var(--d9-youth-blue) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#for-schools .youth-launch-steps .launch-step + .launch-step,
+#for-schools .launch-steps-row .launch-step + .launch-step {
+  border-left: 1px solid rgba(0,15,74,0.20) !important;
+}
+#for-schools .launch-icon-burst {
+  display: none !important;
+}
+#for-schools .youth-launch-steps .launch-icon-wrap,
+#for-schools .launch-steps-row .launch-icon-wrap {
+  width: clamp(88px, 7vw, 112px) !important;
+  height: clamp(88px, 7vw, 112px) !important;
+  margin: 0 auto 0.65rem !important;
+}
+#for-schools .youth-launch-steps .launch-icon-circle,
+#for-schools .launch-steps-row .launch-icon-circle {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#for-schools .youth-launch-steps .launch-step-number,
+#for-schools .launch-steps-row .launch-step-number {
+  min-width: 3.1rem !important;
+  height: auto !important;
+  margin: 0 auto 0.7rem !important;
+  padding: 0.3rem 0.65rem !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  font-size: 0.95rem !important;
+}
+#for-schools .youth-launch-steps h3,
+#for-schools .launch-steps-row .launch-step h3 {
+  color: var(--d9-youth-blue) !important;
+  text-shadow: none !important;
+  font-size: clamp(1.08rem, 1.35vw, 1.38rem) !important;
+  line-height: 1.12 !important;
+}
+#for-schools .youth-launch-steps p,
+#for-schools .launch-steps-row .launch-step p {
+  color: #36415a !important;
+  opacity: 1 !important;
+  font-size: clamp(0.88rem, 0.95vw, 0.98rem) !important;
+  line-height: 1.4 !important;
+}
+
+/* Closing call-to-action is a structural band, not another card. */
+#for-schools .youth-ready-closing {
+  width: 100% !important;
+  margin: clamp(1.5rem, 2.5vw, 2rem) 0 0 !important;
+  padding: 1rem clamp(1rem, 2vw, 1.4rem) !important;
+  justify-content: space-between !important;
+  background: var(--d9-youth-blue) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#for-schools .youth-ready-closing-text {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+#for-schools .youth-ready-closing-text::after {
+  width: 220px !important;
+  height: 5px !important;
+  background: linear-gradient(90deg,
+    var(--d9-youth-red) 0 33.333%,
+    var(--d9-youth-black) 33.333% 66.666%,
+    var(--d9-youth-green) 66.666% 100%) !important;
+}
+#for-schools .youth-ready-secondary-cta {
+  background: var(--d9-youth-red) !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Global footer lock: equal clean R-B-G rules top and bottom, with the logo fully inside. */
+.site-footer {
+  position: relative !important;
+  background: var(--d9-youth-blue) !important;
+  border: 0 !important;
+  padding: 9px 0 !important;
+}
+.site-footer::before,
+.site-footer::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 9px !important;
+  background: linear-gradient(to bottom,
+    var(--d9-youth-red) 0 33.333%,
+    var(--d9-youth-black) 33.333% 66.666%,
+    var(--d9-youth-green) 66.666% 100%) !important;
+  pointer-events: none !important;
+  z-index: 3 !important;
+}
+.site-footer::before { top: 0 !important; }
+.site-footer::after { bottom: 0 !important; }
+.site-footer .footer-inner {
+  position: relative !important;
+  z-index: 4 !important;
+  padding-top: clamp(1.7rem, 3vw, 2.3rem) !important;
+  padding-bottom: clamp(1.7rem, 3vw, 2.3rem) !important;
+}
+.site-footer .footer-inner img {
+  align-self: center !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 980px) {
+  #for-schools .youth-launch-steps,
+  #for-schools .launch-steps-row.youth-launch-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  #for-schools .youth-launch-steps .launch-step + .launch-step,
+  #for-schools .launch-steps-row .launch-step + .launch-step {
+    border-left: 0 !important;
+  }
+  #for-schools .youth-launch-steps .launch-step:nth-child(even),
+  #for-schools .launch-steps-row .launch-step:nth-child(even) {
+    border-left: 1px solid rgba(0,15,74,0.20) !important;
+  }
+}
+@media (max-width: 640px) {
+  #for-schools .youth-launch-steps,
+  #for-schools .launch-steps-row.youth-launch-steps {
+    grid-template-columns: 1fr !important;
+  }
+  #for-schools .youth-launch-steps .launch-step,
+  #for-schools .launch-steps-row .launch-step {
+    border-left: 0 !important;
+    border-top: 1px solid rgba(0,15,74,0.14) !important;
+  }
+  #for-schools .youth-launch-steps .launch-step:first-child,
+  #for-schools .launch-steps-row .launch-step:first-child {
+    border-top: 0 !important;
+  }
+  #for-schools .youth-ready-closing {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  #for-schools .youth-ready-closing-text::after {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+
+
+/* Screen-first review fixes from the landscape diagnostic. */
+@media (min-width: 821px) {
+  .site-nav .nav-inner {
+    width: min(96%, 1440px) !important;
+    max-width: 1440px !important;
+    min-height: 72px !important;
+    padding: 0.72rem clamp(1rem, 2vw, 2rem) !important;
+    gap: clamp(0.8rem, 1.4vw, 1.5rem) !important;
+  }
+  .site-nav .brand-link,
+  .site-nav .standard-logo-link {
+    flex: 0 0 auto !important;
+  }
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img {
+    width: clamp(76px, 5.4vw, 96px) !important;
+    height: auto !important;
+  }
+  .site-nav .nav-links {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    gap: clamp(0.68rem, 1.05vw, 1.05rem) !important;
+  }
+  .site-nav .nav-links a {
+    font-size: clamp(0.74rem, 0.77vw, 0.88rem) !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* The campaign page remains screen-first: no print/PDF layout hacks. */
 </style>
 
 </head>

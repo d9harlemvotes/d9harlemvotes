@@ -2029,3 +2029,411 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
     font-size: 18pt !important;
   }
 }
+
+/* ===== YOUTH READY REBALANCE LOCK — 2026-09-13 =====
+   User corrections:
+   1) larger header logo
+   2) header styled like footer
+   3) Vote = rich gold to match Registered
+   4) smaller, better-balanced hero/photo
+   5) exact school-participation banner asset
+*/
+:root {
+  --yr-navy: #000f4a;
+  --yr-blue: #073fa8;
+  --yr-red: #e31c24;
+  --yr-black: #111111;
+  --yr-green: #0e8f58;
+  --yr-gold: #d9ad32;
+  --yr-silver: #e7e9ee;
+}
+
+/* HEADER — intentionally mirrors footer: flat navy with R/B/G bands. */
+.site-nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  min-height: 108px !important;
+  padding: 8px 0 !important;
+  background: var(--yr-navy) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.site-nav::before,
+.site-nav::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 8px !important;
+  background: linear-gradient(
+    to bottom,
+    var(--yr-red) 0 33.333%,
+    var(--yr-black) 33.333% 66.666%,
+    var(--yr-green) 66.666% 100%
+  ) !important;
+  pointer-events: none !important;
+  z-index: 5 !important;
+}
+.site-nav::before { top: 0 !important; }
+.site-nav::after { bottom: 0 !important; }
+
+.site-nav .nav-inner {
+  width: min(91%, 1420px) !important;
+  max-width: 1420px !important;
+  min-height: 92px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: clamp(1.5rem, 2.3vw, 2.5rem) !important;
+  position: relative !important;
+  z-index: 6 !important;
+}
+.site-nav .brand-link,
+.site-nav .standard-logo-link {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.site-nav .brand-link img,
+.site-nav .standard-logo-link img {
+  display: block !important;
+  width: clamp(88px, 6.7vw, 108px) !important;
+  height: auto !important;
+  max-height: 96px !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.site-nav .nav-links {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  display: flex !important;
+  position: static !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: clamp(1.05rem, 1.65vw, 1.75rem) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+.site-nav .nav-links a,
+.site-nav .nav-links a:link,
+.site-nav .nav-links a:visited,
+.site-nav .nav-links a[aria-current="page"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  font-size: clamp(.76rem, .82vw, .9rem) !important;
+  line-height: 1.1 !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible {
+  color: #fff !important;
+  opacity: .82 !important;
+  text-decoration: none !important;
+}
+.site-nav .nav-toggle { display: none !important; }
+
+/* HERO — reduce scale so the page reads as one balanced composition. */
+.natural-school-hero {
+  background:
+    radial-gradient(circle at 74% 28%, rgba(14,143,88,.11), transparent 28%),
+    linear-gradient(112deg, #052d7f 0%, #073fa8 57%, #0b52c6 100%) !important;
+  border: 0 !important;
+}
+.natural-school-hero::before,
+.natural-school-hero::after {
+  content: none !important;
+  display: none !important;
+}
+.natural-school-hero-inner {
+  width: min(90%, 1420px) !important;
+  max-width: 1420px !important;
+  min-height: 485px !important;
+  margin: 0 auto !important;
+  padding: clamp(2.3rem, 3.6vw, 3.8rem) 0 clamp(2.6rem, 4vw, 4rem) !important;
+  display: grid !important;
+  grid-template-columns: minmax(410px, .96fr) minmax(500px, 1.04fr) !important;
+  align-items: center !important;
+  gap: clamp(2rem, 3.5vw, 3.8rem) !important;
+}
+.natural-school-copy {
+  max-width: 650px !important;
+}
+.natural-school-title {
+  max-width: 650px !important;
+  margin-bottom: 1rem !important;
+  font-size: clamp(3rem, 4.55vw, 5.15rem) !important;
+  line-height: .94 !important;
+}
+.natural-school-title > span {
+  display: block !important;
+  color: #fff !important;
+  white-space: nowrap !important;
+}
+.natural-school-title > span.gold,
+.natural-school-title b,
+.natural-school-title .vote-green {
+  color: var(--yr-gold) !important;
+}
+.natural-school-title::after {
+  content: none !important;
+  display: none !important;
+}
+.natural-school-lede {
+  max-width: 610px !important;
+  font-size: clamp(1rem, 1.15vw, 1.15rem) !important;
+  line-height: 1.42 !important;
+}
+.natural-school-subcopy {
+  max-width: 590px !important;
+  font-size: clamp(.88rem, 1vw, 1rem) !important;
+  line-height: 1.44 !important;
+}
+.natural-school-cta {
+  min-height: 42px !important;
+  padding: .62rem 1.1rem !important;
+  border-radius: 999px !important;
+  background: var(--yr-gold) !important;
+  color: #090909 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-size: .84rem !important;
+}
+
+/* Keep the storytelling scrapbook treatment, but scale it down. */
+.natural-school-photo-shell {
+  position: relative !important;
+  align-self: center !important;
+  justify-self: end !important;
+  width: 100% !important;
+  max-width: 660px !important;
+  margin: 0 !important;
+  padding: .7rem .7rem 0 !important;
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: .48rem !important;
+  box-shadow: 0 14px 28px rgba(2,11,24,.25) !important;
+  transform: rotate(-.45deg) !important;
+  overflow: visible !important;
+}
+.natural-school-photo-shell::before {
+  content: none !important;
+  display: none !important;
+}
+.natural-school-photo-shell img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1.61 / 1 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #fff !important;
+  border-radius: .2rem !important;
+}
+.natural-school-photo-shell::after {
+  content: "" !important;
+  position: absolute !important;
+  left: .7rem !important;
+  right: .7rem !important;
+  bottom: 4.55rem !important;
+  height: 5px !important;
+  background: linear-gradient(
+    90deg,
+    var(--yr-red) 0 33.333%,
+    var(--yr-black) 33.333% 66.666%,
+    var(--yr-green) 66.666% 100%
+  ) !important;
+  z-index: 3 !important;
+}
+.natural-school-photo-caption {
+  min-height: 4.55rem !important;
+  padding: .7rem .82rem .86rem !important;
+  background: #fff !important;
+  color: #052d7f !important;
+  text-align: left !important;
+}
+.natural-school-photo-caption strong {
+  display: block !important;
+  color: #052d7f !important;
+  font-size: clamp(.98rem, 1.16vw, 1.2rem) !important;
+}
+.natural-school-photo-caption span {
+  display: block !important;
+  margin-top: .22rem !important;
+  color: #526075 !important;
+  font-size: .77rem !important;
+}
+
+/* EXACT banner asset: full width, no card styling, preserve 1600:400 ratio. */
+#for-schools .school-campaign-banner-block {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 0 clamp(2.5rem, 3.4vw, 3.4rem) calc(50% - 50vw) !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+#for-schools .school-campaign-banner-block img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 1 !important;
+  object-fit: cover !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* True tablet/phone behavior only; desktop remains intact. */
+@media (max-width: 1050px) {
+  .natural-school-hero-inner {
+    grid-template-columns: 1fr !important;
+    width: min(88%, 780px) !important;
+    min-height: 0 !important;
+    gap: 2.3rem !important;
+  }
+  .natural-school-copy { max-width: 680px !important; }
+  .natural-school-title > span { white-space: normal !important; }
+  .natural-school-photo-shell {
+    justify-self: center !important;
+    max-width: 660px !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-nav {
+    min-height: 86px !important;
+  }
+  .site-nav .nav-inner {
+    width: 90% !important;
+    min-height: 70px !important;
+    justify-content: space-between !important;
+  }
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img {
+    width: 68px !important;
+    max-height: 70px !important;
+  }
+  .site-nav .nav-toggle {
+    display: block !important;
+    color: #fff !important;
+    background: transparent !important;
+    border: 1px solid rgba(255,255,255,.65) !important;
+    border-radius: .3rem !important;
+    padding: .48rem .72rem !important;
+  }
+  .site-nav .nav-links {
+    display: none !important;
+    position: absolute !important;
+    top: 78px !important;
+    left: -5% !important;
+    right: -5% !important;
+    padding: 1rem 6% 1.2rem !important;
+    background: var(--yr-navy) !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: .7rem !important;
+  }
+  .site-nav .nav-links.open { display: flex !important; }
+  .site-nav .nav-links a {
+    padding: .35rem 0 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
+
+/* Print/PDF keeps the desktop visual proportions. */
+@media print {
+  .site-nav {
+    min-height: 74px !important;
+    padding: 6px 0 !important;
+    position: relative !important;
+  }
+  .site-nav::before,
+  .site-nav::after { height: 6px !important; }
+  .site-nav .nav-inner {
+    width: 94% !important;
+    min-height: 62px !important;
+    gap: .65rem !important;
+  }
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img {
+    width: 56px !important;
+    max-height: 58px !important;
+  }
+  .site-nav .nav-toggle { display: none !important; }
+  .site-nav .nav-links {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: .55rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  .site-nav .nav-links a {
+    color: #fff !important;
+    font-size: 7.2pt !important;
+    white-space: nowrap !important;
+  }
+
+  .natural-school-hero-inner {
+    width: 92% !important;
+    max-width: none !important;
+    min-height: 410px !important;
+    padding: 1.6rem 0 2rem !important;
+    grid-template-columns: minmax(0, .98fr) minmax(0, 1.02fr) !important;
+    gap: 1.2rem !important;
+  }
+  .natural-school-title {
+    font-size: 31pt !important;
+  }
+  .natural-school-title > span { white-space: nowrap !important; }
+  .natural-school-photo-shell {
+    max-width: 390px !important;
+    transform: rotate(-.35deg) !important;
+    padding: .45rem .45rem 0 !important;
+  }
+  .natural-school-photo-shell::after {
+    left: .45rem !important;
+    right: .45rem !important;
+    bottom: 3.4rem !important;
+    height: 4px !important;
+  }
+  .natural-school-photo-caption {
+    min-height: 3.4rem !important;
+    padding: .48rem .55rem .58rem !important;
+  }
+  .natural-school-photo-caption strong { font-size: 8.8pt !important; }
+  .natural-school-photo-caption span { font-size: 6.6pt !important; }
+
+  #for-schools .school-campaign-banner-block {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

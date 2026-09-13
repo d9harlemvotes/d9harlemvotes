@@ -3313,8 +3313,6 @@
   margin: 0 !important;
   position: relative;
   background: rgba(255,255,255,0.07);
-  border: 6px solid var(--d9-gold);
-  box-shadow: 0 0 0 4px var(--d9-white), 0 0 0 8px rgba(4,27,67,0.8);
   overflow: hidden;
   min-height: clamp(360px, 35vw, 510px);
 }
@@ -3328,17 +3326,7 @@
   background: var(--d9-blue-deep);
 }
 .natural-school-photo-caption {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  background: var(--d9-black);
-  color: var(--d9-white);
-  border: 2px solid var(--d9-white);
-  box-shadow: 0 0 0 3px rgba(4,27,67,0.4);
-  padding: 0.45rem 0.55rem;
-  font-weight: 900;
-  transform: rotate(-2deg);
-  max-width: 12rem;
+  display: none !important;
 }
 .natural-school-motto {
   background: var(--d9-blue-deep);
@@ -3777,8 +3765,8 @@
 }
 .natural-school-photo-shell {
   min-height: clamp(355px, 33vw, 500px) !important;
-  border-width: 4px !important;
-  box-shadow: 0 0 0 3px var(--d9-white), 0 0 0 6px rgba(4,27,67,0.75) !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 .natural-school-photo-shell img {
   object-fit: contain !important;
@@ -3786,8 +3774,7 @@
   background: var(--d9-blue-deep) !important;
 }
 .natural-school-photo-caption {
-  font-size: 0.9rem !important;
-  max-width: 11rem !important;
+  display: none !important;
 }
 
 .youth-ready-launch-section {

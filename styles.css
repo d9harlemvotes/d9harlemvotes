@@ -2571,144 +2571,226 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   box-shadow: none !important;
 }
 
-/* ===== YOUTH READY FINAL PARTICIPATION HIERARCHY — 2026-09-13 =====
-   Final Youth Ready page decisions:
-   - no CTA in the opening hero/story section
-   - correct existing school participation banner
-   - "Simple to launch. Easy to manage." stays one continuous line
-   - action appears only after the four launch steps
-   - two clear school pathways: direct sign-up + school referral
-   - no callout box around the final action copy
-*/
 
-/* Opening hero tells the story only. */
-.natural-school-actions,
-.natural-school-cta {
-  display: none !important;
+/* ============================================================
+   About Us refresh — 2026-09-13
+   Scoped to #about only. Header/footer and other pages unchanged.
+   ============================================================ */
+#about.locked-about-page {
+  padding: 0 !important;
+  background: var(--d9-approved-blue, #000f4a) !important;
+  color: var(--d9-approved-blue, #000f4a) !important;
 }
 
-/* Exact existing banner asset is shown uncropped. */
-#for-schools .school-campaign-banner-block img {
+#about .about-band {
+  width: 100%;
+  position: relative;
+}
+
+#about .about-band-intro,
+#about .about-band-steering {
+  background: var(--d9-approved-silver, #e7e9ee) !important;
+}
+
+#about .about-band-origin {
+  background:
+    radial-gradient(circle at 18% 14%, rgba(22, 82, 160, 0.26), transparent 34%),
+    var(--d9-approved-blue, #000f4a) !important;
+}
+
+/* Opening section: larger, more readable copy on silver. */
+#about .about-band-intro .locked-about-grid {
+  padding-top: clamp(3.4rem, 6vw, 5.4rem) !important;
+  padding-bottom: clamp(3rem, 5vw, 4.4rem) !important;
+}
+
+#about .about-band-intro .locked-about-copy .kicker {
+  color: var(--d9-green, #0e8f58) !important;
+}
+
+#about .about-band-intro .locked-about-copy h2 {
+  color: var(--d9-approved-blue, #000f4a) !important;
+}
+
+#about .about-band-intro .locked-about-copy p {
+  color: #263550 !important;
+  font-size: clamp(1.12rem, 1.45vw, 1.32rem) !important;
+  line-height: 1.6 !important;
+}
+
+#about .about-band-intro .locked-about-copy .about-lead {
+  color: var(--d9-approved-blue, #000f4a) !important;
+  font-size: clamp(1.18rem, 1.55vw, 1.38rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.55 !important;
+}
+
+/* How It Started remains the deep-blue story band. */
+#about .about-band-origin .locked-origin-grid {
+  border-top: 0 !important;
+  padding-top: clamp(3.25rem, 5vw, 4.75rem) !important;
+  padding-bottom: clamp(3.25rem, 5vw, 4.75rem) !important;
+}
+
+#about .about-band-origin .locked-origin-copy .kicker {
+  color: #d9dee8 !important;
+}
+
+#about .about-band-origin .locked-origin-copy h3,
+#about .about-band-origin .locked-origin-copy p,
+#about .about-band-origin .locked-origin-copy strong {
+  color: #ffffff !important;
+}
+
+/* Steering Committee switches to silver to break the page into clear chapters. */
+#about .about-band-steering .d9-steering-locked {
+  border-top: 0 !important;
+  padding-top: clamp(3.4rem, 5vw, 4.8rem) !important;
+}
+
+#about .about-band-steering .d9-steering-intro .kicker,
+#about .about-band-steering .d9-cochair-kicker {
+  color: var(--d9-green, #0e8f58) !important;
+}
+
+#about .about-band-steering .d9-steering-intro h3,
+#about .about-band-steering .d9-steering-principle {
+  color: var(--d9-approved-blue, #000f4a) !important;
+}
+
+#about .about-band-steering .d9-steering-intro h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+#about .about-band-steering .d9-steering-intro p:not(.kicker) {
+  color: #2b3952 !important;
+}
+
+#about .about-band-steering .d9-cochair-card {
+  background: var(--d9-approved-blue, #000f4a) !important;
+  border: 1px solid #c7ccd5 !important;
+  border-left: 0 !important;
+  box-shadow: none !important;
+}
+
+#about .about-band-steering .d9-cochair-card strong {
+  color: #ffffff !important;
+}
+
+#about .about-band-steering .d9-cochair-card span {
+  color: rgba(255,255,255,0.78) !important;
+}
+
+#about .about-band-steering .d9-cochair-card em {
+  color: #d9dee8 !important;
+}
+
+#about .about-band-steering .d9-subtle-member-details {
+  background: var(--d9-approved-blue, #000f4a) !important;
+  border: 1px solid #c7ccd5 !important;
+  border-top: 0 !important;
+  box-shadow: none !important;
+}
+
+/* One consistent archival-postcard treatment for all three About images. */
+#about figure.about-postcard,
+#about .d9-steering-service-photo.d9-pace-leadership-photo.about-postcard {
+  margin: 0 !important;
+  padding: 8px !important;
+  background: var(--d9-approved-silver-light, #f3f4f6) !important;
+  border: 2px solid var(--d9-approved-blue, #000f4a) !important;
+  border-top: 2px solid var(--d9-approved-blue, #000f4a) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 10px 24px rgba(0, 15, 74, 0.18) !important;
+  overflow: visible !important;
+}
+
+#about figure.about-postcard img,
+#about .d9-steering-service-photo.d9-pace-leadership-photo.about-postcard img {
   display: block !important;
   width: 100% !important;
   height: auto !important;
-  max-width: none !important;
+  max-height: 520px !important;
   aspect-ratio: auto !important;
-  object-fit: contain !important;
-  object-position: center !important;
-}
-
-/* One continuous headline. Scale it rather than forcing a line break. */
-#for-schools .youth-launch-heading {
-  max-width: none !important;
-}
-#for-schools .youth-launch-heading h2 {
-  max-width: none !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  white-space: nowrap !important;
-  text-wrap: nowrap !important;
-  overflow-wrap: normal !important;
-  word-break: normal !important;
-  font-size: clamp(1.35rem, 4.15vw, 4.65rem) !important;
-  letter-spacing: -0.04em !important;
-}
-#for-schools .youth-launch-heading h2::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Final action area — open typography, not a callout card. */
-#for-schools .youth-ready-action-block {
-  width: min(92%, 980px) !important;
-  margin: clamp(2.4rem, 4vw, 4rem) auto 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
+  object-fit: cover !important;
+  object-position: center center !important;
   border: 0 !important;
-  border-radius: 0 !important;
   box-shadow: none !important;
-  text-align: center !important;
-  color: #111111 !important;
+  background: transparent !important;
 }
 
-#for-schools .youth-ready-action-copy {
-  margin: 0 auto !important;
-  max-width: 900px !important;
-  color: #111111 !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(1.35rem, 2vw, 2rem) !important;
-  line-height: 1.32 !important;
-  font-weight: 700 !important;
+#about figure.about-postcard figcaption.about-postcard-caption,
+#about .d9-steering-service-photo.d9-pace-leadership-photo.about-postcard figcaption.about-postcard-caption {
+  margin: 0 !important;
+  padding: 0.9rem 0.95rem 0.85rem !important;
+  color: var(--d9-approved-blue, #000f4a) !important;
+  background: var(--d9-approved-silver-light, #f3f4f6) !important;
+  border: 0 !important;
+  border-top: 1px solid #c9ced8 !important;
+  font-family: "Helvetica Neue", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  text-align: left !important;
 }
 
-#for-schools .youth-ready-action-motto {
-  margin: .7rem 0 0 !important;
-  color: #111111 !important;
-  font-size: clamp(.92rem, 1vw, 1.02rem) !important;
-  line-height: 1.25 !important;
+#about .about-postcard-caption .postcard-eyebrow,
+#about .about-postcard-caption .postcard-title,
+#about .about-postcard-caption .postcard-copy,
+#about .about-postcard-caption .postcard-credit {
+  display: block !important;
+}
+
+#about .about-postcard-caption .postcard-eyebrow {
+  margin-bottom: 0.28rem !important;
+  color: var(--d9-green, #0e8f58) !important;
+  font-size: clamp(0.7rem, 0.78vw, 0.78rem) !important;
   font-weight: 900 !important;
-  letter-spacing: .08em !important;
+  letter-spacing: 0.09em !important;
+  line-height: 1.3 !important;
   text-transform: uppercase !important;
 }
 
-#for-schools .youth-ready-action-buttons {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: .9rem !important;
-  margin-top: 1.5rem !important;
-}
-
-#for-schools .youth-ready-action-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 46px !important;
-  padding: .72rem 1.2rem !important;
-  border-radius: 999px !important;
-  box-shadow: none !important;
-  text-decoration: none !important;
-  font-size: .86rem !important;
-  line-height: 1 !important;
+#about .about-postcard-caption .postcard-title {
+  color: var(--d9-approved-blue, #000f4a) !important;
+  font-size: clamp(0.84rem, 0.96vw, 0.98rem) !important;
   font-weight: 900 !important;
-  letter-spacing: .02em !important;
+  line-height: 1.34 !important;
+  letter-spacing: 0.015em !important;
 }
 
-#for-schools .youth-ready-action-primary {
-  background: #d9ad32 !important;
-  color: #111111 !important;
-  border: 2px solid #d9ad32 !important;
+#about .about-postcard-caption .postcard-copy {
+  margin-top: 0.38rem !important;
+  color: #3c485e !important;
+  font-size: clamp(0.8rem, 0.9vw, 0.9rem) !important;
+  font-weight: 650 !important;
+  line-height: 1.45 !important;
 }
 
-#for-schools .youth-ready-action-secondary {
-  background: transparent !important;
-  color: #111111 !important;
-  border: 2px solid #111111 !important;
+#about .about-postcard-caption .postcard-credit {
+  margin-top: 0.38rem !important;
+  color: #626b7b !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
 }
 
-#for-schools .youth-ready-action-btn:hover,
-#for-schools .youth-ready-action-btn:focus-visible {
-  transform: translateY(-1px);
+@media (max-width: 980px) {
+  #about .about-band-intro .locked-about-grid,
+  #about .about-band-origin .locked-origin-grid {
+    gap: 1.75rem !important;
+  }
+
+  #about .about-band-origin .locked-origin-grid .locked-origin-photo {
+    order: 0 !important;
+  }
 }
 
-/* Small phones: retain the sentence on one line by scaling it down. */
 @media (max-width: 620px) {
-  #for-schools .youth-launch-heading h2 {
-    font-size: clamp(1.18rem, 5.7vw, 1.55rem) !important;
-    letter-spacing: -0.045em !important;
+  #about .about-band-intro .locked-about-copy p {
+    font-size: 1.08rem !important;
   }
 
-  #for-schools .youth-ready-action-buttons {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: min(100%, 340px) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  #for-schools .youth-ready-action-btn {
-    width: 100% !important;
+  #about figure.about-postcard,
+  #about .d9-steering-service-photo.d9-pace-leadership-photo.about-postcard {
+    padding: 6px !important;
   }
 }

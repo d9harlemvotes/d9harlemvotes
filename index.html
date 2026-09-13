@@ -5438,7 +5438,164 @@
 }
 </style>
 
-<link href="styles.css?v=18" rel="stylesheet" id="d9-final-styles"/>
+<link href="styles.css?v=19" rel="stylesheet" id="d9-final-styles"/>
+<style id="about-silver-band-critical-fix">
+
+/* ============================================================
+   CRITICAL ABOUT US SILVER-BAND FIX — 2026-09-13
+   This block must win over older embedded About/Steering rules.
+   Final rhythm: SILVER intro → DEEP BLUE origin → SILVER steering.
+   ============================================================ */
+#about.locked-about-page {
+  background: #e7e9ee !important;
+  color: #000f4a !important;
+}
+
+#about.locked-about-page > .about-band.about-band-intro {
+  background: #e7e9ee !important;
+  color: #000f4a !important;
+}
+
+#about.locked-about-page > .about-band.about-band-origin {
+  background: radial-gradient(circle at 18% 14%, rgba(22,82,160,.24), transparent 34%), #000f4a !important;
+  color: #fff !important;
+}
+
+#about.locked-about-page > .about-band.about-band-steering {
+  background: #e7e9ee !important;
+  color: #000f4a !important;
+}
+
+/* Intro: force the light supporting-page treatment. */
+#about .about-band-intro .locked-about-copy,
+#about .about-band-intro .locked-about-grid {
+  background: transparent !important;
+}
+#about .about-band-intro .locked-about-copy h2,
+#about .about-band-intro .locked-about-copy p,
+#about .about-band-intro .locked-about-copy .about-lead {
+  color: #000f4a !important;
+}
+#about .about-band-intro .locked-about-copy .kicker {
+  color: #0e8f58 !important;
+}
+
+/* Origin: retain the one intentional deep-blue story band. */
+#about .about-band-origin .locked-origin-grid,
+#about .about-band-origin .locked-origin-copy {
+  background: transparent !important;
+}
+#about .about-band-origin .locked-origin-copy h3,
+#about .about-band-origin .locked-origin-copy p,
+#about .about-band-origin .locked-origin-copy strong {
+  color: #fff !important;
+}
+#about .about-band-origin .locked-origin-copy .kicker {
+  color: #d9dee8 !important;
+}
+
+/* Steering: remove the large uninterrupted blue field. */
+#about .about-band-steering .d9-steering-locked,
+#about .about-band-steering .d9-steering-top-grid,
+#about .about-band-steering .d9-steering-copy-stack,
+#about .about-band-steering .d9-steering-media-stack,
+#about .about-band-steering .d9-steering-intro,
+#about .about-band-steering .d9-cochairs {
+  background: transparent !important;
+  color: #000f4a !important;
+}
+#about .about-band-steering .d9-steering-intro .kicker,
+#about .about-band-steering .d9-cochair-kicker {
+  color: #0e8f58 !important;
+}
+#about .about-band-steering .d9-steering-intro h3,
+#about .about-band-steering .d9-steering-intro p:not(.kicker),
+#about .about-band-steering .d9-steering-principle {
+  color: #000f4a !important;
+}
+#about .about-band-steering .d9-steering-intro h3::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+/* Co-chair cards: silver cards with blue structure, not blue-on-blue. */
+#about .about-band-steering .d9-cochair-card {
+  background: #f3f4f6 !important;
+  color: #000f4a !important;
+  border: 1px solid #bdc3cf !important;
+  border-left: 5px solid #000f4a !important;
+  box-shadow: none !important;
+}
+#about .about-band-steering .d9-cochair-card strong {
+  color: #000f4a !important;
+}
+#about .about-band-steering .d9-cochair-card span {
+  color: #4c5668 !important;
+}
+#about .about-band-steering .d9-cochair-card em {
+  color: #0e8f58 !important;
+}
+
+/* Pace image: same archival postcard system as the other About images. */
+#about .about-band-steering .d9-steering-service-photo.d9-pace-leadership-photo.about-postcard {
+  background: #f3f4f6 !important;
+  border: 2px solid #000f4a !important;
+  border-top: 2px solid #000f4a !important;
+  box-shadow: 0 10px 24px rgba(0,15,74,.16) !important;
+  padding: 8px !important;
+}
+#about .about-band-steering .d9-steering-service-photo.d9-pace-leadership-photo.about-postcard figcaption,
+#about .about-band-steering .d9-steering-service-photo.d9-pace-leadership-photo.about-postcard .about-postcard-caption {
+  margin: 0 !important;
+  padding: .9rem .95rem .85rem !important;
+  background: #f3f4f6 !important;
+  color: #000f4a !important;
+  border: 0 !important;
+  border-top: 1px solid #c9ced8 !important;
+}
+#about .about-band-steering .about-postcard-caption .postcard-eyebrow {
+  color: #0e8f58 !important;
+}
+#about .about-band-steering .about-postcard-caption .postcard-title {
+  color: #000f4a !important;
+}
+#about .about-band-steering .about-postcard-caption .postcard-copy {
+  color: #3c485e !important;
+}
+
+/* Member control stays structural blue, but sits on the silver section. */
+#about .about-band-steering .d9-steering-media-stack .d9-subtle-member-details {
+  background: #f3f4f6 !important;
+  color: #000f4a !important;
+  border: 1px solid #aeb6c5 !important;
+  border-top: 1px solid #aeb6c5 !important;
+  box-shadow: none !important;
+}
+#about .about-band-steering .d9-steering-media-stack .d9-subtle-member-details summary {
+  background: #000f4a !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+#about .about-band-steering .d9-steering-media-stack .d9-subtle-member-details summary::after {
+  color: #e7e9ee !important;
+}
+#about .about-band-steering .d9-steering-media-stack .d9-subtle-member-details .locked-people-list {
+  background: #f3f4f6 !important;
+}
+#about .about-band-steering .d9-steering-media-stack .d9-subtle-member-details .locked-people-list li {
+  background: #fff !important;
+  color: #000f4a !important;
+  border-bottom: 1px solid #d4d8e0 !important;
+}
+#about .about-band-steering .d9-steering-media-stack .d9-subtle-member-details .locked-people-list strong {
+  color: #000f4a !important;
+}
+#about .about-band-steering .d9-steering-media-stack .d9-subtle-member-details .locked-people-list span {
+  color: #586275 !important;
+}
+
+</style>
 </head>
 <body>
 <nav aria-label="Main navigation" class="site-nav">

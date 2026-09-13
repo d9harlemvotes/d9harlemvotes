@@ -4911,6 +4911,77 @@
   }
 }
 </style>
+<style id="d9-footer-sleek-final">
+  /* Approved shared footer typography update. */
+  .site-footer,
+  .site-footer strong,
+  .site-footer p,
+  .site-footer small {
+    font-family: "Avenir Next", "Segoe UI Variable", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  }
+
+  .site-footer .footer-wordmark {
+    display: block;
+    margin: 0;
+    font-size: clamp(1.45rem, 2.15vw, 2rem) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+
+  .site-footer .footer-wordmark .brand-red,
+  .site-footer .footer-wordmark .brand-black,
+  .site-footer .footer-wordmark .brand-green {
+    color: #ffffff !important;
+    font-weight: inherit !important;
+  }
+
+  .site-footer .footer-registered {
+    display: inline-block;
+    margin-left: 0.08em;
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-family: inherit;
+    font-size: 0.31em;
+    font-weight: 500;
+    line-height: 1;
+    vertical-align: top;
+    transform: translateY(0.06em);
+  }
+
+  .site-footer p {
+    margin: 0.72rem 0 0.55rem !important;
+    font-size: clamp(0.88rem, 1.05vw, 1rem) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.012em;
+    line-height: 1.35;
+  }
+
+  .site-footer .footer-divider {
+    color: var(--d9-gold) !important;
+    padding: 0 0.48rem !important;
+    font-weight: 650 !important;
+  }
+
+  .site-footer small {
+    display: block;
+    max-width: 72rem;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: clamp(0.7rem, 0.82vw, 0.79rem) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.005em;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 640px) {
+    .site-footer .footer-wordmark {
+      font-size: 1.55rem !important;
+    }
+
+    .site-footer p {
+      font-size: 0.88rem !important;
+    }
+  }
+</style>
 </head>
 <body>
 <div aria-hidden="true" class="brand-stripe"><span></span><span></span><span></span></div>
@@ -5279,7 +5350,7 @@
 <div class="footer-inner">
 <img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
 <div>
-<strong><span class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes®</span></span></strong>
+<strong aria-label="D9 Harlem Votes, registered trademark" class="footer-wordmark"><span aria-hidden="true" class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes<span class="footer-registered">®</span></span></span></strong>
 <p><span class="footer-service">We Serve Harlem First.</span> <span class="footer-divider">|</span> <span class="footer-motto">Your Choice. Your Voice. Your Vote.</span></p>
 <small>© 2026 D9 Harlem Votes®. All rights reserved. The D9 Harlem Votes® name, logo, campaign graphics and related branding may not be used without permission.</small>
 </div>

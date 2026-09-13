@@ -2437,3 +2437,278 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
     margin-right: 0 !important;
   }
 }
+
+/* ===== YOUTH READY FINAL CLEANUP — DO NOT TOUCH OTHER PAGE ELEMENTS =====
+   Only the requested corrections:
+   - header + footer same deep navy
+   - identical clean R/B/G edge treatment
+   - mature black text on light surfaces
+   - exact existing banner asset, uncropped
+   - preserve all other approved Youth Ready layout choices
+*/
+:root {
+  --yr-final-navy: #000f4a;
+  --yr-final-red: #e31c24;
+  --yr-final-black: #111111;
+  --yr-final-green: #0e8f58;
+  --yr-final-gold: #d9ad32;
+  --yr-final-silver: #e7e9ee;
+}
+
+/* 1. Top header and footer are now the exact same base color. */
+.site-nav,
+.site-footer {
+  background: var(--yr-final-navy) !important;
+  background-color: var(--yr-final-navy) !important;
+  box-shadow: none !important;
+}
+
+/* Keep the top header treatment restrained and consistent with the footer. */
+.site-nav {
+  border: 0 !important;
+}
+.site-nav::before,
+.site-nav::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 8px !important;
+  background: linear-gradient(
+    to bottom,
+    var(--yr-final-red) 0 33.333%,
+    var(--yr-final-black) 33.333% 66.666%,
+    var(--yr-final-green) 66.666% 100%
+  ) !important;
+  pointer-events: none !important;
+}
+.site-nav::before { top: 0 !important; }
+.site-nav::after { bottom: 0 !important; }
+
+/* Footer uses the same navy and same R/B/G rule language. */
+.site-footer {
+  position: relative !important;
+  border: 0 !important;
+}
+.site-footer::before,
+.site-footer::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 8px !important;
+  background: linear-gradient(
+    to bottom,
+    var(--yr-final-red) 0 33.333%,
+    var(--yr-final-black) 33.333% 66.666%,
+    var(--yr-final-green) 66.666% 100%
+  ) !important;
+  pointer-events: none !important;
+}
+.site-footer::before { top: 0 !important; }
+.site-footer::after { bottom: 0 !important; }
+
+/* 3. Black is the default text color on silver/light surfaces.
+   Blue remains structural/background brand color only. */
+#for-schools.youth-ready-launch-section,
+#for-schools .youth-launch-heading h2,
+#for-schools .youth-launch-heading .launch-intro,
+#for-schools .launch-step h3,
+#for-schools .launch-step p,
+#for-schools .youth-ready-closing-text,
+#for-schools .youth-ready-closing-plain {
+  color: var(--yr-final-black) !important;
+}
+
+/* Keep the green campaign kicker as the restrained connector accent. */
+#for-schools .youth-launch-heading .launch-kicker {
+  color: var(--yr-final-green) !important;
+}
+
+/* Make the scrapbook caption more editorial/mature: black headline, softer gray subline. */
+.natural-school-photo-caption {
+  background: #f4f4f2 !important;
+  color: var(--yr-final-black) !important;
+}
+.natural-school-photo-caption strong {
+  color: var(--yr-final-black) !important;
+}
+.natural-school-photo-caption span {
+  color: #5d626b !important;
+}
+
+/* Keep the R/B/G divider visible against the slightly lifted gray caption field. */
+.natural-school-photo-shell::after {
+  background: linear-gradient(
+    90deg,
+    var(--yr-final-red) 0 33.333%,
+    var(--yr-final-black) 33.333% 66.666%,
+    var(--yr-final-green) 66.666% 100%
+  ) !important;
+}
+
+/* 5. Use the existing asset exactly as stored. No crop, no replacement, no generated copy. */
+#for-schools .school-campaign-banner-block {
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+#for-schools .school-campaign-banner-block img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ===== YOUTH READY FINAL PARTICIPATION HIERARCHY — 2026-09-13 =====
+   Final Youth Ready page decisions:
+   - no CTA in the opening hero/story section
+   - correct existing school participation banner
+   - "Simple to launch. Easy to manage." stays one continuous line
+   - action appears only after the four launch steps
+   - two clear school pathways: direct sign-up + school referral
+   - no callout box around the final action copy
+*/
+
+/* Opening hero tells the story only. */
+.natural-school-actions,
+.natural-school-cta {
+  display: none !important;
+}
+
+/* Exact existing banner asset is shown uncropped. */
+#for-schools .school-campaign-banner-block img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* One continuous headline. Scale it rather than forcing a line break. */
+#for-schools .youth-launch-heading {
+  max-width: none !important;
+}
+#for-schools .youth-launch-heading h2 {
+  max-width: none !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  font-size: clamp(1.35rem, 4.15vw, 4.65rem) !important;
+  letter-spacing: -0.04em !important;
+}
+#for-schools .youth-launch-heading h2::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Final action area — open typography, not a callout card. */
+#for-schools .youth-ready-action-block {
+  width: min(92%, 980px) !important;
+  margin: clamp(2.4rem, 4vw, 4rem) auto 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-align: center !important;
+  color: #111111 !important;
+}
+
+#for-schools .youth-ready-action-copy {
+  margin: 0 auto !important;
+  max-width: 900px !important;
+  color: #111111 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.35rem, 2vw, 2rem) !important;
+  line-height: 1.32 !important;
+  font-weight: 700 !important;
+}
+
+#for-schools .youth-ready-action-motto {
+  margin: .7rem 0 0 !important;
+  color: #111111 !important;
+  font-size: clamp(.92rem, 1vw, 1.02rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 900 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+}
+
+#for-schools .youth-ready-action-buttons {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .9rem !important;
+  margin-top: 1.5rem !important;
+}
+
+#for-schools .youth-ready-action-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 46px !important;
+  padding: .72rem 1.2rem !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  font-size: .86rem !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: .02em !important;
+}
+
+#for-schools .youth-ready-action-primary {
+  background: #d9ad32 !important;
+  color: #111111 !important;
+  border: 2px solid #d9ad32 !important;
+}
+
+#for-schools .youth-ready-action-secondary {
+  background: transparent !important;
+  color: #111111 !important;
+  border: 2px solid #111111 !important;
+}
+
+#for-schools .youth-ready-action-btn:hover,
+#for-schools .youth-ready-action-btn:focus-visible {
+  transform: translateY(-1px);
+}
+
+/* Small phones: retain the sentence on one line by scaling it down. */
+@media (max-width: 620px) {
+  #for-schools .youth-launch-heading h2 {
+    font-size: clamp(1.18rem, 5.7vw, 1.55rem) !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  #for-schools .youth-ready-action-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: min(100%, 340px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  #for-schools .youth-ready-action-btn {
+    width: 100% !important;
+  }
+}

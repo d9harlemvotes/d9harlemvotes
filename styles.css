@@ -7512,3 +7512,205 @@ body.impact-award-open { overflow: hidden !important; }
 }
 
 /* ===== END PAST EVENTS V8 ===== */
+
+/* =====================================================================
+   PAST EVENTS V9 — VISUAL REVIEW CORRECTIONS
+   Compact page header, open stacked Live/Love/Serve, no photo counters,
+   complete forum archive, and cleaner mobile reading flow.
+   ===================================================================== */
+
+/* Page header: match the scale and discipline of the other completed tabs. */
+#events .past-events-intro-inner {
+  padding: clamp(1.5rem, 2.2vw, 2.15rem) 0 clamp(1.35rem, 2vw, 1.9rem) !important;
+}
+
+#events .past-events-intro-heading {
+  display: block !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+}
+
+#events .past-events-intro-title,
+#events .past-events-intro-lede {
+  max-width: none !important;
+}
+
+#events .past-events-intro h2 {
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: clamp(2rem, 3vw, 3.05rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.035em !important;
+  text-wrap: initial !important;
+}
+
+#events .past-events-brand-line,
+#events .past-events-conversations-line {
+  display: block !important;
+  white-space: nowrap !important;
+}
+
+#events .past-events-table-line {
+  margin: .52rem 0 0 !important;
+  font-size: clamp(.98rem, 1.25vw, 1.15rem) !important;
+  line-height: 1.25 !important;
+  font-style: italic !important;
+}
+
+#events .past-events-signature {
+  width: min(320px, 48vw) !important;
+  height: 5px !important;
+  margin-top: .72rem !important;
+}
+
+#events .past-events-intro-lede {
+  max-width: 1040px !important;
+  margin: .9rem 0 0 !important;
+  font-size: clamp(1rem, 1.04vw, 1.08rem) !important;
+  line-height: 1.5 !important;
+}
+
+/* Live / Love / Serve: no three-column wrapping and no full-width color bars. */
+#events .past-events-values {
+  display: block !important;
+  margin-top: 1rem !important;
+  border: 0 !important;
+}
+
+#events .past-events-value {
+  display: block !important;
+  padding: .78rem 0 .82rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#events .past-events-value + .past-events-value {
+  border-top: 1px solid rgba(0,15,74,.13) !important;
+}
+
+#events .past-events-value::before {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 5px;
+  margin: 0 0 .55rem;
+}
+
+#events .past-events-value-live::before { background: var(--pe-red) !important; }
+#events .past-events-value-love::before { background: var(--pe-black) !important; }
+#events .past-events-value-serve::before { background: var(--pe-green) !important; }
+
+#events .past-events-value h3 {
+  margin: 0 0 .42rem !important;
+  font-size: clamp(1.4rem, 1.85vw, 1.8rem) !important;
+  line-height: 1.08 !important;
+}
+
+#events .past-events-value p {
+  max-width: 1120px !important;
+  margin: 0 !important;
+  font-size: clamp(.96rem, .98vw, 1.03rem) !important;
+  line-height: 1.5 !important;
+}
+
+/* Latest review removes the oversized standalone seat statement. */
+#events .past-events-seat-line { display: none !important; }
+
+/* People are here to see the photographs; remove all visible counts/status. */
+#events .past-events-photo-count,
+#events .past-events-carousel-status,
+#events .past-events-carousel-controls,
+#events .past-events-carousel-dots {
+  display: none !important;
+}
+
+#events .past-events-photo-drawer > summary {
+  gap: .45rem !important;
+}
+
+#events .past-events-carousel {
+  padding-bottom: .85rem !important;
+}
+
+/* Keep archive copy from stretching into awkward lines. */
+#events .past-events-event-copy {
+  width: min(100%, 980px) !important;
+}
+
+@media (max-width: 760px) {
+  #events .past-events-shell,
+  #events .past-events-event-featured {
+    width: 92% !important;
+  }
+
+  #events .past-events-intro-inner {
+    padding: 1.3rem 0 1.2rem !important;
+  }
+
+  #events .past-events-intro h2 {
+    font-size: clamp(1.85rem, 8.2vw, 2.45rem) !important;
+    line-height: 1 !important;
+  }
+
+  #events .past-events-brand-line,
+  #events .past-events-conversations-line {
+    white-space: normal !important;
+  }
+
+  #events .past-events-conversations-line {
+    white-space: nowrap !important;
+  }
+
+  #events .past-events-table-line {
+    font-size: 1rem !important;
+  }
+
+  #events .past-events-signature {
+    width: min(260px, 70vw) !important;
+  }
+
+  #events .past-events-intro-lede,
+  #events .past-events-value p {
+    font-size: .96rem !important;
+    line-height: 1.47 !important;
+  }
+
+  #events .past-events-value {
+    padding: .68rem 0 .72rem !important;
+  }
+
+  #events .past-events-value h3 {
+    font-size: clamp(1.35rem, 6vw, 1.7rem) !important;
+  }
+
+  #events .past-events-event {
+    padding: 1.35rem 0 1.5rem !important;
+  }
+
+  #events .past-events-event h3 {
+    font-size: clamp(1.78rem, 8vw, 2.4rem) !important;
+  }
+
+  #events .past-events-event-copy {
+    width: 100% !important;
+  }
+
+  #events .past-events-photo-drawer > summary {
+    justify-content: center !important;
+    font-size: .92rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #events .past-events-intro h2 {
+    font-size: clamp(1.72rem, 8.1vw, 2.05rem) !important;
+  }
+
+  #events .past-events-conversations-line {
+    white-space: normal !important;
+  }
+}
+
+/* ===== END PAST EVENTS V9 ===== */
+

@@ -5024,23 +5024,19 @@ body.impact-award-open { overflow: hidden !important; }
   display: grid !important;
   place-items: center !important;
   width: min(100%, 530px) !important;
-  aspect-ratio: 1 / 1 !important;
-  overflow: hidden !important;
-  border-radius: 50% !important;
 }
 
 #first-time-voter .ftv-process-figure img {
   display: block !important;
-  width: 115% !important;
-  max-width: none !important;
-  height: 115% !important;
-  aspect-ratio: 1 / 1 !important;
-  object-fit: cover !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
   object-position: center center !important;
-  transform: scale(1.02) !important;
-  border-radius: 50% !important;
-  clip-path: none !important;
+  transform: none !important;
   border: 0 !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
   box-shadow: none !important;
   background: transparent !important;
 }
@@ -5176,7 +5172,7 @@ body.impact-award-open { overflow: hidden !important; }
     gap: 2.5rem !important;
   }
   #first-time-voter .ftv-sticker-figure img { width: min(76vw, 440px) !important; }
-  #first-time-voter .ftv-process-figure img { width: min(80vw, 510px) !important; }
+  #first-time-voter .ftv-process-figure { width: min(80vw, 510px) !important; }
   #first-time-voter .ftv-resource-steps { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
   #first-time-voter .ftv-resource-step:nth-child(3) { border-left: 0 !important; border-top: 1px solid rgba(255,255,255,.26) !important; }
   #first-time-voter .ftv-resource-step:nth-child(4) { border-top: 1px solid rgba(255,255,255,.26) !important; }

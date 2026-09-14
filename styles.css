@@ -9451,3 +9451,188 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   #first-time-voter .ftv-poll-guidance a { margin-top: .35rem !important; min-height: 26px !important; padding: .3rem .5rem !important; font-size: 5.5pt !important; }
 }
 /* ===== END FIRST-TIME VOTERS V17 INFORMATION ARCHITECTURE + JOURNEY PATH ===== */
+
+
+/* ===== FIRST-TIME VOTERS v18 — RESTORE PROCESS OVERVIEW + COMPACT RESOURCE BAND ===== */
+#first-time-voter .ftv-process-overview {
+  display: grid !important;
+  place-items: center !important;
+  padding: clamp(1.4rem, 2.6vw, 2.4rem) 0 clamp(2.2rem, 4vw, 3.6rem) !important;
+}
+
+#first-time-voter .ftv-process-overview-figure {
+  margin: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  width: min(100%, 440px) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-process-overview-figure img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-actions-compact {
+  width: min(90%, 980px) !important;
+}
+
+#first-time-voter .ftv-actions-compact .ftv-actions-heading {
+  margin-bottom: clamp(1.4rem, 2.4vw, 2rem) !important;
+}
+
+#first-time-voter .ftv-actions-compact .ftv-actions-heading h3 {
+  font-size: clamp(2.6rem, 4vw, 4rem) !important;
+}
+
+#first-time-voter .ftv-resource-grid-v18 {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  border-top: 1px solid rgba(255,255,255,.22) !important;
+  border-bottom: 1px solid rgba(255,255,255,.22) !important;
+}
+
+#first-time-voter .ftv-resource-card-v18,
+#first-time-voter .ftv-resource-card-v18:visited {
+  min-width: 0 !important;
+  min-height: 190px !important;
+  padding: 1.35rem 1.4rem 1.45rem !important;
+  display: grid !important;
+  grid-template-columns: 72px minmax(0,1fr) !important;
+  grid-template-rows: auto 1fr !important;
+  column-gap: 1.1rem !important;
+  align-items: start !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-resource-card-v18:nth-child(even) {
+  border-left: 1px solid rgba(255,255,255,.18) !important;
+}
+
+#first-time-voter .ftv-resource-card-v18:nth-child(n+3) {
+  border-top: 1px solid rgba(255,255,255,.18) !important;
+}
+
+#first-time-voter .ftv-step-num-v18 {
+  grid-row: 1 / 3 !important;
+  width: 68px !important;
+  height: 68px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  color: var(--ftv-blue) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 1.08rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .02em !important;
+}
+
+#first-time-voter .ftv-resource-card-v18 strong {
+  display: block !important;
+  margin: .12rem 0 .35rem !important;
+  color: #fff !important;
+  font-size: 1.02rem !important;
+  line-height: 1.2 !important;
+}
+
+#first-time-voter .ftv-resource-card-v18 small {
+  display: block !important;
+  max-width: 26rem !important;
+  color: rgba(255,255,255,.84) !important;
+  font-size: .9rem !important;
+  line-height: 1.42 !important;
+}
+
+#first-time-voter .ftv-open-v18 {
+  grid-column: 2 !important;
+  align-self: end !important;
+  justify-self: start !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 40px !important;
+  margin-top: .85rem !important;
+  padding: .6rem .95rem !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  color: var(--ftv-blue) !important;
+  font-size: .78rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .03em !important;
+}
+
+#first-time-voter .ftv-resource-card-v18:hover strong,
+#first-time-voter .ftv-resource-card-v18:focus-visible strong {
+  text-decoration: underline !important;
+  text-underline-offset: .22em !important;
+}
+
+#first-time-voter .ftv-tracking-note {
+  max-width: 760px !important;
+  margin: 1rem auto 0 !important;
+}
+
+#first-time-voter .ftv-band-transition {
+  background: var(--ftv-silver) !important;
+  padding: 8px 0 0 !important;
+}
+
+#first-time-voter .ftv-band-transition span {
+  min-height: 7px !important;
+}
+
+#first-time-voter .ftv-polls-shell {
+  width: min(88%, 1040px) !important;
+}
+
+@media (max-width: 820px) {
+  #first-time-voter .ftv-process-overview-figure { width: min(78vw, 390px) !important; }
+  #first-time-voter .ftv-resource-grid-v18 { grid-template-columns: 1fr !important; }
+  #first-time-voter .ftv-resource-card-v18,
+  #first-time-voter .ftv-resource-card-v18:nth-child(even),
+  #first-time-voter .ftv-resource-card-v18:nth-child(n+3) {
+    border-left: 0 !important;
+    border-top: 1px solid rgba(255,255,255,.18) !important;
+  }
+  #first-time-voter .ftv-resource-card-v18:first-child { border-top: 0 !important; }
+}
+
+@media (max-width: 560px) {
+  #first-time-voter .ftv-resource-card-v18,
+  #first-time-voter .ftv-resource-card-v18:visited {
+    grid-template-columns: 58px minmax(0,1fr) !important;
+    column-gap: .85rem !important;
+    min-height: 0 !important;
+    padding: 1.15rem .8rem 1.2rem !important;
+  }
+  #first-time-voter .ftv-step-num-v18 { width: 54px !important; height: 54px !important; font-size: .95rem !important; }
+}
+
+@media print {
+  #first-time-voter .ftv-process-overview { padding: .4rem 0 .7rem !important; break-inside: avoid !important; }
+  #first-time-voter .ftv-process-overview-figure { width: 240px !important; }
+  #first-time-voter .ftv-band-actions { break-inside: avoid !important; }
+  #first-time-voter .ftv-actions-compact { width: 92% !important; }
+  #first-time-voter .ftv-actions-compact .ftv-actions-heading h3 { font-size: 24pt !important; }
+  #first-time-voter .ftv-resource-grid-v18 { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+  #first-time-voter .ftv-resource-card-v18 { min-height: 118px !important; padding: .6rem .65rem !important; grid-template-columns: 42px minmax(0,1fr) !important; column-gap: .55rem !important; }
+  #first-time-voter .ftv-step-num-v18 { width: 38px !important; height: 38px !important; font-size: 8pt !important; }
+  #first-time-voter .ftv-resource-card-v18 strong { font-size: 8.5pt !important; }
+  #first-time-voter .ftv-resource-card-v18 small { font-size: 7pt !important; }
+  #first-time-voter .ftv-open-v18 { min-height: 26px !important; padding: .28rem .48rem !important; font-size: 6.5pt !important; }
+  #first-time-voter .ftv-tracking-note { font-size: 6.5pt !important; margin-top: .5rem !important; }
+}
+/* ===== END FIRST-TIME VOTERS v18 ===== */

@@ -4907,8 +4907,9 @@ body.impact-award-open { overflow: hidden !important; }
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   width: 100% !important;
-  border-top: 1px solid rgba(255,255,255,.3) !important;
-  border-bottom: 1px solid rgba(255,255,255,.3) !important;
+  border-top: 1px solid rgba(255,255,255,.34) !important;
+  border-bottom: 1px solid rgba(255,255,255,.34) !important;
+  background: linear-gradient(90deg, var(--ftv-red) 0 33.333%, var(--ftv-black) 33.333% 66.666%, var(--ftv-green) 66.666% 100%) bottom / 100% 6px no-repeat !important;
 }
 
 #first-time-voter .ftv-resource-step,
@@ -4916,7 +4917,7 @@ body.impact-award-open { overflow: hidden !important; }
   display: flex !important;
   min-width: 0 !important;
   min-height: 265px !important;
-  padding: clamp(1.4rem, 2.2vw, 2.25rem) clamp(1rem, 1.8vw, 1.75rem) !important;
+  padding: clamp(1.5rem, 2.25vw, 2.35rem) clamp(1.05rem, 1.9vw, 1.8rem) !important;
   flex-direction: column !important;
   align-items: flex-start !important;
   justify-content: flex-start !important;
@@ -4929,7 +4930,7 @@ body.impact-award-open { overflow: hidden !important; }
 }
 
 #first-time-voter .ftv-resource-step + .ftv-resource-step {
-  border-left: 1px solid rgba(255,255,255,.26) !important;
+  border-left: 1px solid rgba(255,255,255,.18) !important;
 }
 
 #first-time-voter .ftv-step-num {
@@ -4939,9 +4940,10 @@ body.impact-award-open { overflow: hidden !important; }
   width: 54px !important;
   height: 54px !important;
   margin-bottom: 1rem !important;
-  border: 2px solid rgba(255,255,255,.82) !important;
+  border: 2px solid rgba(255,255,255,.96) !important;
   border-radius: 50% !important;
-  color: #fff !important;
+  background: #fff !important;
+  color: var(--ftv-blue) !important;
   font-family: Georgia, "Times New Roman", serif !important;
   font-size: 1.25rem !important;
   font-weight: 800 !important;
@@ -4958,28 +4960,35 @@ body.impact-award-open { overflow: hidden !important; }
 #first-time-voter .ftv-resource-step small {
   display: block !important;
   margin-top: .55rem !important;
-  color: rgba(255,255,255,.78) !important;
-  font-size: .88rem !important;
-  line-height: 1.4 !important;
+  color: rgba(255,255,255,.86) !important;
+  font-size: .9rem !important;
+  line-height: 1.42 !important;
 }
 
 #first-time-voter .ftv-open {
-  display: inline-block !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .35rem !important;
   margin-top: auto !important;
-  padding-top: 1rem !important;
-  color: #fff !important;
-  font-size: .78rem !important;
+  padding: .8rem 1.15rem !important;
+  background: #fff !important;
+  border-radius: 999px !important;
+  color: var(--ftv-blue) !important;
+  font-size: .76rem !important;
   font-weight: 900 !important;
   letter-spacing: .045em !important;
   text-transform: uppercase !important;
 }
 
 #first-time-voter .ftv-resource-step:hover strong,
-#first-time-voter .ftv-resource-step:focus-visible strong,
-#first-time-voter .ftv-resource-step:hover .ftv-open,
-#first-time-voter .ftv-resource-step:focus-visible .ftv-open {
+#first-time-voter .ftv-resource-step:focus-visible strong {
   text-decoration: underline !important;
   text-underline-offset: .25em !important;
+}
+
+#first-time-voter .ftv-resource-step:hover .ftv-open,
+#first-time-voter .ftv-resource-step:focus-visible .ftv-open {
+  background: rgba(255,255,255,.92) !important;
 }
 
 #first-time-voter .ftv-resource-step:focus-visible {
@@ -5014,16 +5023,23 @@ body.impact-award-open { overflow: hidden !important; }
   margin: 0 !important;
   display: grid !important;
   place-items: center !important;
+  width: min(100%, 530px) !important;
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
 }
 
 #first-time-voter .ftv-process-figure img {
   display: block !important;
-  width: min(100%, 525px) !important;
-  height: auto !important;
+  width: 115% !important;
+  max-width: none !important;
+  height: 115% !important;
   aspect-ratio: 1 / 1 !important;
   object-fit: cover !important;
+  object-position: center center !important;
+  transform: scale(1.02) !important;
   border-radius: 50% !important;
-  clip-path: circle(48.7% at 50% 50%) !important;
+  clip-path: none !important;
   border: 0 !important;
   box-shadow: none !important;
   background: transparent !important;

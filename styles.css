@@ -4439,3 +4439,68 @@ body.impact-award-open { overflow: hidden !important; }
   #impact .botg-card { aspect-ratio:4/5!important; }
 }
 /* ===== END COMMUNITY IMPACT V3 ===== */
+
+
+/* ===== COMMUNITY IMPACT V4 — COLOR RHYTHM REFINEMENT (2026-09-13) =====
+   Scope: #impact only. Youth Ready + About Us remain locked.
+   Uses the approved Youth Ready blue in the middle impact band, then
+   RED → BLACK → GREEN for the three detailed impact cards. */
+#impact.locked-impact-page {
+  --impact-blue-bright:#0b52c6;
+  --impact-blue-mid:#073fa8;
+  --impact-blue-start:#052d7f;
+}
+
+/* Break up the repeated deep navy with the exact blue family from Youth Ready. */
+#impact .impact-band-stats {
+  background:linear-gradient(112deg,
+    var(--impact-blue-start) 0%,
+    var(--impact-blue-mid) 55%,
+    var(--impact-blue-bright) 100%)!important;
+}
+
+/* The three cards now carry the full Pan-African signature, so the tiny rule is redundant here. */
+#impact .impact-band-stats .impact-signature-rule {
+  display:none!important;
+}
+
+#impact .impact-detail-line {
+  gap:clamp(.75rem,1.6vw,1.15rem)!important;
+  padding-top:0!important;
+  border-top:0!important;
+}
+#impact .impact-detail-line>div,
+#impact .impact-detail-line>div:first-child {
+  min-height:150px!important;
+  padding:clamp(1.2rem,2.1vw,1.7rem)!important;
+  border:0!important;
+  border-radius:16px!important;
+  box-shadow:none!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+#impact .impact-detail-line>div:nth-child(1) { background:var(--impact-red)!important; }
+#impact .impact-detail-line>div:nth-child(2) { background:var(--impact-black)!important; }
+#impact .impact-detail-line>div:nth-child(3) { background:var(--impact-green)!important; }
+#impact .impact-detail-line strong,
+#impact .impact-detail-line span {
+  color:#fff!important;
+}
+#impact .impact-detail-line strong {
+  font-size:clamp(2.35rem,3.7vw,3.8rem)!important;
+}
+#impact .impact-detail-line span {
+  color:rgba(255,255,255,.96)!important;
+  font-weight:800!important;
+}
+
+@media(max-width:760px){
+  #impact .impact-detail-line>div,
+  #impact .impact-detail-line>div:first-child {
+    min-height:0!important;
+    padding:1.2rem 1.25rem!important;
+    border-top:0!important;
+  }
+}
+/* ===== END COMMUNITY IMPACT V4 ===== */

@@ -5901,15 +5901,15 @@
       <div aria-hidden="true" class="impact-signature-rule"><span></span><span></span><span></span></div>
     </div>
     <div aria-label="Overall impact totals" class="impact-summary-line">
-      <div class="impact-summary-pair"><strong data-impact-count="8">0</strong><span>ACTIVATIONS</span></div>
+      <div class="impact-summary-pair"><strong data-impact-count="8">8</strong><span>ACTIVATIONS</span></div>
       <span aria-hidden="true" class="impact-summary-dot">·</span>
-      <div class="impact-summary-pair"><strong data-impact-count="31">0</strong><span>TRAINED VOLUNTEERS</span></div>
+      <div class="impact-summary-pair"><strong data-impact-count="31">31</strong><span>TRAINED VOLUNTEERS</span></div>
     </div>
-    <div class="impact-conversations"><strong data-impact-count="1640">0</strong><span>CONVERSATIONS</span></div>
+    <div class="impact-conversations"><strong data-impact-count="1640">1,640</strong><span>CONVERSATIONS</span></div>
     <div aria-label="Detailed impact totals" class="impact-detail-line">
-      <div><strong data-impact-count="1030">0</strong><span>voter engagement actions</span></div>
-      <div><strong data-impact-count="85">0</strong><span>completed voter registrations</span></div>
-      <div><strong data-impact-count="525">0</strong><span>documented voting plans</span></div>
+      <div><strong data-impact-count="1030">1,030</strong><span>voter engagement actions</span></div>
+      <div><strong data-impact-count="85">85</strong><span>completed voter registrations</span></div>
+      <div><strong data-impact-count="525">525</strong><span>documented voting plans</span></div>
     </div>
   </div>
 </div>
@@ -6541,22 +6541,31 @@
   function counters() {
     return Array.prototype.slice.call(impact.querySelectorAll('[data-impact-count]'));
   }
-  function resetCounters() {
+  function showFinalValues() {
+    counters().forEach(function (el) {
+      el.textContent = parseInt(el.getAttribute('data-impact-count') || '0', 10).toLocaleString();
+    });
+  }
+  function armCounters() {
     running = false;
     completed = false;
-    counters().forEach(function (el) { el.textContent = '0'; });
+    showFinalValues();
+  }
+  function bandIsVisible() {
+    if (!statsBand || impact.hasAttribute('hidden')) return false;
+    var rect = statsBand.getBoundingClientRect();
+    return rect.top < window.innerHeight * 0.88 && rect.bottom > window.innerHeight * 0.12;
   }
   function animateCounters() {
     if (running || completed || impact.hasAttribute('hidden')) return;
     var els = counters();
     if (!els.length) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      els.forEach(function (el) {
-        el.textContent = parseInt(el.getAttribute('data-impact-count') || '0', 10).toLocaleString();
-      });
+      showFinalValues();
       completed = true;
       return;
     }
+    els.forEach(function (el) { el.textContent = '0'; });
     running = true;
     var duration = 1550;
     var started = null;
@@ -6571,9 +6580,7 @@
       if (progress < 1) {
         requestAnimationFrame(tick);
       } else {
-        els.forEach(function (el) {
-          el.textContent = parseInt(el.getAttribute('data-impact-count') || '0', 10).toLocaleString();
-        });
+        showFinalValues();
         running = false;
         completed = true;
       }
@@ -6587,7 +6594,7 @@
       entries.forEach(function (entry) {
         if (entry.isIntersecting && !impact.hasAttribute('hidden')) animateCounters();
       });
-    }, { threshold: 0.32 });
+    }, { threshold: 0.28 });
     observer.observe(statsBand);
   }
 
@@ -6595,27 +6602,26 @@
     new MutationObserver(function (mutations) {
       mutations.forEach(function (mutation) {
         if (mutation.attributeName === 'hidden' && !impact.hasAttribute('hidden')) {
-          resetCounters();
+          armCounters();
           window.setTimeout(function () {
-            if (!observer && statsBand) {
-              var rect = statsBand.getBoundingClientRect();
-              if (rect.top < window.innerHeight && rect.bottom > 0) animateCounters();
-            }
-          }, 120);
+            if (bandIsVisible()) animateCounters();
+          }, 140);
         }
       });
     }).observe(impact, { attributes: true, attributeFilter: ['hidden'] });
   }
 
   document.addEventListener('click', function (event) {
-    if (event.target.closest('a[href="#impact"]')) resetCounters();
+    if (event.target.closest('a[href="#impact"]')) armCounters();
   }, true);
   window.addEventListener('hashchange', function () {
-    if (window.location.hash === '#impact') resetCounters();
+    if (window.location.hash === '#impact') armCounters();
   });
 
-  resetCounters();
-  if (!impact.hasAttribute('hidden') && !observer) window.setTimeout(animateCounters, 200);
+  armCounters();
+  if (!impact.hasAttribute('hidden') && bandIsVisible()) {
+    window.setTimeout(animateCounters, 220);
+  }
 }());
 </script></body>
 </html>

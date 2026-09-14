@@ -5435,7 +5435,7 @@
   #for-schools { break-before: page !important; }
 }
 </style>
-<link href="styles.css?v=29" id="d9-final-styles" rel="stylesheet"/>
+<link href="styles.css?v=31" id="d9-final-styles" rel="stylesheet"/>
 <style id="about-silver-band-critical-fix">
 
 /* ============================================================
@@ -6428,6 +6428,172 @@
 
 /* ===== END PAST EVENTS V8 ===== */
 
+
+
+/* =====================================================================
+   PAST EVENTS V11 — COPY + PHOTO PRESENTATION CORRECTIONS
+   User-approved intro only; full Town Hall and PACE archives; photos are
+   shown without forced cropping so faces, heads, and bodies remain intact.
+   ===================================================================== */
+#events .past-events-intro-inner {
+  padding: clamp(1.55rem, 2.5vw, 2.4rem) 0 clamp(1.45rem, 2.4vw, 2.25rem) !important;
+}
+
+#events .past-events-intro-heading {
+  display: block !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-intro-title {
+  max-width: 1000px !important;
+}
+
+#events .past-events-intro h2 {
+  max-width: 920px !important;
+  margin: 0 !important;
+  font-size: clamp(2.15rem, 4.2vw, 4.65rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.035em !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
+}
+
+#events .past-events-registered {
+  font-size: .38em !important;
+  vertical-align: super !important;
+  margin-left: .04em !important;
+}
+
+#events .past-events-table-line {
+  margin: .72rem 0 0 !important;
+  font-size: clamp(1.05rem, 1.55vw, 1.34rem) !important;
+  line-height: 1.28 !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+}
+
+#events .past-events-signature {
+  width: min(330px, 52vw) !important;
+  height: 5px !important;
+  margin-top: .82rem !important;
+}
+
+#events .past-events-intro-copy {
+  width: min(100%, 980px) !important;
+  margin-top: 1.15rem !important;
+}
+
+#events .past-events-intro-lede,
+#events .past-events-intro-body {
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: clamp(1rem, 1.1vw, 1.11rem) !important;
+  line-height: 1.58 !important;
+  text-align: left !important;
+}
+
+#events .past-events-intro-body {
+  margin-top: .72rem !important;
+}
+
+#events .past-events-values,
+#events .past-events-seat-line {
+  display: none !important;
+}
+
+/* Photo viewers: preserve the complete photograph. Never crop people to fit a box. */
+#events .past-events-photo-drawer {
+  width: min(94%, 1180px) !important;
+}
+
+#events .past-events-carousel {
+  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+  align-items: center !important;
+  gap: clamp(.35rem, 1vw, .8rem) !important;
+}
+
+#events .past-events-carousel-stage,
+#events .past-events-event-featured .past-events-carousel-stage {
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+  padding: clamp(.45rem, 1.2vw, .85rem) !important;
+  background: rgba(0,15,74,.045) !important;
+}
+
+#events .past-events-event-featured .past-events-carousel-stage {
+  background: rgba(255,255,255,.06) !important;
+}
+
+#events .past-events-carousel-slide {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+#events .past-events-carousel-slide.is-active {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#events .past-events-carousel-slide img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: min(76vh, 760px) !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-carousel-arrow {
+  align-self: center !important;
+}
+
+@media (max-width: 760px) {
+  #events .past-events-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+    line-height: 1.01 !important;
+  }
+
+  #events .past-events-table-line {
+    font-size: 1.02rem !important;
+  }
+
+  #events .past-events-intro-copy {
+    margin-top: 1rem !important;
+  }
+
+  #events .past-events-intro-lede,
+  #events .past-events-intro-body {
+    font-size: .98rem !important;
+    line-height: 1.52 !important;
+  }
+
+  #events .past-events-photo-drawer {
+    width: 100% !important;
+  }
+
+  #events .past-events-carousel {
+    grid-template-columns: 40px minmax(0,1fr) 40px !important;
+    gap: .25rem !important;
+  }
+
+  #events .past-events-carousel-stage,
+  #events .past-events-event-featured .past-events-carousel-stage {
+    padding: .25rem !important;
+  }
+
+  #events .past-events-carousel-slide img {
+    max-height: 70vh !important;
+  }
+}
+/* ===== END PAST EVENTS V11 ===== */
+
 </style>
 </head>
 <body>
@@ -6843,28 +7009,14 @@
     <div class="past-events-shell past-events-intro-inner">
       <div class="past-events-intro-heading">
         <div class="past-events-intro-title">
-          <h2 aria-label="D9 Harlem Votes, registered trademark, Community Conversations"><span class="past-events-brand-line">D9 Harlem Votes<sup class="past-events-registered" aria-hidden="true">®</sup></span><span class="past-events-conversations-line">Community Conversations</span></h2>
-          <p class="past-events-table-line">Setting the table for Harlem.</p>
+          <h2 aria-label="D9 Harlem Votes, registered trademark, Community Conversations">D9 Harlem Votes<sup class="past-events-registered" aria-hidden="true">®</sup> Community Conversations</h2>
+          <p class="past-events-table-line">Setting a Seat at the Table for Harlem</p>
           <div aria-hidden="true" class="past-events-signature"><span></span><span></span><span></span></div>
         </div>
-        <p class="past-events-intro-lede">D9 Harlem Votes® was called to <strong>live, love, and serve Harlem</strong>. For us, that means centering Harlem, being present in the community, and remaining in conversation with our neighbors every day.</p>
-      </div>
-
-      <div class="past-events-values" aria-label="D9 Harlem Votes® commitment to Harlem">
-        <section class="past-events-value past-events-value-live">
-          <h3>We <em>live</em> Harlem.</h3>
-          <p>Our civic engagement does not end at the voter registration table. Voter registration activates our ongoing, proactive participation in local government and in the decisions that shape our community. Voting is an action, but civic engagement is a practice. We stay informed, stay engaged, ask questions, follow the policies, and pay attention to what happens long after the polls close.</p>
-        </section>
-
-        <section class="past-events-value past-events-value-love">
-          <h3>We <em>love</em> Harlem.</h3>
-          <p>Our Harlem village is shaped by spirit, shared history, and generations of residents who have poured, and continue to pour, into the upliftment and welfare of our community. We are proud of Harlem and of our <strong>collective legacy as cultural architects who have made Harlem a beacon of Black America.</strong> Beyond our community pride, we understand that laws, policies, and practices have shaped Harlem and continue to affect the lives of the people who sustain its global influence. We recognize that the Harlem community is in need of protection, healing, and community care. We endeavor to make every effort to restore hope in our democracy and civic participation, and to empower every resident to participate, make voting a priority and a practice, and commit to advocating for their needs before, during, and beyond every election, because <strong class="past-events-voices">Harlem’s voices and VOTES still Matter.</strong></p>
-        </section>
-
-        <section class="past-events-value past-events-value-serve">
-          <h3>We <em>serve</em> Harlem.</h3>
-          <p>We curate opportunities to gather in intergenerational community spaces where Harlem residents are <strong>felt, seen, and heard</strong> by those they elect and by decision makers who work on behalf of our community. We work to ensure Harlem residents are in the room and have equal access to information, resources, and public conversations surrounding policies that affect our lives. Our youth belong in these conversations. Our elders belong in these conversations. The people who live, work, worship, create, build, and call Harlem their cultural home belong at the table.</p>
-        </section>
+        <div class="past-events-intro-copy">
+          <p class="past-events-intro-lede">D9 Harlem Votes® <strong><em>lives, loves, and serves Harlem</em></strong>. For us, that means centering Harlem, being present in the community, and remaining in conversation with our neighbors every day.</p>
+          <p class="past-events-intro-body">Our civic engagement does not end at the voter registration table. Voter registration activates our ongoing, proactive participation in local government and in the decisions that shape our community. Voting is an action, but civic engagement is a practice. We stay informed, stay engaged, ask questions, follow the policies, and pay attention to what happens long after the polls close.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -6891,14 +7043,25 @@
         <div class="past-events-carousel" data-event-carousel>
           <button class="past-events-carousel-arrow past-events-carousel-prev" type="button" aria-label="Previous Town Hall photo">‹</button>
           <div class="past-events-carousel-stage" aria-live="polite">
-            <figure class="past-events-carousel-slide is-active"><img alt="Town Hall documentary photo 1" loading="lazy" src="assets/past-events/town-hall/townhall-02.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Town Hall documentary photo 2" loading="lazy" src="assets/past-events/town-hall/townhall-03.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Town Hall documentary photo 3" loading="lazy" src="assets/past-events/town-hall/townhall-04.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Town Hall documentary photo 4" loading="lazy" src="assets/past-events/town-hall/townhall-05.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Town Hall documentary photo 5" loading="lazy" src="assets/past-events/town-hall/townhall-06.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Town Hall documentary photo 6" loading="lazy" src="assets/past-events/town-hall/townhall-07.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Town Hall documentary photo 7" loading="lazy" src="assets/past-events/town-hall/townhall-08.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Town Hall documentary photo 8" loading="lazy" src="assets/past-events/town-hall/townhall-09.jpeg"/></figure>
+            <figure class="past-events-carousel-slide is-active"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-01.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-02.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-03.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-04.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-05.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-06.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-07.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-08.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-09.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-10.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-11.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-12.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-13.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-14.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-15.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-16.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-17.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-18.jpeg"/></figure>
+            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-19.jpeg"/></figure>
           </div>
           <button class="past-events-carousel-arrow past-events-carousel-next" type="button" aria-label="Next Town Hall photo">›</button>
         </div>
@@ -6937,31 +7100,25 @@
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-07.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-08.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-09.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-10.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-11.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-12.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-13.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-14.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-15.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-16.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-17.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-18.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-19.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-20.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-21.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-22.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-23.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-24.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-25.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-26.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-27.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-28.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-29.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-30.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-31.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-32.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-33.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-34.jpeg"/></figure>
               <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-35.jpeg"/></figure>
             </div>
             <button class="past-events-carousel-arrow past-events-carousel-next" type="button" aria-label="Next Mayoral Candidates Forum photo">›</button>
@@ -6980,7 +7137,7 @@
         </div>
 
         <figure class="past-events-hero-image">
-          <img alt="D9 Harlem Votes® participants at PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/MBPace-14.jpg"/>
+          <img alt="D9 Harlem Votes® participants at PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-hero.jpg"/>
         </figure>
 
         <details class="past-events-photo-drawer">
@@ -6988,14 +7145,21 @@
           <div class="past-events-carousel" data-event-carousel>
             <button class="past-events-carousel-arrow past-events-carousel-prev" type="button" aria-label="Previous PACE Social Justice Week photo">‹</button>
             <div class="past-events-carousel-stage" aria-live="polite">
-              <figure class="past-events-carousel-slide is-active"><img alt="Panelists and moderator at the Rapid Fire Chat during PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/Panelists and Moderator.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="Rapid Fire Chat panel discussion during PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/20251029_194515.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="D9 Harlem Votes® voter information table during PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/20251029_184530.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="D9 Harlem Votes® participants posing together at PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/MBPace-7.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="Community participants gathered at PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/MBPace-8.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="Fraternity members gathered at PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/20251029_212200.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="D9 Harlem Votes® participants at the PACE University backdrop" loading="lazy" src="assets/past-events/pace-social-justice-week/20251029_211731.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="D9 Harlem Votes® participants during PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/20251029_181517.jpg"/></figure>
+              <figure class="past-events-carousel-slide is-active"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-01.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-02.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-03.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-04.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-05.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-06.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-07.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-08.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-09.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-10.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-11.jpeg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-12.png"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-13.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-15.jpg"/></figure>
+              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-16.jpeg"/></figure>
             </div>
             <button class="past-events-carousel-arrow past-events-carousel-next" type="button" aria-label="Next PACE Social Justice Week photo">›</button>
           </div>
@@ -7662,7 +7826,7 @@
   }
 }());
 </script>
-<script id="d9-past-events-carousel-v9">
+<script id="d9-past-events-carousel-v10">
 (function () {
   function initCarousel(carousel) {
     if (!carousel || carousel.dataset.ready === 'true') return;
@@ -7675,20 +7839,32 @@
     var touchStartX = null;
     if (!slides.length) return;
 
+    function updateButtons() {
+      if (prev) {
+        prev.disabled = index === 0;
+        prev.setAttribute('aria-disabled', prev.disabled ? 'true' : 'false');
+      }
+      if (next) {
+        next.disabled = index === slides.length - 1;
+        next.setAttribute('aria-disabled', next.disabled ? 'true' : 'false');
+      }
+    }
+
     function show(i) {
-      index = (i + slides.length) % slides.length;
+      index = Math.max(0, Math.min(slides.length - 1, i));
       slides.forEach(function (slide, n) {
         var active = n === index;
         slide.classList.toggle('is-active', active);
         slide.setAttribute('aria-hidden', active ? 'false' : 'true');
       });
+      updateButtons();
     }
 
-    if (prev) prev.addEventListener('click', function () { show(index - 1); });
-    if (next) next.addEventListener('click', function () { show(index + 1); });
+    if (prev) prev.addEventListener('click', function () { if (index > 0) show(index - 1); });
+    if (next) next.addEventListener('click', function () { if (index < slides.length - 1) show(index + 1); });
     carousel.addEventListener('keydown', function (event) {
-      if (event.key === 'ArrowLeft') { event.preventDefault(); show(index - 1); }
-      if (event.key === 'ArrowRight') { event.preventDefault(); show(index + 1); }
+      if (event.key === 'ArrowLeft' && index > 0) { event.preventDefault(); show(index - 1); }
+      if (event.key === 'ArrowRight' && index < slides.length - 1) { event.preventDefault(); show(index + 1); }
     });
 
     if (stage) {
@@ -7700,7 +7876,8 @@
         var delta = event.changedTouches[0].clientX - touchStartX;
         touchStartX = null;
         if (Math.abs(delta) < 45) return;
-        show(delta < 0 ? index + 1 : index - 1);
+        if (delta < 0 && index < slides.length - 1) show(index + 1);
+        if (delta > 0 && index > 0) show(index - 1);
       }, { passive: true });
     }
 

@@ -7714,3 +7714,180 @@ body.impact-award-open { overflow: hidden !important; }
 
 /* ===== END PAST EVENTS V9 ===== */
 
+
+
+/* ===== PAST EVENTS V10 — FORUM PHOTO QA =====
+   Do not loop carousels. Disabled arrows mark the true beginning/end. */
+#events .past-events-carousel-arrow:disabled {
+  opacity: .24 !important;
+  cursor: default !important;
+  pointer-events: none !important;
+}
+/* ===== END PAST EVENTS V10 ===== */
+
+
+
+/* =====================================================================
+   PAST EVENTS V11 — COPY + PHOTO PRESENTATION CORRECTIONS
+   User-approved intro only; full Town Hall and PACE archives; photos are
+   shown without forced cropping so faces, heads, and bodies remain intact.
+   ===================================================================== */
+#events .past-events-intro-inner {
+  padding: clamp(1.55rem, 2.5vw, 2.4rem) 0 clamp(1.45rem, 2.4vw, 2.25rem) !important;
+}
+
+#events .past-events-intro-heading {
+  display: block !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-intro-title {
+  max-width: 1000px !important;
+}
+
+#events .past-events-intro h2 {
+  max-width: 920px !important;
+  margin: 0 !important;
+  font-size: clamp(2.15rem, 4.2vw, 4.65rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.035em !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
+}
+
+#events .past-events-registered {
+  font-size: .38em !important;
+  vertical-align: super !important;
+  margin-left: .04em !important;
+}
+
+#events .past-events-table-line {
+  margin: .72rem 0 0 !important;
+  font-size: clamp(1.05rem, 1.55vw, 1.34rem) !important;
+  line-height: 1.28 !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+}
+
+#events .past-events-signature {
+  width: min(330px, 52vw) !important;
+  height: 5px !important;
+  margin-top: .82rem !important;
+}
+
+#events .past-events-intro-copy {
+  width: min(100%, 980px) !important;
+  margin-top: 1.15rem !important;
+}
+
+#events .past-events-intro-lede,
+#events .past-events-intro-body {
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: clamp(1rem, 1.1vw, 1.11rem) !important;
+  line-height: 1.58 !important;
+  text-align: left !important;
+}
+
+#events .past-events-intro-body {
+  margin-top: .72rem !important;
+}
+
+#events .past-events-values,
+#events .past-events-seat-line {
+  display: none !important;
+}
+
+/* Photo viewers: preserve the complete photograph. Never crop people to fit a box. */
+#events .past-events-photo-drawer {
+  width: min(94%, 1180px) !important;
+}
+
+#events .past-events-carousel {
+  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+  align-items: center !important;
+  gap: clamp(.35rem, 1vw, .8rem) !important;
+}
+
+#events .past-events-carousel-stage,
+#events .past-events-event-featured .past-events-carousel-stage {
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+  padding: clamp(.45rem, 1.2vw, .85rem) !important;
+  background: rgba(0,15,74,.045) !important;
+}
+
+#events .past-events-event-featured .past-events-carousel-stage {
+  background: rgba(255,255,255,.06) !important;
+}
+
+#events .past-events-carousel-slide {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+#events .past-events-carousel-slide.is-active {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#events .past-events-carousel-slide img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: min(76vh, 760px) !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-carousel-arrow {
+  align-self: center !important;
+}
+
+@media (max-width: 760px) {
+  #events .past-events-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+    line-height: 1.01 !important;
+  }
+
+  #events .past-events-table-line {
+    font-size: 1.02rem !important;
+  }
+
+  #events .past-events-intro-copy {
+    margin-top: 1rem !important;
+  }
+
+  #events .past-events-intro-lede,
+  #events .past-events-intro-body {
+    font-size: .98rem !important;
+    line-height: 1.52 !important;
+  }
+
+  #events .past-events-photo-drawer {
+    width: 100% !important;
+  }
+
+  #events .past-events-carousel {
+    grid-template-columns: 40px minmax(0,1fr) 40px !important;
+    gap: .25rem !important;
+  }
+
+  #events .past-events-carousel-stage,
+  #events .past-events-event-featured .past-events-carousel-stage {
+    padding: .25rem !important;
+  }
+
+  #events .past-events-carousel-slide img {
+    max-height: 70vh !important;
+  }
+}
+/* ===== END PAST EVENTS V11 ===== */
+

@@ -9290,7 +9290,7 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   height: 34px !important;
   display: block !important;
 }
-#first-time-voter .ftv-rights-fist svg {
+#first-time-voter .ftv-rights-bulb svg {
   width: 36px !important;
   height: 36px !important;
 }
@@ -9364,13 +9364,13 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   }
 }
 
-/* Rights icon: the fist itself is brown, not white. */
-#first-time-voter .ftv-rights-fist {
-  background: #efe4da !important;
-  color: #7a4327 !important;
+/* Rights icon: use the same deep-blue circle with a white light bulb for consistency. */
+#first-time-voter .ftv-rights-bulb {
+  background: var(--ftv-blue, #000f4a) !important;
+  color: #fff !important;
 }
-#first-time-voter .ftv-rights-fist svg {
-  color: #7a4327 !important;
+#first-time-voter .ftv-rights-bulb svg {
+  color: #fff !important;
   width: 37px !important;
   height: 37px !important;
 }
@@ -9395,13 +9395,14 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
 @media (max-width: 700px) {
   #first-time-voter .ftv-process-v22-figure img { width: min(88vw, 350px) !important; max-width: 350px !important; }
 }
-#first-time-voter .ftv-polls-v22-icon.ftv-rights-fist {
-  background: #efe4da !important;
-  color: #7a4327 !important;
+#first-time-voter .ftv-polls-v22-icon.ftv-rights-bulb {
+  background: var(--ftv-blue, #000f4a) !important;
+  color: #fff !important;
 }
-#first-time-voter .ftv-polls-v22-icon.ftv-rights-fist svg,
-#first-time-voter .ftv-polls-v22-icon.ftv-rights-fist svg * {
-  color: #7a4327 !important;
-  fill: #7a4327 !important;
+#first-time-voter .ftv-polls-v22-icon.ftv-rights-bulb svg,
+#first-time-voter .ftv-polls-v22-icon.ftv-rights-bulb svg * {
+  color: #fff !important;
+  stroke: #fff !important;
+  fill: none !important;
 }
 /* ===== END FIRST-TIME VOTERS V30 ===== */

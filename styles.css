@@ -4904,21 +4904,20 @@ body.impact-award-open { overflow: hidden !important; }
 
 /* Keep the application-language sticker as a supporting education cue, not the hero. */
 #first-time-voter .ftv-application-note {
-  width: min(92%, 1500px) !important;
-  max-width: 1500px !important;
-  margin: clamp(2rem, 3.4vw, 3rem) auto 0 !important;
-  padding-top: clamp(1.4rem, 2.2vw, 2rem) !important;
-  border-top: 1px solid #b9c0cb !important;
+  max-width: 700px !important;
+  margin: clamp(1.35rem, 2vw, 1.8rem) 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
   display: grid !important;
-  grid-template-columns: 118px minmax(0, 1fr) !important;
-  gap: clamp(1.1rem, 2.4vw, 2rem) !important;
+  grid-template-columns: 82px minmax(0, 1fr) !important;
+  gap: clamp(.9rem, 1.4vw, 1.25rem) !important;
   align-items: center !important;
 }
 
 #first-time-voter .ftv-application-note img {
   display: block !important;
-  width: 118px !important;
-  height: 118px !important;
+  width: 82px !important;
+  height: 82px !important;
   object-fit: cover !important;
   border-radius: 50% !important;
   clip-path: circle(49.4% at 50% 50%) !important;
@@ -4928,11 +4927,11 @@ body.impact-award-open { overflow: hidden !important; }
 }
 
 #first-time-voter .ftv-application-note p {
-  max-width: 760px !important;
+  max-width: 590px !important;
   margin: 0 !important;
   color: #202632 !important;
-  font-size: clamp(.98rem, 1.08vw, 1.08rem) !important;
-  line-height: 1.5 !important;
+  font-size: clamp(.94rem, 1vw, 1.04rem) !important;
+  line-height: 1.48 !important;
 }
 
 #first-time-voter .ftv-application-note strong {
@@ -5341,6 +5340,17 @@ body.impact-award-open { overflow: hidden !important; }
   #first-time-voter .ftv-learning-row { gap: 1.5rem !important; }
 }
 
+@media (max-width: 620px) {
+  #first-time-voter .ftv-application-note {
+    grid-template-columns: 66px minmax(0, 1fr) !important;
+    gap: .85rem !important;
+  }
+  #first-time-voter .ftv-application-note img {
+    width: 66px !important;
+    height: 66px !important;
+  }
+}
+
 @media (max-width: 520px) {
   #first-time-voter .ftv-band-intro,
   #first-time-voter .ftv-band-actions,
@@ -5355,3 +5365,112 @@ body.impact-award-open { overflow: hidden !important; }
 }
 /* ===== END FIRST-TIME VOTERS REBUILD ===== */
 
+
+/* ===== FIRST-TIME VOTERS HERO + PRINT CORRECTION — 2026-09-14 =====
+   Keep the real voter photo documentary/clean: crop out the baked-in corner art.
+   Also prevent print/PDF from collapsing the desktop hero/process layouts into tablet stacks.
+*/
+#first-time-voter .ftv-human-figure {
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-human-figure img {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  transform: scale(1.22) !important;
+  transform-origin: center center !important;
+  object-fit: cover !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+@media print {
+  #first-time-voter .ftv-band-intro {
+    padding: 2.2rem 0 2.5rem !important;
+  }
+
+  #first-time-voter .ftv-hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(250px, .72fr) !important;
+    gap: 2rem !important;
+    align-items: center !important;
+  }
+
+  #first-time-voter .ftv-hero-copy {
+    max-width: none !important;
+  }
+
+  #first-time-voter .ftv-human-figure {
+    width: 100% !important;
+    max-width: 360px !important;
+    justify-self: end !important;
+    align-self: center !important;
+    overflow: hidden !important;
+    break-inside: avoid !important;
+  }
+
+  #first-time-voter .ftv-human-figure img {
+    width: 100% !important;
+    max-width: none !important;
+    transform: scale(1.22) !important;
+  }
+
+  #first-time-voter .ftv-application-note {
+    grid-template-columns: 58px minmax(0, 1fr) !important;
+    gap: .75rem !important;
+    margin-top: 1rem !important;
+    max-width: 620px !important;
+    break-inside: avoid !important;
+  }
+
+  #first-time-voter .ftv-application-note img {
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  #first-time-voter .ftv-application-note p {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  #first-time-voter .ftv-process-grid {
+    grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr) !important;
+    gap: 2.2rem !important;
+    align-items: center !important;
+  }
+
+  #first-time-voter .ftv-process-figure {
+    width: 100% !important;
+    max-width: 330px !important;
+    justify-self: center !important;
+  }
+
+  #first-time-voter .ftv-process-line {
+    grid-template-columns: repeat(4, minmax(0,1fr)) !important;
+  }
+
+  #first-time-voter .ftv-process-step {
+    min-height: 150px !important;
+    padding: .75rem .55rem .9rem !important;
+  }
+
+  #first-time-voter .ftv-process-step:nth-child(3),
+  #first-time-voter .ftv-process-step:nth-child(4) {
+    border-top: 0 !important;
+  }
+
+  #first-time-voter .ftv-process-step:nth-child(3) {
+    border-left: 1px solid #c7cdd6 !important;
+  }
+
+  #first-time-voter .ftv-process-icon {
+    width: 54px !important;
+    height: 54px !important;
+    margin-bottom: .65rem !important;
+  }
+}
+/* ===== END FIRST-TIME VOTERS HERO + PRINT CORRECTION ===== */

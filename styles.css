@@ -9334,3 +9334,44 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   }
 }
 /* ===== END FIRST-TIME VOTERS V28 ===== */
+
+
+/* ===== FIRST-TIME VOTERS V29 — VISIBLE PROCESS SCALE + BROWN RIGHTS FIST ===== */
+/* Make the process emblem visibly larger on desktop while preserving the approved two-column composition. */
+@media (min-width: 981px) {
+  #first-time-voter .ftv-process-v22-grid {
+    width: min(92%, 1280px) !important;
+    grid-template-columns: minmax(460px, 520px) minmax(0, 1fr) !important;
+    gap: clamp(2.6rem, 4vw, 4.5rem) !important;
+  }
+  #first-time-voter .ftv-process-v22-figure img {
+    width: 500px !important;
+    max-width: 500px !important;
+  }
+}
+
+/* Keep the emblem readable and centered as the layout stacks. */
+@media (max-width: 980px) and (min-width: 701px) {
+  #first-time-voter .ftv-process-v22-figure img {
+    width: min(72vw, 400px) !important;
+    max-width: 400px !important;
+  }
+}
+@media (max-width: 700px) {
+  #first-time-voter .ftv-process-v22-figure img {
+    width: min(86vw, 340px) !important;
+    max-width: 340px !important;
+  }
+}
+
+/* Rights icon: the fist itself is brown, not white. */
+#first-time-voter .ftv-rights-fist {
+  background: #efe4da !important;
+  color: #7a4327 !important;
+}
+#first-time-voter .ftv-rights-fist svg {
+  color: #7a4327 !important;
+  width: 37px !important;
+  height: 37px !important;
+}
+/* ===== END FIRST-TIME VOTERS V29 ===== */

@@ -8721,3 +8721,306 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   }
 }
 /* ===== END FIRST-TIME VOTERS V15 BALANCE + SECTION RHYTHM LOCK ===== */
+
+/* ============================================================
+   FIRST-TIME VOTERS — V16 HORIZONTAL READINESS PATH
+   2026-09-14
+   Deep-blue action center becomes a compact, linear voter-readiness path.
+   RED -> BLACK -> GREEN moves out of the blue field and becomes the
+   transition into the closing silver section.
+   ============================================================ */
+#first-time-voter .ftv-band-actions {
+  background: #000f4a !important;
+  padding: clamp(2.75rem, 3.6vw, 3.7rem) 0 clamp(2.65rem, 3.5vw, 3.5rem) !important;
+}
+
+#first-time-voter .ftv-actions-shell {
+  width: min(88%, 1100px) !important;
+  max-width: 1100px !important;
+}
+
+#first-time-voter .ftv-actions-heading {
+  max-width: 720px !important;
+  margin: 0 auto 2rem !important;
+  text-align: center !important;
+}
+
+#first-time-voter .ftv-actions-heading h3 {
+  font-size: clamp(2.45rem, 3.3vw, 3.5rem) !important;
+}
+
+#first-time-voter .ftv-actions-heading p {
+  max-width: 560px !important;
+  margin: .65rem auto 0 !important;
+}
+
+#first-time-voter .ftv-actions-heading .ftv-signature {
+  display: none !important;
+}
+
+#first-time-voter .ftv-resource-steps {
+  display: none !important;
+}
+
+#first-time-voter .ftv-resource-path {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: clamp(.85rem, 1.5vw, 1.35rem) !important;
+  width: min(100%, 1060px) !important;
+  margin: 0 auto !important;
+  padding: .15rem 0 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+#first-time-voter .ftv-resource-path::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 35px !important;
+  left: 7.5% !important;
+  right: 7.5% !important;
+  height: 2px !important;
+  background: rgba(255,255,255,.30) !important;
+  z-index: 0 !important;
+}
+
+#first-time-voter .ftv-resource-path .ftv-resource-step,
+#first-time-voter .ftv-resource-path .ftv-resource-step:visited,
+#first-time-voter .ftv-ready-step {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 .25rem !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
+  color: #fff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+#first-time-voter .ftv-resource-path .ftv-resource-step + .ftv-resource-step {
+  border-left: 0 !important;
+}
+
+#first-time-voter .ftv-resource-path .ftv-step-num,
+#first-time-voter .ftv-ready-icon {
+  position: relative !important;
+  z-index: 2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 68px !important;
+  height: 68px !important;
+  margin: 0 auto 1rem !important;
+  border: 4px solid #fff !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  color: #000f4a !important;
+  box-shadow: 0 0 0 5px #000f4a !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 1.18rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+#first-time-voter .ftv-ready-icon {
+  background: #fff !important;
+  color: #000f4a !important;
+}
+
+#first-time-voter .ftv-ready-icon svg {
+  width: 36px !important;
+  height: 36px !important;
+  display: block !important;
+}
+
+#first-time-voter .ftv-resource-path .ftv-resource-step strong,
+#first-time-voter .ftv-ready-step strong {
+  display: block !important;
+  min-height: 2.4em !important;
+  color: #fff !important;
+  font-size: clamp(.9rem, .95vw, 1.02rem) !important;
+  line-height: 1.2 !important;
+}
+
+#first-time-voter .ftv-resource-path .ftv-resource-step small,
+#first-time-voter .ftv-ready-step small {
+  display: block !important;
+  min-height: 3.15em !important;
+  margin-top: .42rem !important;
+  color: rgba(255,255,255,.80) !important;
+  font-size: .78rem !important;
+  line-height: 1.35 !important;
+}
+
+#first-time-voter .ftv-resource-path .ftv-open {
+  margin-top: .85rem !important;
+  padding: .62rem .85rem !important;
+  background: #fff !important;
+  border-radius: 999px !important;
+  color: #000f4a !important;
+  font-size: .68rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .035em !important;
+  white-space: nowrap !important;
+}
+
+#first-time-voter .ftv-ready-step {
+  padding-top: 0 !important;
+}
+
+#first-time-voter .ftv-ready-step strong {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1rem, 1.05vw, 1.12rem) !important;
+}
+
+#first-time-voter .ftv-tracking-note {
+  max-width: 760px !important;
+  margin: 1.75rem auto 0 !important;
+  font-size: .74rem !important;
+}
+
+#first-time-voter .ftv-band-transition {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  width: 100% !important;
+  height: 7px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  background: transparent !important;
+}
+
+#first-time-voter .ftv-band-transition span:nth-child(1) { background: var(--ftv-red) !important; }
+#first-time-voter .ftv-band-transition span:nth-child(2) { background: var(--ftv-black) !important; }
+#first-time-voter .ftv-band-transition span:nth-child(3) { background: var(--ftv-green) !important; }
+
+@media (max-width: 980px) {
+  #first-time-voter .ftv-actions-shell {
+    width: min(88%, 820px) !important;
+  }
+
+  #first-time-voter .ftv-resource-path {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.6rem 1.2rem !important;
+  }
+
+  #first-time-voter .ftv-resource-path::before {
+    display: none !important;
+  }
+
+  #first-time-voter .ftv-ready-step {
+    grid-column: 1 / -1 !important;
+    max-width: 320px !important;
+    margin: .35rem auto 0 !important;
+  }
+
+  #first-time-voter .ftv-resource-path .ftv-resource-step strong,
+  #first-time-voter .ftv-resource-path .ftv-resource-step small,
+  #first-time-voter .ftv-ready-step strong,
+  #first-time-voter .ftv-ready-step small {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 620px) {
+  #first-time-voter .ftv-resource-path {
+    grid-template-columns: 1fr !important;
+    gap: 1.35rem !important;
+  }
+
+  #first-time-voter .ftv-resource-path .ftv-resource-step,
+  #first-time-voter .ftv-ready-step {
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media print {
+  #first-time-voter .ftv-band-actions {
+    padding: 1.25rem 0 1.35rem !important;
+  }
+
+  #first-time-voter .ftv-actions-shell {
+    width: min(92%, 900px) !important;
+  }
+
+  #first-time-voter .ftv-actions-heading {
+    margin-bottom: .8rem !important;
+  }
+
+  #first-time-voter .ftv-actions-heading h3 {
+    font-size: 22pt !important;
+  }
+
+  #first-time-voter .ftv-actions-heading p {
+    font-size: 8pt !important;
+  }
+
+  #first-time-voter .ftv-resource-path {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: .45rem !important;
+    width: min(100%, 850px) !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #first-time-voter .ftv-resource-path::before {
+    top: 27px !important;
+  }
+
+  #first-time-voter .ftv-resource-path .ftv-step-num,
+  #first-time-voter .ftv-ready-icon {
+    width: 52px !important;
+    height: 52px !important;
+    margin-bottom: .45rem !important;
+    border-width: 3px !important;
+    box-shadow: 0 0 0 4px #000f4a !important;
+    font-size: 9pt !important;
+  }
+
+  #first-time-voter .ftv-ready-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  #first-time-voter .ftv-resource-path .ftv-resource-step strong,
+  #first-time-voter .ftv-ready-step strong {
+    min-height: 0 !important;
+    font-size: 7.4pt !important;
+    line-height: 1.12 !important;
+  }
+
+  #first-time-voter .ftv-resource-path .ftv-resource-step small,
+  #first-time-voter .ftv-ready-step small {
+    min-height: 0 !important;
+    margin-top: .2rem !important;
+    font-size: 6pt !important;
+    line-height: 1.16 !important;
+  }
+
+  #first-time-voter .ftv-resource-path .ftv-open {
+    margin-top: .4rem !important;
+    padding: .38rem .52rem !important;
+    font-size: 5.5pt !important;
+  }
+
+  #first-time-voter .ftv-tracking-note {
+    margin-top: .55rem !important;
+    font-size: 5.8pt !important;
+  }
+
+  #first-time-voter .ftv-band-transition {
+    height: 5px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+/* ===== END FIRST-TIME VOTERS V16 HORIZONTAL READINESS PATH ===== */

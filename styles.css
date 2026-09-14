@@ -8541,3 +8541,183 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   }
 }
 /* ===== END YOUTH READY V13 ===== */
+
+/* ============================================================
+   FIRST-TIME VOTERS — V15 BALANCE + SECTION RHYTHM LOCK
+   2026-09-14
+   Supporting-page rhythm: SILVER -> DEEP D9 BLUE -> SILVER.
+   Keep Know Before You Go as one cohesive deep-blue section.
+   No cobalt/bright-blue field. Improve desktop and print balance.
+   ============================================================ */
+#first-time-voter .ftv-band-intro,
+#first-time-voter .ftv-band-process {
+  background: var(--ftv-silver) !important;
+}
+
+#first-time-voter .ftv-band-actions {
+  background: #000f4a !important;
+  padding: clamp(2.9rem, 4vw, 4rem) 0 clamp(3rem, 4.2vw, 4.2rem) !important;
+}
+
+#first-time-voter .ftv-actions-heading {
+  max-width: 860px !important;
+  margin: 0 auto 1.65rem !important;
+}
+
+#first-time-voter .ftv-actions-heading h3 {
+  font-size: clamp(2.45rem, 3.5vw, 3.65rem) !important;
+  line-height: 1 !important;
+}
+
+#first-time-voter .ftv-actions-heading p {
+  max-width: 680px !important;
+  margin-top: .65rem !important;
+  font-size: clamp(.98rem, 1vw, 1.08rem) !important;
+}
+
+#first-time-voter .ftv-actions-heading .ftv-signature {
+  margin-top: 1rem !important;
+}
+
+#first-time-voter .ftv-resource-steps {
+  width: min(100%, 1040px) !important;
+  margin: 0 auto !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  border-top: 1px solid rgba(255,255,255,.28) !important;
+  border-bottom: 1px solid rgba(255,255,255,.28) !important;
+}
+
+#first-time-voter .ftv-resource-step,
+#first-time-voter .ftv-resource-step:visited {
+  min-height: 205px !important;
+  padding: 1.35rem 1.55rem 1.5rem !important;
+}
+
+#first-time-voter .ftv-step-num {
+  width: 62px !important;
+  height: 62px !important;
+  margin-bottom: .85rem !important;
+  font-size: 1.22rem !important;
+}
+
+#first-time-voter .ftv-resource-step strong {
+  font-size: clamp(1.02rem, 1.12vw, 1.2rem) !important;
+}
+
+#first-time-voter .ftv-resource-step small {
+  margin-top: .42rem !important;
+  font-size: .88rem !important;
+}
+
+#first-time-voter .ftv-open {
+  margin-top: .85rem !important;
+  padding: .7rem 1rem !important;
+}
+
+#first-time-voter .ftv-tracking-note {
+  max-width: 820px !important;
+  margin-top: 1rem !important;
+}
+
+#first-time-voter .ftv-band-process {
+  padding: clamp(3rem, 4.4vw, 4.5rem) 0 clamp(3.1rem, 4.5vw, 4.6rem) !important;
+}
+
+@media (max-width: 760px) {
+  #first-time-voter .ftv-resource-steps {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media print {
+  /* Give each major section its own visual field in PDF/print:
+     page 1 silver, page 2 deep blue, page 3 silver. */
+  #first-time-voter .ftv-band-intro {
+    background: var(--ftv-silver) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #first-time-voter .ftv-band-actions {
+    break-before: page !important;
+    page-break-before: always !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    background: #000f4a !important;
+    padding: 1.35rem 0 1.45rem !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #first-time-voter .ftv-actions-heading {
+    margin-bottom: .8rem !important;
+  }
+
+  #first-time-voter .ftv-actions-heading h3 {
+    font-size: 24pt !important;
+  }
+
+  #first-time-voter .ftv-actions-heading p {
+    margin-top: .35rem !important;
+    font-size: 8.8pt !important;
+    line-height: 1.3 !important;
+  }
+
+  #first-time-voter .ftv-actions-heading .ftv-signature {
+    margin-top: .55rem !important;
+  }
+
+  #first-time-voter .ftv-resource-steps {
+    width: min(94%, 900px) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #first-time-voter .ftv-resource-step,
+  #first-time-voter .ftv-resource-step:visited {
+    min-height: 122px !important;
+    padding: .75rem .9rem .8rem !important;
+  }
+
+  #first-time-voter .ftv-step-num {
+    width: 44px !important;
+    height: 44px !important;
+    margin-bottom: .45rem !important;
+    font-size: 10.5pt !important;
+  }
+
+  #first-time-voter .ftv-resource-step strong {
+    font-size: 9pt !important;
+    line-height: 1.15 !important;
+  }
+
+  #first-time-voter .ftv-resource-step small {
+    margin-top: .25rem !important;
+    font-size: 7.4pt !important;
+    line-height: 1.22 !important;
+  }
+
+  #first-time-voter .ftv-open {
+    margin-top: .5rem !important;
+    padding: .48rem .78rem !important;
+    font-size: 6.8pt !important;
+  }
+
+  #first-time-voter .ftv-tracking-note {
+    max-width: 760px !important;
+    margin-top: .6rem !important;
+    font-size: 6.7pt !important;
+    line-height: 1.25 !important;
+  }
+
+  #first-time-voter .ftv-band-process {
+    break-before: page !important;
+    page-break-before: always !important;
+    background: var(--ftv-silver) !important;
+    padding: 1.6rem 0 1.8rem !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+/* ===== END FIRST-TIME VOTERS V15 BALANCE + SECTION RHYTHM LOCK ===== */

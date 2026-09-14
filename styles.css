@@ -4808,6 +4808,60 @@ body.impact-award-open { overflow: hidden !important; }
   line-height: 1.55 !important;
 }
 
+#first-time-voter .ftv-eligibility-checklist {
+  list-style: none !important;
+  margin: 1.45rem 0 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  gap: .72rem !important;
+  max-width: 760px !important;
+}
+
+#first-time-voter .ftv-eligibility-checklist li {
+  display: grid !important;
+  grid-template-columns: 30px minmax(0, 1fr) !important;
+  gap: .72rem !important;
+  align-items: start !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #202632 !important;
+  font-size: clamp(.98rem, 1.08vw, 1.08rem) !important;
+  line-height: 1.42 !important;
+}
+
+#first-time-voter .ftv-eligibility-checklist li::before {
+  content: "✓" !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 26px !important;
+  height: 26px !important;
+  margin-top: .02rem !important;
+  border-radius: 50% !important;
+  background: var(--ftv-blue) !important;
+  color: #fff !important;
+  font-size: .95rem !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+}
+
+#first-time-voter .ftv-preregister-note,
+#first-time-voter .ftv-address-note {
+  max-width: 760px !important;
+  margin: 1rem 0 0 !important;
+  color: #2f3540 !important;
+  font-size: .95rem !important;
+  line-height: 1.48 !important;
+}
+
+#first-time-voter .ftv-address-note {
+  margin-top: .55rem !important;
+}
+
+#first-time-voter .ftv-preregister-note strong,
+#first-time-voter .ftv-address-note strong {
+  color: #000 !important;
+}
+
 #first-time-voter .ftv-deadlines {
   display: flex !important;
   flex-wrap: wrap !important;

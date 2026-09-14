@@ -6150,3 +6150,22 @@ body.impact-award-open { overflow: hidden !important; }
     margin: .1in 0 .13in !important;
   }
 }
+
+/* ===== GET INVOLVED — VOLUNTEER TITLE FIT FIX (2026-09-14) =====
+   Keep “Volunteer Sign-Up” on one line and bring its scale into the approved page hierarchy. */
+#get-involved .volunteer-card .get-involved-copy h2 {
+  max-width: none !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
+  font-size: clamp(2.65rem, 3.55vw, 4.15rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.03em !important;
+}
+
+@media (max-width: 620px) {
+  #get-involved .volunteer-card .get-involved-copy h2 {
+    font-size: clamp(1.95rem, 8.25vw, 2.7rem) !important;
+    white-space: nowrap !important;
+  }
+}

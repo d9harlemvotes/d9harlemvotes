@@ -9026,431 +9026,6 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
 /* ===== END FIRST-TIME VOTERS V16 HORIZONTAL READINESS PATH ===== */
 
 
-/* ============================================================
-   FIRST-TIME VOTERS — V17 INFORMATION ARCHITECTURE + JOURNEY PATH
-   2026-09-14
-   Final public-information hierarchy:
-   SILVER eligibility -> DEEP BLUE journey -> SILVER at-the-polls guidance.
-   No Conversation Cards, no duplicate process graphic, no repeated process section.
-   ============================================================ */
-#first-time-voter .ftv-band-actions {
-  background: #000f4a !important;
-  padding: clamp(3rem, 4.2vw, 4.4rem) 0 clamp(2.8rem, 4vw, 4rem) !important;
-}
-
-#first-time-voter .ftv-actions-shell {
-  width: min(90%, 1180px) !important;
-  max-width: 1180px !important;
-}
-
-#first-time-voter .ftv-actions-heading {
-  max-width: 760px !important;
-  margin: 0 auto clamp(2.2rem, 3vw, 3rem) !important;
-  text-align: center !important;
-}
-
-#first-time-voter .ftv-actions-eyebrow {
-  margin: 0 0 .65rem !important;
-  color: rgba(255,255,255,.72) !important;
-  font-size: .78rem !important;
-  font-weight: 900 !important;
-  letter-spacing: .22em !important;
-  text-transform: uppercase !important;
-}
-
-#first-time-voter .ftv-actions-heading h3 {
-  margin: 0 !important;
-  color: #fff !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(2.65rem, 3.8vw, 4rem) !important;
-  line-height: .98 !important;
-}
-
-#first-time-voter .ftv-actions-heading p:last-child {
-  margin: .75rem auto 0 !important;
-  color: rgba(255,255,255,.88) !important;
-  font-size: clamp(1rem, 1.1vw, 1.12rem) !important;
-  font-weight: 700 !important;
-}
-
-#first-time-voter .ftv-resource-path,
-#first-time-voter .ftv-ready-step {
-  display: none !important;
-}
-
-#first-time-voter .ftv-voter-journey {
-  position: relative !important;
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(180px, .9fr) !important;
-  gap: clamp(1rem, 1.8vw, 1.8rem) !important;
-  align-items: start !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-}
-
-#first-time-voter .ftv-voter-journey::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 55px !important;
-  left: 7% !important;
-  right: 11% !important;
-  height: 3px !important;
-  background: rgba(255,255,255,.28) !important;
-  z-index: 0 !important;
-}
-
-#first-time-voter .ftv-journey-step,
-#first-time-voter .ftv-poll-destination {
-  position: relative !important;
-  z-index: 1 !important;
-  min-width: 0 !important;
-  text-align: center !important;
-}
-
-#first-time-voter .ftv-footprint-wrap {
-  position: relative !important;
-  width: 82px !important;
-  height: 110px !important;
-  margin: 0 auto .65rem !important;
-}
-
-#first-time-voter .ftv-footprint {
-  display: block !important;
-  width: 80px !important;
-  height: 110px !important;
-  filter: drop-shadow(0 5px 8px rgba(0,0,0,.2)) !important;
-}
-
-#first-time-voter .ftv-footprint ellipse,
-#first-time-voter .ftv-footprint circle {
-  fill: currentColor !important;
-}
-
-#first-time-voter .ftv-foot-left { transform: rotate(-7deg) !important; }
-#first-time-voter .ftv-foot-right { transform: rotate(7deg) !important; }
-
-#first-time-voter .ftv-journey-apply .ftv-footprint { color: #f3c84b !important; }
-#first-time-voter .ftv-journey-confirm .ftv-footprint { color: #eeb23c !important; }
-#first-time-voter .ftv-journey-prepare .ftv-footprint { color: #df7f35 !important; }
-#first-time-voter .ftv-journey-vote .ftv-footprint { color: #2d9a55 !important; }
-
-#first-time-voter .ftv-step-index {
-  position: absolute !important;
-  left: 50% !important;
-  top: 52px !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 3 !important;
-  color: #000f4a !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: 1.05rem !important;
-  font-weight: 900 !important;
-  line-height: 1 !important;
-}
-
-#first-time-voter .ftv-journey-vote .ftv-step-index {
-  color: #fff !important;
-}
-
-#first-time-voter .ftv-journey-step > strong,
-#first-time-voter .ftv-poll-destination > strong {
-  display: block !important;
-  margin: 0 !important;
-  color: #fff !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(1.35rem, 1.55vw, 1.75rem) !important;
-  line-height: 1.05 !important;
-}
-
-#first-time-voter .ftv-journey-step > p,
-#first-time-voter .ftv-poll-destination > p {
-  max-width: 210px !important;
-  margin: .5rem auto 0 !important;
-  color: rgba(255,255,255,.80) !important;
-  font-size: .84rem !important;
-  line-height: 1.38 !important;
-}
-
-#first-time-voter .ftv-journey-kicker {
-  color: #fff !important;
-  font-weight: 900 !important;
-}
-
-#first-time-voter .ftv-journey-link,
-#first-time-voter .ftv-prepare-links a,
-#first-time-voter .ftv-journey-link:visited,
-#first-time-voter .ftv-prepare-links a:visited {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 38px !important;
-  margin-top: .7rem !important;
-  padding: .55rem .82rem !important;
-  border-radius: 999px !important;
-  background: #fff !important;
-  color: #000f4a !important;
-  font-size: .7rem !important;
-  font-weight: 900 !important;
-  line-height: 1.2 !important;
-  text-decoration: none !important;
-}
-
-#first-time-voter .ftv-prepare-links {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: .4rem !important;
-  margin-top: .55rem !important;
-}
-
-#first-time-voter .ftv-prepare-links a {
-  width: min(100%, 175px) !important;
-  margin-top: 0 !important;
-}
-
-#first-time-voter .ftv-journey-link:hover,
-#first-time-voter .ftv-journey-link:focus-visible,
-#first-time-voter .ftv-prepare-links a:hover,
-#first-time-voter .ftv-prepare-links a:focus-visible {
-  text-decoration: underline !important;
-  text-underline-offset: .18em !important;
-}
-
-#first-time-voter .ftv-poll-destination {
-  padding-top: 7px !important;
-}
-
-#first-time-voter .ftv-city-poll {
-  position: relative !important;
-  width: 168px !important;
-  margin: 0 auto .65rem !important;
-  color: #fff !important;
-}
-
-#first-time-voter .ftv-city-poll svg {
-  display: block !important;
-  width: 168px !important;
-  height: 132px !important;
-}
-
-#first-time-voter .ftv-vote-here {
-  position: absolute !important;
-  left: 50% !important;
-  top: 34px !important;
-  transform: translateX(-50%) !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-width: 92px !important;
-  min-height: 26px !important;
-  padding: .25rem .6rem !important;
-  border-radius: 999px !important;
-  background: #2d9a55 !important;
-  color: #fff !important;
-  font-size: .68rem !important;
-  font-weight: 900 !important;
-  letter-spacing: .06em !important;
-}
-
-#first-time-voter .ftv-tracking-note {
-  max-width: 760px !important;
-  margin: 2rem auto 0 !important;
-  color: rgba(255,255,255,.62) !important;
-  font-size: .7rem !important;
-  line-height: 1.4 !important;
-  text-align: center !important;
-}
-
-#first-time-voter .ftv-band-transition {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  width: 100% !important;
-  height: 20px !important;
-  padding: 7px 0 6px !important;
-  background: var(--ftv-silver) !important;
-}
-
-#first-time-voter .ftv-band-transition span { min-height: 7px !important; }
-
-#first-time-voter .ftv-band-process {
-  background: var(--ftv-silver) !important;
-  padding: clamp(3rem, 4.5vw, 4.6rem) 0 clamp(3.25rem, 4.6vw, 4.8rem) !important;
-}
-
-#first-time-voter .ftv-polls-shell {
-  width: min(92%, 1120px) !important;
-  max-width: 1120px !important;
-}
-
-#first-time-voter .ftv-polls-heading {
-  max-width: 760px !important;
-  margin: 0 auto clamp(1.8rem, 3vw, 2.6rem) !important;
-  text-align: center !important;
-}
-
-#first-time-voter .ftv-polls-heading .ftv-eyebrow {
-  margin-bottom: .55rem !important;
-}
-
-#first-time-voter .ftv-polls-heading h3 {
-  margin: 0 !important;
-  color: #000 !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(2.5rem, 3.6vw, 3.75rem) !important;
-  line-height: 1 !important;
-}
-
-#first-time-voter .ftv-polls-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: clamp(1.25rem, 2.4vw, 2.4rem) !important;
-}
-
-#first-time-voter .ftv-poll-guidance {
-  display: grid !important;
-  grid-template-columns: 58px minmax(0,1fr) !important;
-  gap: 1rem !important;
-  align-items: start !important;
-  padding: 1.45rem 0 !important;
-  border-top: 1px solid #aeb5c1 !important;
-  background: transparent !important;
-}
-
-#first-time-voter .ftv-poll-guidance-icon {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 52px !important;
-  height: 52px !important;
-  border-radius: 50% !important;
-  background: #000f4a !important;
-  color: #fff !important;
-  font-size: 1.45rem !important;
-  font-weight: 900 !important;
-  line-height: 1 !important;
-}
-
-#first-time-voter .ftv-poll-guidance h4 {
-  margin: 0 !important;
-  color: #000 !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(1.35rem, 1.65vw, 1.8rem) !important;
-  line-height: 1.08 !important;
-}
-
-#first-time-voter .ftv-poll-guidance p {
-  margin: .55rem 0 0 !important;
-  color: #333a45 !important;
-  font-size: .94rem !important;
-  line-height: 1.5 !important;
-}
-
-#first-time-voter .ftv-poll-guidance a,
-#first-time-voter .ftv-poll-guidance a:visited {
-  display: inline-flex !important;
-  min-height: 40px !important;
-  align-items: center !important;
-  margin-top: .8rem !important;
-  padding: .58rem .92rem !important;
-  border-radius: 999px !important;
-  background: #000f4a !important;
-  color: #fff !important;
-  font-size: .76rem !important;
-  font-weight: 900 !important;
-  text-decoration: none !important;
-}
-
-#first-time-voter .ftv-poll-guidance a:hover,
-#first-time-voter .ftv-poll-guidance a:focus-visible {
-  text-decoration: underline !important;
-  text-underline-offset: .18em !important;
-}
-
-@media (max-width: 1040px) {
-  #first-time-voter .ftv-voter-journey {
-    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
-    gap: 2rem 1.5rem !important;
-  }
-  #first-time-voter .ftv-voter-journey::before { display: none !important; }
-  #first-time-voter .ftv-poll-destination {
-    grid-column: 1 / -1 !important;
-    max-width: 360px !important;
-    margin: .25rem auto 0 !important;
-  }
-}
-
-@media (max-width: 700px) {
-  #first-time-voter .ftv-voter-journey,
-  #first-time-voter .ftv-polls-grid {
-    grid-template-columns: 1fr !important;
-  }
-  #first-time-voter .ftv-journey-step,
-  #first-time-voter .ftv-poll-destination {
-    max-width: 420px !important;
-    margin: 0 auto !important;
-  }
-  #first-time-voter .ftv-poll-guidance {
-    grid-template-columns: 48px minmax(0,1fr) !important;
-  }
-  #first-time-voter .ftv-poll-guidance-icon {
-    width: 44px !important;
-    height: 44px !important;
-  }
-}
-
-@media print {
-  #first-time-voter .ftv-band-actions {
-    break-before: page !important;
-    page-break-before: always !important;
-    background: #000f4a !important;
-    padding: 1.2rem 0 1.25rem !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  #first-time-voter .ftv-actions-shell { width: min(94%, 940px) !important; }
-  #first-time-voter .ftv-actions-heading { margin-bottom: .7rem !important; }
-  #first-time-voter .ftv-actions-heading h3 { font-size: 22pt !important; }
-  #first-time-voter .ftv-actions-heading p:last-child { font-size: 8pt !important; }
-  #first-time-voter .ftv-actions-eyebrow { font-size: 6pt !important; }
-  #first-time-voter .ftv-voter-journey {
-    grid-template-columns: repeat(5, minmax(0,1fr)) !important;
-    gap: .5rem !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-  }
-  #first-time-voter .ftv-voter-journey::before { top: 37px !important; left: 7% !important; right: 10% !important; display: block !important; }
-  #first-time-voter .ftv-footprint-wrap { width: 54px !important; height: 73px !important; margin-bottom: .3rem !important; }
-  #first-time-voter .ftv-footprint { width: 54px !important; height: 73px !important; }
-  #first-time-voter .ftv-step-index { top: 35px !important; font-size: 7pt !important; }
-  #first-time-voter .ftv-journey-step > strong,
-  #first-time-voter .ftv-poll-destination > strong { font-size: 8pt !important; }
-  #first-time-voter .ftv-journey-step > p,
-  #first-time-voter .ftv-poll-destination > p { margin-top: .2rem !important; font-size: 5.8pt !important; line-height: 1.2 !important; }
-  #first-time-voter .ftv-journey-link,
-  #first-time-voter .ftv-prepare-links a { min-height: 24px !important; margin-top: .25rem !important; padding: .28rem .42rem !important; font-size: 5pt !important; }
-  #first-time-voter .ftv-prepare-links { gap: .18rem !important; margin-top: .2rem !important; }
-  #first-time-voter .ftv-city-poll,
-  #first-time-voter .ftv-city-poll svg { width: 100px !important; height: 79px !important; }
-  #first-time-voter .ftv-vote-here { top: 18px !important; min-width: 56px !important; min-height: 16px !important; padding: .1rem .25rem !important; font-size: 4.6pt !important; }
-  #first-time-voter .ftv-tracking-note { margin-top: .5rem !important; font-size: 5.3pt !important; }
-  #first-time-voter .ftv-band-transition { height: 14px !important; padding: 5px 0 4px !important; }
-  #first-time-voter .ftv-band-process {
-    break-before: page !important;
-    page-break-before: always !important;
-    background: var(--ftv-silver) !important;
-    padding: 1.35rem 0 1.5rem !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  #first-time-voter .ftv-polls-heading { margin-bottom: .7rem !important; }
-  #first-time-voter .ftv-polls-heading h3 { font-size: 22pt !important; }
-  #first-time-voter .ftv-polls-grid { gap: 1rem !important; }
-  #first-time-voter .ftv-poll-guidance { grid-template-columns: 40px minmax(0,1fr) !important; padding: .7rem 0 !important; }
-  #first-time-voter .ftv-poll-guidance-icon { width: 34px !important; height: 34px !important; font-size: 10pt !important; }
-  #first-time-voter .ftv-poll-guidance h4 { font-size: 10pt !important; }
-  #first-time-voter .ftv-poll-guidance p { margin-top: .25rem !important; font-size: 7pt !important; line-height: 1.25 !important; }
-  #first-time-voter .ftv-poll-guidance a { margin-top: .35rem !important; min-height: 26px !important; padding: .3rem .5rem !important; font-size: 5.5pt !important; }
-}
-/* ===== END FIRST-TIME VOTERS V17 INFORMATION ARCHITECTURE + JOURNEY PATH ===== */
 
 
 /* ===== FIRST-TIME VOTERS v18 — RESTORE PROCESS OVERVIEW + COMPACT RESOURCE BAND ===== */
@@ -9636,3 +9211,143 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   #first-time-voter .ftv-tracking-note { font-size: 6.5pt !important; margin-top: .5rem !important; }
 }
 /* ===== END FIRST-TIME VOTERS v18 ===== */
+
+
+/* ===== FIRST-TIME VOTERS v19 — RESTORED CIRCULAR PROCESS OVERVIEW ===== */
+#first-time-voter .ftv-band-intro {
+  background: var(--ftv-silver) !important;
+}
+
+#first-time-voter .ftv-process-overview {
+  width: min(92%, 1120px) !important;
+  margin: 0 auto !important;
+  padding: clamp(2rem, 3.4vw, 3rem) 0 clamp(2.5rem, 4.2vw, 3.8rem) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px) !important;
+  gap: clamp(2rem, 4vw, 4.5rem) !important;
+  align-items: center !important;
+  border-top: 1px solid rgba(0,15,74,.12) !important;
+}
+
+#first-time-voter .ftv-process-overview-copy {
+  min-width: 0 !important;
+  max-width: 560px !important;
+}
+
+#first-time-voter .ftv-process-overview-copy .ftv-eyebrow {
+  margin: 0 0 .65rem !important;
+  color: #000 !important;
+}
+
+#first-time-voter .ftv-process-overview-copy h3 {
+  margin: 0 !important;
+  color: #000 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(2.35rem, 3.4vw, 3.8rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.025em !important;
+}
+
+#first-time-voter .ftv-process-overview-copy p:last-child {
+  margin: 1rem 0 0 !important;
+  color: #2c3340 !important;
+  font-size: clamp(.98rem, 1.05vw, 1.08rem) !important;
+  line-height: 1.55 !important;
+}
+
+#first-time-voter .ftv-process-overview-copy strong {
+  color: #000 !important;
+}
+
+#first-time-voter .ftv-process-overview-figure {
+  margin: 0 !important;
+  width: min(100%, 420px) !important;
+  justify-self: end !important;
+  display: grid !important;
+  place-items: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-process-overview-figure img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-band-actions {
+  background: var(--ftv-blue) !important;
+  padding-top: clamp(2.8rem, 4vw, 3.8rem) !important;
+  padding-bottom: clamp(2.8rem, 4vw, 3.8rem) !important;
+}
+
+#first-time-voter .ftv-actions-compact {
+  width: min(88%, 940px) !important;
+}
+
+#first-time-voter .ftv-actions-compact .ftv-actions-heading h3 {
+  font-size: clamp(2.55rem, 3.8vw, 3.8rem) !important;
+}
+
+#first-time-voter .ftv-resource-card-v18 {
+  min-height: 168px !important;
+}
+
+#first-time-voter .ftv-band-transition {
+  background: var(--ftv-silver) !important;
+  padding-top: 10px !important;
+}
+
+@media (max-width: 980px) {
+  #first-time-voter .ftv-process-overview {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+  #first-time-voter .ftv-process-overview-copy {
+    max-width: 680px !important;
+  }
+  #first-time-voter .ftv-process-overview-figure {
+    width: min(76vw, 390px) !important;
+    justify-self: center !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #first-time-voter .ftv-process-overview {
+    width: min(88%, 680px) !important;
+    padding-top: 1.7rem !important;
+    padding-bottom: 2.3rem !important;
+  }
+  #first-time-voter .ftv-process-overview-copy h3 {
+    font-size: clamp(2.15rem, 9vw, 3rem) !important;
+  }
+  #first-time-voter .ftv-process-overview-figure {
+    width: min(82vw, 350px) !important;
+  }
+}
+
+@media print {
+  #first-time-voter .ftv-process-overview {
+    width: 86% !important;
+    grid-template-columns: minmax(0,1fr) 250px !important;
+    gap: 22px !important;
+    padding: 18px 0 24px !important;
+    break-inside: avoid !important;
+  }
+  #first-time-voter .ftv-process-overview-copy h3 {
+    font-size: 25pt !important;
+  }
+  #first-time-voter .ftv-process-overview-copy p:last-child {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+  }
+  #first-time-voter .ftv-process-overview-figure {
+    width: 250px !important;
+  }
+}
+/* ===== END FIRST-TIME VOTERS v19 ===== */

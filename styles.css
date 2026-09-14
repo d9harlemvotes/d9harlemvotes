@@ -7891,3 +7891,272 @@ body.impact-award-open { overflow: hidden !important; }
 }
 /* ===== END PAST EVENTS V11 ===== */
 
+
+
+
+/* =====================================================================
+   PAST EVENTS V12 — DESIGN-RULE AUDIT + PHOTO QA
+   Final override: editorial archive, fewer effects, no stray divider rules,
+   deep D9 blue feature section, intact photos, compact gallery controls.
+   ===================================================================== */
+#events .past-events-intro-inner {
+  padding: clamp(1.45rem, 2.2vw, 2.05rem) 0 clamp(1.35rem, 2.1vw, 1.95rem) !important;
+}
+
+#events .past-events-intro-heading {
+  display: block !important;
+  width: min(100%, 1120px) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-intro-title {
+  width: min(100%, 900px) !important;
+  max-width: 900px !important;
+}
+
+#events .past-events-intro h2 {
+  max-width: 900px !important;
+  margin: 0 !important;
+  font-size: clamp(2.35rem, 3.6vw, 4rem) !important;
+  line-height: 1.01 !important;
+  letter-spacing: -.03em !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
+}
+
+#events .past-events-table-line {
+  margin: .62rem 0 0 !important;
+  font-size: clamp(1.12rem, 1.65vw, 1.5rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+}
+
+#events .past-events-signature {
+  width: min(310px, 48vw) !important;
+  height: 5px !important;
+  margin-top: .78rem !important;
+}
+
+#events .past-events-intro-copy {
+  width: min(100%, 980px) !important;
+  margin-top: 1rem !important;
+}
+
+#events .past-events-intro-lede,
+#events .past-events-intro-body {
+  max-width: 980px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  font-size: clamp(1rem, 1.02vw, 1.08rem) !important;
+  line-height: 1.56 !important;
+}
+
+#events .past-events-intro-body {
+  margin-top: .66rem !important;
+}
+
+/* Keep the page an editorial civic-history archive, not a ruled card stack. */
+#events .past-events-event {
+  padding: clamp(2.35rem, 3.8vw, 3.55rem) 0 !important;
+}
+
+#events .past-events-event-copy {
+  margin-bottom: clamp(1.15rem, 2vw, 1.7rem) !important;
+}
+
+#events .past-events-feature-band {
+  background: #000f4a !important;
+}
+
+#events .past-events-event-archive + .past-events-event-archive {
+  border-top: 0 !important;
+}
+
+#events .past-events-hero-image {
+  width: min(100%, 1220px) !important;
+  max-width: 1220px !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-event-featured .past-events-hero-image {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+#events .past-events-hero-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* Remove the distracting full-width hairlines around photo drawers. */
+#events .past-events-photo-drawer,
+#events .past-events-event-featured .past-events-photo-drawer {
+  width: min(100%, 1180px) !important;
+  margin: clamp(.9rem, 1.6vw, 1.25rem) auto 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* Turn View event photos into one compact action rather than a horizontal rule. */
+#events .past-events-photo-drawer > summary {
+  width: max-content !important;
+  max-width: 100% !important;
+  min-height: 42px !important;
+  margin: 0 auto !important;
+  padding: .62rem 1rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: rgba(0,15,74,.07) !important;
+  color: #000f4a !important;
+  line-height: 1.2 !important;
+}
+
+#events .past-events-event-featured .past-events-photo-drawer > summary {
+  background: rgba(255,255,255,.12) !important;
+  color: #fff !important;
+}
+
+#events .past-events-photo-drawer > summary::after {
+  margin-left: .1rem !important;
+}
+
+/* No gray photo box: let the photograph sit directly on the section surface. */
+#events .past-events-carousel {
+  position: relative !important;
+  display: block !important;
+  padding: .9rem 0 0 !important;
+}
+
+#events .past-events-carousel-stage,
+#events .past-events-event-featured .past-events-carousel-stage {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 3.1rem !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+#events .past-events-carousel-slide,
+#events .past-events-carousel-slide.is-active {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+#events .past-events-carousel-slide.is-active {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#events .past-events-carousel-slide img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: min(78vh, 820px) !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Arrows float beside the image instead of creating side columns or rules. */
+#events .past-events-carousel-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
+  width: 42px !important;
+  height: 42px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: rgba(0,15,74,.08) !important;
+  color: #000f4a !important;
+  box-shadow: none !important;
+}
+
+#events .past-events-carousel-prev { left: 0 !important; }
+#events .past-events-carousel-next { right: 0 !important; }
+
+#events .past-events-event-featured .past-events-carousel-arrow {
+  border: 0 !important;
+  background: rgba(255,255,255,.13) !important;
+  color: #fff !important;
+}
+
+#events .past-events-carousel-arrow:disabled {
+  opacity: .28 !important;
+}
+
+@media (max-width: 760px) {
+  #events .past-events-shell {
+    width: min(91%, 760px) !important;
+  }
+
+  #events .past-events-intro-inner {
+    padding: 1.2rem 0 1.35rem !important;
+  }
+
+  #events .past-events-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(2.05rem, 9.3vw, 2.85rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  #events .past-events-table-line {
+    font-size: 1.06rem !important;
+  }
+
+  #events .past-events-intro-copy {
+    margin-top: .9rem !important;
+  }
+
+  #events .past-events-intro-lede,
+  #events .past-events-intro-body {
+    font-size: .98rem !important;
+    line-height: 1.5 !important;
+  }
+
+  #events .past-events-event {
+    padding: 2rem 0 2.25rem !important;
+  }
+
+  #events .past-events-photo-drawer > summary {
+    min-height: 44px !important;
+    padding: .67rem .95rem !important;
+  }
+
+  #events .past-events-carousel {
+    padding-top: .72rem !important;
+  }
+
+  #events .past-events-carousel-stage,
+  #events .past-events-event-featured .past-events-carousel-stage {
+    padding: 0 2.55rem !important;
+  }
+
+  #events .past-events-carousel-slide img {
+    max-height: 72vh !important;
+  }
+
+  #events .past-events-carousel-arrow {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.55rem !important;
+  }
+
+  #events .past-events-carousel-prev { left: .1rem !important; }
+  #events .past-events-carousel-next { right: .1rem !important; }
+}
+/* ===== END PAST EVENTS V12 ===== */
+

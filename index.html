@@ -5435,7 +5435,275 @@
   #for-schools { break-before: page !important; }
 }
 </style>
-<link href="styles.css?v=31" id="d9-final-styles" rel="stylesheet"/>
+<link href="styles.css?v=32" id="d9-final-styles" rel="stylesheet"/><style id="d9-past-events-v12-audit-fix">
+
+/* =====================================================================
+   PAST EVENTS V12 — DESIGN-RULE AUDIT + PHOTO QA
+   Final override: editorial archive, fewer effects, no stray divider rules,
+   deep D9 blue feature section, intact photos, compact gallery controls.
+   ===================================================================== */
+#events .past-events-intro-inner {
+  padding: clamp(1.45rem, 2.2vw, 2.05rem) 0 clamp(1.35rem, 2.1vw, 1.95rem) !important;
+}
+
+#events .past-events-intro-heading {
+  display: block !important;
+  width: min(100%, 1120px) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-intro-title {
+  width: min(100%, 900px) !important;
+  max-width: 900px !important;
+}
+
+#events .past-events-intro h2 {
+  max-width: 900px !important;
+  margin: 0 !important;
+  font-size: clamp(2.35rem, 3.6vw, 4rem) !important;
+  line-height: 1.01 !important;
+  letter-spacing: -.03em !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
+}
+
+#events .past-events-table-line {
+  margin: .62rem 0 0 !important;
+  font-size: clamp(1.12rem, 1.65vw, 1.5rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+}
+
+#events .past-events-signature {
+  width: min(310px, 48vw) !important;
+  height: 5px !important;
+  margin-top: .78rem !important;
+}
+
+#events .past-events-intro-copy {
+  width: min(100%, 980px) !important;
+  margin-top: 1rem !important;
+}
+
+#events .past-events-intro-lede,
+#events .past-events-intro-body {
+  max-width: 980px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  font-size: clamp(1rem, 1.02vw, 1.08rem) !important;
+  line-height: 1.56 !important;
+}
+
+#events .past-events-intro-body {
+  margin-top: .66rem !important;
+}
+
+/* Keep the page an editorial civic-history archive, not a ruled card stack. */
+#events .past-events-event {
+  padding: clamp(2.35rem, 3.8vw, 3.55rem) 0 !important;
+}
+
+#events .past-events-event-copy {
+  margin-bottom: clamp(1.15rem, 2vw, 1.7rem) !important;
+}
+
+#events .past-events-feature-band {
+  background: #000f4a !important;
+}
+
+#events .past-events-event-archive + .past-events-event-archive {
+  border-top: 0 !important;
+}
+
+#events .past-events-hero-image {
+  width: min(100%, 1220px) !important;
+  max-width: 1220px !important;
+  margin: 0 auto !important;
+}
+
+#events .past-events-event-featured .past-events-hero-image {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+#events .past-events-hero-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* Remove the distracting full-width hairlines around photo drawers. */
+#events .past-events-photo-drawer,
+#events .past-events-event-featured .past-events-photo-drawer {
+  width: min(100%, 1180px) !important;
+  margin: clamp(.9rem, 1.6vw, 1.25rem) auto 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* Turn View event photos into one compact action rather than a horizontal rule. */
+#events .past-events-photo-drawer > summary {
+  width: max-content !important;
+  max-width: 100% !important;
+  min-height: 42px !important;
+  margin: 0 auto !important;
+  padding: .62rem 1rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: rgba(0,15,74,.07) !important;
+  color: #000f4a !important;
+  line-height: 1.2 !important;
+}
+
+#events .past-events-event-featured .past-events-photo-drawer > summary {
+  background: rgba(255,255,255,.12) !important;
+  color: #fff !important;
+}
+
+#events .past-events-photo-drawer > summary::after {
+  margin-left: .1rem !important;
+}
+
+/* No gray photo box: let the photograph sit directly on the section surface. */
+#events .past-events-carousel {
+  position: relative !important;
+  display: block !important;
+  padding: .9rem 0 0 !important;
+}
+
+#events .past-events-carousel-stage,
+#events .past-events-event-featured .past-events-carousel-stage {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 3.1rem !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+#events .past-events-carousel-slide,
+#events .past-events-carousel-slide.is-active {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+#events .past-events-carousel-slide.is-active {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#events .past-events-carousel-slide img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: min(78vh, 820px) !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Arrows float beside the image instead of creating side columns or rules. */
+#events .past-events-carousel-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
+  width: 42px !important;
+  height: 42px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: rgba(0,15,74,.08) !important;
+  color: #000f4a !important;
+  box-shadow: none !important;
+}
+
+#events .past-events-carousel-prev { left: 0 !important; }
+#events .past-events-carousel-next { right: 0 !important; }
+
+#events .past-events-event-featured .past-events-carousel-arrow {
+  border: 0 !important;
+  background: rgba(255,255,255,.13) !important;
+  color: #fff !important;
+}
+
+#events .past-events-carousel-arrow:disabled {
+  opacity: .28 !important;
+}
+
+@media (max-width: 760px) {
+  #events .past-events-shell {
+    width: min(91%, 760px) !important;
+  }
+
+  #events .past-events-intro-inner {
+    padding: 1.2rem 0 1.35rem !important;
+  }
+
+  #events .past-events-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(2.05rem, 9.3vw, 2.85rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  #events .past-events-table-line {
+    font-size: 1.06rem !important;
+  }
+
+  #events .past-events-intro-copy {
+    margin-top: .9rem !important;
+  }
+
+  #events .past-events-intro-lede,
+  #events .past-events-intro-body {
+    font-size: .98rem !important;
+    line-height: 1.5 !important;
+  }
+
+  #events .past-events-event {
+    padding: 2rem 0 2.25rem !important;
+  }
+
+  #events .past-events-photo-drawer > summary {
+    min-height: 44px !important;
+    padding: .67rem .95rem !important;
+  }
+
+  #events .past-events-carousel {
+    padding-top: .72rem !important;
+  }
+
+  #events .past-events-carousel-stage,
+  #events .past-events-event-featured .past-events-carousel-stage {
+    padding: 0 2.55rem !important;
+  }
+
+  #events .past-events-carousel-slide img {
+    max-height: 72vh !important;
+  }
+
+  #events .past-events-carousel-arrow {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.55rem !important;
+  }
+
+  #events .past-events-carousel-prev { left: .1rem !important; }
+  #events .past-events-carousel-next { right: .1rem !important; }
+}
+/* ===== END PAST EVENTS V12 ===== */
+
+</style>
 <style id="about-silver-band-critical-fix">
 
 /* ============================================================
@@ -5605,8 +5873,7 @@
 }
 
 </style>
-<script data-goatcounter="https://d9harlemvotes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
+<script async="" data-goatcounter="https://d9harlemvotes.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 <style id="d9-past-events-v7">
 
 /* =====================================================================
@@ -6728,7 +6995,7 @@
 <p class="ftv-eyebrow">TRANSPARENCY FIRST</p>
 <h2>Who is eligible to register?</h2>
 <p class="ftv-lede">D9 Harlem Votes® gives Harlem residents clear, accurate information about voter eligibility and registration.</p>
-<ul class="ftv-eligibility-checklist" aria-label="New York City voter registration qualifications">
+<ul aria-label="New York City voter registration qualifications" class="ftv-eligibility-checklist">
 <li>Be a citizen of the United States.</li>
 <li>Be a New York City resident for at least 30 days.</li>
 <li>Be 18 years old on or before Election Day.</li>
@@ -6738,22 +7005,21 @@
 </ul>
 <p class="ftv-preregister-note"><strong>Age 16 or 17?</strong> If you otherwise qualify, you may preregister to vote and will be automatically registered when you turn 18.</p>
 <p class="ftv-address-note"><strong>When you apply:</strong> Use your current residential address. If you receive mail somewhere else, include your mailing address too.</p>
-<div class="ftv-signature" aria-hidden="true"><span></span><span></span><span></span></div>
+<div aria-hidden="true" class="ftv-signature"><span></span><span></span><span></span></div>
 </div>
 <figure class="ftv-human-figure">
 <img alt="Young voters featured in D9 Harlem Votes® First-Time Voters campaign artwork" src="assets/first-time-voters-afrocentric.png"/>
 </figure>
 </div>
 </div>
-
 <div class="ftv-band ftv-band-actions">
 <div class="ftv-shell">
 <div class="ftv-actions-heading">
 <h3>Know before you go.</h3>
 <p>Use these official voter resources to confirm where you stand and prepare for the ballot.</p>
-<div class="ftv-signature ftv-signature-light" aria-hidden="true"><span></span><span></span><span></span></div>
+<div aria-hidden="true" class="ftv-signature ftv-signature-light"><span></span><span></span><span></span></div>
 </div>
-<nav class="ftv-resource-steps" aria-label="First-time voter resources">
+<nav aria-label="First-time voter resources" class="ftv-resource-steps">
 <a class="ftv-resource-step" data-goatcounter-click="first-voter-check-status" data-goatcounter-title="First-Time Voters — Check Registration Status" href="https://voterlookup.elections.ny.gov/" rel="noopener noreferrer" target="_blank">
 <span class="ftv-step-num">01</span>
 <strong>Check Your Registration Status</strong>
@@ -6782,7 +7048,6 @@
 <p class="ftv-tracking-note">D9 Harlem Votes® tracks clicks on these resources so we can understand which voter information Harlem residents are using. A click tells us a resource was opened; it does not tell us whether the voter completed the action on the external site.</p>
 </div>
 </div>
-
 <div class="ftv-band ftv-band-process">
 <div class="ftv-shell ftv-process-grid">
 <figure class="ftv-process-figure">
@@ -6791,11 +7056,11 @@
 <div class="ftv-process-copy">
 <p class="ftv-eyebrow">WHAT HAPPENS NEXT</p>
 <h3>Apply. Confirm. Prepare. Vote.</h3>
-<div class="ftv-process-line" aria-label="Voter registration process">
-<div class="ftv-process-step ftv-process-apply"><span class="ftv-process-icon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M18 10h22l10 10v34H18z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M40 10v10h10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M26 38l16-16 5 5-16 16-8 3z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M24 48h16" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></span><strong>APPLY</strong><span>Submit the application by the deadline.</span></div>
-<div class="ftv-process-step ftv-process-confirm"><span class="ftv-process-icon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" focusable="false"><rect x="16" y="10" width="32" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M24 22h16M24 30h16" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><path d="M23 40l6 6 12-14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>CONFIRM</strong><span>Check that your registration is active.</span></div>
-<div class="ftv-process-step ftv-process-prepare"><span class="ftv-process-icon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" focusable="false"><rect x="15" y="12" width="34" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M24 24h16M24 32h16M24 40h10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><path d="M46 16l6 6M52 16l-6 6" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></span><strong>PREPARE</strong><span>Know your poll site, ID rules and ballot.</span></div>
-<div class="ftv-process-step ftv-process-vote"><span class="ftv-process-icon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M20 26h24l4 24H16z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M24 26V14h16v12" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M26 18l6 6 12-12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>VOTE</strong><span>Make a plan and complete the full ballot.</span></div>
+<div aria-label="Voter registration process" class="ftv-process-line">
+<div class="ftv-process-step ftv-process-apply"><span aria-hidden="true" class="ftv-process-icon"><svg focusable="false" role="img" viewbox="0 0 64 64"><path d="M18 10h22l10 10v34H18z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path><path d="M40 10v10h10" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path><path d="M26 38l16-16 5 5-16 16-8 3z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path><path d="M24 48h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"></path></svg></span><strong>APPLY</strong><span>Submit the application by the deadline.</span></div>
+<div class="ftv-process-step ftv-process-confirm"><span aria-hidden="true" class="ftv-process-icon"><svg focusable="false" role="img" viewbox="0 0 64 64"><rect fill="none" height="44" rx="4" stroke="currentColor" stroke-width="3.2" width="32" x="16" y="10"></rect><path d="M24 22h16M24 30h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"></path><path d="M23 40l6 6 12-14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path></svg></span><strong>CONFIRM</strong><span>Check that your registration is active.</span></div>
+<div class="ftv-process-step ftv-process-prepare"><span aria-hidden="true" class="ftv-process-icon"><svg focusable="false" role="img" viewbox="0 0 64 64"><rect fill="none" height="40" rx="4" stroke="currentColor" stroke-width="3.2" width="34" x="15" y="12"></rect><path d="M24 24h16M24 32h16M24 40h10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"></path><path d="M46 16l6 6M52 16l-6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"></path></svg></span><strong>PREPARE</strong><span>Know your poll site, ID rules and ballot.</span></div>
+<div class="ftv-process-step ftv-process-vote"><span aria-hidden="true" class="ftv-process-icon"><svg focusable="false" role="img" viewbox="0 0 64 64"><path d="M20 26h24l4 24H16z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path><path d="M24 26V14h16v12" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path><path d="M26 18l6 6 12-12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path></svg></span><strong>VOTE</strong><span>Make a plan and complete the full ballot.</span></div>
 </div>
 <div class="ftv-affidavit-note">
 <strong>If your name is not on the poll list:</strong>
@@ -6829,7 +7094,7 @@
 <div class="get-involved-copy">
 <p class="get-involved-card-kicker">Get Involved</p>
 <h2>Volunteer Sign-Up</h2>
-<div class="get-involved-signature" aria-hidden="true"><span></span><span></span><span></span></div>
+<div aria-hidden="true" class="get-involved-signature"><span></span><span></span><span></span></div>
 <p>Join the D9 Harlem Votes® volunteer team and tell us where you want to serve. Volunteers may support civic engagement events, voter registration activations, voter education training, youth engagement, social media, partnerships, and general event support.</p>
 <div class="get-involved-note">Volunteers may support setup, greeting, materials distribution, sign-in, crowd support, photography support, and other activation-day tasks.</div>
 <p class="get-involved-followup">Aaliyah Brown, Volunteer Recruitment Lead, will follow up after the form is submitted.</p>
@@ -6845,7 +7110,7 @@
 <div class="get-involved-copy">
 <p class="get-involved-card-kicker">Additional Requirement</p>
 <h2>Voter Registration Training</h2>
-<div class="get-involved-signature" aria-hidden="true"><span></span><span></span><span></span></div>
+<div aria-hidden="true" class="get-involved-signature"><span></span><span></span><span></span></div>
 <p>Voter Registration Training is an additional requirement for volunteers who are doing voter registration activations and helping to assist residents with voter registration forms.</p>
 <p>D9 Harlem Votes® offers a nonpartisan self-paced training covering voter-registration essentials, voting rights, ballot literacy, civic participation, and peer-to-peer learning so volunteers and coalition participants can support Harlem voters with clear, practical information.</p>
 <div class="get-involved-note">Voter registration training is required before volunteers directly assist residents with completing voter registration forms during D9 Harlem Votes® Boots on the Ground Voter Registration Activations.</div>
@@ -6929,244 +7194,235 @@
 </section>
 <section class="section impact-section locked-impact-page" id="impact">
 <div class="impact-band impact-band-intro">
-  <div class="section-inner locked-impact-hero">
-    <div class="impact-intro-grid">
-      <div class="locked-impact-copy">
-        <h2>Boots on the Ground</h2>
-        <p class="locked-impact-intro">D9 Harlem Votes® Boots on the Ground is our signature voter-registration activation, bringing Steering Committee Members and partner organizations together across Harlem to educate, engage, and register voters.</p>
-        <p class="locked-impact-context">Since 2024, D9 Harlem Votes® has been on the ground serving Harlem. We began officially tracking our impact in 2025 and partner with NYC Votes, the NYC Board of Elections, and Educated Voter, LLC, to connect Harlem residents with current, nonpartisan voter information and resources for every election cycle. We equip Harlem voters with the information they need to understand their New York State voting rights, navigate the voting process, and show up at the polls informed, prepared, and ready to exercise the power of their vote.</p>
-      </div>
-      <figure class="locked-boots-feature">
-        <img alt="D9 Harlem Votes® Boots on the Ground voter registration activation signature image" loading="eager" src="assets/community-impact/boots-on-the-ground-feature.jpg"/>
-      </figure>
-    </div>
-    <div class="impact-recognition-block" aria-labelledby="impact-recognition-title">
-      <p class="impact-recognition-kicker" id="impact-recognition-title">HARLEM WEEK 2026 RECOGNITION</p>
-      <p class="impact-recognition-copy">On August 16, 2026, D9 Harlem Votes® was recognized during Harlem Week 2026 for service, leadership, and civic engagement in Harlem.</p>
-      <div class="impact-recognition-grid">
-        <button aria-haspopup="dialog" class="impact-award-link impact-recognition-card" data-award-alt="Harlem Week 2026 award presented to D9 Harlem Votes®" data-award-caption="Harlem Week 2026 Award" data-award-src="assets/award-legacy.jpg" type="button">
-          <strong>Harlem Week 2026 Award</strong><span>D9 Harlem Votes®</span><em>View Award</em>
-        </button>
-        <button aria-haspopup="dialog" class="impact-award-link impact-recognition-card" data-award-alt="Certificate of Recognition presented to D9 Harlem Votes® by New York State Senator Cordell Cleare" data-award-caption="Certificate of Recognition — New York State Senator Cordell Cleare" data-award-src="assets/award-cleare.jpg" type="button">
-          <strong>Certificate of Recognition</strong><span>New York State Senator Cordell Cleare</span><em>View Certificate</em>
-        </button>
-      </div>
-    </div>
-  </div>
+<div class="section-inner locked-impact-hero">
+<div class="impact-intro-grid">
+<div class="locked-impact-copy">
+<h2>Boots on the Ground</h2>
+<p class="locked-impact-intro">D9 Harlem Votes® Boots on the Ground is our signature voter-registration activation, bringing Steering Committee Members and partner organizations together across Harlem to educate, engage, and register voters.</p>
+<p class="locked-impact-context">Since 2024, D9 Harlem Votes® has been on the ground serving Harlem. We began officially tracking our impact in 2025 and partner with NYC Votes, the NYC Board of Elections, and Educated Voter, LLC, to connect Harlem residents with current, nonpartisan voter information and resources for every election cycle. We equip Harlem voters with the information they need to understand their New York State voting rights, navigate the voting process, and show up at the polls informed, prepared, and ready to exercise the power of their vote.</p>
+</div>
+<figure class="locked-boots-feature">
+<img alt="D9 Harlem Votes® Boots on the Ground voter registration activation signature image" loading="eager" src="assets/community-impact/boots-on-the-ground-feature.jpg"/>
+</figure>
+</div>
+<div aria-labelledby="impact-recognition-title" class="impact-recognition-block">
+<p class="impact-recognition-kicker" id="impact-recognition-title">HARLEM WEEK 2026 RECOGNITION</p>
+<p class="impact-recognition-copy">On August 16, 2026, D9 Harlem Votes® was recognized during Harlem Week 2026 for service, leadership, and civic engagement in Harlem.</p>
+<div class="impact-recognition-grid">
+<button aria-haspopup="dialog" class="impact-award-link impact-recognition-card" data-award-alt="Harlem Week 2026 award presented to D9 Harlem Votes®" data-award-caption="Harlem Week 2026 Award" data-award-src="assets/award-legacy.jpg" type="button">
+<strong>Harlem Week 2026 Award</strong><span>D9 Harlem Votes®</span><em>View Award</em>
+</button>
+<button aria-haspopup="dialog" class="impact-award-link impact-recognition-card" data-award-alt="Certificate of Recognition presented to D9 Harlem Votes® by New York State Senator Cordell Cleare" data-award-caption="Certificate of Recognition — New York State Senator Cordell Cleare" data-award-src="assets/award-cleare.jpg" type="button">
+<strong>Certificate of Recognition</strong><span>New York State Senator Cordell Cleare</span><em>View Certificate</em>
+</button>
+</div>
+</div>
+</div>
 </div>
 <div class="impact-band impact-band-stats">
-  <div class="section-inner impact-metrics-v3">
-    <div class="impact-metrics-heading">
-      <h3>Impact to Date</h3>
-      <div aria-hidden="true" class="impact-signature-rule"><span></span><span></span><span></span></div>
-    </div>
-    <div aria-label="Overall impact totals" class="impact-summary-line">
-      <div class="impact-summary-pair"><strong data-impact-count="8">8</strong><span>ACTIVATIONS</span></div>
-      <span aria-hidden="true" class="impact-summary-dot">·</span>
-      <div class="impact-summary-pair"><strong data-impact-count="31">31</strong><span>TRAINED VOLUNTEERS</span></div>
-    </div>
-    <div class="impact-conversations"><strong data-impact-count="1640">1,640</strong><span>CONVERSATIONS</span></div>
-    <div aria-label="Detailed impact totals" class="impact-detail-line">
-      <div><strong data-impact-count="1030">1,030</strong><span>voter engagement actions</span></div>
-      <div><strong data-impact-count="85">85</strong><span>completed voter registrations</span></div>
-      <div><strong data-impact-count="525">525</strong><span>documented voting plans</span></div>
-    </div>
-  </div>
+<div class="section-inner impact-metrics-v3">
+<div class="impact-metrics-heading">
+<h3>Impact to Date</h3>
+<div aria-hidden="true" class="impact-signature-rule"><span></span><span></span><span></span></div>
+</div>
+<div aria-label="Overall impact totals" class="impact-summary-line">
+<div class="impact-summary-pair"><strong data-impact-count="8">8</strong><span>ACTIVATIONS</span></div>
+<span aria-hidden="true" class="impact-summary-dot">·</span>
+<div class="impact-summary-pair"><strong data-impact-count="31">31</strong><span>TRAINED VOLUNTEERS</span></div>
+</div>
+<div class="impact-conversations"><strong data-impact-count="1640">1,640</strong><span>CONVERSATIONS</span></div>
+<div aria-label="Detailed impact totals" class="impact-detail-line">
+<div><strong data-impact-count="1030">1,030</strong><span>voter engagement actions</span></div>
+<div><strong data-impact-count="85">85</strong><span>completed voter registrations</span></div>
+<div><strong data-impact-count="525">525</strong><span>documented voting plans</span></div>
+</div>
+</div>
 </div>
 <div class="impact-band impact-band-partners">
-  <div class="section-inner impact-partners-section">
-    <div class="impact-partners-copy">
-      <p class="impact-partners-kicker">COMMUNITY PARTNERSHIPS</p>
-      <h3>Connecting Harlem to resources that strengthen our community.</h3>
-      <p>Our impact extends beyond the ballot box. D9 Harlem Votes® has partnered with at least 12 civic, community-based, and government organizations to bring information, services, and resources directly to Harlem residents. Among these partners are NYC CORE (New York City Commission on Racial Equity), NYC Votes, the NYC Board of Elections, Educated Voter, LLC, and organizations working across health, workforce development, youth services, public safety, environmental justice, and social services.</p>
-    </div>
-    <div class="impact-partner-story" aria-label="Community partnership photo story">
-      <figure class="partner-photo partner-photo-lead"><img alt="Harlem residents visiting multiple community resource partner tables" loading="lazy" src="assets/community-impact/community-partners-01.jpg"/></figure>
-      <figure class="partner-photo"><img alt="New York City Commission on Racial Equity resource table at a Harlem community event" loading="lazy" src="assets/community-impact/community-partners-02.jpg"/></figure>
-      <figure class="partner-photo"><img alt="NAACP Mid-Manhattan Branch representatives engaging residents at a community resource table" loading="lazy" src="assets/community-impact/community-partners-03.jpg"/></figure>
-      <figure class="partner-photo"><img alt="Harlem residents attending a civic and community resource program" loading="lazy" src="assets/community-impact/community-partners-04.jpg"/></figure>
-      <figure class="partner-photo"><img alt="Nonpartisan ranked-choice voting education presentation for Harlem residents" loading="lazy" src="assets/community-impact/community-partners-05.jpg"/></figure>
-    </div>
-  </div>
+<div class="section-inner impact-partners-section">
+<div class="impact-partners-copy">
+<p class="impact-partners-kicker">COMMUNITY PARTNERSHIPS</p>
+<h3>Connecting Harlem to resources that strengthen our community.</h3>
+<p>Our impact extends beyond the ballot box. D9 Harlem Votes® has partnered with at least 12 civic, community-based, and government organizations to bring information, services, and resources directly to Harlem residents. Among these partners are NYC CORE (New York City Commission on Racial Equity), NYC Votes, the NYC Board of Elections, Educated Voter, LLC, and organizations working across health, workforce development, youth services, public safety, environmental justice, and social services.</p>
+</div>
+<div aria-label="Community partnership photo story" class="impact-partner-story">
+<figure class="partner-photo partner-photo-lead"><img alt="Harlem residents visiting multiple community resource partner tables" loading="lazy" src="assets/community-impact/community-partners-01.jpg"/></figure>
+<figure class="partner-photo"><img alt="New York City Commission on Racial Equity resource table at a Harlem community event" loading="lazy" src="assets/community-impact/community-partners-02.jpg"/></figure>
+<figure class="partner-photo"><img alt="NAACP Mid-Manhattan Branch representatives engaging residents at a community resource table" loading="lazy" src="assets/community-impact/community-partners-03.jpg"/></figure>
+<figure class="partner-photo"><img alt="Harlem residents attending a civic and community resource program" loading="lazy" src="assets/community-impact/community-partners-04.jpg"/></figure>
+<figure class="partner-photo"><img alt="Nonpartisan ranked-choice voting education presentation for Harlem residents" loading="lazy" src="assets/community-impact/community-partners-05.jpg"/></figure>
+</div>
+</div>
 </div>
 <div class="impact-band impact-band-gallery">
-  <div aria-label="D9 Harlem Votes Boots on the Ground photo carousel" class="section-inner locked-botg-gallery">
-    <div class="locked-gallery-heading">
-      <div><h3>BOOTS ON THE GROUND</h3><p>Meeting Harlem where they are.</p></div>
-      <div aria-hidden="true" class="locked-gallery-rule"><span></span><span></span><span></span></div>
-    </div>
-    <div class="botg-carousel" data-botg-carousel>
-      <button aria-label="Previous Boots on the Ground photos" class="botg-arrow botg-prev" type="button">‹</button>
-      <div class="botg-viewport"><div class="botg-track"><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 1" loading="lazy" src="assets/community-impact/boots-on-the-ground-01.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 2" loading="lazy" src="assets/community-impact/boots-on-the-ground-02.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 3" loading="lazy" src="assets/community-impact/boots-on-the-ground-03.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 4" loading="lazy" src="assets/community-impact/boots-on-the-ground-04.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 5" loading="lazy" src="assets/community-impact/boots-on-the-ground-05.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 6" loading="lazy" src="assets/community-impact/boots-on-the-ground-06.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 7" loading="lazy" src="assets/community-impact/boots-on-the-ground-07.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 8" loading="lazy" src="assets/community-impact/boots-on-the-ground-08.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 9" loading="lazy" src="assets/community-impact/boots-on-the-ground-09.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 10" loading="lazy" src="assets/community-impact/boots-on-the-ground-10.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 11" loading="lazy" src="assets/community-impact/boots-on-the-ground-11.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 12" loading="lazy" src="assets/community-impact/boots-on-the-ground-12.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 13" loading="lazy" src="assets/community-impact/boots-on-the-ground-13.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 14" loading="lazy" src="assets/community-impact/boots-on-the-ground-14.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 15" loading="lazy" src="assets/community-impact/boots-on-the-ground-15.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 16" loading="lazy" src="assets/community-impact/boots-on-the-ground-16.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 17" loading="lazy" src="assets/community-impact/boots-on-the-ground-17.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 18" loading="lazy" src="assets/community-impact/boots-on-the-ground-18.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 19" loading="lazy" src="assets/community-impact/boots-on-the-ground-19.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 20" loading="lazy" src="assets/community-impact/boots-on-the-ground-20.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 21" loading="lazy" src="assets/community-impact/boots-on-the-ground-21.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 22" loading="lazy" src="assets/community-impact/boots-on-the-ground-22.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 23" loading="lazy" src="assets/community-impact/boots-on-the-ground-23.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 24" loading="lazy" src="assets/community-impact/boots-on-the-ground-24.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 25" loading="lazy" src="assets/community-impact/boots-on-the-ground-25.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 26" loading="lazy" src="assets/community-impact/boots-on-the-ground-26.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 27" loading="lazy" src="assets/community-impact/boots-on-the-ground-27.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 28" loading="lazy" src="assets/community-impact/boots-on-the-ground-28.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 29" loading="lazy" src="assets/community-impact/boots-on-the-ground-29.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 30" loading="lazy" src="assets/community-impact/boots-on-the-ground-30.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 31" loading="lazy" src="assets/community-impact/boots-on-the-ground-31.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 32" loading="lazy" src="assets/community-impact/boots-on-the-ground-32.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 33" loading="lazy" src="assets/community-impact/boots-on-the-ground-33.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 34" loading="lazy" src="assets/community-impact/boots-on-the-ground-34.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 35" loading="lazy" src="assets/community-impact/boots-on-the-ground-35.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 36" loading="lazy" src="assets/community-impact/boots-on-the-ground-36.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 37" loading="lazy" src="assets/community-impact/boots-on-the-ground-37.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 38" loading="lazy" src="assets/community-impact/boots-on-the-ground-38.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 39" loading="lazy" src="assets/community-impact/boots-on-the-ground-39.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 40" loading="lazy" src="assets/community-impact/boots-on-the-ground-40.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 41" loading="lazy" src="assets/community-impact/boots-on-the-ground-41.jpg"/></figure></div></div></div>
-      <button aria-label="Next Boots on the Ground photos" class="botg-arrow botg-next" type="button">›</button>
-    </div>
-    <div aria-label="Carousel navigation" class="botg-dots"><button aria-label="Show Boots on the Ground photo set 1" class="is-active" data-botg-dot="0" type="button"></button><button aria-label="Show Boots on the Ground photo set 2" class="" data-botg-dot="1" type="button"></button><button aria-label="Show Boots on the Ground photo set 3" class="" data-botg-dot="2" type="button"></button><button aria-label="Show Boots on the Ground photo set 4" class="" data-botg-dot="3" type="button"></button><button aria-label="Show Boots on the Ground photo set 5" class="" data-botg-dot="4" type="button"></button><button aria-label="Show Boots on the Ground photo set 6" class="" data-botg-dot="5" type="button"></button><button aria-label="Show Boots on the Ground photo set 7" class="" data-botg-dot="6" type="button"></button><button aria-label="Show Boots on the Ground photo set 8" class="" data-botg-dot="7" type="button"></button><button aria-label="Show Boots on the Ground photo set 9" class="" data-botg-dot="8" type="button"></button><button aria-label="Show Boots on the Ground photo set 10" class="" data-botg-dot="9" type="button"></button><button aria-label="Show Boots on the Ground photo set 11" class="" data-botg-dot="10" type="button"></button><button aria-label="Show Boots on the Ground photo set 12" class="" data-botg-dot="11" type="button"></button><button aria-label="Show Boots on the Ground photo set 13" class="" data-botg-dot="12" type="button"></button><button aria-label="Show Boots on the Ground photo set 14" class="" data-botg-dot="13" type="button"></button></div>
-  </div>
+<div aria-label="D9 Harlem Votes Boots on the Ground photo carousel" class="section-inner locked-botg-gallery">
+<div class="locked-gallery-heading">
+<div><h3>BOOTS ON THE GROUND</h3><p>Meeting Harlem where they are.</p></div>
+<div aria-hidden="true" class="locked-gallery-rule"><span></span><span></span><span></span></div>
+</div>
+<div class="botg-carousel" data-botg-carousel="">
+<button aria-label="Previous Boots on the Ground photos" class="botg-arrow botg-prev" type="button">‹</button>
+<div class="botg-viewport"><div class="botg-track"><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 1" loading="lazy" src="assets/community-impact/boots-on-the-ground-01.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 2" loading="lazy" src="assets/community-impact/boots-on-the-ground-02.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 3" loading="lazy" src="assets/community-impact/boots-on-the-ground-03.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 4" loading="lazy" src="assets/community-impact/boots-on-the-ground-04.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 5" loading="lazy" src="assets/community-impact/boots-on-the-ground-05.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 6" loading="lazy" src="assets/community-impact/boots-on-the-ground-06.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 7" loading="lazy" src="assets/community-impact/boots-on-the-ground-07.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 8" loading="lazy" src="assets/community-impact/boots-on-the-ground-08.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 9" loading="lazy" src="assets/community-impact/boots-on-the-ground-09.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 10" loading="lazy" src="assets/community-impact/boots-on-the-ground-10.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 11" loading="lazy" src="assets/community-impact/boots-on-the-ground-11.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 12" loading="lazy" src="assets/community-impact/boots-on-the-ground-12.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 13" loading="lazy" src="assets/community-impact/boots-on-the-ground-13.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 14" loading="lazy" src="assets/community-impact/boots-on-the-ground-14.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 15" loading="lazy" src="assets/community-impact/boots-on-the-ground-15.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 16" loading="lazy" src="assets/community-impact/boots-on-the-ground-16.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 17" loading="lazy" src="assets/community-impact/boots-on-the-ground-17.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 18" loading="lazy" src="assets/community-impact/boots-on-the-ground-18.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 19" loading="lazy" src="assets/community-impact/boots-on-the-ground-19.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 20" loading="lazy" src="assets/community-impact/boots-on-the-ground-20.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 21" loading="lazy" src="assets/community-impact/boots-on-the-ground-21.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 22" loading="lazy" src="assets/community-impact/boots-on-the-ground-22.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 23" loading="lazy" src="assets/community-impact/boots-on-the-ground-23.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 24" loading="lazy" src="assets/community-impact/boots-on-the-ground-24.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 25" loading="lazy" src="assets/community-impact/boots-on-the-ground-25.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 26" loading="lazy" src="assets/community-impact/boots-on-the-ground-26.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 27" loading="lazy" src="assets/community-impact/boots-on-the-ground-27.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 28" loading="lazy" src="assets/community-impact/boots-on-the-ground-28.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 29" loading="lazy" src="assets/community-impact/boots-on-the-ground-29.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 30" loading="lazy" src="assets/community-impact/boots-on-the-ground-30.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 31" loading="lazy" src="assets/community-impact/boots-on-the-ground-31.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 32" loading="lazy" src="assets/community-impact/boots-on-the-ground-32.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 33" loading="lazy" src="assets/community-impact/boots-on-the-ground-33.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 34" loading="lazy" src="assets/community-impact/boots-on-the-ground-34.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 35" loading="lazy" src="assets/community-impact/boots-on-the-ground-35.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 36" loading="lazy" src="assets/community-impact/boots-on-the-ground-36.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 37" loading="lazy" src="assets/community-impact/boots-on-the-ground-37.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 38" loading="lazy" src="assets/community-impact/boots-on-the-ground-38.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 39" loading="lazy" src="assets/community-impact/boots-on-the-ground-39.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 40" loading="lazy" src="assets/community-impact/boots-on-the-ground-40.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 41" loading="lazy" src="assets/community-impact/boots-on-the-ground-41.jpg"/></figure></div></div></div>
+<button aria-label="Next Boots on the Ground photos" class="botg-arrow botg-next" type="button">›</button>
+</div>
+<div aria-label="Carousel navigation" class="botg-dots"><button aria-label="Show Boots on the Ground photo set 1" class="is-active" data-botg-dot="0" type="button"></button><button aria-label="Show Boots on the Ground photo set 2" class="" data-botg-dot="1" type="button"></button><button aria-label="Show Boots on the Ground photo set 3" class="" data-botg-dot="2" type="button"></button><button aria-label="Show Boots on the Ground photo set 4" class="" data-botg-dot="3" type="button"></button><button aria-label="Show Boots on the Ground photo set 5" class="" data-botg-dot="4" type="button"></button><button aria-label="Show Boots on the Ground photo set 6" class="" data-botg-dot="5" type="button"></button><button aria-label="Show Boots on the Ground photo set 7" class="" data-botg-dot="6" type="button"></button><button aria-label="Show Boots on the Ground photo set 8" class="" data-botg-dot="7" type="button"></button><button aria-label="Show Boots on the Ground photo set 9" class="" data-botg-dot="8" type="button"></button><button aria-label="Show Boots on the Ground photo set 10" class="" data-botg-dot="9" type="button"></button><button aria-label="Show Boots on the Ground photo set 11" class="" data-botg-dot="10" type="button"></button><button aria-label="Show Boots on the Ground photo set 12" class="" data-botg-dot="11" type="button"></button><button aria-label="Show Boots on the Ground photo set 13" class="" data-botg-dot="12" type="button"></button><button aria-label="Show Boots on the Ground photo set 14" class="" data-botg-dot="13" type="button"></button></div>
+</div>
 </div>
 </section>
 <section class="section events-section past-events-page" id="events">
-  <div class="past-events-band past-events-intro">
-    <div class="past-events-shell past-events-intro-inner">
-      <div class="past-events-intro-heading">
-        <div class="past-events-intro-title">
-          <h2 aria-label="D9 Harlem Votes, registered trademark, Community Conversations">D9 Harlem Votes<sup class="past-events-registered" aria-hidden="true">®</sup> Community Conversations</h2>
-          <p class="past-events-table-line">Setting a Seat at the Table for Harlem</p>
-          <div aria-hidden="true" class="past-events-signature"><span></span><span></span><span></span></div>
-        </div>
-        <div class="past-events-intro-copy">
-          <p class="past-events-intro-lede">D9 Harlem Votes® <strong><em>lives, loves, and serves Harlem</em></strong>. For us, that means centering Harlem, being present in the community, and remaining in conversation with our neighbors every day.</p>
-          <p class="past-events-intro-body">Our civic engagement does not end at the voter registration table. Voter registration activates our ongoing, proactive participation in local government and in the decisions that shape our community. Voting is an action, but civic engagement is a practice. We stay informed, stay engaged, ask questions, follow the policies, and pay attention to what happens long after the polls close.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="past-events-band past-events-intro">
+<div class="past-events-shell past-events-intro-inner">
+<div class="past-events-intro-heading">
+<div class="past-events-intro-title">
+<h2 aria-label="D9 Harlem Votes, registered trademark, Community Conversations">D9 Harlem Votes<sup aria-hidden="true" class="past-events-registered">®</sup> Community Conversations</h2>
+<p class="past-events-table-line">Setting a Seat at the Table for Harlem</p>
+<div aria-hidden="true" class="past-events-signature"><span></span><span></span><span></span></div>
+</div>
+<div class="past-events-intro-copy">
+<p class="past-events-intro-lede">D9 Harlem Votes® <strong><em>lives, loves, and serves Harlem</em></strong>. For us, that means centering Harlem, being present in the community, and remaining in conversation with our neighbors every day.</p>
+<p class="past-events-intro-body">Our civic engagement does not end at the voter registration table. Voter registration activates our ongoing, proactive participation in local government and in the decisions that shape our community. Voting is an action, but civic engagement is a practice. We stay informed, stay engaged, ask questions, follow the policies, and pay attention to what happens long after the polls close.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="past-events-band past-events-feature-band">
+<article class="past-events-shell past-events-event past-events-event-featured">
+<div class="past-events-event-copy">
+<p class="past-events-event-date">APRIL 13, 2026</p>
+<h3>Harlem Mayor’s Town Hall</h3>
+<p class="past-events-summary">A town hall at the Schomburg Center focused on issues affecting Black New Yorkers.</p>
+<div aria-label="Harlem Mayor’s Town Hall links" class="past-events-links">
+<a class="past-events-link past-events-link-light" href="https://amsterdamnews.com/news/2026/04/16/are-black-new-yorkers-still-feeling-nyc-mayor-mamdani/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
+<a class="past-events-link past-events-link-light" href="https://www.youtube.com/live/saCWYWLreFA?si=Q3KW5Gvt3NOwTu1Z" rel="noopener noreferrer" target="_blank">Watch full town hall →</a>
+<a class="past-events-link past-events-link-light" href="https://youtu.be/Po7eMskTX5M?si=jT06Dy91rQ8eVm4g" rel="noopener noreferrer" target="_blank">Watch news clip →</a>
+</div>
+</div>
+<figure class="past-events-hero-image">
+<img alt="D9 Harlem Votes® members and community participants at the 2026 Harlem Mayor’s Town Hall" src="assets/past-events/town-hall/townhall-hero.jpeg"/>
+</figure>
+<details class="past-events-photo-drawer">
+<summary><span>View 19 event photos</span></summary>
+<div class="past-events-carousel" data-event-carousel="">
+<button aria-label="Previous Town Hall photo" class="past-events-carousel-arrow past-events-carousel-prev" type="button">‹</button>
+<div aria-live="polite" class="past-events-carousel-stage">
+<figure class="past-events-carousel-slide is-active"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-01.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-02.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-03.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-04.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-05.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-06.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-07.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-08.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-09.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-10.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-11.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-12.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-13.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-14.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-15.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-16.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-17.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-18.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-19.jpeg"/></figure>
+</div>
+<button aria-label="Next Town Hall photo" class="past-events-carousel-arrow past-events-carousel-next" type="button">›</button>
+</div>
+</details>
+</article>
+</div>
+<div class="past-events-band past-events-archive-band">
+<div class="past-events-shell past-events-archive">
+<article class="past-events-event past-events-event-archive">
+<div class="past-events-event-copy">
+<p class="past-events-event-date">2025</p>
+<h3>NYC Mayoral Candidates Forum</h3>
+<p class="past-events-summary">Community-centered candidate forum held at Mother AME Zion Church in Harlem.</p>
+<div aria-label="NYC Mayoral Candidates Forum links" class="past-events-links">
+<a class="past-events-link" href="https://amsterdamnews.com/news/2025/05/29/divine-nine-harlem-votes-hosts-mayoral-candidates-forum/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
+<a class="past-events-link" href="https://www.youtube.com/live/C_1Iw1SMe2A?si=v7Voh-FbcJm4JoeY" rel="noopener noreferrer" target="_blank">Watch full forum →</a>
+</div>
+</div>
+<figure class="past-events-hero-image">
+<img alt="D9 Harlem Votes® participants at the 2025 NYC Mayoral Candidates Forum" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-hero.jpeg"/>
+</figure>
+<details class="past-events-photo-drawer">
+<summary><span>View 28 event photos</span></summary>
+<div class="past-events-carousel" data-event-carousel="">
+<button aria-label="Previous Mayoral Candidates Forum photo" class="past-events-carousel-arrow past-events-carousel-prev" type="button">‹</button>
+<div aria-live="polite" class="past-events-carousel-stage">
+<figure class="past-events-carousel-slide is-active"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-01.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-02.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-03.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-04.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-05.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-06.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-07.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-08.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-09.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-12.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-14.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-15.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-16.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-17.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-18.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-19.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-21.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-22.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-23.jpeg"/></figure>
 
-  <div class="past-events-band past-events-feature-band">
-    <article class="past-events-shell past-events-event past-events-event-featured">
-      <div class="past-events-event-copy">
-        <p class="past-events-event-date">APRIL 13, 2026</p>
-        <h3>Harlem Mayor’s Town Hall</h3>
-        <p class="past-events-summary">A town hall at the Schomburg Center focused on issues affecting Black New Yorkers.</p>
-        <div class="past-events-links" aria-label="Harlem Mayor’s Town Hall links">
-          <a class="past-events-link past-events-link-light" href="https://amsterdamnews.com/news/2026/04/16/are-black-new-yorkers-still-feeling-nyc-mayor-mamdani/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
-          <a class="past-events-link past-events-link-light" href="https://www.youtube.com/live/saCWYWLreFA?si=Q3KW5Gvt3NOwTu1Z" rel="noopener noreferrer" target="_blank">Watch full town hall →</a>
-          <a class="past-events-link past-events-link-light" href="https://youtu.be/Po7eMskTX5M?si=jT06Dy91rQ8eVm4g" rel="noopener noreferrer" target="_blank">Watch news clip →</a>
-        </div>
-      </div>
-
-      <figure class="past-events-hero-image">
-        <img alt="D9 Harlem Votes® members and community participants at the 2026 Harlem Mayor’s Town Hall" src="assets/past-events/town-hall/townhall-hero.jpeg"/>
-      </figure>
-
-      <details class="past-events-photo-drawer">
-        <summary><span>View event photos</span></summary>
-        <div class="past-events-carousel" data-event-carousel>
-          <button class="past-events-carousel-arrow past-events-carousel-prev" type="button" aria-label="Previous Town Hall photo">‹</button>
-          <div class="past-events-carousel-stage" aria-live="polite">
-            <figure class="past-events-carousel-slide is-active"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-01.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-02.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-03.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-04.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-05.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-06.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-07.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-08.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-09.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-10.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-11.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-12.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-13.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-14.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-15.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-16.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-17.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-18.jpeg"/></figure>
-            <figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" loading="lazy" src="assets/past-events/town-hall/townhall-19.jpeg"/></figure>
-          </div>
-          <button class="past-events-carousel-arrow past-events-carousel-next" type="button" aria-label="Next Town Hall photo">›</button>
-        </div>
-      </details>
-    </article>
-  </div>
-
-  <div class="past-events-band past-events-archive-band">
-    <div class="past-events-shell past-events-archive">
-      <article class="past-events-event past-events-event-archive">
-        <div class="past-events-event-copy">
-          <p class="past-events-event-date">2025</p>
-          <h3>NYC Mayoral Candidates Forum</h3>
-          <p class="past-events-summary">Community-centered candidate forum held at Mother AME Zion Church in Harlem.</p>
-          <div class="past-events-links" aria-label="NYC Mayoral Candidates Forum links">
-            <a class="past-events-link" href="https://amsterdamnews.com/news/2025/05/29/divine-nine-harlem-votes-hosts-mayoral-candidates-forum/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
-            <a class="past-events-link" href="https://www.youtube.com/live/C_1Iw1SMe2A?si=v7Voh-FbcJm4JoeY" rel="noopener noreferrer" target="_blank">Watch full forum →</a>
-          </div>
-        </div>
-
-        <figure class="past-events-hero-image">
-          <img alt="D9 Harlem Votes® participants at the 2025 NYC Mayoral Candidates Forum" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-hero.jpeg"/>
-        </figure>
-
-        <details class="past-events-photo-drawer">
-          <summary><span>View event photos</span></summary>
-          <div class="past-events-carousel" data-event-carousel>
-            <button class="past-events-carousel-arrow past-events-carousel-prev" type="button" aria-label="Previous Mayoral Candidates Forum photo">‹</button>
-            <div class="past-events-carousel-stage" aria-live="polite">
-              <figure class="past-events-carousel-slide is-active"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-01.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-02.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-03.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-04.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-05.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-06.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-07.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-08.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-09.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-12.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-14.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-15.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-16.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-17.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-18.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-19.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-21.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-22.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-23.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-24.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-25.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-26.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-28.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-29.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-30.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-31.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-32.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-33.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-35.jpeg"/></figure>
-            </div>
-            <button class="past-events-carousel-arrow past-events-carousel-next" type="button" aria-label="Next Mayoral Candidates Forum photo">›</button>
-          </div>
-        </details>
-      </article>
-
-      <article class="past-events-event past-events-event-archive">
-        <div class="past-events-event-copy">
-          <p class="past-events-event-date">OCTOBER 29, 2025</p>
-          <h3>PACE Social Justice Week</h3>
-          <p class="past-events-summary">“Rapid Fire Chat: Whose House?” focused on affordability, economics and ballot initiatives.</p>
-          <div class="past-events-links" aria-label="PACE Social Justice Week links">
-            <a class="past-events-link" href="https://amsterdamnews.com/news/2025/11/13/d9-harlem-votes-partners-with-pace-university/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
-          </div>
-        </div>
-
-        <figure class="past-events-hero-image">
-          <img alt="D9 Harlem Votes® participants at PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-hero.jpg"/>
-        </figure>
-
-        <details class="past-events-photo-drawer">
-          <summary><span>View event photos</span></summary>
-          <div class="past-events-carousel" data-event-carousel>
-            <button class="past-events-carousel-arrow past-events-carousel-prev" type="button" aria-label="Previous PACE Social Justice Week photo">‹</button>
-            <div class="past-events-carousel-stage" aria-live="polite">
-              <figure class="past-events-carousel-slide is-active"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-01.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-02.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-03.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-04.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-05.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-06.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-07.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-08.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-09.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-10.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-11.jpeg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-12.png"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-13.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-15.jpg"/></figure>
-              <figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-16.jpeg"/></figure>
-            </div>
-            <button class="past-events-carousel-arrow past-events-carousel-next" type="button" aria-label="Next PACE Social Justice Week photo">›</button>
-          </div>
-        </details>
-      </article>
-    </div>
-  </div>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-25.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-26.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-28.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-29.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-30.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-31.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-32.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-33.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-35.jpeg"/></figure>
+</div>
+<button aria-label="Next Mayoral Candidates Forum photo" class="past-events-carousel-arrow past-events-carousel-next" type="button">›</button>
+</div>
+</details>
+</article>
+<article class="past-events-event past-events-event-archive">
+<div class="past-events-event-copy">
+<p class="past-events-event-date">OCTOBER 29, 2025</p>
+<h3>PACE Social Justice Week</h3>
+<p class="past-events-summary">“Rapid Fire Chat: Whose House?” focused on affordability, economics and ballot initiatives.</p>
+<div aria-label="PACE Social Justice Week links" class="past-events-links">
+<a class="past-events-link" href="https://amsterdamnews.com/news/2025/11/13/d9-harlem-votes-partners-with-pace-university/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
+</div>
+</div>
+<figure class="past-events-hero-image">
+<img alt="D9 Harlem Votes® participants at PACE University Social Justice Week" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-hero.jpg"/>
+</figure>
+<details class="past-events-photo-drawer">
+<summary><span>View 16 event photos</span></summary>
+<div class="past-events-carousel" data-event-carousel="">
+<button aria-label="Previous PACE Social Justice Week photo" class="past-events-carousel-arrow past-events-carousel-prev" type="button">‹</button>
+<div aria-live="polite" class="past-events-carousel-stage">
+<figure class="past-events-carousel-slide is-active"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-01.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-02.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-03.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-04.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-05.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-06.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-07.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-08.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-09.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-10.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-11.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-12.png"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-13.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-14.jpg"/></figure><figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-15.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-16.jpeg"/></figure>
+</div>
+<button aria-label="Next PACE Social Justice Week photo" class="past-events-carousel-arrow past-events-carousel-next" type="button">›</button>
+</div>
+</details>
+</article>
+</div>
+</div>
 </section>
 <section class="section contact-section final-contact-page" id="contact">
 <div class="section-inner final-contact-layout">
@@ -7893,6 +8149,5 @@
   if (document.readyState !== 'loading') initPastEventsCarousels();
 }());
 </script>
-
 </body>
 </html>

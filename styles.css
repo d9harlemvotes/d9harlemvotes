@@ -3419,3 +3419,54 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
     var(--about-black) 33.333% 66.666%,
     var(--about-green) 66.666% 100%) !important;
 }
+
+
+/* ============================================================
+   ABOUT US v5 — NO COLORED TYPE ON LIGHT SURFACES
+   2026-09-13
+   Green is reserved for the RED → BLACK → GREEN signature only.
+   ============================================================ */
+#about .about-band-intro,
+#about .about-band-steering,
+#about .about-band-intro h2,
+#about .about-band-intro p,
+#about .about-band-intro .kicker,
+#about .about-band-steering h3,
+#about .about-band-steering p,
+#about .about-band-steering .kicker,
+#about .about-band-steering .d9-cochair-kicker,
+#about .about-band-steering .d9-cochair-card strong,
+#about .about-band-steering .d9-cochair-card em,
+#about .about-band-steering .about-postcard-caption,
+#about .about-band-steering .about-postcard-caption .postcard-eyebrow,
+#about .about-band-steering .about-postcard-caption .postcard-title {
+  color: #000 !important;
+}
+#about .about-band-steering .d9-cochair-card span,
+#about .about-band-steering .about-postcard-caption .postcard-copy {
+  color: #444 !important;
+}
+#about .about-band-steering .d9-cochair-card {
+  position: relative !important;
+  padding-left: 1.35rem !important;
+  border-left: 0 !important;
+}
+#about .about-band-steering .d9-cochair-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 10px !important;
+  background: linear-gradient(to bottom,
+    #e31c24 0 33.333%,
+    #111111 33.333% 66.666%,
+    #0e8f58 66.666% 100%) !important;
+}
+/* The origin band is the exception: white type on structural blue. */
+#about .about-band-origin .locked-origin-copy .kicker,
+#about .about-band-origin .locked-origin-copy h3,
+#about .about-band-origin .locked-origin-copy p,
+#about .about-band-origin .locked-origin-copy strong {
+  color: #fff !important;
+}

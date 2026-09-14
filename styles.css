@@ -3349,3 +3349,73 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
     padding: .72rem .72rem .68rem !important;
   }
 }
+
+/* ============================================================
+   ABOUT US v4 — typography cleanup + vertical D9 signature
+   2026-09-13
+   No green or blue text on light About surfaces. Structural blue stays.
+   ============================================================ */
+
+/* Light-band typography: black, not blue or green. */
+#about .about-band-intro .locked-about-copy h2,
+#about .about-band-intro .locked-about-copy .about-lead,
+#about .about-band-intro .locked-about-copy p,
+#about .about-band-steering .d9-steering-intro h3,
+#about .about-band-steering .d9-steering-intro p:not(.kicker),
+#about .about-band-steering .d9-steering-principle,
+#about .d9-cochair-kicker,
+#about .d9-cochair-card strong,
+#about .d9-cochair-card em,
+#about figure.about-postcard figcaption.about-postcard-caption,
+#about .about-postcard-caption .postcard-title,
+#about .about-postcard-caption .postcard-slogan,
+#about .about-postcard-caption .postcard-eyebrow,
+#about .about-postcard-caption .postcard-copy,
+#about .about-postcard-caption .postcard-credit,
+#about .d9-steering-media-stack .d9-subtle-member-details .locked-people-list li,
+#about .d9-steering-media-stack .d9-subtle-member-details .locked-people-list strong,
+#about .d9-steering-media-stack .d9-subtle-member-details .locked-people-list em {
+  color: #000 !important;
+}
+
+/* Secondary information may recede, but stays neutral—not blue/green. */
+#about .d9-cochair-card span,
+#about .d9-steering-media-stack .d9-subtle-member-details .locked-people-list span {
+  color: #444 !important;
+}
+
+/* No green kicker text anywhere on the About page. */
+#about .about-band-intro .kicker,
+#about .about-band-steering .kicker,
+#about .d9-cochair-kicker {
+  color: #000 !important;
+}
+
+/* Keep the origin band readable: white type on the approved structural blue. */
+#about .about-band-origin .locked-origin-copy .kicker,
+#about .about-band-origin .locked-origin-copy h3,
+#about .about-band-origin .locked-origin-copy p,
+#about .about-band-origin .locked-origin-copy strong {
+  color: #fff !important;
+}
+
+/* Co-chair cards: one vertical RED → BLACK → GREEN signature on the left. */
+#about .d9-cochair-card {
+  position: relative !important;
+  padding-left: 1.2rem !important;
+  border-left: 0 !important;
+}
+#about .d9-cochair-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  width: 7px !important;
+  height: auto !important;
+  background: linear-gradient(to bottom,
+    var(--about-red) 0 33.333%,
+    var(--about-black) 33.333% 66.666%,
+    var(--about-green) 66.666% 100%) !important;
+}

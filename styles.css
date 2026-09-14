@@ -4504,3 +4504,38 @@ body.impact-award-open { overflow: hidden !important; }
   }
 }
 /* ===== END COMMUNITY IMPACT V4 ===== */
+
+/* ===== COMMUNITY IMPACT V5 — SILVER PAGE CLOSE (2026-09-13) =====
+   Scope: #impact only. Keeps the footer locked and restores a silver
+   final gallery band so the deep-blue footer has a clear visual break. */
+#impact .impact-band-gallery {
+  background: var(--impact-silver) !important;
+  color: #000 !important;
+}
+
+#impact .locked-gallery-heading h3 {
+  color: #000 !important;
+}
+
+#impact .locked-gallery-heading p {
+  color: #333 !important;
+}
+
+#impact .botg-card {
+  background: var(--impact-paper) !important;
+  border-color: #b9c1ce !important;
+}
+
+#impact .botg-arrow {
+  background: var(--impact-blue) !important;
+  color: #fff !important;
+}
+
+#impact .botg-dots button {
+  background: rgba(0,15,74,.28) !important;
+}
+
+#impact .botg-dots button.is-active {
+  background: var(--impact-blue) !important;
+}
+/* ===== END COMMUNITY IMPACT V5 ===== */

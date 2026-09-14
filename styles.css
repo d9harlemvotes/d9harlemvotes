@@ -9307,3 +9307,30 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   #first-time-voter .ftv-polls-v22-icon svg { width: 19pt !important; height: 19pt !important; }
 }
 /* ===== END FIRST-TIME VOTERS V26 ===== */
+
+/* ===== FIRST-TIME VOTERS V28 — PROCESS GRAPHIC SIZE LOCK ===== */
+/* Desktop: increase the process emblem about 15% without changing the approved layout. */
+@media (min-width: 981px) {
+  #first-time-voter .ftv-process-v22-grid {
+    grid-template-columns: minmax(340px, 440px) minmax(0, 1fr) !important;
+  }
+  #first-time-voter .ftv-process-v22-figure img {
+    width: min(100%, 440px) !important;
+    max-width: 440px !important;
+  }
+}
+
+/* Tablet/mobile: center the emblem and keep its labels readable without dominating the screen. */
+@media (max-width: 980px) {
+  #first-time-voter .ftv-process-v22-figure img {
+    width: min(82vw, 360px) !important;
+    max-width: 360px !important;
+  }
+}
+@media (max-width: 700px) {
+  #first-time-voter .ftv-process-v22-figure img {
+    width: min(84vw, 340px) !important;
+    max-width: 340px !important;
+  }
+}
+/* ===== END FIRST-TIME VOTERS V28 ===== */

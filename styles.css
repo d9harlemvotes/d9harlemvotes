@@ -2324,6 +2324,13 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   }
 }
 
+@media (max-width: 980px) {
+  #first-time-voter .ftv-process-line { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  #first-time-voter .ftv-process-step:nth-child(3),
+  #first-time-voter .ftv-process-step:nth-child(4) { border-top: 1px solid #c7cdd6 !important; }
+  #first-time-voter .ftv-process-step:nth-child(3) { border-left: 0 !important; }
+}
+
 @media (max-width: 760px) {
   .site-nav {
     min-height: 86px !important;
@@ -4801,6 +4808,60 @@ body.impact-award-open { overflow: hidden !important; }
   line-height: 1.55 !important;
 }
 
+#first-time-voter .ftv-eligibility-checklist {
+  list-style: none !important;
+  margin: 1.45rem 0 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  gap: .72rem !important;
+  max-width: 760px !important;
+}
+
+#first-time-voter .ftv-eligibility-checklist li {
+  display: grid !important;
+  grid-template-columns: 30px minmax(0, 1fr) !important;
+  gap: .72rem !important;
+  align-items: start !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #202632 !important;
+  font-size: clamp(.98rem, 1.08vw, 1.08rem) !important;
+  line-height: 1.42 !important;
+}
+
+#first-time-voter .ftv-eligibility-checklist li::before {
+  content: "✓" !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 26px !important;
+  height: 26px !important;
+  margin-top: .02rem !important;
+  border-radius: 50% !important;
+  background: var(--ftv-blue) !important;
+  color: #fff !important;
+  font-size: .95rem !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+}
+
+#first-time-voter .ftv-preregister-note,
+#first-time-voter .ftv-address-note {
+  max-width: 760px !important;
+  margin: 1rem 0 0 !important;
+  color: #2f3540 !important;
+  font-size: .95rem !important;
+  line-height: 1.48 !important;
+}
+
+#first-time-voter .ftv-address-note {
+  margin-top: .55rem !important;
+}
+
+#first-time-voter .ftv-preregister-note strong,
+#first-time-voter .ftv-address-note strong {
+  color: #000 !important;
+}
+
 #first-time-voter .ftv-deadlines {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -4870,6 +4931,49 @@ body.impact-award-open { overflow: hidden !important; }
 
 #first-time-voter .ftv-sticker-figure figcaption strong {
   color: #000 !important;
+}
+
+/* First-Time Voters hero artwork — restore the human campaign image. */
+#first-time-voter .ftv-human-figure {
+  margin: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  min-width: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-human-figure img {
+  display: block !important;
+  width: min(100%, 560px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+
+/* First-Time Voters registration guidance — concise teaching point paired with the documentary hero photo. */
+#first-time-voter .ftv-registration-callout {
+  width: min(100%, 760px) !important;
+  margin: 1.65rem 0 0 !important;
+  padding: 1.15rem 1.35rem !important;
+  border: 1px solid rgba(0,15,74,.10) !important;
+  border-radius: 22px !important;
+  background: rgba(255,255,255,.58) !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-registration-callout p {
+  margin: 0 !important;
+  color: #1f2530 !important;
+  font-size: clamp(.98rem, 1.05vw, 1.08rem) !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
 }
 
 /* APPROVED BLUE — one major action band. */
@@ -5024,6 +5128,11 @@ body.impact-award-open { overflow: hidden !important; }
   display: grid !important;
   place-items: center !important;
   width: min(100%, 530px) !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 #first-time-voter .ftv-process-figure img {
@@ -5034,6 +5143,8 @@ body.impact-award-open { overflow: hidden !important; }
   object-fit: contain !important;
   object-position: center center !important;
   transform: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
   clip-path: none !important;
@@ -5062,34 +5173,93 @@ body.impact-award-open { overflow: hidden !important; }
 #first-time-voter .ftv-process-line {
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  margin-top: 1.75rem !important;
-  border-top: 1px solid #9ba3b1 !important;
-  border-bottom: 1px solid #9ba3b1 !important;
+  gap: 0 !important;
+  margin-top: 1.85rem !important;
+  border-top: 1px solid #b6bec9 !important;
+  border-bottom: 1px solid #b6bec9 !important;
 }
 
-#first-time-voter .ftv-process-line > div {
+#first-time-voter .ftv-process-step {
   min-width: 0 !important;
-  padding: 1.05rem .9rem 1.15rem !important;
+  min-height: 220px !important;
+  padding: 1.35rem 1.15rem 1.4rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
 }
 
-#first-time-voter .ftv-process-line > div + div {
-  border-left: 1px solid #b8bec8 !important;
+#first-time-voter .ftv-process-step + .ftv-process-step {
+  border-left: 1px solid #c7cdd6 !important;
+}
+
+#first-time-voter .ftv-process-icon {
+  width: 88px !important;
+  height: 88px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 1rem !important;
+  border-radius: 50% !important;
+  border: 5px solid #fff !important;
+  box-shadow: 0 0 0 1px rgba(0,15,74,.12), 0 8px 16px rgba(0,15,74,.10) !important;
+}
+
+#first-time-voter .ftv-process-apply .ftv-process-icon {
+  background: var(--ftv-gold) !important;
+  color: var(--ftv-black) !important;
+}
+
+#first-time-voter .ftv-process-confirm .ftv-process-icon {
+  background: var(--ftv-red) !important;
+  color: #fff !important;
+}
+
+#first-time-voter .ftv-process-prepare .ftv-process-icon {
+  background: var(--ftv-black) !important;
+  color: #fff !important;
+}
+
+#first-time-voter .ftv-process-vote .ftv-process-icon {
+  background: var(--ftv-green) !important;
+  color: #fff !important;
+}
+
+#first-time-voter .ftv-process-line .ftv-process-icon svg {
+  width: 46px !important;
+  height: 46px !important;
+  display: block !important;
+  color: inherit !important;
+}
+
+#first-time-voter .ftv-process-line .ftv-process-icon svg * {
+  vector-effect: non-scaling-stroke !important;
 }
 
 #first-time-voter .ftv-process-line strong {
   display: block !important;
-  margin-bottom: .32rem !important;
+  margin-bottom: .42rem !important;
   color: var(--ftv-blue) !important;
-  font-size: .8rem !important;
-  letter-spacing: .09em !important;
+  font-size: .94rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .11em !important;
 }
 
-#first-time-voter .ftv-process-line span {
+#first-time-voter .ftv-process-line span:not(.ftv-process-icon) {
   display: block !important;
   color: #2f3540 !important;
-  font-size: .84rem !important;
-  line-height: 1.35 !important;
+  font-size: 1rem !important;
+  line-height: 1.42 !important;
 }
+
+#first-time-voter .ftv-process-line .ftv-process-icon {
+  color: inherit !important;
+}
+#first-time-voter .ftv-process-apply .ftv-process-icon { color: var(--ftv-black) !important; }
+#first-time-voter .ftv-process-confirm .ftv-process-icon,
+#first-time-voter .ftv-process-prepare .ftv-process-icon,
+#first-time-voter .ftv-process-vote .ftv-process-icon { color: #fff !important; }
 
 #first-time-voter .ftv-affidavit-note {
   display: grid !important;
@@ -5172,14 +5342,21 @@ body.impact-award-open { overflow: hidden !important; }
     gap: 2.5rem !important;
   }
   #first-time-voter .ftv-sticker-figure img { width: min(76vw, 440px) !important; }
+  #first-time-voter .ftv-human-figure img { width: min(82vw, 560px) !important; }
   #first-time-voter .ftv-process-figure { width: min(80vw, 510px) !important; }
   #first-time-voter .ftv-resource-steps { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
-  #first-time-voter .ftv-resource-step:nth-child(3) { border-left: 0 !important; border-top: 1px solid rgba(255,255,255,.26) !important; }
-  #first-time-voter .ftv-resource-step:nth-child(4) { border-top: 1px solid rgba(255,255,255,.26) !important; }
+  #first-time-voter .ftv-resource-step:nth-child(3) { border-left: 0 !important; border-top: 1px solid rgba(255,255,255,.18) !important; }
+  #first-time-voter .ftv-resource-step:nth-child(4) { border-top: 1px solid rgba(255,255,255,.18) !important; }
 }
 
 @media (max-width: 760px) {
   #first-time-voter .ftv-shell { width: min(88%, 680px) !important; }
+  #first-time-voter .ftv-registration-callout {
+    width: 100% !important;
+    margin-top: 1.35rem !important;
+    padding: 1rem 1.05rem !important;
+    border-radius: 18px !important;
+  }
   #first-time-voter .ftv-hero-copy h2 { font-size: clamp(2.65rem, 11vw, 4rem) !important; }
   #first-time-voter .ftv-resource-steps,
   #first-time-voter .ftv-process-line,
@@ -5201,6 +5378,7 @@ body.impact-award-open { overflow: hidden !important; }
   #first-time-voter .ftv-learning-row { gap: 1.5rem !important; }
 }
 
+
 @media (max-width: 520px) {
   #first-time-voter .ftv-band-intro,
   #first-time-voter .ftv-band-actions,
@@ -5215,3 +5393,760 @@ body.impact-award-open { overflow: hidden !important; }
 }
 /* ===== END FIRST-TIME VOTERS REBUILD ===== */
 
+
+/* ===== FIRST-TIME VOTERS HERO + PRINT CORRECTION — 2026-09-14 =====
+   Keep the real voter photo documentary/clean: crop out the baked-in corner art.
+   Also prevent print/PDF from collapsing the desktop hero/process layouts into tablet stacks.
+*/
+#first-time-voter .ftv-human-figure {
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#first-time-voter .ftv-human-figure img {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  transform: scale(1.22) !important;
+  transform-origin: center center !important;
+  object-fit: cover !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+@media print {
+  #first-time-voter .ftv-band-intro {
+    padding: 2.2rem 0 2.5rem !important;
+  }
+
+  #first-time-voter .ftv-hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(250px, .72fr) !important;
+    gap: 2rem !important;
+    align-items: center !important;
+  }
+
+  #first-time-voter .ftv-hero-copy {
+    max-width: none !important;
+  }
+
+  #first-time-voter .ftv-human-figure {
+    width: 100% !important;
+    max-width: 360px !important;
+    justify-self: end !important;
+    align-self: center !important;
+    overflow: hidden !important;
+    break-inside: avoid !important;
+  }
+
+  #first-time-voter .ftv-human-figure img {
+    width: 100% !important;
+    max-width: none !important;
+    transform: scale(1.22) !important;
+  }
+
+
+  #first-time-voter .ftv-registration-callout {
+    margin-top: .9rem !important;
+    padding: .75rem .9rem !important;
+    border-radius: 14px !important;
+    break-inside: avoid !important;
+  }
+
+  #first-time-voter .ftv-registration-callout p {
+    font-size: 8.8pt !important;
+    line-height: 1.35 !important;
+  }
+
+  #first-time-voter .ftv-process-grid {
+    grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr) !important;
+    gap: 2.2rem !important;
+    align-items: center !important;
+  }
+
+  #first-time-voter .ftv-process-figure {
+    width: 100% !important;
+    max-width: 330px !important;
+    justify-self: center !important;
+  }
+
+  #first-time-voter .ftv-process-line {
+    grid-template-columns: repeat(4, minmax(0,1fr)) !important;
+  }
+
+  #first-time-voter .ftv-process-step {
+    min-height: 150px !important;
+    padding: .75rem .55rem .9rem !important;
+  }
+
+  #first-time-voter .ftv-process-step:nth-child(3),
+  #first-time-voter .ftv-process-step:nth-child(4) {
+    border-top: 0 !important;
+  }
+
+  #first-time-voter .ftv-process-step:nth-child(3) {
+    border-left: 1px solid #c7cdd6 !important;
+  }
+
+  #first-time-voter .ftv-process-icon {
+    width: 54px !important;
+    height: 54px !important;
+    margin-bottom: .65rem !important;
+  }
+}
+/* ===== END FIRST-TIME VOTERS HERO + PRINT CORRECTION ===== */
+
+
+/* ===== FIRST-TIME VOTERS FINAL COMPACT PASS — 2026-09-14 =====
+   Final three refinements:
+   1) keep the residential/mailing-address note together in print,
+   2) make Know Before You Go a 2x2 action grid on desktop/print,
+   3) enlarge the numbered action markers for stronger hierarchy.
+*/
+#first-time-voter .ftv-resource-steps {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+#first-time-voter .ftv-resource-step,
+#first-time-voter .ftv-resource-step:visited {
+  min-height: 230px !important;
+  padding: clamp(1.45rem, 2vw, 2rem) clamp(1.25rem, 2vw, 2rem) !important;
+}
+
+#first-time-voter .ftv-resource-step:nth-child(3) {
+  border-left: 0 !important;
+  border-top: 1px solid rgba(255,255,255,.18) !important;
+}
+
+#first-time-voter .ftv-resource-step:nth-child(4) {
+  border-top: 1px solid rgba(255,255,255,.18) !important;
+}
+
+#first-time-voter .ftv-step-num {
+  width: 70px !important;
+  height: 70px !important;
+  margin-bottom: 1.15rem !important;
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  border-width: 3px !important;
+}
+
+#first-time-voter .ftv-address-note {
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+@media (max-width: 760px) {
+  #first-time-voter .ftv-resource-steps {
+    grid-template-columns: 1fr !important;
+  }
+
+  #first-time-voter .ftv-step-num {
+    width: 62px !important;
+    height: 62px !important;
+    font-size: 1.2rem !important;
+  }
+}
+
+@media print {
+  #first-time-voter .ftv-band-intro {
+    padding-top: 1.7rem !important;
+    padding-bottom: 1.7rem !important;
+  }
+
+  #first-time-voter .ftv-eligibility-checklist {
+    margin-top: .9rem !important;
+    gap: .42rem !important;
+  }
+
+  #first-time-voter .ftv-eligibility-checklist li {
+    font-size: 8.6pt !important;
+    line-height: 1.28 !important;
+    grid-template-columns: 24px minmax(0,1fr) !important;
+    gap: .5rem !important;
+  }
+
+  #first-time-voter .ftv-eligibility-checklist li::before {
+    width: 21px !important;
+    height: 21px !important;
+    font-size: 8pt !important;
+  }
+
+  #first-time-voter .ftv-preregister-note,
+  #first-time-voter .ftv-address-note {
+    font-size: 8.4pt !important;
+    line-height: 1.28 !important;
+  }
+
+  #first-time-voter .ftv-preregister-note {
+    margin-top: .65rem !important;
+  }
+
+  #first-time-voter .ftv-address-note {
+    margin-top: .35rem !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #first-time-voter .ftv-signature {
+    margin-top: 1rem !important;
+  }
+
+  #first-time-voter .ftv-band-actions {
+    padding-top: 2.2rem !important;
+    padding-bottom: 2.2rem !important;
+  }
+
+  #first-time-voter .ftv-actions-heading {
+    margin-bottom: 1.35rem !important;
+  }
+
+  #first-time-voter .ftv-resource-steps {
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  }
+
+  #first-time-voter .ftv-resource-step,
+  #first-time-voter .ftv-resource-step:visited {
+    min-height: 165px !important;
+    padding: 1rem 1rem 1.05rem !important;
+  }
+
+  #first-time-voter .ftv-step-num {
+    width: 58px !important;
+    height: 58px !important;
+    margin-bottom: .7rem !important;
+    font-size: 13pt !important;
+    border-width: 2px !important;
+  }
+
+  #first-time-voter .ftv-resource-step strong {
+    font-size: 10pt !important;
+  }
+
+  #first-time-voter .ftv-resource-step small {
+    font-size: 8.2pt !important;
+    line-height: 1.3 !important;
+  }
+}
+/* ===== END FIRST-TIME VOTERS FINAL COMPACT PASS ===== */
+
+/* =====================================================================
+   GET INVOLVED — FINAL FIRST-TIME-VOTERS FAMILY REBUILD (2026-09-14)
+   Page-only lock. Mirrors the approved supporting-page system:
+   full-bleed campaign banner -> silver volunteer section -> blue training
+   section -> silver close. Header, footer and all other tabs stay untouched.
+   ===================================================================== */
+#get-involved.get-involved-section {
+  --gi-silver: #e7e9ee;
+  --gi-silver-2: #f3f4f6;
+  --gi-blue: #000f4a;
+  --gi-blue-mid: #073fa8;
+  --gi-blue-bright: #0b52c6;
+  --gi-red: #e31c24;
+  --gi-black: #111111;
+  --gi-green: #0e8f58;
+  --gi-gold: #d9ad32;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  background: var(--gi-silver) !important;
+  color: #000 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+#get-involved .get-involved-inner {
+  width: min(92%, 1500px) !important;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* Campaign banner: true full-bleed, flat, with no surrounding blue field. */
+#get-involved .get-involved-hero-banner {
+  display: block !important;
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 0 0 calc(50% - 50vw) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#get-involved .get-involved-hero-banner img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Shared open-section grid: no floating cards. */
+#get-involved .get-involved-card,
+#get-involved .get-involved-card.volunteer-card,
+#get-involved .get-involved-card.get-involved-training-card {
+  display: grid !important;
+  grid-template-columns: minmax(360px, 1.04fr) minmax(0, .96fr) !important;
+  align-items: center !important;
+  gap: clamp(2.4rem, 5vw, 6rem) !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* SILVER — volunteer sign-up. */
+#get-involved .get-involved-card.volunteer-card {
+  padding: clamp(3.2rem, 5.4vw, 5.8rem) 0 !important;
+  background: transparent !important;
+  color: #000 !important;
+}
+
+#get-involved .volunteer-card .get-involved-photo,
+#get-involved .volunteer-card .get-involved-copy {
+  order: initial !important;
+}
+
+#get-involved .volunteer-card .get-involved-photo {
+  position: relative !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: center !important;
+  overflow: hidden !important;
+  isolation: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+
+#get-involved .volunteer-card .get-involved-photo::before,
+#get-involved .volunteer-card .get-involved-photo::after {
+  content: none !important;
+  display: none !important;
+}
+
+#get-involved .volunteer-card .get-involved-photo img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+
+#get-involved .volunteer-card .get-involved-copy {
+  max-width: 700px !important;
+  padding: 0 !important;
+  color: #000 !important;
+}
+
+#get-involved .volunteer-card .get-involved-card-kicker {
+  margin: 0 0 .7rem !important;
+  color: #000 !important;
+  font-size: clamp(.78rem, .9vw, .94rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 950 !important;
+  letter-spacing: .19em !important;
+  text-transform: uppercase !important;
+}
+
+#get-involved .volunteer-card .get-involved-copy h2 {
+  max-width: 12ch !important;
+  margin: 0 !important;
+  color: #000 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(3rem, 4.9vw, 5.25rem) !important;
+  line-height: .97 !important;
+  letter-spacing: -.035em !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+}
+
+#get-involved .volunteer-card .get-involved-copy h2::after,
+#get-involved .get-involved-training-card .get-involved-copy h2::after {
+  content: "" !important;
+  display: block !important;
+  width: min(300px, 64vw) !important;
+  height: 7px !important;
+  margin: 1.15rem 0 1.35rem !important;
+  background: linear-gradient(90deg,
+    var(--gi-red) 0 33.333%,
+    var(--gi-black) 33.333% 66.666%,
+    var(--gi-green) 66.666% 100%) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#get-involved .volunteer-card .get-involved-copy p {
+  max-width: 690px !important;
+  margin: 0 0 1rem !important;
+  color: #2f3540 !important;
+  font-size: clamp(1rem, 1.12vw, 1.12rem) !important;
+  line-height: 1.55 !important;
+}
+
+#get-involved .volunteer-card .get-involved-note {
+  max-width: 690px !important;
+  margin: 1.15rem 0 .9rem !important;
+  padding: 0 !important;
+  color: #000 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-size: clamp(.98rem, 1.05vw, 1.06rem) !important;
+  line-height: 1.5 !important;
+  font-weight: 850 !important;
+}
+
+#get-involved .volunteer-card .get-involved-followup {
+  max-width: 690px !important;
+  margin: 0 !important;
+  color: #555d69 !important;
+  font-size: .94rem !important;
+  line-height: 1.45 !important;
+  font-weight: 750 !important;
+}
+
+#get-involved .volunteer-card .get-involved-actions {
+  margin-top: 1.65rem !important;
+}
+
+#get-involved .volunteer-card .get-involved-btn,
+#get-involved .volunteer-card .get-involved-btn:visited {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 52px !important;
+  padding: .85rem 1.55rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: var(--gi-red) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  font-size: .9rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .025em !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+}
+
+#get-involved .volunteer-card .get-involved-btn:hover,
+#get-involved .volunteer-card .get-involved-btn:focus-visible {
+  background: #b8141b !important;
+  color: #fff !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* APPROVED BLUE — voter-registration training. */
+#get-involved .get-involved-card.get-involved-training-card {
+  grid-template-columns: minmax(360px, .94fr) minmax(0, 1.06fr) !important;
+  gap: clamp(2.4rem, 5vw, 6rem) !important;
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  padding: clamp(3.4rem, 5.2vw, 5.6rem) max(4vw, calc((100vw - 1500px) / 2)) !important;
+  color: #fff !important;
+  background: linear-gradient(112deg, #052d7f 0%, var(--gi-blue-mid) 54%, var(--gi-blue-bright) 100%) !important;
+}
+
+#get-involved .get-involved-training-card.reverse .get-involved-photo,
+#get-involved .get-involved-training-card.reverse .get-involved-copy {
+  order: initial !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-photo {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: center !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-photo img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-copy {
+  max-width: 760px !important;
+  padding: 0 !important;
+  color: #fff !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-card-kicker {
+  margin: 0 0 .7rem !important;
+  color: #fff !important;
+  font-size: clamp(.78rem, .9vw, .94rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 950 !important;
+  letter-spacing: .19em !important;
+  text-transform: uppercase !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-copy h2 {
+  margin: 0 !important;
+  color: #fff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(2.75rem, 4.35vw, 4.75rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.035em !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-copy p {
+  max-width: 740px !important;
+  margin: 0 0 1rem !important;
+  color: rgba(255,255,255,.9) !important;
+  font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+  line-height: 1.54 !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-note {
+  max-width: 740px !important;
+  margin: 1.2rem 0 .95rem !important;
+  padding: 0 !important;
+  color: #fff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-size: clamp(1rem, 1.08vw, 1.08rem) !important;
+  line-height: 1.5 !important;
+  font-weight: 900 !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-supporting-line {
+  margin: 0 !important;
+  color: rgba(255,255,255,.76) !important;
+  font-size: .94rem !important;
+  line-height: 1.45 !important;
+  font-weight: 750 !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-actions {
+  margin-top: 1.65rem !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-btn,
+#get-involved .get-involved-training-card .get-involved-btn:visited {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 52px !important;
+  padding: .85rem 1.55rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  color: var(--gi-blue) !important;
+  box-shadow: none !important;
+  font-size: .9rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .025em !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+}
+
+#get-involved .get-involved-training-card .get-involved-btn:hover,
+#get-involved .get-involved-training-card .get-involved-btn:focus-visible {
+  background: var(--gi-silver-2) !important;
+  color: var(--gi-blue) !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Return to silver before the locked deep-blue footer. */
+#get-involved::after {
+  content: "" !important;
+  display: block !important;
+  width: 100% !important;
+  height: clamp(2.4rem, 4vw, 4rem) !important;
+  background: var(--gi-silver) !important;
+}
+
+@media (max-width: 980px) {
+  #get-involved .get-involved-card,
+  #get-involved .get-involved-card.volunteer-card,
+  #get-involved .get-involved-card.get-involved-training-card {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  #get-involved .get-involved-card.get-involved-training-card {
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-copy,
+  #get-involved .get-involved-training-card .get-involved-copy {
+    max-width: 820px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  #get-involved .get-involved-inner {
+    width: min(88%, 720px) !important;
+  }
+
+  #get-involved .get-involved-card.volunteer-card {
+    padding-top: 2.6rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  #get-involved .get-involved-card.get-involved-training-card {
+    padding: 3rem 6% !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-copy h2,
+  #get-involved .get-involved-training-card .get-involved-copy h2 {
+    font-size: clamp(2.45rem, 12vw, 3.45rem) !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-btn,
+  #get-involved .get-involved-training-card .get-involved-btn {
+    width: 100% !important;
+  }
+}
+
+@media print {
+  #get-involved.get-involved-section {
+    overflow: visible !important;
+    background: var(--gi-silver) !important;
+  }
+
+  #get-involved .get-involved-inner {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  #get-involved .get-involved-hero-banner {
+    width: 100% !important;
+    margin: 0 0 .12in 0 !important;
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+
+  #get-involved .get-involved-card.volunteer-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: .28in !important;
+    padding: .12in .18in .2in !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-copy h2 {
+    font-size: 27pt !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-copy h2::after,
+  #get-involved .get-involved-training-card .get-involved-copy h2::after {
+    width: 2.25in !important;
+    height: 5px !important;
+    margin: .1in 0 .13in !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-copy p,
+  #get-involved .volunteer-card .get-involved-note,
+  #get-involved .volunteer-card .get-involved-followup {
+    font-size: 8.5pt !important;
+    line-height: 1.3 !important;
+    margin-bottom: .08in !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-actions,
+  #get-involved .get-involved-training-card .get-involved-actions {
+    margin-top: .12in !important;
+  }
+
+  #get-involved .volunteer-card .get-involved-btn,
+  #get-involved .get-involved-training-card .get-involved-btn {
+    min-height: 0 !important;
+    padding: .09in .16in !important;
+    font-size: 7.8pt !important;
+  }
+
+  #get-involved .get-involved-card.get-involved-training-card {
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr) !important;
+    gap: .34in !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: .34in .42in !important;
+    break-before: page !important;
+    page-break-before: always !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  #get-involved .get-involved-training-card .get-involved-copy h2 {
+    font-size: 25pt !important;
+  }
+
+  #get-involved .get-involved-training-card .get-involved-copy p,
+  #get-involved .get-involved-training-card .get-involved-note,
+  #get-involved .get-involved-training-card .get-involved-supporting-line {
+    font-size: 8.3pt !important;
+    line-height: 1.28 !important;
+    margin-bottom: .08in !important;
+  }
+
+  #get-involved::after {
+    height: .2in !important;
+  }
+}
+/* ===== END GET INVOLVED FINAL REBUILD ===== */
+
+/* Get Involved signature bars — explicit markup for rendering consistency. */
+#get-involved .volunteer-card .get-involved-copy h2::after,
+#get-involved .get-involved-training-card .get-involved-copy h2::after {
+  content: none !important;
+  display: none !important;
+}
+
+#get-involved .get-involved-signature {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  width: min(300px, 64vw) !important;
+  height: 7px !important;
+  margin: 1.15rem 0 1.35rem !important;
+  gap: 0 !important;
+  background: transparent !important;
+}
+
+#get-involved .get-involved-signature span:nth-child(1) { background: var(--gi-red) !important; }
+#get-involved .get-involved-signature span:nth-child(2) { background: var(--gi-black) !important; }
+#get-involved .get-involved-signature span:nth-child(3) { background: var(--gi-green) !important; }
+
+@media print {
+  #get-involved .get-involved-signature {
+    width: 2.25in !important;
+    height: 5px !important;
+    margin: .1in 0 .13in !important;
+  }
+}

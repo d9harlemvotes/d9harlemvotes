@@ -5435,7 +5435,7 @@
   #for-schools { break-before: page !important; }
 }
 </style>
-<link href="styles.css?v=33" id="d9-final-styles" rel="stylesheet"/><style id="d9-past-events-v12-audit-fix">
+<link href="styles.css?v=34" id="d9-final-styles" rel="stylesheet"/><style id="d9-past-events-v12-audit-fix">
 
 /* =====================================================================
    PAST EVENTS V12 — DESIGN-RULE AUDIT + PHOTO QA
@@ -6862,6 +6862,41 @@
 /* ===== END PAST EVENTS V11 ===== */
 
 </style>
+
+<style id="ftv-v30-final-visual-fix">
+@media (min-width: 981px) {
+  #first-time-voter .ftv-process-v22-grid {
+    width: min(94%, 1320px) !important;
+    grid-template-columns: minmax(500px, 550px) minmax(0, 1fr) !important;
+    gap: clamp(2.5rem, 3.6vw, 4rem) !important;
+  }
+  #first-time-voter .ftv-process-v22-figure img {
+    width: 540px !important;
+    max-width: 540px !important;
+  }
+}
+@media (max-width: 980px) and (min-width: 701px) {
+  #first-time-voter .ftv-process-v22-figure img {
+    width: min(76vw, 410px) !important;
+    max-width: 410px !important;
+  }
+}
+@media (max-width: 700px) {
+  #first-time-voter .ftv-process-v22-figure img {
+    width: min(88vw, 350px) !important;
+    max-width: 350px !important;
+  }
+}
+#first-time-voter .ftv-polls-v22-icon.ftv-rights-fist {
+  background: #efe4da !important;
+  color: #7a4327 !important;
+}
+#first-time-voter .ftv-polls-v22-icon.ftv-rights-fist svg,
+#first-time-voter .ftv-polls-v22-icon.ftv-rights-fist svg * {
+  color: #7a4327 !important;
+  fill: #7a4327 !important;
+}
+</style>
 </head>
 <body>
 <nav aria-label="Main navigation" class="site-nav">
@@ -7017,7 +7052,7 @@
 <div class="ftv-band ftv-band-process-v22">
 <div class="ftv-shell ftv-process-v22-grid">
 <figure class="ftv-process-v22-figure">
-<img alt="D9 Harlem Votes® Where Are You in the Process graphic showing Apply, Registered, Engage, Plan and Vote" loading="lazy" src="assets/where-are-you-in-the-process-white-center.png?v=2"/>
+<img alt="D9 Harlem Votes® Where Are You in the Process graphic showing Apply, Registered, Engage, Plan and Vote" loading="lazy" src="assets/where-are-you-in-the-process-white-center.png?v=3"/>
 </figure>
 <div class="ftv-process-v22-copy">
 <p class="ftv-eyebrow ftv-eyebrow-light">TRANSPARENCY AT EVERY STEP</p>

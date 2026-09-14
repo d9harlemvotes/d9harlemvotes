@@ -4902,40 +4902,24 @@ body.impact-award-open { overflow: hidden !important; }
   background: transparent !important;
 }
 
-/* Keep the application-language sticker as a supporting education cue, not the hero. */
-#first-time-voter .ftv-application-note {
-  max-width: 700px !important;
-  margin: clamp(1.35rem, 2vw, 1.8rem) 0 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  display: grid !important;
-  grid-template-columns: 82px minmax(0, 1fr) !important;
-  gap: clamp(.9rem, 1.4vw, 1.25rem) !important;
-  align-items: center !important;
-}
 
-#first-time-voter .ftv-application-note img {
-  display: block !important;
-  width: 82px !important;
-  height: 82px !important;
-  object-fit: cover !important;
-  border-radius: 50% !important;
-  clip-path: circle(49.4% at 50% 50%) !important;
-  border: 0 !important;
+/* First-Time Voters registration guidance — concise teaching point paired with the documentary hero photo. */
+#first-time-voter .ftv-registration-callout {
+  width: min(100%, 760px) !important;
+  margin: 1.65rem 0 0 !important;
+  padding: 1.15rem 1.35rem !important;
+  border: 1px solid rgba(0,15,74,.10) !important;
+  border-radius: 22px !important;
+  background: rgba(255,255,255,.58) !important;
   box-shadow: none !important;
-  background: transparent !important;
 }
 
-#first-time-voter .ftv-application-note p {
-  max-width: 590px !important;
+#first-time-voter .ftv-registration-callout p {
   margin: 0 !important;
-  color: #202632 !important;
-  font-size: clamp(.94rem, 1vw, 1.04rem) !important;
-  line-height: 1.48 !important;
-}
-
-#first-time-voter .ftv-application-note strong {
-  color: #000 !important;
+  color: #1f2530 !important;
+  font-size: clamp(.98rem, 1.05vw, 1.08rem) !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
 }
 
 /* APPROVED BLUE — one major action band. */
@@ -5313,12 +5297,12 @@ body.impact-award-open { overflow: hidden !important; }
 
 @media (max-width: 760px) {
   #first-time-voter .ftv-shell { width: min(88%, 680px) !important; }
-  #first-time-voter .ftv-application-note {
-    width: min(88%, 680px) !important;
-    grid-template-columns: 88px minmax(0, 1fr) !important;
-    gap: 1rem !important;
+  #first-time-voter .ftv-registration-callout {
+    width: 100% !important;
+    margin-top: 1.35rem !important;
+    padding: 1rem 1.05rem !important;
+    border-radius: 18px !important;
   }
-  #first-time-voter .ftv-application-note img { width: 88px !important; height: 88px !important; }
   #first-time-voter .ftv-hero-copy h2 { font-size: clamp(2.65rem, 11vw, 4rem) !important; }
   #first-time-voter .ftv-resource-steps,
   #first-time-voter .ftv-process-line,
@@ -5340,16 +5324,6 @@ body.impact-award-open { overflow: hidden !important; }
   #first-time-voter .ftv-learning-row { gap: 1.5rem !important; }
 }
 
-@media (max-width: 620px) {
-  #first-time-voter .ftv-application-note {
-    grid-template-columns: 66px minmax(0, 1fr) !important;
-    gap: .85rem !important;
-  }
-  #first-time-voter .ftv-application-note img {
-    width: 66px !important;
-    height: 66px !important;
-  }
-}
 
 @media (max-width: 520px) {
   #first-time-voter .ftv-band-intro,
@@ -5419,21 +5393,16 @@ body.impact-award-open { overflow: hidden !important; }
     transform: scale(1.22) !important;
   }
 
-  #first-time-voter .ftv-application-note {
-    grid-template-columns: 58px minmax(0, 1fr) !important;
-    gap: .75rem !important;
-    margin-top: 1rem !important;
-    max-width: 620px !important;
+
+  #first-time-voter .ftv-registration-callout {
+    margin-top: .9rem !important;
+    padding: .75rem .9rem !important;
+    border-radius: 14px !important;
     break-inside: avoid !important;
   }
 
-  #first-time-voter .ftv-application-note img {
-    width: 58px !important;
-    height: 58px !important;
-  }
-
-  #first-time-voter .ftv-application-note p {
-    font-size: 8.5pt !important;
+  #first-time-voter .ftv-registration-callout p {
+    font-size: 8.8pt !important;
     line-height: 1.35 !important;
   }
 

@@ -8160,3 +8160,149 @@ body.impact-award-open { overflow: hidden !important; }
 }
 /* ===== END PAST EVENTS V12 ===== */
 
+
+
+/* =====================================================================
+   V14 RESPONSIVE AUDIT FIXES — MOBILE + TABLET ONLY
+   Preserve locked desktop design/content. These rules address navigation,
+   touch targets, wrapping, overflow resilience, image behavior, and compact
+   tablet/phone spacing without changing desktop compositions.
+   ===================================================================== */
+@media (max-width: 900px) {
+  html, body {
+    max-width: 100% !important;
+    overflow-x: clip !important;
+  }
+
+  /* Tablet portrait and phones use the working collapsible navigation. */
+  .site-nav { min-height: 78px !important; }
+  .site-nav .nav-inner {
+    width: 90% !important;
+    min-height: 72px !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+  }
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img {
+    width: clamp(54px, 8vw, 68px) !important;
+    height: auto !important;
+    max-height: 68px !important;
+  }
+  .site-nav .nav-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 48px !important;
+    min-height: 44px !important;
+    padding: .55rem .8rem !important;
+    color: #fff !important;
+    background: transparent !important;
+    border: 1px solid rgba(255,255,255,.65) !important;
+    border-radius: .35rem !important;
+  }
+  .site-nav .nav-links {
+    display: none !important;
+    position: absolute !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    padding: .8rem 5% 1rem !important;
+    background: #000f4a !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: .2rem !important;
+    z-index: 100 !important;
+  }
+  .site-nav .nav-links.open { display: flex !important; }
+  .site-nav .nav-links a,
+  .site-nav .nav-links a[aria-current="page"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    padding: .55rem .4rem !important;
+    text-align: center !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Allow grid/flex children to shrink instead of forcing horizontal scroll. */
+  main, main > section, .section-inner,
+  .about-grid, .impact-grid, .contact-grid,
+  .natural-school-hero-inner, .launch-steps-row,
+  #first-time-voter *, #get-involved *, #events *, #contact * {
+    min-width: 0;
+  }
+
+  img, svg, video, iframe { max-width: 100%; }
+
+  /* Key interactive controls meet a comfortable phone/tablet target. */
+  .btn,
+  .member-accordions summary,
+  #events .past-events-photo-drawer > summary,
+  #events .past-events-carousel-arrow,
+  #first-time-voter .ftv-open {
+    min-height: 44px !important;
+  }
+
+  /* Long names, email addresses and labels should wrap rather than overflow. */
+  #contact a,
+  #contact p,
+  #contact strong,
+  #contact span,
+  .contact-email,
+  .contact-email a,
+  .footer-inner,
+  .footer-inner * {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .site-footer .footer-inner {
+    width: 90% !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Past Events arrows were 38px in V13; restore a full touch target. */
+  #events .past-events-carousel-arrow {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  #events .past-events-carousel-stage,
+  #events .past-events-event-featured .past-events-carousel-stage {
+    padding-left: 2.75rem !important;
+    padding-right: 2.75rem !important;
+  }
+
+  /* Footer stacks cleanly on narrow portrait layouts. */
+  .site-footer .footer-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .section,
+  #about, #impact, #for-schools, #first-time-voter,
+  #get-involved, #events, #contact {
+    scroll-margin-top: 82px !important;
+  }
+
+  .section-inner,
+  #events .past-events-shell,
+  .natural-school-hero-inner {
+    width: 92% !important;
+  }
+
+  h1, h2, h3,
+  .natural-school-title,
+  #events .past-events-intro h2 {
+    overflow-wrap: break-word;
+  }
+}
+/* ===== END V14 RESPONSIVE AUDIT FIXES ===== */

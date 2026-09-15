@@ -9406,3 +9406,51 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   fill: none !important;
 }
 /* ===== END FIRST-TIME VOTERS V30 ===== */
+
+/* ===== CONTACT PAGE — SILVER POWER FIST LOCK ===== */
+/* Contact-only. Keeps the approved silver supporting-page treatment and
+   displays the recovered Power Fist as standalone transparent artwork. */
+#contact.final-contact-page {
+  background: transparent !important;
+}
+
+#contact .contact-fist-wrap {
+  align-self: center !important;
+  justify-self: center !important;
+  width: clamp(255px, 25vw, 365px) !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+#contact .contact-fist-wrap img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+@media (max-width: 760px) {
+  #contact .contact-fist-wrap {
+    width: min(300px, 72vw) !important;
+  }
+}
+/* ===== END CONTACT PAGE — SILVER POWER FIST LOCK ===== */
+

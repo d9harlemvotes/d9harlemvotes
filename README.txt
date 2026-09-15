@@ -1,4 +1,5 @@
-D9 Harlem Votes® — Harlem Youth Registered & Ready To Vote
+D9 Harlem Votes®
+Civic Engagement & Voter Education in Harlem
 WEBSITE VERSION 5
 
 WHAT CHANGED

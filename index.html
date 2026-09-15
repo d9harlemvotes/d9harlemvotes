@@ -7545,22 +7545,6 @@
         }
       }
 
-      const navToggleButton = document.querySelector('.nav-toggle');
-      const navMenuPanel = document.getElementById('nav-links');
-      if (navToggleButton && navMenuPanel) {
-        navToggleButton.addEventListener('click', function () {
-          const isOpen = navMenuPanel.classList.toggle('open');
-          navToggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-        document.addEventListener('keydown', function (event) {
-          if (event.key === 'Escape' && navMenuPanel.classList.contains('open')) {
-            navMenuPanel.classList.remove('open');
-            navToggleButton.setAttribute('aria-expanded', 'false');
-            navToggleButton.focus();
-          }
-        });
-      }
-
       navLinks.forEach((link) => {
         const href = link.getAttribute('href') || '';
         if (!href.startsWith('#')) return;

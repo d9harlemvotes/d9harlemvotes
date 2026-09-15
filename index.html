@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="D9 Harlem Votes® — Harlem Youth Registered &amp; Ready To Vote campaign, school resources, first-time voter information, voter education, community impact and civic engagement in Harlem." name="description"/>
-<title>D9 Harlem Votes® | Harlem Youth Registered &amp; Ready To Vote</title>
+<meta content="D9 Harlem Votes® advances voter education, civic engagement and community participation in Harlem through voter resources, youth initiatives, public programs and community partnerships." name="description"/>
+<title>D9 Harlem Votes® | Civic Engagement &amp; Voter Education in Harlem</title>
 <style>
     :root {
       --d9-blue: #000f4a;
@@ -2352,7 +2352,7 @@
       order: 10 !important;
     }
 
-    .site-nav .nav-links a[href="#for-schools"] {
+    .site-nav .nav-links a[href="#about"] {
       order: 0 !important;
     }
 
@@ -2366,12 +2366,12 @@
       margin-right: 0.35rem !important;
     }
 
-    .site-nav .nav-links a[href="#first-time-voter"] { order: 2 !important; }
-    .site-nav .nav-links a[href="#get-involved"] { order: 3 !important; }
-    .site-nav .nav-links a[href="#about"] { order: 4 !important; }
-    .site-nav .nav-links a[href="#impact"] { order: 5 !important; }
-    .site-nav .nav-links a[href="#events"] { order: 6 !important; }
-    .site-nav .nav-links a[href="#contact"] { order: 7 !important; }
+    .site-nav .nav-links a[href="#impact"] { order: 1 !important; }
+    .site-nav .nav-links a[href="#for-schools"] { order: 2 !important; }
+    .site-nav .nav-links a[href="#first-time-voter"] { order: 3 !important; }
+    .site-nav .nav-links a[href="#get-involved"] { order: 4 !important; }
+    .site-nav .nav-links a[href="#events"] { order: 5 !important; }
+    .site-nav .nav-links a[href="#contact"] { order: 6 !important; }
 
     .hero .hero-inner {
       max-width: 1320px !important;
@@ -2627,9 +2627,9 @@
       white-space: nowrap !important;
     }
 
-    .site-nav .nav-links a[href="#for-schools"] { order: 0 !important; }
-    .site-nav .nav-links a[href="#about"] { order: 1 !important; }
-    .site-nav .nav-links a[href="#impact"] { order: 2 !important; }
+    .site-nav .nav-links a[href="#about"] { order: 0 !important; }
+    .site-nav .nav-links a[href="#impact"] { order: 1 !important; }
+    .site-nav .nav-links a[href="#for-schools"] { order: 2 !important; }
     .site-nav .nav-links a[href="#first-time-voter"] { order: 3 !important; }
     .site-nav .nav-links a[href="#get-involved"] { order: 4 !important; }
     .site-nav .nav-links a[href="#events"] { order: 5 !important; }
@@ -6866,14 +6866,14 @@
 <body>
 <nav aria-label="Main navigation" class="site-nav">
 <div class="nav-inner">
-<a aria-label="D9 Harlem Votes® home" class="brand-link standard-logo-link" href="#home">
+<a aria-label="D9 Harlem Votes® — About Us" class="brand-link standard-logo-link" href="#about">
 <img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
 </a>
 <button aria-controls="nav-links" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
 <div class="nav-links" id="nav-links">
-<a href="#for-schools">Youth Ready School Campaign</a>
 <a href="#about">About Us</a>
 <a href="#impact">Community Impact</a>
+<a href="#for-schools">Youth Ready School Campaign</a>
 <a href="#first-time-voter">First-Time Voters</a>
 <a href="#get-involved">Get Involved</a>
 <a href="#events">Past Events</a>
@@ -7466,7 +7466,7 @@
       const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"], .brand-link[href^="#"]'));
 
       const pageGroups = {
-        home: ['for-schools'],
+        home: ['about'],
         'for-schools': ['for-schools'],
         'registration-basics': ['for-schools'],
         'first-time-voter': ['first-time-voter'],
@@ -7487,19 +7487,19 @@
       ]);
 
       function routeFromHash() {
-        const raw = (window.location.hash || '#home').replace('#', '').trim();
-        return pageGroups[raw] ? raw : 'home';
+        const raw = (window.location.hash || '#about').replace('#', '').trim();
+        return pageGroups[raw] ? raw : 'about';
       }
 
       function visibleIdsFor(route) {
-        return pageGroups[route] || pageGroups.home;
+        return pageGroups[route] || pageGroups.about;
       }
 
       function renderRoute(route, shouldScrollTop) {
         document.body.classList.add('tabbed-site');
 
         const visibleIds = visibleIdsFor(route);
-        const showHero = route === 'home' || route === 'for-schools' || route === 'registration-basics';
+        const showHero = route === 'for-schools' || route === 'registration-basics';
 
         if (hero) {
           hero.hidden = !showHero;
@@ -7522,7 +7522,7 @@
           const isActive =
             target === route ||
             (route === 'voter-education' && target === 'get-involved') ||
-            (route === 'home' && target === 'for-schools') ||
+            (route === 'home' && target === 'about') ||
             (route === 'registration-basics' && target === 'for-schools') ||
             (route === 'recognition' && target === 'impact');
 

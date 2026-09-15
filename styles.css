@@ -9459,7 +9459,7 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
 /* ===== CONTACT TAB UPDATE — 2026-09-15 =====
    Contact only: plain black email text, no EMAIL label, no pill/bubble styling, no blue text. */
 #contact.final-contact-page,
-#contact.final-contact-page * { color: #111111; }
+#contact.final-contact-page * { color: #ffffff !important; }
 #contact .final-contact-copy .kicker,
 #contact .final-contact-copy h2,
 #contact .final-contact-copy > p,
@@ -9470,7 +9470,7 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
 #contact .contact-motto-clean,
 #contact .contact-roles-clean .kicker,
 #contact .contact-roles-clean li span,
-#contact .contact-roles-clean li strong { color: #111111 !important; }
+#contact .contact-roles-clean li strong { color: #ffffff !important; }
 #contact .contact-email-clean {
   display: block !important;
   width: auto !important;
@@ -9724,3 +9724,58 @@ body.tabbed-site main > section#for-schools.youth-ready-launch-section,
   #contact .contact-motto-clean { font-size: .78rem !important; letter-spacing: .1em !important; }
 }
 /* ===== END CONTACT PAGE — DEEP BLUE CLOSING STATEMENT ===== */
+
+/* ===== CONTACT PAGE VISIBILITY CORRECTION — 2026-09-15 =====
+   Final override: prevent legacy black-type rules from leaking onto the deep-blue Contact page. */
+body #contact.final-contact-page .final-contact-copy > p:not(.kicker),
+body #contact.final-contact-page .final-contact-copy > p:not(.contact-motto-clean),
+body #contact.final-contact-page .contact-motto-clean {
+  color: #ffffff !important;
+}
+
+body #contact.final-contact-page .contact-email-clean,
+body #contact.final-contact-page .contact-email-clean a,
+body #contact.final-contact-page .contact-email-clean a:link,
+body #contact.final-contact-page .contact-email-clean a:visited,
+body #contact.final-contact-page .contact-email-clean a:hover,
+body #contact.final-contact-page .contact-email-clean a:focus,
+body #contact.final-contact-page .contact-email-clean a:active {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+body #contact.final-contact-page .contact-motto-clean {
+  color: #ffffff !important;
+}
+
+body #contact.final-contact-page .contact-roles-clean li strong {
+  font-size: clamp(1.08rem, 1.28vw, 1.42rem) !important;
+}
+
+body #contact.final-contact-page .contact-fist-wrap {
+  width: clamp(310px, 27vw, 420px) !important;
+}
+/* ===== END CONTACT PAGE VISIBILITY CORRECTION ===== */
+
+
+/* ===== CONTACT PAGE HARD WHITE-TEXT OVERRIDE — 2026-09-15 =====
+   Contact only: every textual element on the deep-blue closing statement is white. */
+body #contact.final-contact-page,
+body #contact.final-contact-page .final-contact-copy,
+body #contact.final-contact-page .final-contact-copy *,
+body #contact.final-contact-page .contact-email-clean,
+body #contact.final-contact-page .contact-email-clean *,
+body #contact.final-contact-page .contact-roles-clean,
+body #contact.final-contact-page .contact-roles-clean * {
+  color: #ffffff !important;
+}
+body #contact.final-contact-page .contact-email-clean a,
+body #contact.final-contact-page .contact-email-clean a:link,
+body #contact.final-contact-page .contact-email-clean a:visited,
+body #contact.final-contact-page .contact-email-clean a:hover,
+body #contact.final-contact-page .contact-email-clean a:focus,
+body #contact.final-contact-page .contact-email-clean a:active {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* ===== END CONTACT PAGE HARD WHITE-TEXT OVERRIDE ===== */

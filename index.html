@@ -7464,6 +7464,25 @@
       const hero = document.getElementById('home');
       const sections = Array.from(document.querySelectorAll('main > section.section[id]'));
       const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"], .brand-link[href^="#"]'));
+      const navToggleButton = document.querySelector('.nav-toggle');
+      const navMenuElement = document.getElementById('nav-links');
+
+      /* Responsive navigation behavior: V13 had collapse styles but no Menu handler. */
+      if (navToggleButton && navMenuElement) {
+        navToggleButton.addEventListener('click', function () {
+          const willOpen = !navMenuElement.classList.contains('open');
+          navMenuElement.classList.toggle('open', willOpen);
+          navToggleButton.setAttribute('aria-expanded', String(willOpen));
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && navMenuElement.classList.contains('open')) {
+            navMenuElement.classList.remove('open');
+            navToggleButton.setAttribute('aria-expanded', 'false');
+            navToggleButton.focus();
+          }
+        });
+      }
 
       const pageGroups = {
         home: ['about'],

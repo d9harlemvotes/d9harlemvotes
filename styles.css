@@ -5784,8 +5784,8 @@ body.impact-award-open { overflow: hidden !important; }
   --gi-silver: #e7e9ee;
   --gi-silver-2: #f3f4f6;
   --gi-blue: #000f4a;
-  --gi-blue-mid: #073fa8;
-  --gi-blue-bright: #0b52c6;
+  --gi-blue-mid: #000f4a;
+  --gi-blue-bright: #000f4a;
   --gi-red: #e31c24;
   --gi-black: #111111;
   --gi-green: #0e8f58;
@@ -5998,7 +5998,7 @@ body.impact-award-open { overflow: hidden !important; }
   filter: none !important;
 }
 
-/* APPROVED BLUE — voter-registration training. */
+/* APPROVED BLUE — voter-education training. */
 #get-involved .get-involved-card.get-involved-training-card {
   grid-template-columns: minmax(360px, .94fr) minmax(0, 1.06fr) !important;
   gap: clamp(2.4rem, 5vw, 6rem) !important;
@@ -6006,7 +6006,7 @@ body.impact-award-open { overflow: hidden !important; }
   margin-left: calc(50% - 50vw) !important;
   padding: clamp(3.4rem, 5.2vw, 5.6rem) max(4vw, calc((100vw - 1500px) / 2)) !important;
   color: #fff !important;
-  background: linear-gradient(112deg, #052d7f 0%, var(--gi-blue-mid) 54%, var(--gi-blue-bright) 100%) !important;
+  background: var(--gi-blue) !important;
 }
 
 #get-involved .get-involved-training-card.reverse .get-involved-photo,

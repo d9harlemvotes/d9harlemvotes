@@ -8163,7 +8163,7 @@ body.impact-award-open { overflow: hidden !important; }
 
 
 /* =====================================================================
-   V14 RESPONSIVE AUDIT FIXES — MOBILE + TABLET ONLY
+   V40 RESPONSIVE RECOVERY LAYER — MOBILE + TABLET ONLY
    Preserve locked desktop design/content. These rules address navigation,
    touch targets, wrapping, overflow resilience, image behavior, and compact
    tablet/phone spacing without changing desktop compositions.
@@ -8305,4 +8305,4 @@ body.impact-award-open { overflow: hidden !important; }
     overflow-wrap: break-word;
   }
 }
-/* ===== END V14 RESPONSIVE AUDIT FIXES ===== */
+/* ===== END V40 RESPONSIVE RECOVERY LAYER ===== */

@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Contact D9 Harlem Votes® for school participation, voter education, volunteer engagement, media requests, and community partnerships." name="description"/>
-<title>Contact | D9 Harlem Votes®</title>
+<title>D9 Harlem Votes® | Contact</title>
 <style>
     :root {
       --d9-blue: #000f4a;
@@ -6865,19 +6865,19 @@
 <body class="standalone-contact-page">
 <nav aria-label="Main navigation" class="site-nav">
 <div class="nav-inner">
-<a aria-label="D9 Harlem Votes® home" class="brand-link standard-logo-link" href="index.html#about">
+<a aria-label="D9 Harlem Votes® home" class="brand-link standard-logo-link" href="index.html">
 <img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
 </a>
 <button aria-controls="nav-links" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
 <div class="nav-links" id="nav-links">
-
-
-
-
-
-
-
-<a href="index.html#about">About Us</a><a href="index.html#impact">Community Impact</a><a href="index.html#for-schools">Youth Ready School Campaign</a><a href="index.html#first-time-voter">First-Time Voters</a><a href="index.html#get-involved">Get Involved</a><a href="index.html#events">Past Events</a><a aria-current="page" href="contact.html">Contact</a></div>
+<a href="index.html">About Us</a>
+<a href="community-impact.html">Community Impact</a>
+<a href="youth-ready.html">Youth Ready School Campaign</a>
+<a href="first-time-voters.html">First-Time Voters</a>
+<a href="get-involved.html">Get Involved</a>
+<a href="past-events.html">Past Events</a>
+<a aria-current="page" href="contact.html">Contact</a>
+</div>
 </div>
 </nav>
 <main>
@@ -6922,5 +6922,30 @@
 </div>
 </div>
 </footer>
+
+<script id="d9-shared-nav-toggle">
+(function () {
+  const toggle = document.querySelector('.site-nav .nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+  toggle.addEventListener('click', function () {
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  links.addEventListener('click', function (event) {
+    if (event.target.closest('a')) {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+  });
+})();
+</script>
 </body>
 </html>

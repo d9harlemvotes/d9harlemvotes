@@ -1,0 +1,11 @@
+D9 Harlem Votes® — Final Static Site Architecture
+
+index.html                About Us / homepage
+community-impact.html     Community Impact
+youth-ready.html          Youth Ready School Campaign
+first-time-voters.html    First-Time Voters
+get-involved.html         Get Involved
+past-events.html          Past Events
+contact.html              Contact
+
+Navigation is direct-file multipage navigation. Legacy index.html#section routing has been removed.

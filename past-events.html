@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past Events | D9 Harlem Votes®</title>
+<meta name="description" content="D9 Harlem Votes® past civic engagement events and community conversations in Harlem.">
+<style>
+/* D9 Harlem Votes® — Past Events standalone diagnostic page
+   Only Past Events page styles are scoped beneath .standalone-past-events-page #events.
+   Header/footer reproduce the locked site treatment without importing the historical site stylesheet stack. */
+:root {
+  --d9-navy: #000f4a;
+  --d9-red: #e31c24;
+  --d9-black: #111111;
+  --d9-green: #0e8f58;
+  --d9-gold: #d9ad32;
+  --d9-silver: #e7e9ee;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--d9-navy); color: #111; }
+img { max-width: 100%; }
+a { color: inherit; }
+
+/* Locked site navigation */
+.site-nav {
+  position: sticky; top: 0; z-index: 50; min-height: 108px; padding: 8px 0;
+  background: var(--d9-navy); border: 0; box-shadow: none;
+}
+.site-nav::before, .site-nav::after,
+.site-footer::before, .site-footer::after {
+  content: ""; display: block; position: absolute; left: 0; right: 0; height: 8px;
+  background: linear-gradient(to bottom, var(--d9-red) 0 33.333%, var(--d9-black) 33.333% 66.666%, var(--d9-green) 66.666% 100%);
+  pointer-events: none;
+}
+.site-nav::before, .site-footer::before { top: 0; }
+.site-nav::after, .site-footer::after { bottom: 0; }
+.site-nav .nav-inner {
+  width: min(91%, 1420px); max-width: 1420px; min-height: 92px; margin: 0 auto; padding: 0;
+  display: flex; align-items: center; justify-content: flex-start; gap: clamp(1.5rem, 2.3vw, 2.5rem); position: relative; z-index: 6;
+}
+.site-nav .brand-link { flex: 0 0 auto; margin: 0; padding: 0; text-decoration: none; }
+.site-nav .brand-link img { display: block; width: clamp(88px, 6.7vw, 108px); height: auto; max-height: 96px; object-fit: contain; }
+.site-nav .nav-links {
+  flex: 1 1 auto; min-width: 0; display: flex; align-items: center; justify-content: flex-start; flex-direction: row;
+  flex-wrap: nowrap; gap: clamp(1.05rem, 1.65vw, 1.75rem); margin: 0; padding: 0;
+}
+.site-nav .nav-links a {
+  margin: 0; padding: 0; color: #fff; text-decoration: none; font-size: clamp(.76rem, .82vw, .9rem);
+  line-height: 1.1; font-weight: 800; white-space: nowrap;
+}
+.site-nav .nav-links a:hover, .site-nav .nav-links a:focus-visible { opacity: .82; }
+.site-nav .nav-links a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .35em; }
+.site-nav .nav-toggle { display: none; }
+
+/* Past Events — page-scoped, clean effective rules only */
+.standalone-past-events-page #events {
+  --pe-silver: #e7e9ee; --pe-blue: #000f4a; --pe-red: #e31c24; --pe-black: #111111; --pe-green: #0e8f58;
+  margin: 0; padding: 0; background: var(--pe-silver); color: #000; border: 0; box-shadow: none; overflow: hidden;
+}
+.standalone-past-events-page #events .past-events-band { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+.standalone-past-events-page #events .past-events-shell { width: min(90%, 1240px); max-width: 1240px; margin-inline: auto; }
+.standalone-past-events-page #events .past-events-intro { background: var(--pe-silver); color: #000; }
+.standalone-past-events-page #events .past-events-intro-inner { padding: clamp(1.45rem, 2.2vw, 2.05rem) 0 clamp(1.35rem, 2.1vw, 1.95rem); }
+.standalone-past-events-page #events .past-events-intro-heading { display: block; width: min(100%, 1120px); max-width: 1120px; margin: 0 auto; }
+.standalone-past-events-page #events .past-events-intro-title { width: min(100%, 900px); max-width: 900px; }
+.standalone-past-events-page #events .past-events-intro h2 {
+  max-width: 900px; margin: 0; color: #000; font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 3.6vw, 4rem); line-height: 1.01; letter-spacing: -.03em; text-wrap: balance; white-space: normal;
+}
+.standalone-past-events-page #events .past-events-registered { font-size: .38em; vertical-align: super; margin-left: .04em; }
+.standalone-past-events-page #events .past-events-table-line {
+  margin: .62rem 0 0; color: #000; font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.12rem, 1.65vw, 1.5rem); line-height: 1.25; font-style: italic; font-weight: 600;
+}
+.standalone-past-events-page #events .past-events-signature {
+  display: grid; grid-template-columns: repeat(3,1fr); width: min(310px,48vw); height: 5px; margin-top: .78rem; gap: 0;
+}
+.standalone-past-events-page #events .past-events-signature span:nth-child(1) { background: var(--pe-red); }
+.standalone-past-events-page #events .past-events-signature span:nth-child(2) { background: var(--pe-black); }
+.standalone-past-events-page #events .past-events-signature span:nth-child(3) { background: var(--pe-green); }
+.standalone-past-events-page #events .past-events-intro-copy { width: min(100%,980px); margin-top: 1rem; }
+.standalone-past-events-page #events .past-events-intro-lede,
+.standalone-past-events-page #events .past-events-intro-body {
+  max-width: 980px; margin-left: 0; margin-right: 0; color: #202020; font-size: clamp(1rem,1.02vw,1.08rem); line-height: 1.56; text-align: left;
+}
+.standalone-past-events-page #events .past-events-intro-lede { margin-top: 0; margin-bottom: 0; }
+.standalone-past-events-page #events .past-events-intro-lede strong { color: #000; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; }
+.standalone-past-events-page #events .past-events-intro-body { margin-top: .66rem; margin-bottom: 0; }
+
+.standalone-past-events-page #events .past-events-feature-band { background: var(--pe-blue); color: #fff; }
+.standalone-past-events-page #events .past-events-archive-band { background: var(--pe-silver); color: #000; }
+.standalone-past-events-page #events .past-events-event { padding: clamp(2.35rem,3.8vw,3.55rem) 0; }
+.standalone-past-events-page #events .past-events-event-archive + .past-events-event-archive { border-top: 0; }
+.standalone-past-events-page #events .past-events-event-copy {
+  width: min(100%,820px); max-width: 820px; margin: 0 auto clamp(1.15rem,2vw,1.7rem); text-align: center;
+}
+.standalone-past-events-page #events .past-events-event-date {
+  margin: 0 0 .55rem; color: #000; font-size: clamp(.75rem,.85vw,.88rem); line-height: 1.2; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+}
+.standalone-past-events-page #events .past-events-event h3 {
+  max-width: none; margin: 0 auto .7rem; color: #000; font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.15rem,3.55vw,3.7rem); line-height: 1.02; letter-spacing: -.035em; font-weight: 600; text-wrap: balance;
+}
+.standalone-past-events-page #events .past-events-summary {
+  width: min(100%,720px); max-width: 720px; margin: 0 auto .95rem; color: #252525; font-size: clamp(1rem,1.16vw,1.16rem); line-height: 1.55;
+}
+.standalone-past-events-page #events .past-events-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.25rem; }
+.standalone-past-events-page #events .past-events-link,
+.standalone-past-events-page #events .past-events-link:visited {
+  display: inline-block; margin: 0; color: var(--pe-blue); font-size: .88rem; font-weight: 700;
+  text-decoration-line: underline; text-decoration-thickness: 2px; text-underline-offset: .25em;
+}
+.standalone-past-events-page #events .past-events-link:hover,
+.standalone-past-events-page #events .past-events-link:focus-visible { text-decoration-thickness: 3px; }
+.standalone-past-events-page #events .past-events-event-featured .past-events-event-date,
+.standalone-past-events-page #events .past-events-event-featured h3 { color: #fff; }
+.standalone-past-events-page #events .past-events-event-featured .past-events-summary { color: rgba(255,255,255,.94); }
+.standalone-past-events-page #events .past-events-event-featured .past-events-link,
+.standalone-past-events-page #events .past-events-event-featured .past-events-link:visited { color: #fff; }
+
+.standalone-past-events-page #events .past-events-hero-image {
+  width: min(100%,1220px); max-width: 1220px; margin: 0 auto; padding: 0; background: transparent; border: 0; box-shadow: none; text-align: center;
+}
+.standalone-past-events-page #events .past-events-event-featured .past-events-hero-image { width: 100%; max-width: none; }
+.standalone-past-events-page #events .past-events-hero-image img {
+  display: block; width: 100%; height: auto; max-height: none; margin: 0 auto; object-fit: contain; object-position: center center;
+  background: transparent; border: 0; border-radius: 0; box-shadow: none;
+}
+
+.standalone-past-events-page #events .past-events-photo-drawer,
+.standalone-past-events-page #events .past-events-event-featured .past-events-photo-drawer {
+  width: min(100%,1180px); margin: clamp(.9rem,1.6vw,1.25rem) auto 0; border: 0; background: transparent;
+}
+.standalone-past-events-page #events .past-events-photo-drawer > summary {
+  display: flex; align-items: center; justify-content: center; gap: .75rem; cursor: pointer; list-style: none;
+  width: max-content; max-width: 100%; min-height: 42px; margin: 0 auto; padding: .62rem 1rem; border: 0; border-radius: 999px;
+  background: rgba(0,15,74,.07); color: var(--pe-blue); font-size: .9rem; line-height: 1.2; font-weight: 700; text-align: center;
+}
+.standalone-past-events-page #events .past-events-photo-drawer > summary::-webkit-details-marker { display: none; }
+.standalone-past-events-page #events .past-events-photo-drawer > summary::after { content: "+"; margin-left: .1rem; font-size: 1.1rem; font-weight: 700; }
+.standalone-past-events-page #events .past-events-photo-drawer[open] > summary::after { content: "–"; }
+.standalone-past-events-page #events .past-events-event-featured .past-events-photo-drawer > summary { background: rgba(255,255,255,.12); color: #fff; }
+
+.standalone-past-events-page #events .past-events-carousel { position: relative; display: block; padding: .9rem 0 0; }
+.standalone-past-events-page #events .past-events-carousel-stage {
+  position: relative; display: block; width: 100%; min-height: 0; height: auto; padding: 0 3.1rem; overflow: visible; background: transparent;
+}
+.standalone-past-events-page #events .past-events-carousel-slide { display: none; width: 100%; height: auto; min-height: 0; margin: 0; padding: 0; }
+.standalone-past-events-page #events .past-events-carousel-slide.is-active { display: flex; align-items: center; justify-content: center; }
+.standalone-past-events-page #events .past-events-carousel-slide img {
+  display: block; width: auto; height: auto; max-width: 100%; max-height: min(78vh,820px); margin: 0 auto;
+  object-fit: contain; object-position: center center; border: 0; border-radius: 0; box-shadow: none;
+}
+.standalone-past-events-page #events .past-events-carousel-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 42px; height: 42px; padding: 0;
+  display: inline-grid; place-items: center; border: 0; border-radius: 999px; background: rgba(0,15,74,.08); color: var(--pe-blue);
+  font-size: 1.8rem; line-height: 1; cursor: pointer; box-shadow: none;
+}
+.standalone-past-events-page #events .past-events-carousel-prev { left: 0; }
+.standalone-past-events-page #events .past-events-carousel-next { right: 0; }
+.standalone-past-events-page #events .past-events-event-featured .past-events-carousel-arrow { background: rgba(255,255,255,.13); color: #fff; }
+.standalone-past-events-page #events .past-events-carousel-arrow:disabled { opacity: .28; cursor: default; }
+
+/* Locked footer */
+.site-footer { position: relative; background: var(--d9-navy); color: #fff; border: 0; padding: 9px 0; box-shadow: none; }
+.site-footer .footer-inner {
+  width: min(90%,1160px); margin: 0 auto; padding: clamp(1.9rem,3vw,2.6rem) 0; display: flex; align-items: center; gap: 1.6rem; position: relative; z-index: 4;
+}
+.site-footer .footer-inner img { width: clamp(84px,8vw,116px); height: auto; margin: 0; align-self: center; object-fit: contain; }
+.site-footer .footer-wordmark { display: inline-block; color: #fff; font-size: 1.15rem; font-weight: 700; }
+.brand-wordmark { display: inline-flex; align-items: baseline; gap: .22em; font-weight: 900; }
+.brand-red { color: var(--d9-red); } .brand-black { color: var(--d9-black); } .brand-green { color: var(--d9-green); }
+.site-footer .footer-registered { display: inline-block; margin-left: .03em; font-size: .42em; font-weight: 600; line-height: 0; vertical-align: super; position: relative; top: -.04em; }
+.site-footer p { margin: 5px 0; color: #fff; font-weight: 800; }
+.site-footer .footer-divider { color: var(--d9-gold); }
+.site-footer small { color: #fff; line-height: 1.4; }
+
+@media (max-width: 760px) {
+  .site-nav { min-height: 86px; }
+  .site-nav .nav-inner { width: 90%; min-height: 70px; justify-content: space-between; }
+  .site-nav .brand-link img { width: 68px; max-height: 70px; }
+  .site-nav .nav-toggle {
+    display: block; color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.65); border-radius: .3rem; padding: .48rem .72rem; font-weight: 800;
+  }
+  .site-nav .nav-links {
+    display: none; position: absolute; top: 78px; left: -5%; right: -5%; padding: 1rem 6% 1.2rem;
+    background: var(--d9-navy); flex-direction: column; align-items: stretch; gap: .7rem;
+  }
+  .site-nav .nav-links.open { display: flex; }
+  .site-nav .nav-links a { padding: .35rem 0; text-align: center; white-space: normal; }
+
+  .standalone-past-events-page #events .past-events-shell { width: min(91%,760px); }
+  .standalone-past-events-page #events .past-events-intro-inner { padding: 1.2rem 0 1.35rem; }
+  .standalone-past-events-page #events .past-events-intro h2 { max-width: 100%; font-size: clamp(2.05rem,9.3vw,2.85rem); line-height: 1.02; }
+  .standalone-past-events-page #events .past-events-table-line { font-size: 1.06rem; }
+  .standalone-past-events-page #events .past-events-intro-copy { margin-top: .9rem; }
+  .standalone-past-events-page #events .past-events-intro-lede,
+  .standalone-past-events-page #events .past-events-intro-body { font-size: .98rem; line-height: 1.5; }
+  .standalone-past-events-page #events .past-events-event { padding: 2rem 0 2.25rem; }
+  .standalone-past-events-page #events .past-events-photo-drawer > summary { min-height: 44px; padding: .67rem .95rem; }
+  .standalone-past-events-page #events .past-events-carousel { padding-top: .72rem; }
+  .standalone-past-events-page #events .past-events-carousel-stage { padding: 0 2.55rem; }
+  .standalone-past-events-page #events .past-events-carousel-slide img { max-height: 72vh; }
+  .standalone-past-events-page #events .past-events-carousel-arrow { width: 38px; height: 38px; font-size: 1.55rem; }
+  .standalone-past-events-page #events .past-events-carousel-prev { left: .1rem; }
+  .standalone-past-events-page #events .past-events-carousel-next { right: .1rem; }
+  .site-footer .footer-inner { align-items: flex-start; gap: 1rem; }
+  .site-footer .footer-inner img { width: 76px; }
+}
+
+</style>
+</head>
+<body class="standalone-past-events-page">
+<!-- Standalone Past Events tab only. The main site files are not modified. -->
+<nav aria-label="Main navigation" class="site-nav">
+<div class="nav-inner">
+<a aria-label="D9 Harlem Votes® home" class="brand-link standard-logo-link" href="index.html#about">
+<img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
+</a>
+<button aria-controls="nav-links" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+<div class="nav-links" id="nav-links">
+<a href="index.html#about">About Us</a><a href="index.html#impact">Community Impact</a><a href="index.html#for-schools">Youth Ready School Campaign</a><a href="index.html#first-time-voter">First-Time Voters</a><a href="index.html#get-involved">Get Involved</a><a aria-current="page" href="#events">Past Events</a><a href="contact.html">Contact</a></div>
+</div>
+</nav>
+<main>
+<section class="section events-section past-events-page" id="events">
+<div class="past-events-band past-events-intro">
+<div class="past-events-shell past-events-intro-inner">
+<div class="past-events-intro-heading">
+<div class="past-events-intro-title">
+<h2 aria-label="D9 Harlem Votes, registered trademark, Community Conversations">D9 Harlem Votes<sup aria-hidden="true" class="past-events-registered">®</sup> Community Conversations</h2>
+<p class="past-events-table-line">Setting a Seat at the Table for Harlem</p>
+<div aria-hidden="true" class="past-events-signature"><span></span><span></span><span></span></div>
+</div>
+<div class="past-events-intro-copy">
+<p class="past-events-intro-lede">D9 Harlem Votes® <strong><em>lives, loves, and serves Harlem</em></strong>. For us, that means centering Harlem, being present in the community, and remaining in conversation with our neighbors every day.</p>
+<p class="past-events-intro-body">Our civic engagement does not end at the voter registration table. Voter registration activates our ongoing, proactive participation in local government and in the decisions that shape our community. Voting is an action, but civic engagement is a practice. We stay informed, stay engaged, ask questions, follow the policies, and pay attention to what happens long after the polls close.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="past-events-band past-events-feature-band">
+<article class="past-events-shell past-events-event past-events-event-featured">
+<div class="past-events-event-copy">
+<p class="past-events-event-date">APRIL 13, 2026</p>
+<h3>Harlem Mayor’s Town Hall</h3>
+<p class="past-events-summary">A town hall at the Schomburg Center focused on issues affecting Black New Yorkers.</p>
+<div aria-label="Harlem Mayor’s Town Hall links" class="past-events-links">
+<a class="past-events-link past-events-link-light" href="https://amsterdamnews.com/news/2026/04/16/are-black-new-yorkers-still-feeling-nyc-mayor-mamdani/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
+<a class="past-events-link past-events-link-light" href="https://www.youtube.com/live/saCWYWLreFA?si=Q3KW5Gvt3NOwTu1Z" rel="noopener noreferrer" target="_blank">Watch full town hall →</a>
+<a class="past-events-link past-events-link-light" href="https://youtu.be/Po7eMskTX5M?si=jT06Dy91rQ8eVm4g" rel="noopener noreferrer" target="_blank">Watch news clip →</a>
+</div>
+</div>
+<figure class="past-events-hero-image">
+<img alt="D9 Harlem Votes® members and community participants at the 2026 Harlem Mayor’s Town Hall" decoding="async" loading="eager" src="assets/past-events/town-hall/townhall-hero.jpeg"/>
+</figure>
+<details class="past-events-photo-drawer">
+<summary><span>View 29 event photos</span></summary>
+<div class="past-events-carousel" data-event-carousel="">
+<button aria-label="Previous Town Hall photo" class="past-events-carousel-arrow past-events-carousel-prev" type="button">‹</button>
+<div aria-live="polite" class="past-events-carousel-stage">
+<figure class="past-events-carousel-slide is-active"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-01.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-02.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-03.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-04.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-05.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-06.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-07.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-08.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-09.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-10.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-11.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-12.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-13.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-14.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-15.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-16.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-17.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-18.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-19.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-20.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-21.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-22.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-23.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-24.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-25.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-26.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-27.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-28.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="Harlem Mayor’s Town Hall event photo" decoding="async" loading="lazy" src="assets/past-events/town-hall/townhall-29.jpg"/></figure>
+</div>
+<button aria-label="Next Town Hall photo" class="past-events-carousel-arrow past-events-carousel-next" type="button">›</button>
+</div>
+</details>
+</article>
+</div>
+<div class="past-events-band past-events-archive-band">
+<div class="past-events-shell past-events-archive">
+<article class="past-events-event past-events-event-archive">
+<div class="past-events-event-copy">
+<p class="past-events-event-date">2025</p>
+<h3>NYC Mayoral Candidates Forum</h3>
+<p class="past-events-summary">Community-centered candidate forum held at Mother AME Zion Church in Harlem.</p>
+<div aria-label="NYC Mayoral Candidates Forum links" class="past-events-links">
+<a class="past-events-link" href="https://amsterdamnews.com/news/2025/05/29/divine-nine-harlem-votes-hosts-mayoral-candidates-forum/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
+<a class="past-events-link" href="https://www.youtube.com/live/C_1Iw1SMe2A?si=v7Voh-FbcJm4JoeY" rel="noopener noreferrer" target="_blank">Watch full forum →</a>
+</div>
+</div>
+<figure class="past-events-hero-image">
+<img alt="D9 Harlem Votes® participants at the 2025 NYC Mayoral Candidates Forum" decoding="async" loading="eager" src="assets/past-events/mayoral-forum/mayoral-forum-hero.jpeg"/>
+</figure>
+<details class="past-events-photo-drawer">
+<summary><span>View 28 event photos</span></summary>
+<div class="past-events-carousel" data-event-carousel="">
+<button aria-label="Previous Mayoral Candidates Forum photo" class="past-events-carousel-arrow past-events-carousel-prev" type="button">‹</button>
+<div aria-live="polite" class="past-events-carousel-stage">
+<figure class="past-events-carousel-slide is-active"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-01.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-02.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-03.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-04.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-05.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-06.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-07.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-08.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-09.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-12.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-14.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-15.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-16.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-17.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-18.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-19.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-21.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-22.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-23.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-25.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-26.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-28.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-29.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-30.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-31.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-32.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-33.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="NYC Mayoral Candidates Forum event photo" decoding="async" loading="lazy" src="assets/past-events/mayoral-forum/mayoral-forum-35.jpeg"/></figure>
+</div>
+<button aria-label="Next Mayoral Candidates Forum photo" class="past-events-carousel-arrow past-events-carousel-next" type="button">›</button>
+</div>
+</details>
+</article>
+<article class="past-events-event past-events-event-archive">
+<div class="past-events-event-copy">
+<p class="past-events-event-date">OCTOBER 29, 2025</p>
+<h3>PACE Social Justice Week</h3>
+<p class="past-events-summary">“Rapid Fire Chat: Whose House?” focused on affordability, economics and ballot initiatives.</p>
+<div aria-label="PACE Social Justice Week links" class="past-events-links">
+<a class="past-events-link" href="https://amsterdamnews.com/news/2025/11/13/d9-harlem-votes-partners-with-pace-university/" rel="noopener noreferrer" target="_blank">Read coverage →</a>
+</div>
+</div>
+<figure class="past-events-hero-image">
+<img alt="D9 Harlem Votes® participants at PACE University Social Justice Week" decoding="async" loading="eager" src="assets/past-events/pace-social-justice-week/pace-hero.jpg"/>
+</figure>
+<details class="past-events-photo-drawer">
+<summary><span>View 16 event photos</span></summary>
+<div class="past-events-carousel" data-event-carousel="">
+<button aria-label="Previous PACE Social Justice Week photo" class="past-events-carousel-arrow past-events-carousel-prev" type="button">‹</button>
+<div aria-live="polite" class="past-events-carousel-stage">
+<figure class="past-events-carousel-slide is-active"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-01.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-02.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-03.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-04.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-05.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-06.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-07.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-08.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-09.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-10.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-11.jpeg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-12.png"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-13.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-14.jpg"/></figure><figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-15.jpg"/></figure>
+<figure class="past-events-carousel-slide"><img alt="PACE Social Justice Week event photo" decoding="async" loading="lazy" src="assets/past-events/pace-social-justice-week/pace-16.jpeg"/></figure>
+</div>
+<button aria-label="Next PACE Social Justice Week photo" class="past-events-carousel-arrow past-events-carousel-next" type="button">›</button>
+</div>
+</details>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
+<div>
+<span aria-label="D9 Harlem Votes, registered trademark" class="footer-wordmark"><span aria-hidden="true" class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes<span class="footer-registered">®</span></span></span></span>
+<p><span class="footer-service">We Serve Harlem First.</span> <span class="footer-divider">|</span> <span class="footer-motto">Your Choice. Your Voice. Your Vote.</span></p>
+<small>© 2026 D9 Harlem Votes®. All rights reserved. The D9 Harlem Votes® name, logo, campaign graphics and related branding may not be used without permission.</small>
+</div>
+</div>
+</footer>
+<script>
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  function initCarousel(carousel) {
+    if (carousel.dataset.ready === 'true') return;
+    const slides = [...carousel.querySelectorAll('.past-events-carousel-slide')];
+    const prev = carousel.querySelector('.past-events-carousel-prev');
+    const next = carousel.querySelector('.past-events-carousel-next');
+    if (!slides.length || !prev || !next) return;
+    carousel.dataset.ready = 'true';
+    let index = 0;
+    let touchStartX = null;
+
+    function prime(i) {
+      [i, i - 1, i + 1].forEach(n => {
+        if (n < 0 || n >= slides.length) return;
+        const img = slides[n].querySelector('img');
+        if (img) img.loading = 'eager';
+      });
+    }
+
+    function show(i) {
+      index = Math.max(0, Math.min(i, slides.length - 1));
+      slides.forEach((slide, n) => {
+        const active = n === index;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+      });
+      prev.disabled = index === 0;
+      next.disabled = index === slides.length - 1;
+      prev.setAttribute('aria-disabled', String(prev.disabled));
+      next.setAttribute('aria-disabled', String(next.disabled));
+      prime(index);
+    }
+
+    prev.addEventListener('click', () => show(index - 1));
+    next.addEventListener('click', () => show(index + 1));
+    carousel.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+    carousel.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+    carousel.addEventListener('touchend', e => {
+      if (touchStartX == null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) >= 45) show(index + (dx < 0 ? 1 : -1));
+      touchStartX = null;
+    }, {passive:true});
+    show(0);
+  }
+
+  document.querySelectorAll('#events [data-event-carousel]').forEach(initCarousel);
+  document.querySelectorAll('#events .past-events-photo-drawer').forEach(drawer => {
+    drawer.addEventListener('toggle', () => {
+      if (!drawer.open) return;
+      const carousel = drawer.querySelector('[data-event-carousel]');
+      if (carousel) {
+        initCarousel(carousel);
+        const active = carousel.querySelector('.past-events-carousel-slide.is-active img');
+        if (active) active.loading = 'eager';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

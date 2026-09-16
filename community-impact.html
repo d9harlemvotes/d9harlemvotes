@@ -1,0 +1,1424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="D9 Harlem Votes® Community Impact">
+  <title>D9 Harlem Votes® | Community Impact</title>
+  <style>
+/* D9 Harlem Votes® — Community Impact standalone tab V4
+   Self-contained page with the locked site header and footer.
+   Final page rhythm: SILVER → DEEP BLUE → SILVER. */
+
+:root {
+  --impact-blue: #000f4a;
+  --impact-blue-bright: #0b52c6;
+  --impact-silver: #e7e9ee;
+  --impact-paper: #f7f8fa;
+  --impact-red: #e31c24;
+  --impact-black: #111111;
+  --impact-green: #0e8f58;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--impact-silver);
+  color: #000;
+}
+img { max-width: 100%; }
+button { font: inherit; }
+
+
+
+/* ===== LOCKED D9 HARLEM VOTES® HEADER =====
+   Restored from the current site structure: deep D9 blue with
+   RED → BLACK → GREEN bands at the top and bottom. */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  min-height: 108px;
+  padding: 8px 0;
+  background: var(--impact-blue);
+  border: 0;
+  box-shadow: none;
+}
+.site-nav::before,
+.site-nav::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(
+    to bottom,
+    var(--impact-red) 0 33.333%,
+    var(--impact-black) 33.333% 66.666%,
+    var(--impact-green) 66.666% 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+.site-nav::before { top: 0; }
+.site-nav::after { bottom: 0; }
+
+.site-nav .nav-inner {
+  width: min(91%, 1420px);
+  max-width: 1420px;
+  min-height: 92px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(1.5rem, 2.3vw, 2.5rem);
+  position: relative;
+  z-index: 6;
+}
+.site-nav .brand-link,
+.site-nav .standard-logo-link {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.site-nav .brand-link img,
+.site-nav .standard-logo-link img {
+  display: block;
+  width: clamp(88px, 6.7vw, 108px);
+  height: auto;
+  max-height: 96px;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  filter: none;
+}
+.site-nav .nav-links {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  position: static;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: clamp(1.05rem, 1.65vw, 1.75rem);
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+.site-nav .nav-links a,
+.site-nav .nav-links a:link,
+.site-nav .nav-links a:visited {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-decoration: none;
+  font-size: clamp(.76rem, .82vw, .9rem);
+  line-height: 1.1;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.site-nav .nav-links a[aria-current="page"] {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .45em;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible {
+  color: #fff;
+  opacity: .82;
+}
+.site-nav .nav-toggle { display: none; }
+
+@media (max-width: 1060px) and (min-width: 761px) {
+  .site-nav .nav-inner { gap: 1rem; width: 94%; }
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img { width: 80px; }
+  .site-nav .nav-links { gap: .72rem; }
+  .site-nav .nav-links a { font-size: .72rem; }
+}
+
+@media (max-width: 760px) {
+  .site-nav { min-height: 86px; }
+  .site-nav .nav-inner {
+    width: 90%;
+    min-height: 70px;
+    justify-content: space-between;
+  }
+  .site-nav .brand-link img,
+  .site-nav .standard-logo-link img {
+    width: 68px;
+    max-height: 70px;
+  }
+  .site-nav .nav-toggle {
+    display: block;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: .3rem;
+    padding: .48rem .72rem;
+    font-weight: 800;
+  }
+  .site-nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: -5%;
+    right: -5%;
+    padding: 1rem 6% 1.2rem;
+    background: var(--impact-blue);
+    flex-direction: column;
+    align-items: stretch;
+    gap: .7rem;
+    border-bottom: 8px solid transparent;
+  }
+  .site-nav .nav-links::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -8px;
+    height: 8px;
+    background: linear-gradient(
+      to bottom,
+      var(--impact-red) 0 33.333%,
+      var(--impact-black) 33.333% 66.666%,
+      var(--impact-green) 66.666% 100%
+    );
+  }
+  .site-nav .nav-links.open { display: flex; }
+  .site-nav .nav-links a {
+    padding: .35rem 0;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+
+
+#impact.locked-impact-page {
+  padding: 0;
+  margin: 0;
+  background: var(--impact-silver);
+  color: #000;
+  border: 0;
+  box-shadow: none;
+  overflow-x: hidden;
+}
+#impact .impact-band { width: 100%; position: relative; }
+#impact .impact-band-intro,
+#impact .impact-band-partners,
+#impact .impact-band-gallery {
+  background: var(--impact-silver);
+  color: #000;
+}
+#impact .impact-band-stats {
+  background: var(--impact-blue);
+  background-image: none;
+  color: #fff;
+}
+#impact .section-inner { margin-inline: auto; }
+
+/* Opening / recognition — SILVER */
+#impact .locked-impact-hero {
+  display: block;
+  width: min(92%, 1240px);
+  max-width: 1240px;
+  padding: clamp(2.7rem, 4vw, 4rem) 0;
+}
+#impact .impact-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, .9fr) minmax(500px, 1.1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+#impact .locked-impact-copy { max-width: 620px; }
+#impact .locked-impact-copy h2 {
+  margin: 0 0 1rem;
+  color: #000;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.7rem, 4vw, 4.2rem);
+  line-height: .98;
+  letter-spacing: -.035em;
+}
+#impact .locked-impact-intro,
+#impact .locked-impact-context {
+  color: #000;
+  font-size: clamp(1rem, 1.08vw, 1.08rem);
+  line-height: 1.58;
+}
+#impact .locked-impact-intro { margin: 0; }
+#impact .locked-impact-context { margin: 1rem 0 0; }
+#impact .locked-boots-feature {
+  margin: 0;
+  max-width: 650px;
+  padding: 5px;
+  border: 1px solid #bcc3ce;
+  background: var(--impact-paper);
+  box-shadow: 0 8px 18px rgba(0,15,74,.10);
+  overflow: hidden;
+}
+#impact .locked-boots-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#impact .impact-recognition-block {
+  margin-top: clamp(2rem, 3.2vw, 3rem);
+  padding-top: clamp(1.5rem, 2.4vw, 2rem);
+  border-top: 1px solid rgba(0,15,74,.18);
+}
+#impact .impact-recognition-kicker,
+#impact .impact-partners-kicker {
+  margin: 0 0 .55rem;
+  color: #000;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+#impact .impact-recognition-copy {
+  max-width: 820px;
+  margin: 0 0 1rem;
+  color: #222;
+  line-height: 1.5;
+}
+#impact .impact-recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1rem;
+}
+#impact .impact-award-link.impact-recognition-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 138px;
+  padding: 1.2rem 1.25rem 1.1rem 2rem;
+  background: var(--impact-paper);
+  color: #000;
+  border: 1px solid #c5cad3;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+  cursor: pointer;
+}
+#impact .impact-award-link.impact-recognition-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 10px;
+  background: linear-gradient(to bottom,
+    var(--impact-red) 0 33.333%,
+    var(--impact-black) 33.333% 66.666%,
+    var(--impact-green) 66.666% 100%);
+}
+#impact .impact-recognition-card strong {
+  color: #000;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+#impact .impact-recognition-card span {
+  display: block;
+  margin-top: .35rem;
+  color: #4c5565;
+  font-size: .92rem;
+  line-height: 1.3;
+}
+#impact .impact-recognition-card em {
+  display: block;
+  margin-top: auto;
+  padding-top: .6rem;
+  color: #000;
+  font-size: .78rem;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+#impact .impact-award-link.impact-recognition-card:hover,
+#impact .impact-award-link.impact-recognition-card:focus-visible {
+  outline: 2px solid var(--impact-blue);
+  outline-offset: 2px;
+}
+
+/* Impact to Date — DEEP BLUE */
+#impact .impact-metrics-v3 {
+  width: min(88%,1180px);
+  max-width: 1180px;
+  padding: clamp(2rem,3.2vw,3rem) 0 clamp(2.2rem,3.4vw,3.2rem);
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.35fr) minmax(0,1fr);
+  column-gap: clamp(1.4rem,3.2vw,3.4rem);
+  row-gap: clamp(1.15rem,2vw,1.8rem);
+  align-items: center;
+}
+#impact .impact-metrics-heading {
+  grid-column: 1/-1;
+  margin: 0;
+  text-align: center;
+}
+#impact .impact-metrics-heading h3 {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.15rem,3.4vw,3.4rem);
+  line-height: 1.02;
+  text-align: center;
+}
+#impact .impact-signature-rule { display: none; }
+#impact .impact-summary-line { display: contents; }
+#impact .impact-summary-dot { display: none; }
+#impact .impact-summary-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .38rem;
+  text-align: center;
+}
+#impact .impact-summary-pair:first-of-type { grid-column: 1; grid-row: 2; }
+#impact .impact-summary-pair:last-of-type { grid-column: 3; grid-row: 2; }
+#impact .impact-summary-pair strong {
+  width: clamp(132px, 11vw, 158px);
+  height: clamp(132px, 11vw, 158px);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--impact-blue-bright);
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem,4.4vw,4.8rem);
+  line-height: .9;
+  font-variant-numeric: tabular-nums;
+}
+#impact .impact-summary-pair span {
+  max-width: 15rem;
+  color: #fff;
+  font-size: clamp(.76rem,.92vw,.9rem);
+  line-height: 1.18;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+#impact .impact-conversations {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .38rem;
+  color: #fff;
+  text-align: center;
+}
+#impact .impact-conversations strong {
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4.8rem,7vw,7.2rem);
+  line-height: .82;
+  font-variant-numeric: tabular-nums;
+}
+#impact .impact-conversations span {
+  color: #fff;
+  font-size: clamp(.9rem,1.12vw,1.08rem);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+#impact .impact-detail-line {
+  grid-column: 1/-1;
+  grid-row: 3;
+  width: min(100%,980px);
+  margin: clamp(.25rem,.8vw,.7rem) auto 0;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  justify-items: center;
+  align-items: center;
+  gap: clamp(1.2rem,3vw,2.6rem);
+}
+#impact .impact-detail-line > div {
+  width: clamp(190px,16vw,230px);
+  height: clamp(190px,16vw,230px);
+  aspect-ratio: 1/1;
+  padding: clamp(1.25rem,2vw,1.8rem);
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: none;
+}
+#impact .impact-detail-line > div:nth-child(1) { background: var(--impact-red); }
+#impact .impact-detail-line > div:nth-child(2) { background: var(--impact-black); }
+#impact .impact-detail-line > div:nth-child(3) { background: var(--impact-green); }
+#impact .impact-detail-line strong {
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.65rem,3.7vw,3.8rem);
+  line-height: .92;
+  font-variant-numeric: tabular-nums;
+}
+#impact .impact-detail-line span {
+  max-width: 11.5rem;
+  margin-top: .55rem;
+  color: #fff;
+  font-size: clamp(.78rem,.92vw,.9rem);
+  line-height: 1.18;
+  font-weight: 850;
+}
+
+/* Community Partnerships — SILVER */
+#impact .impact-partners-section {
+  width: min(92%,1240px);
+  max-width: 1240px;
+  padding: clamp(2.8rem,4.4vw,4.3rem) 0;
+}
+#impact .impact-partners-copy {
+  max-width: 900px;
+  margin-bottom: clamp(1.5rem,2.5vw,2.2rem);
+}
+#impact .impact-partners-copy h3 {
+  margin: 0 0 .85rem;
+  color: #000;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem,3.15vw,3.15rem);
+  line-height: 1.04;
+}
+#impact .impact-partners-copy p:not(.impact-partners-kicker) {
+  margin: 0;
+  color: #111;
+  font-size: clamp(.98rem,1.08vw,1.08rem);
+  line-height: 1.58;
+}
+#impact .impact-partner-story {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-template-rows: repeat(2,minmax(190px,1fr));
+  gap: .85rem;
+}
+#impact .partner-photo {
+  margin: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 5px;
+  background: var(--impact-paper);
+  border: 1px solid #bcc3ce;
+  box-shadow: 0 7px 16px rgba(0,15,74,.08);
+}
+#impact .partner-photo-lead { grid-column: span 2; grid-row: span 2; }
+#impact .partner-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Restored locked footer — deep blue with matching RED → BLACK → GREEN top/bottom rules. */
+.site-footer.impact-standalone-footer {
+  position: relative;
+  margin: 0;
+  padding: 9px 0;
+  background: var(--impact-blue);
+  color: #fff;
+  overflow: hidden;
+}
+.site-footer.impact-standalone-footer::before,
+.site-footer.impact-standalone-footer::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 9px;
+  background: linear-gradient(to bottom,
+    var(--impact-red) 0 33.333%,
+    var(--impact-black) 33.333% 66.666%,
+    var(--impact-green) 66.666% 100%);
+}
+.site-footer.impact-standalone-footer::before { top: 0; }
+.site-footer.impact-standalone-footer::after { bottom: 0; }
+.site-footer.impact-standalone-footer .footer-inner {
+  width: min(90%,1160px);
+  margin: 0 auto;
+  padding: clamp(1.9rem,3vw,2.6rem) 0;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.site-footer.impact-standalone-footer img {
+  width: clamp(84px,8vw,116px);
+  height: auto;
+  flex: 0 0 auto;
+}
+.site-footer.impact-standalone-footer .footer-copy { min-width: 0; }
+.site-footer.impact-standalone-footer strong {
+  display: block;
+  color: #fff;
+  font-size: clamp(1.3rem,2.2vw,1.9rem);
+  font-weight: 700;
+}
+.site-footer.impact-standalone-footer p {
+  margin: .4rem 0 .55rem;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.site-footer.impact-standalone-footer p b {
+  color: #d9ad32;
+  padding: 0 .35rem;
+}
+.site-footer.impact-standalone-footer small {
+  display: block;
+  max-width: 840px;
+  color: rgba(255,255,255,.76);
+  line-height: 1.45;
+}
+
+/* Boots on the Ground gallery — SILVER */
+#impact .locked-botg-gallery {
+  width: min(92%,1240px);
+  max-width: 1240px;
+  padding: clamp(2.8rem,4.4vw,4.3rem) 0;
+}
+#impact .locked-gallery-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.2rem;
+}
+#impact .locked-gallery-heading h3 {
+  margin: 0;
+  color: #000;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem,3vw,3rem);
+  line-height: 1.04;
+  letter-spacing: .02em;
+}
+#impact .locked-gallery-heading p {
+  margin: .4rem 0 0;
+  color: #333;
+  font-size: clamp(1rem,1.2vw,1.14rem);
+  font-weight: 700;
+}
+#impact .locked-gallery-rule {
+  display: flex;
+  width: 96px;
+  height: 4px;
+  gap: 0;
+  margin: 0 0 .35rem;
+}
+#impact .locked-gallery-rule span:nth-child(1) { background: var(--impact-red); flex: 1; }
+#impact .locked-gallery-rule span:nth-child(2) { background: var(--impact-black); flex: 1; }
+#impact .locked-gallery-rule span:nth-child(3) { background: var(--impact-green); flex: 1; }
+#impact .botg-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  gap: .65rem;
+  align-items: center;
+}
+#impact .botg-viewport { overflow: hidden; width: 100%; }
+#impact .botg-track {
+  display: flex;
+  width: 100%;
+  transition: transform 420ms ease;
+  will-change: transform;
+}
+#impact .botg-slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .9rem;
+}
+#impact .botg-card {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4/5;
+  padding: 5px;
+  background: var(--impact-paper);
+  border: 1px solid #b9c1ce;
+  overflow: hidden;
+  cursor: zoom-in;
+  box-shadow: none;
+}
+#impact .botg-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#impact .botg-card figcaption { display: none; }
+#impact .botg-arrow {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--impact-blue);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+#impact .botg-arrow:hover,
+#impact .botg-arrow:focus-visible {
+  background: #000;
+  color: #fff;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+#impact .botg-dots {
+  display: flex;
+  justify-content: center;
+  gap: .45rem;
+  margin-top: 1.05rem;
+}
+#impact .botg-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0,15,74,.28);
+  cursor: pointer;
+}
+#impact .botg-dots button.is-active { background: var(--impact-blue); }
+
+/* Award lightbox */
+body.impact-award-open { overflow: hidden; }
+.impact-award-lightbox[hidden],
+.botg-lightbox[hidden] { display: none; }
+.impact-award-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem,3vw,2.5rem);
+  background: rgba(0,0,0,.88);
+}
+.impact-award-dialog {
+  position: relative;
+  width: min(94vw,1040px);
+  max-height: 92vh;
+  overflow: auto;
+  padding: 1rem;
+  background: var(--impact-paper);
+  box-shadow: 0 28px 80px rgba(0,0,0,.45);
+}
+.impact-award-dialog::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 6px;
+  margin-bottom: .85rem;
+  background: linear-gradient(90deg,
+    var(--impact-red) 0 33.333%,
+    var(--impact-black) 33.333% 66.666%,
+    var(--impact-green) 66.666% 100%);
+}
+.impact-award-image {
+  display: block;
+  max-width: 100%;
+  max-height: 76vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #c7ccd5;
+}
+.impact-award-caption {
+  margin: .85rem 0 .1rem;
+  color: #000;
+  font-size: .94rem;
+  font-weight: 850;
+  line-height: 1.35;
+  text-align: center;
+}
+.impact-award-close {
+  position: absolute;
+  top: .55rem;
+  right: .55rem;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--impact-blue);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Photo lightbox */
+.botg-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  grid-template-columns: minmax(44px,72px) minmax(0,1fr) minmax(44px,72px);
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  gap: .75rem;
+  padding: clamp(1rem,2vw,1.75rem);
+  background: rgba(0,0,0,.92);
+}
+.botg-lightbox-close {
+  grid-column: 3;
+  justify-self: end;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,.38);
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: 1.9rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.botg-lightbox-prev,
+.botg-lightbox-next {
+  width: clamp(42px,5vw,58px);
+  height: clamp(42px,5vw,58px);
+  border: 1px solid rgba(255,255,255,.38);
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: clamp(2rem,4vw,3rem);
+  line-height: 1;
+  cursor: pointer;
+}
+.botg-lightbox-prev { grid-column: 1; grid-row: 2; justify-self: center; }
+.botg-lightbox-next { grid-column: 3; grid-row: 2; justify-self: center; }
+.botg-lightbox-figure {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .85rem;
+}
+.botg-lightbox-image {
+  max-width: min(100%,1180px);
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 4px solid var(--impact-paper);
+  background: #111;
+  box-shadow: 0 28px 80px rgba(0,0,0,.55);
+}
+.botg-lightbox-caption {
+  color: rgba(255,255,255,.9);
+  font-size: .95rem;
+  font-weight: 700;
+  text-align: center;
+}
+.botg-lightbox-close:hover,
+.botg-lightbox-prev:hover,
+.botg-lightbox-next:hover,
+.botg-lightbox-close:focus-visible,
+.botg-lightbox-prev:focus-visible,
+.botg-lightbox-next:focus-visible {
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 1040px) {
+  #impact .impact-intro-grid { grid-template-columns: 1fr; }
+  #impact .locked-impact-copy,
+  #impact .locked-boots-feature { max-width: 780px; }
+  #impact .impact-partner-story {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-rows: auto;
+  }
+  #impact .partner-photo-lead { grid-column: 1/-1; grid-row: auto; }
+}
+@media (max-width: 900px) {
+  #impact .impact-metrics-v3 {
+    width: min(90%,860px);
+    grid-template-columns: 1fr 1.18fr 1fr;
+    column-gap: 1rem;
+  }
+  #impact .impact-detail-line > div {
+    width: clamp(165px,22vw,195px);
+    height: clamp(165px,22vw,195px);
+  }
+}
+@media (max-width: 760px) {
+  #impact .impact-recognition-grid { grid-template-columns: 1fr; }
+  #impact .impact-partner-story { grid-template-columns: 1fr; }
+  #impact .partner-photo-lead { grid-column: auto; }
+  #impact .botg-carousel { grid-template-columns: 1fr; }
+  #impact .botg-arrow { display: none; }
+  #impact .botg-slide { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 680px) {
+  #impact .impact-metrics-v3 {
+    width: min(88%,560px);
+    grid-template-columns: 1fr;
+    row-gap: 1.15rem;
+    padding: 2rem 0 2.4rem;
+  }
+  #impact .impact-metrics-heading,
+  #impact .impact-summary-pair:first-of-type,
+  #impact .impact-conversations,
+  #impact .impact-summary-pair:last-of-type,
+  #impact .impact-detail-line { grid-column: 1; }
+  #impact .impact-metrics-heading { grid-row: 1; }
+  #impact .impact-summary-pair:first-of-type { grid-row: 2; }
+  #impact .impact-conversations { grid-row: 3; }
+  #impact .impact-summary-pair:last-of-type { grid-row: 4; }
+  #impact .impact-detail-line {
+    grid-row: 5;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: .4rem;
+  }
+  #impact .impact-detail-line > div { width: 190px; height: 190px; }
+}
+@media (max-width: 620px) {
+  #impact .locked-impact-hero,
+  #impact .impact-partners-section,
+  #impact .locked-botg-gallery { width: min(90%,1240px); }
+  #impact .locked-gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #impact .locked-gallery-rule { width: 84px; }
+  #impact .botg-slide { grid-template-columns: 1fr; }
+  .impact-award-dialog { width: min(96vw,1040px); padding: .75rem; }
+  .botg-lightbox {
+    grid-template-columns: 44px minmax(0,1fr) 44px;
+    padding: .75rem;
+  }
+}
+
+
+@media (max-width: 680px) {
+  #impact .impact-summary-pair strong {
+    width: 132px;
+    height: 132px;
+  }
+  .site-footer.impact-standalone-footer .footer-inner {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .site-footer.impact-standalone-footer img {
+    width: 76px;
+  }
+}
+
+
+/* V3 hard lock: the standalone file carries its own border + footer styling. */
+body { min-height: 100vh; }
+.impact-page-rule {
+  display:block !important;
+  width:100% !important;
+  height:8px !important;
+  margin:0 !important;
+  padding:0 !important;
+  background:linear-gradient(to bottom,
+    var(--impact-red) 0 33.333%,
+    var(--impact-black) 33.333% 66.666%,
+    var(--impact-green) 66.666% 100%) !important;
+}
+.site-footer.impact-standalone-footer {
+  display:block !important;
+  position:relative !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:8px 0 !important;
+  background:#000f4a !important;
+  color:#fff !important;
+  border:0 !important;
+  box-shadow:none !important;
+  overflow:hidden !important;
+}
+.site-footer.impact-standalone-footer::before,
+.site-footer.impact-standalone-footer::after {
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  height:8px !important;
+  background:linear-gradient(to bottom,
+    #e31c24 0 33.333%,
+    #111111 33.333% 66.666%,
+    #0e8f58 66.666% 100%) !important;
+  pointer-events:none !important;
+  z-index:3 !important;
+}
+.site-footer.impact-standalone-footer::before { top:0 !important; }
+.site-footer.impact-standalone-footer::after { bottom:0 !important; }
+.site-footer.impact-standalone-footer .footer-inner {
+  position:relative !important;
+  z-index:4 !important;
+  width:min(90%,1160px) !important;
+  margin:0 auto !important;
+  padding:clamp(1.9rem,3vw,2.6rem) 0 !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:1.6rem !important;
+}
+.site-footer.impact-standalone-footer .footer-inner img {
+  display:block !important;
+  width:clamp(84px,8vw,116px) !important;
+  height:auto !important;
+  margin:0 !important;
+  flex:0 0 auto !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+.site-footer.impact-standalone-footer .footer-wordmark {
+  display:inline-block !important;
+  color:#fff !important;
+  font-family:"Helvetica Neue","Avenir Next","Segoe UI",Helvetica,Arial,sans-serif !important;
+  font-size:clamp(1.35rem,2.4vw,2rem) !important;
+  line-height:1.1 !important;
+  font-weight:400 !important;
+}
+.site-footer.impact-standalone-footer .brand-wordmark { display:inline-flex !important; gap:.18em !important; align-items:baseline !important; }
+.site-footer.impact-standalone-footer .brand-red,
+.site-footer.impact-standalone-footer .brand-black,
+.site-footer.impact-standalone-footer .brand-green,
+.site-footer.impact-standalone-footer .footer-registered {
+  color:#fff !important;
+}
+.site-footer.impact-standalone-footer .brand-red,
+.site-footer.impact-standalone-footer .brand-green { font-weight:800 !important; }
+.site-footer.impact-standalone-footer .brand-black { font-weight:500 !important; }
+.site-footer.impact-standalone-footer .footer-registered {
+  display:inline-block !important;
+  margin-left:.03em !important;
+  font-size:.42em !important;
+  font-weight:600 !important;
+  line-height:0 !important;
+  vertical-align:super !important;
+  position:relative !important;
+  top:-.04em !important;
+}
+.site-footer.impact-standalone-footer p,
+.site-footer.impact-standalone-footer .footer-service,
+.site-footer.impact-standalone-footer .footer-motto {
+  color:#fff !important;
+}
+.site-footer.impact-standalone-footer p {
+  margin:.45rem 0 .55rem !important;
+  font-weight:800 !important;
+  line-height:1.35 !important;
+}
+.site-footer.impact-standalone-footer .footer-divider {
+  color:#d9ad32 !important;
+  font-weight:950 !important;
+  padding:0 .35rem !important;
+}
+.site-footer.impact-standalone-footer small {
+  display:block !important;
+  max-width:840px !important;
+  color:rgba(255,255,255,.76) !important;
+  line-height:1.45 !important;
+}
+/* Keep the top totals visibly circular against deep navy. */
+#impact .impact-summary-pair strong {
+  background:#0b52c6 !important;
+  color:#fff !important;
+  border-radius:50% !important;
+  box-shadow:none !important;
+}
+@media (max-width:680px){
+  .site-footer.impact-standalone-footer .footer-inner { align-items:flex-start !important; gap:1rem !important; }
+  .site-footer.impact-standalone-footer .footer-inner img { width:76px !important; }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Standalone Community Impact tab only. Other tab content is not included, but the locked site header/footer are preserved. -->
+  <nav aria-label="Main navigation" class="site-nav">
+    <div class="nav-inner">
+      <a aria-label="D9 Harlem Votes® home" class="brand-link standard-logo-link" href="#impact">
+        <img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png">
+      </a>
+      <button aria-controls="nav-links" aria-expanded="false" class="nav-toggle" type="button">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#for-schools">Youth Ready School Campaign</a>
+        <a href="#about">About Us</a>
+        <a aria-current="page" href="#impact">Community Impact</a>
+        <a href="#first-time-voter">First-Time Voters</a>
+        <a href="#get-involved">Get Involved</a>
+        <a href="#events">Past Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+<section class="section impact-section locked-impact-page" id="impact">
+<div class="impact-band impact-band-intro">
+<div class="section-inner locked-impact-hero">
+<div class="impact-intro-grid">
+<div class="locked-impact-copy">
+<h2>Boots on the Ground</h2>
+<p class="locked-impact-intro">D9 Harlem Votes® Boots on the Ground is our signature voter-registration activation, bringing Steering Committee Members and partner organizations together across Harlem to educate, engage, and register voters.</p>
+<p class="locked-impact-context">Since 2024, D9 Harlem Votes® has been on the ground serving Harlem. We began officially tracking our impact in 2025 and partner with NYC Votes, the NYC Board of Elections, and Educated Voter, LLC, to connect Harlem residents with current, nonpartisan voter information and resources for every election cycle. We equip Harlem voters with the information they need to understand their New York State voting rights, navigate the voting process, and show up at the polls informed, prepared, and ready to exercise the power of their vote.</p>
+</div>
+<figure class="locked-boots-feature">
+<img alt="D9 Harlem Votes® Boots on the Ground voter registration activation signature image" loading="eager" src="assets/community-impact/boots-on-the-ground-feature.jpg"/>
+</figure>
+</div>
+<div aria-labelledby="impact-recognition-title" class="impact-recognition-block">
+<p class="impact-recognition-kicker" id="impact-recognition-title">HARLEM WEEK 2026 RECOGNITION</p>
+<p class="impact-recognition-copy">On August 16, 2026, D9 Harlem Votes® was recognized during Harlem Week 2026 for service, leadership, and civic engagement in Harlem.</p>
+<div class="impact-recognition-grid">
+<button aria-haspopup="dialog" class="impact-award-link impact-recognition-card" data-award-alt="Harlem Week 2026 award presented to D9 Harlem Votes®" data-award-caption="Harlem Week 2026 Award" data-award-src="assets/award-legacy.jpg" type="button">
+<strong>Harlem Week 2026 Award</strong><span>D9 Harlem Votes®</span><em>View Award</em>
+</button>
+<button aria-haspopup="dialog" class="impact-award-link impact-recognition-card" data-award-alt="Certificate of Recognition presented to D9 Harlem Votes® by New York State Senator Cordell Cleare" data-award-caption="Certificate of Recognition — New York State Senator Cordell Cleare" data-award-src="assets/award-cleare.jpg" type="button">
+<strong>Certificate of Recognition</strong><span>New York State Senator Cordell Cleare</span><em>View Certificate</em>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="impact-band impact-band-stats">
+<div class="section-inner impact-metrics-v3">
+<div class="impact-metrics-heading">
+<h3>Impact to Date</h3>
+<div aria-hidden="true" class="impact-signature-rule"><span></span><span></span><span></span></div>
+</div>
+<div aria-label="Overall impact totals" class="impact-summary-line">
+<div class="impact-summary-pair"><strong data-impact-count="8">8</strong><span>ACTIVATIONS</span></div>
+<span aria-hidden="true" class="impact-summary-dot">·</span>
+<div class="impact-summary-pair"><strong data-impact-count="31">31</strong><span>TRAINED VOLUNTEERS</span></div>
+</div>
+<div class="impact-conversations"><strong data-impact-count="1640">1,640</strong><span>CONVERSATIONS</span></div>
+<div aria-label="Detailed impact totals" class="impact-detail-line">
+<div><strong data-impact-count="1030">1,030</strong><span>voter engagement actions</span></div>
+<div><strong data-impact-count="85">85</strong><span>completed voter registrations</span></div>
+<div><strong data-impact-count="525">525</strong><span>documented voting plans</span></div>
+</div>
+</div>
+</div>
+<div class="impact-band impact-band-partners">
+<div class="section-inner impact-partners-section">
+<div class="impact-partners-copy">
+<p class="impact-partners-kicker">COMMUNITY PARTNERSHIPS</p>
+<h3>Connecting Harlem to resources that strengthen our community.</h3>
+<p>Our impact extends beyond the ballot box. D9 Harlem Votes® has partnered with at least 12 civic, community-based, and government organizations to bring information, services, and resources directly to Harlem residents. Among these partners are NYC CORE (New York City Commission on Racial Equity), NYC Votes, the NYC Board of Elections, Educated Voter, LLC, and organizations working across health, workforce development, youth services, public safety, environmental justice, and social services.</p>
+</div>
+<div aria-label="Community partnership photo story" class="impact-partner-story">
+<figure class="partner-photo partner-photo-lead"><img alt="Harlem residents visiting multiple community resource partner tables" loading="lazy" src="assets/community-impact/community-partners-01.jpg"/></figure>
+<figure class="partner-photo"><img alt="New York City Commission on Racial Equity resource table at a Harlem community event" loading="lazy" src="assets/community-impact/community-partners-02.jpg"/></figure>
+<figure class="partner-photo"><img alt="NAACP Mid-Manhattan Branch representatives engaging residents at a community resource table" loading="lazy" src="assets/community-impact/community-partners-03.jpg"/></figure>
+<figure class="partner-photo"><img alt="Harlem residents attending a civic and community resource program" loading="lazy" src="assets/community-impact/community-partners-04.jpg"/></figure>
+<figure class="partner-photo"><img alt="Nonpartisan ranked-choice voting education presentation for Harlem residents" loading="lazy" src="assets/community-impact/community-partners-05.jpg"/></figure>
+</div>
+</div>
+</div>
+<div class="impact-band impact-band-gallery">
+<div aria-label="D9 Harlem Votes Boots on the Ground photo carousel" class="section-inner locked-botg-gallery">
+<div class="locked-gallery-heading">
+<div><h3>BOOTS ON THE GROUND</h3><p>Meeting Harlem where they are.</p></div>
+<div aria-hidden="true" class="locked-gallery-rule"><span></span><span></span><span></span></div>
+</div>
+<div class="botg-carousel" data-botg-carousel="">
+<button aria-label="Previous Boots on the Ground photos" class="botg-arrow botg-prev" type="button">‹</button>
+<div class="botg-viewport"><div class="botg-track"><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 1" loading="lazy" src="assets/community-impact/boots-on-the-ground-01.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 2" loading="lazy" src="assets/community-impact/boots-on-the-ground-02.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 3" loading="lazy" src="assets/community-impact/boots-on-the-ground-03.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 4" loading="lazy" src="assets/community-impact/boots-on-the-ground-04.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 5" loading="lazy" src="assets/community-impact/boots-on-the-ground-05.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 6" loading="lazy" src="assets/community-impact/boots-on-the-ground-06.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 7" loading="lazy" src="assets/community-impact/boots-on-the-ground-07.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 8" loading="lazy" src="assets/community-impact/boots-on-the-ground-08.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 9" loading="lazy" src="assets/community-impact/boots-on-the-ground-09.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 10" loading="lazy" src="assets/community-impact/boots-on-the-ground-10.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 11" loading="lazy" src="assets/community-impact/boots-on-the-ground-11.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 12" loading="lazy" src="assets/community-impact/boots-on-the-ground-12.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 13" loading="lazy" src="assets/community-impact/boots-on-the-ground-13.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 14" loading="lazy" src="assets/community-impact/boots-on-the-ground-14.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 15" loading="lazy" src="assets/community-impact/boots-on-the-ground-15.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 16" loading="lazy" src="assets/community-impact/boots-on-the-ground-16.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 17" loading="lazy" src="assets/community-impact/boots-on-the-ground-17.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 18" loading="lazy" src="assets/community-impact/boots-on-the-ground-18.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 19" loading="lazy" src="assets/community-impact/boots-on-the-ground-19.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 20" loading="lazy" src="assets/community-impact/boots-on-the-ground-20.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 21" loading="lazy" src="assets/community-impact/boots-on-the-ground-21.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 22" loading="lazy" src="assets/community-impact/boots-on-the-ground-22.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 23" loading="lazy" src="assets/community-impact/boots-on-the-ground-23.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 24" loading="lazy" src="assets/community-impact/boots-on-the-ground-24.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 25" loading="lazy" src="assets/community-impact/boots-on-the-ground-25.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 26" loading="lazy" src="assets/community-impact/boots-on-the-ground-26.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 27" loading="lazy" src="assets/community-impact/boots-on-the-ground-27.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 28" loading="lazy" src="assets/community-impact/boots-on-the-ground-28.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 29" loading="lazy" src="assets/community-impact/boots-on-the-ground-29.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 30" loading="lazy" src="assets/community-impact/boots-on-the-ground-30.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 31" loading="lazy" src="assets/community-impact/boots-on-the-ground-31.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 32" loading="lazy" src="assets/community-impact/boots-on-the-ground-32.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 33" loading="lazy" src="assets/community-impact/boots-on-the-ground-33.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 34" loading="lazy" src="assets/community-impact/boots-on-the-ground-34.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 35" loading="lazy" src="assets/community-impact/boots-on-the-ground-35.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 36" loading="lazy" src="assets/community-impact/boots-on-the-ground-36.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 37" loading="lazy" src="assets/community-impact/boots-on-the-ground-37.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 38" loading="lazy" src="assets/community-impact/boots-on-the-ground-38.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 39" loading="lazy" src="assets/community-impact/boots-on-the-ground-39.jpg"/></figure></div><div class="botg-slide"><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 40" loading="lazy" src="assets/community-impact/boots-on-the-ground-40.jpg"/></figure><figure class="botg-card"><img alt="D9 Harlem Votes® Boots on the Ground community activation photo 41" loading="lazy" src="assets/community-impact/boots-on-the-ground-41.jpg"/></figure></div></div></div>
+<button aria-label="Next Boots on the Ground photos" class="botg-arrow botg-next" type="button">›</button>
+</div>
+<div aria-label="Carousel navigation" class="botg-dots"><button aria-label="Show Boots on the Ground photo set 1" class="is-active" data-botg-dot="0" type="button"></button><button aria-label="Show Boots on the Ground photo set 2" class="" data-botg-dot="1" type="button"></button><button aria-label="Show Boots on the Ground photo set 3" class="" data-botg-dot="2" type="button"></button><button aria-label="Show Boots on the Ground photo set 4" class="" data-botg-dot="3" type="button"></button><button aria-label="Show Boots on the Ground photo set 5" class="" data-botg-dot="4" type="button"></button><button aria-label="Show Boots on the Ground photo set 6" class="" data-botg-dot="5" type="button"></button><button aria-label="Show Boots on the Ground photo set 7" class="" data-botg-dot="6" type="button"></button><button aria-label="Show Boots on the Ground photo set 8" class="" data-botg-dot="7" type="button"></button><button aria-label="Show Boots on the Ground photo set 9" class="" data-botg-dot="8" type="button"></button><button aria-label="Show Boots on the Ground photo set 10" class="" data-botg-dot="9" type="button"></button><button aria-label="Show Boots on the Ground photo set 11" class="" data-botg-dot="10" type="button"></button><button aria-label="Show Boots on the Ground photo set 12" class="" data-botg-dot="11" type="button"></button><button aria-label="Show Boots on the Ground photo set 13" class="" data-botg-dot="12" type="button"></button><button aria-label="Show Boots on the Ground photo set 14" class="" data-botg-dot="13" type="button"></button></div>
+</div>
+</div>
+</section>
+  </main>
+<footer class="site-footer impact-standalone-footer">
+  <div class="footer-inner">
+    <img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
+    <div>
+      <span aria-label="D9 Harlem Votes, registered trademark" class="footer-wordmark"><span aria-hidden="true" class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes<span class="footer-registered">®</span></span></span></span>
+      <p><span class="footer-service">We Serve Harlem First.</span> <span class="footer-divider">|</span> <span class="footer-motto">Your Choice. Your Voice. Your Vote.</span></p>
+      <small>© 2026 D9 Harlem Votes®. All rights reserved. The D9 Harlem Votes® name, logo, campaign graphics and related branding may not be used without permission.</small>
+    </div>
+  </div>
+</footer>
+
+
+<div aria-label="Boots on the Ground activation photo viewer" aria-modal="true" class="botg-lightbox" hidden id="botg-lightbox" role="dialog">
+  <button aria-label="Close photo viewer" class="botg-lightbox-close" type="button">×</button>
+  <button aria-label="Previous photo" class="botg-lightbox-prev" type="button">‹</button>
+  <figure class="botg-lightbox-figure">
+    <img alt="" class="botg-lightbox-image"/>
+    <figcaption class="botg-lightbox-caption"></figcaption>
+  </figure>
+  <button aria-label="Next photo" class="botg-lightbox-next" type="button">›</button>
+</div>
+<div aria-labelledby="impact-award-caption" aria-modal="true" class="impact-award-lightbox" hidden id="impact-award-lightbox" role="dialog">
+  <div class="impact-award-dialog" role="document">
+    <button aria-label="Close award image" class="impact-award-close" type="button">×</button>
+    <img alt="" class="impact-award-image" src=""/>
+    <p class="impact-award-caption" id="impact-award-caption"></p>
+  </div>
+</div>
+  <script>
+/* Community Impact standalone interactions: counters, carousel, photo lightbox, award lightbox. */
+(function () {
+  'use strict';
+
+  function setupCounters() {
+    var impact = document.getElementById('impact');
+    if (!impact) return;
+    var band = impact.querySelector('.impact-band-stats');
+    var els = Array.prototype.slice.call(impact.querySelectorAll('[data-impact-count]'));
+    var done = false;
+    function finalValues() {
+      els.forEach(function (el) {
+        el.textContent = parseInt(el.getAttribute('data-impact-count') || '0', 10).toLocaleString();
+      });
+    }
+    function animate() {
+      if (done || !els.length) return;
+      done = true;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        finalValues();
+        return;
+      }
+      els.forEach(function (el) { el.textContent = '0'; });
+      var duration = 1550;
+      var started = null;
+      function tick(ts) {
+        if (started === null) started = ts;
+        var progress = Math.min((ts - started) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        els.forEach(function (el) {
+          var target = parseInt(el.getAttribute('data-impact-count') || '0', 10);
+          el.textContent = Math.round(target * eased).toLocaleString();
+        });
+        if (progress < 1) requestAnimationFrame(tick);
+        else finalValues();
+      }
+      requestAnimationFrame(tick);
+    }
+    finalValues();
+    if ('IntersectionObserver' in window && band) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animate();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.28 });
+      observer.observe(band);
+    } else {
+      window.setTimeout(animate, 250);
+    }
+  }
+
+  function setupCarousel() {
+    document.querySelectorAll('[data-botg-carousel]').forEach(function (carousel) {
+      var track = carousel.querySelector('.botg-track');
+      var slides = Array.prototype.slice.call(carousel.querySelectorAll('.botg-slide'));
+      var root = carousel.closest('.locked-botg-gallery') || document;
+      var dots = Array.prototype.slice.call(root.querySelectorAll('[data-botg-dot]'));
+      var prev = carousel.querySelector('.botg-prev');
+      var next = carousel.querySelector('.botg-next');
+      var index = 0;
+      var autoTimer = null;
+      function go(to) {
+        if (!slides.length) return;
+        index = (to + slides.length) % slides.length;
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        dots.forEach(function (dot, i) { dot.classList.toggle('is-active', i === index); });
+      }
+      function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+      function startAuto() {
+        stopAuto();
+        if (slides.length > 1) autoTimer = setInterval(function () { go(index + 1); }, 4500);
+      }
+      if (prev) prev.addEventListener('click', function () { go(index - 1); startAuto(); });
+      if (next) next.addEventListener('click', function () { go(index + 1); startAuto(); });
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          go(parseInt(dot.getAttribute('data-botg-dot'), 10) || 0);
+          startAuto();
+        });
+      });
+      var startX = null;
+      carousel.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; stopAuto(); }, {passive:true});
+      carousel.addEventListener('touchend', function (e) {
+        if (startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
+        startX = null;
+        startAuto();
+      }, {passive:true});
+      carousel.addEventListener('mouseenter', stopAuto);
+      carousel.addEventListener('mouseleave', startAuto);
+      carousel.addEventListener('focusin', stopAuto);
+      carousel.addEventListener('focusout', startAuto);
+      go(0);
+      startAuto();
+    });
+  }
+
+  function setupPhotoLightbox() {
+    var lightbox = document.getElementById('botg-lightbox');
+    var impact = document.getElementById('impact');
+    if (!lightbox || !impact) return;
+    var images = Array.prototype.slice.call(impact.querySelectorAll('.botg-card img'));
+    var close = lightbox.querySelector('.botg-lightbox-close');
+    var prev = lightbox.querySelector('.botg-lightbox-prev');
+    var next = lightbox.querySelector('.botg-lightbox-next');
+    var img = lightbox.querySelector('.botg-lightbox-image');
+    var caption = lightbox.querySelector('.botg-lightbox-caption');
+    var activeIndex = 0;
+    function labelFor(i) {
+      var source = images[i];
+      var base = source ? (source.getAttribute('alt') || 'Boots on the Ground activation photo') : 'Boots on the Ground activation photo';
+      return base + ' · ' + (i + 1) + ' of ' + images.length;
+    }
+    function render(i) {
+      if (!images.length) return;
+      activeIndex = (i + images.length) % images.length;
+      var source = images[activeIndex];
+      img.src = source.currentSrc || source.src;
+      img.alt = source.getAttribute('alt') || 'Boots on the Ground activation photo';
+      caption.textContent = labelFor(activeIndex);
+    }
+    function openAt(i) {
+      render(i);
+      lightbox.hidden = false;
+      document.documentElement.style.overflow = 'hidden';
+      if (close) close.focus();
+    }
+    function closeBox() {
+      lightbox.hidden = true;
+      document.documentElement.style.overflow = '';
+      img.removeAttribute('src');
+    }
+    images.forEach(function (source, i) {
+      var fig = source.closest('figure');
+      if (!fig) return;
+      fig.setAttribute('tabindex', '0');
+      fig.setAttribute('role', 'button');
+      fig.setAttribute('aria-label', 'Open ' + labelFor(i));
+      fig.addEventListener('click', function () { openAt(i); });
+      fig.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openAt(i);
+        }
+      });
+    });
+    if (close) close.addEventListener('click', closeBox);
+    if (prev) prev.addEventListener('click', function () { render(activeIndex - 1); });
+    if (next) next.addEventListener('click', function () { render(activeIndex + 1); });
+    lightbox.addEventListener('click', function (event) { if (event.target === lightbox) closeBox(); });
+    document.addEventListener('keydown', function (event) {
+      if (lightbox.hidden) return;
+      if (event.key === 'Escape') closeBox();
+      if (event.key === 'ArrowLeft') render(activeIndex - 1);
+      if (event.key === 'ArrowRight') render(activeIndex + 1);
+    });
+  }
+
+  function setupAwardLightbox() {
+    var modal = document.getElementById('impact-award-lightbox');
+    if (!modal) return;
+    var image = modal.querySelector('.impact-award-image');
+    var caption = modal.querySelector('.impact-award-caption');
+    var closeButton = modal.querySelector('.impact-award-close');
+    var lastTrigger = null;
+    function openAward(button) {
+      lastTrigger = button;
+      image.src = button.getAttribute('data-award-src') || '';
+      image.alt = button.getAttribute('data-award-alt') || '';
+      caption.textContent = button.getAttribute('data-award-caption') || button.textContent.trim();
+      modal.hidden = false;
+      document.body.classList.add('impact-award-open');
+      if (closeButton) closeButton.focus();
+    }
+    function closeAward() {
+      modal.hidden = true;
+      image.removeAttribute('src');
+      image.alt = '';
+      caption.textContent = '';
+      document.body.classList.remove('impact-award-open');
+      if (lastTrigger) lastTrigger.focus();
+    }
+    document.querySelectorAll('#impact .impact-award-link').forEach(function (button) {
+      button.addEventListener('click', function () { openAward(button); });
+    });
+    if (closeButton) closeButton.addEventListener('click', closeAward);
+    modal.addEventListener('click', function (event) { if (event.target === modal) closeAward(); });
+    document.addEventListener('keydown', function (event) {
+      if (!modal.hidden && event.key === 'Escape') closeAward();
+    });
+  }
+
+  function init() {
+    setupCounters();
+    setupCarousel();
+    setupPhotoLightbox();
+    setupAwardLightbox();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
+  </script>
+
+<script>
+(function () {
+  const toggle = document.querySelector('.site-nav .nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+
+  toggle.addEventListener('click', function () {
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  links.addEventListener('click', function (event) {
+    if (event.target.closest('a') && window.innerWidth <= 760) {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

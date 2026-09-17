@@ -5607,37 +5607,86 @@
 </style>
 
 <style id="d9-youth-ready-cobalt-launch-final-20260916">
-/* Locked Youth Ready correction: cobalt launch section, horizontal 01–04, CTA below. */
-#for-schools.youth-ready-launch-section {
-  background:
-    radial-gradient(circle at 72% 28%, rgba(14,143,88,.10), transparent 30%),
-    linear-gradient(112deg, #052d7f 0%, #073fa8 53%, #0b52c6 100%) !important;
+/* Locked Youth Ready correction: solid cobalt launch section, horizontal 01–04, larger readable type. */
+#for-schools.youth-ready-launch-section,
+#for-schools.youth-ready-launch-section > .section-inner,
+#for-schools .youth-ready-launch-inner {
+  background: #0b4fc1 !important;
   color: #fff !important;
+}
+#for-schools.youth-ready-launch-section {
+  padding: 0 !important;
+}
+#for-schools .youth-launch-heading,
+#for-schools .youth-launch-steps,
+#for-schools .launch-step,
+#for-schools .youth-ready-closing-text,
+#for-schools .youth-ready-join-wrap {
+  background: transparent !important;
 }
 #for-schools .youth-launch-heading .launch-kicker {
-  color: rgba(255,255,255,.88) !important;
-}
-#for-schools .youth-launch-heading h2,
-#for-schools .youth-launch-heading .launch-intro,
-#for-schools .youth-launch-steps .launch-step h3,
-#for-schools .youth-launch-steps .launch-step p,
-#for-schools .youth-ready-closing-text {
   color: #fff !important;
+  font-size: clamp(.95rem, 1.15vw, 1.08rem) !important;
+  letter-spacing: .18em !important;
 }
-#for-schools .youth-launch-heading .launch-intro,
-#for-schools .youth-launch-steps .launch-step p {
-  opacity: .94 !important;
+#for-schools .youth-launch-heading h2 {
+  color: #fff !important;
+  font-size: clamp(2.6rem, 4.5vw, 4.5rem) !important;
+  line-height: 1.02 !important;
+}
+#for-schools .youth-launch-heading h2::after {
+  background: var(--d9-gold, #d9ad32) !important;
+}
+#for-schools .youth-launch-heading .launch-intro {
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: clamp(1.12rem, 1.4vw, 1.3rem) !important;
+  line-height: 1.45 !important;
 }
 #for-schools .youth-launch-steps {
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: clamp(1rem, 2vw, 2rem) !important;
+  gap: clamp(1.15rem, 2vw, 2rem) !important;
+}
+#for-schools .youth-launch-steps .launch-step {
+  color: #fff !important;
+  padding: 0 1rem !important;
+}
+#for-schools .youth-launch-steps .launch-step + .launch-step {
+  border-left: 1px solid rgba(255,255,255,.30) !important;
+}
+#for-schools .youth-launch-steps .launch-step-number {
+  min-width: 4.7rem !important;
+  height: 2.75rem !important;
+  margin: .05rem auto .85rem !important;
+  border: 4px solid #fff !important;
+  font-size: clamp(1.45rem, 1.7vw, 1.75rem) !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+}
+#for-schools .youth-launch-steps .gold .launch-step-number { background: var(--d9-gold, #d9ad32) !important; color: #000 !important; }
+#for-schools .youth-launch-steps .red .launch-step-number { background: var(--d9-red, #ed1c24) !important; color: #fff !important; }
+#for-schools .youth-launch-steps .black .launch-step-number { background: #000 !important; color: #fff !important; }
+#for-schools .youth-launch-steps .green .launch-step-number { background: var(--d9-green, #118b4b) !important; color: #fff !important; }
+#for-schools .youth-launch-steps .launch-step h3 {
+  color: #fff !important;
+  font-size: clamp(1.3rem, 1.7vw, 1.7rem) !important;
+  line-height: 1.12 !important;
+  margin: .25rem 0 .45rem !important;
+  font-weight: 900 !important;
+}
+#for-schools .youth-launch-steps .launch-step p {
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: clamp(1.02rem, 1.15vw, 1.18rem) !important;
+  line-height: 1.4 !important;
 }
 #for-schools .youth-ready-closing-text {
+  color: #fff !important;
   max-width: 1050px !important;
-  margin: clamp(1.9rem, 3vw, 2.8rem) auto 0 !important;
+  margin: clamp(2rem, 3vw, 2.9rem) auto 0 !important;
   text-align: center !important;
   font-family: Georgia, 'Times New Roman', serif !important;
-  font-size: clamp(1.35rem, 2.05vw, 2rem) !important;
+  font-size: clamp(1.5rem, 2.15vw, 2.15rem) !important;
   line-height: 1.2 !important;
   font-weight: 800 !important;
 }
@@ -5655,8 +5704,8 @@
   align-items: center !important;
   justify-content: center !important;
   width: min(620px, 78vw) !important;
-  min-height: 58px !important;
-  padding: .9rem 1.5rem !important;
+  min-height: 62px !important;
+  padding: 1rem 1.6rem !important;
   border: 0 !important;
   border-radius: 999px !important;
   background: var(--youth-hero-gold, #d9ad32) !important;
@@ -5665,6 +5714,7 @@
   text-decoration: none !important;
   text-transform: uppercase !important;
   letter-spacing: .035em !important;
+  font-size: 1.05rem !important;
   font-weight: 900 !important;
 }
 #for-schools .youth-ready-join-cta:hover,
@@ -5675,6 +5725,9 @@
 @media (max-width: 980px) {
   #for-schools .youth-launch-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  #for-schools .youth-launch-steps .launch-step + .launch-step {
+    border-left: 0 !important;
   }
 }
 @media (max-width: 640px) {

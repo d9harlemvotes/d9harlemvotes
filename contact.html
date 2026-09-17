@@ -7678,108 +7678,58 @@ body #contact.final-contact-page .contact-email-clean a:active {
 
 </style>
 
-<style id="contact-civic-team-dropdown-update">
-/* CONTACT PAGE ONLY — Civic Education Team dropdown. */
-#contact .contact-civic-team {
-  margin-top: 1.5rem !important;
-  border-top: 2px solid rgba(255, 255, 255, 0.36) !important;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.36) !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
 
-#contact .contact-civic-team summary {
-  list-style: none !important;
-  cursor: pointer !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 1rem !important;
-  padding: 1.05rem 0 !important;
-  color: #ffffff !important;
-  background: transparent !important;
-  border: 0 !important;
-  font-size: 0.9rem !important;
-  font-weight: 950 !important;
-  letter-spacing: 0.08em !important;
-  line-height: 1.25 !important;
-  text-transform: uppercase !important;
-}
 
-#contact .contact-civic-team summary::-webkit-details-marker {
-  display: none !important;
+<style id="contact-role-compact-update">
+/* Contact-only refinement: seven visible public-facing roles, compact type, press last. */
+#contact .contact-roles-clean ul {
+  gap: 0 !important;
 }
-
-#contact .contact-civic-team summary::after {
-  content: '+' !important;
-  flex: 0 0 auto !important;
-  color: #ffffff !important;
-  font-size: 1.55rem !important;
-  font-weight: 800 !important;
-  line-height: 1 !important;
+#contact .contact-roles-clean li {
+  padding: 0.78rem 0 !important;
 }
-
-#contact .contact-civic-team[open] summary::after {
-  content: '–' !important;
-}
-
-#contact .contact-civic-team-body {
-  padding: 0.15rem 0 1rem !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
-}
-
-#contact .contact-civic-person {
-  padding: 1rem 0 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important;
-}
-
-#contact .contact-civic-person strong {
+#contact .contact-roles-clean li span {
   display: block !important;
-  color: #ffffff !important;
-  font-family: Georgia, 'Times New Roman', serif !important;
-  font-size: clamp(1.02rem, 1.25vw, 1.3rem) !important;
-  font-weight: 800 !important;
-  line-height: 1.18 !important;
+  font-size: clamp(0.72rem, 0.78vw, 0.84rem) !important;
+  line-height: 1.32 !important;
+  letter-spacing: 0.055em !important;
+  margin-bottom: 0.22rem !important;
 }
-
-#contact .contact-civic-person span {
+#contact .contact-roles-clean li strong {
   display: block !important;
-  margin-top: 0.4rem !important;
-  color: rgba(255, 255, 255, 0.78) !important;
-  font-family: inherit !important;
-  font-size: 0.84rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.035em !important;
-  line-height: 1.4 !important;
-  text-transform: uppercase !important;
+  font-size: clamp(1.02rem, 1.12vw, 1.18rem) !important;
+  line-height: 1.2 !important;
+  white-space: normal !important;
 }
-
-#contact .contact-civic-team-note {
-  margin: 0.85rem 0 0 !important;
-  color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 0.82rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.45 !important;
-  text-transform: none !important;
+#contact .contact-email-clean,
+#contact .contact-email-clean a {
+  max-width: 100% !important;
 }
-
+#contact .contact-email-clean a,
+#contact .contact-email-clean a:link,
+#contact .contact-email-clean a:visited {
+  display: inline-block !important;
+  font-size: clamp(0.92rem, 1.35vw, 1.08rem) !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
 @media (max-width: 760px) {
-  #contact .contact-civic-team {
-    margin-top: 1.25rem !important;
+  #contact .contact-roles-clean li { padding: 0.7rem 0 !important; }
+  #contact .contact-roles-clean li span {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.045em !important;
   }
-
-  #contact .contact-civic-person strong {
+  #contact .contact-roles-clean li strong {
     font-size: 1rem !important;
+    white-space: normal !important;
   }
-
-  #contact .contact-civic-person span,
-  #contact .contact-civic-team-note {
-    font-size: 0.8rem !important;
+  #contact .contact-email-clean a {
+    font-size: 0.92rem !important;
   }
 }
 </style>
-
 </head>
 <body>
 <nav aria-label="Main navigation" class="site-nav">
@@ -8363,22 +8313,10 @@ body #contact.final-contact-page .contact-email-clean a:active {
 <li><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing</strong></li>
 <li><span>Volunteer and Member Recruitment Lead</span><strong>Aaliyah Brown</strong></li>
 <li><span>Volunteer and Member Engagement Lead</span><strong>Jasmine G. McFarlane-White</strong></li>
+<li><span>Agency Partnerships &amp; Coalition Relations</span><strong>Gilda D. Gillim, MA</strong></li>
+<li><span>Civics &amp; Law Research · NYC Board of Elections Liaison &amp; Election Compliance</span><strong>Lisa White-Tingling, MPA</strong></li>
 <li><span>Press Contact</span><strong>Shana Harmongoff</strong></li>
 </ul>
-<details class="contact-civic-team">
-<summary>Civic Education Team</summary>
-<div class="contact-civic-team-body">
-<div class="contact-civic-person">
-<strong>Gilda D. Gillim, MA</strong>
-<span>Agency Partnerships &amp; Coalition Relations</span>
-</div>
-<div class="contact-civic-person">
-<strong>Lisa White-Tingling, MPA</strong>
-<span>Civics &amp; Law Research · NYC Board of Elections Liaison &amp; Election Compliance</span>
-</div>
-<p class="contact-civic-team-note">All inquiries are handled through the main D9 Harlem Votes® email.</p>
-</div>
-</details>
 </div>
 </div>
 </section>

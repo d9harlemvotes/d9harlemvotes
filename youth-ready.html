@@ -5605,6 +5605,85 @@
 }
 
 </style>
+
+<style id="d9-youth-ready-cobalt-launch-final-20260916">
+/* Locked Youth Ready correction: cobalt launch section, horizontal 01–04, CTA below. */
+#for-schools.youth-ready-launch-section {
+  background:
+    radial-gradient(circle at 72% 28%, rgba(14,143,88,.10), transparent 30%),
+    linear-gradient(112deg, #052d7f 0%, #073fa8 53%, #0b52c6 100%) !important;
+  color: #fff !important;
+}
+#for-schools .youth-launch-heading .launch-kicker {
+  color: rgba(255,255,255,.88) !important;
+}
+#for-schools .youth-launch-heading h2,
+#for-schools .youth-launch-heading .launch-intro,
+#for-schools .youth-launch-steps .launch-step h3,
+#for-schools .youth-launch-steps .launch-step p,
+#for-schools .youth-ready-closing-text {
+  color: #fff !important;
+}
+#for-schools .youth-launch-heading .launch-intro,
+#for-schools .youth-launch-steps .launch-step p {
+  opacity: .94 !important;
+}
+#for-schools .youth-launch-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: clamp(1rem, 2vw, 2rem) !important;
+}
+#for-schools .youth-ready-closing-text {
+  max-width: 1050px !important;
+  margin: clamp(1.9rem, 3vw, 2.8rem) auto 0 !important;
+  text-align: center !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: clamp(1.35rem, 2.05vw, 2rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+}
+#for-schools .youth-ready-closing-text::after {
+  content: none !important;
+  display: none !important;
+}
+#for-schools .youth-ready-join-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  margin: clamp(1.5rem, 2.5vw, 2.25rem) auto 0 !important;
+}
+#for-schools .youth-ready-join-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: min(620px, 78vw) !important;
+  min-height: 58px !important;
+  padding: .9rem 1.5rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: var(--youth-hero-gold, #d9ad32) !important;
+  color: #090909 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: .035em !important;
+  font-weight: 900 !important;
+}
+#for-schools .youth-ready-join-cta:hover,
+#for-schools .youth-ready-join-cta:focus-visible {
+  background: #e7bd4d !important;
+  color: #000 !important;
+}
+@media (max-width: 980px) {
+  #for-schools .youth-launch-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 640px) {
+  #for-schools .youth-launch-steps {
+    grid-template-columns: 1fr !important;
+  }
+  #for-schools .youth-ready-join-cta { width: 100% !important; }
+}
+</style>
 </head>
 <body>
 <nav aria-label="Main navigation" class="site-nav">
@@ -5635,9 +5714,7 @@
 </h1>
 <p class="natural-school-lede">Getting our Harlem Youth Pre-Registered and keeping them educated, engaged, and informed so when they turn 18 years old they are ready and empowered to vote.</p>
 <p class="natural-school-subcopy">A school-based pre-registration and voter-readiness campaign for Harlem students.</p>
-<div class="natural-school-actions">
-<a class="btn natural-school-cta" href="https://forms.gle/xaZQtigNrF13ybcU7" rel="noopener noreferrer" target="_blank">Join the Campaign →</a>
-</div>
+
 </div>
 <figure class="natural-school-photo-shell">
 <img alt="Young person completing a voter registration form at a D9 Harlem Votes® activation event" src="assets/youth-ready-preregister-afrocentric.png"/>
@@ -5728,7 +5805,10 @@
 <h3>We Collect &amp; Track</h3>
 <p>Keep it secure and simple.</p>
 </article></div>
-<p class="youth-ready-closing-text youth-ready-closing-plain">Getting our Harlem Youth Pre-Registered and keeping them educated, engaged, and informed so when they turn 18 years old they are ready and empowered to vote.</p>
+<p class="youth-ready-closing-text youth-ready-closing-plain">Helping Harlem youth get pre-registered, educated and ready to vote.</p>
+<div class="youth-ready-join-wrap">
+<a class="btn youth-ready-join-cta" href="https://forms.gle/xaZQtigNrF13ybcU7" rel="noopener noreferrer" target="_blank">Join the Campaign →</a>
+</div>
 </div>
 </section>
 

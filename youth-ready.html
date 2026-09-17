@@ -5605,7 +5605,6 @@
 }
 
 </style>
-
 <style id="d9-youth-ready-cobalt-launch-final-20260916">
 /* Locked Youth Ready correction: solid cobalt launch section, horizontal 01–04, larger readable type. */
 #for-schools.youth-ready-launch-section,
@@ -5613,6 +5612,11 @@
 #for-schools .youth-ready-launch-inner {
   background: #0b4fc1 !important;
   color: #fff !important;
+}
+#for-schools.youth-ready-launch-section > .section-inner,
+#for-schools .youth-ready-launch-inner {
+  max-width: none !important;
+  width: 100% !important;
 }
 #for-schools.youth-ready-launch-section {
   padding: 0 !important;
@@ -5737,7 +5741,96 @@
   #for-schools .youth-ready-join-cta { width: 100% !important; }
 }
 </style>
-</head>
+<style id="d9-youth-ready-locked-cobalt-layout-20260916">
+/* Locked Youth Ready layout: cobalt hero, silver banner transition, cobalt launch section. */
+#for-schools.youth-ready-launch-section {
+  background: #0b4fc1 !important;
+  color: #fff !important;
+  padding: 0 0 clamp(2.5rem, 4vw, 4.25rem) !important;
+  overflow: hidden !important;
+}
+#for-schools > .section-inner.youth-ready-launch-inner {
+  background: #0b4fc1 !important;
+  color: #fff !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 clamp(1.25rem, 3vw, 3.2rem) !important;
+}
+/* Silver breathing band behind the deep-blue campaign banner. */
+#for-schools .school-campaign-banner-block {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 0 clamp(2.4rem, 4vw, 3.7rem) calc(50% - 50vw) !important;
+  padding: clamp(1.4rem, 2.8vw, 2.5rem) clamp(1.25rem, 3vw, 3.2rem) !important;
+  background: #e7e9ee !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+}
+#for-schools .school-campaign-banner-block img {
+  display: block !important;
+  width: min(100%, 1320px) !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  box-shadow: none !important;
+}
+#for-schools .youth-launch-heading {
+  padding-top: clamp(.2rem, .8vw, .65rem) !important;
+}
+#for-schools .youth-launch-heading .launch-kicker,
+#for-schools .youth-launch-heading h2,
+#for-schools .youth-launch-heading .launch-intro,
+#for-schools .youth-launch-steps .launch-step h3,
+#for-schools .youth-launch-steps .launch-step p,
+#for-schools .youth-ready-closing-text {
+  color: #fff !important;
+}
+#for-schools .youth-launch-heading .launch-kicker {
+  color: #fff !important;
+}
+#for-schools .youth-launch-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: clamp(1.15rem, 2vw, 2rem) !important;
+  max-width: 1460px !important;
+  margin: 0 auto !important;
+}
+#for-schools .youth-launch-steps .launch-step {
+  background: transparent !important;
+  color: #fff !important;
+  padding: 0 clamp(.65rem, 1.2vw, 1.15rem) !important;
+}
+#for-schools .youth-launch-steps .launch-step + .launch-step {
+  border-left: 1px solid rgba(255,255,255,.32) !important;
+}
+/* CTA belongs directly under the four steps. */
+#for-schools .youth-ready-join-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  margin: clamp(2rem, 3.5vw, 3rem) auto 0 !important;
+}
+#for-schools .youth-ready-join-cta {
+  width: min(620px, 78vw) !important;
+  min-height: 62px !important;
+  border-radius: 999px !important;
+  background: var(--youth-hero-gold, #d9ad32) !important;
+  color: #090909 !important;
+  box-shadow: none !important;
+  font-weight: 900 !important;
+}
+#for-schools .youth-ready-closing-text {
+  margin: clamp(1.8rem, 3vw, 2.65rem) auto 0 !important;
+  max-width: 980px !important;
+  text-align: center !important;
+}
+@media (max-width: 980px) {
+  #for-schools .youth-launch-steps { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #for-schools .youth-launch-steps .launch-step + .launch-step { border-left: 0 !important; }
+}
+@media (max-width: 620px) {
+  #for-schools .youth-launch-steps { grid-template-columns: 1fr !important; }
+  #for-schools .youth-ready-join-cta { width: 100% !important; }
+}
+</style></head>
 <body>
 <nav aria-label="Main navigation" class="site-nav">
 <div class="nav-inner">
@@ -5767,7 +5860,6 @@
 </h1>
 <p class="natural-school-lede">Getting our Harlem Youth Pre-Registered and keeping them educated, engaged, and informed so when they turn 18 years old they are ready and empowered to vote.</p>
 <p class="natural-school-subcopy">A school-based pre-registration and voter-readiness campaign for Harlem students.</p>
-
 </div>
 <figure class="natural-school-photo-shell">
 <img alt="Young person completing a voter registration form at a D9 Harlem Votes® activation event" src="assets/youth-ready-preregister-afrocentric.png"/>
@@ -5857,19 +5949,13 @@
 <div class="launch-step-number">04</div>
 <h3>We Collect &amp; Track</h3>
 <p>Keep it secure and simple.</p>
-</article></div>
-<p class="youth-ready-closing-text youth-ready-closing-plain">Helping Harlem youth get pre-registered, educated and ready to vote.</p>
-<div class="youth-ready-join-wrap">
+</article></div><div class="youth-ready-join-wrap">
 <a class="btn youth-ready-join-cta" href="https://forms.gle/xaZQtigNrF13ybcU7" rel="noopener noreferrer" target="_blank">Join the Campaign →</a>
-</div>
+</div><p class="youth-ready-closing-text youth-ready-closing-plain">Helping Harlem youth get pre-registered, educated and ready to vote.</p>
+
+
 </div>
 </section>
-
-
-
-
-
-
 </main>
 <footer class="site-footer">
 <div class="footer-inner">

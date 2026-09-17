@@ -7,9 +7,9 @@
 <meta content="D9 Harlem Votes® Community Impact" name="description"/>
 <title>D9 Harlem Votes® | Community Impact</title>
 <style>
-/* D9 Harlem Votes® — Community Impact standalone tab V4
+/* D9 Harlem Votes® — Community Impact standalone tab V5
    Self-contained page with the locked site header and footer.
-   Final page rhythm: SILVER → DEEP BLUE → SILVER. */
+   Final page rhythm: SILVER → DEEP BLUE → SILVER → DEEP BLUE → SILVER. */
 
 :root {
   --impact-blue: #000f4a;
@@ -221,19 +221,21 @@ button { font: inherit; }
 }
 #impact .impact-band { width: 100%; position: relative; }
 #impact .impact-band-partners,
-#impact .impact-band-gallery {
+#impact .impact-band-boots,
+#impact .impact-closing-space {
   background: var(--impact-silver);
   color: #000;
 }
-#impact .impact-band-intro,
-#impact .impact-band-stats {
+#impact .impact-band-stats,
+#impact .impact-band-gallery {
   background: var(--impact-blue);
   background-image: none;
   color: #fff;
 }
 #impact .section-inner { margin-inline: auto; }
+#impact .impact-closing-space { min-height: clamp(48px,5vw,72px); }
 
-/* Opening / recognition — DEEP BLUE */
+/* Boots on the Ground narrative / recognition — SILVER */
 #impact .locked-impact-hero {
   display: block;
   width: min(92%, 1240px);
@@ -353,18 +355,6 @@ button { font: inherit; }
   letter-spacing: .05em;
 }
 
-/* White type on the continuous deep-blue middle section. */
-#impact .impact-band-intro .locked-impact-copy h2,
-#impact .impact-band-intro .locked-impact-intro,
-#impact .impact-band-intro .locked-impact-context,
-#impact .impact-band-intro .impact-partners-kicker,
-#impact .impact-band-intro .impact-recognition-kicker,
-#impact .impact-band-intro .impact-recognition-copy {
-  color: #fff;
-}
-#impact .impact-band-intro .impact-recognition-block {
-  border-top-color: rgba(255,255,255,.22);
-}
 #impact .impact-award-link.impact-recognition-card:hover,
 #impact .impact-award-link.impact-recognition-card:focus-visible {
   outline: 2px solid var(--impact-blue);
@@ -386,6 +376,14 @@ button { font: inherit; }
   grid-column: 1/-1;
   margin: 0;
   text-align: center;
+}
+#impact .impact-stats-kicker {
+  margin: 0 0 .55rem;
+  color: rgba(255,255,255,.82);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
 }
 #impact .impact-metrics-heading h3 {
   margin: 0;
@@ -609,7 +607,7 @@ button { font: inherit; }
   line-height: 1.45;
 }
 
-/* Boots on the Ground gallery — SILVER */
+/* Boots on the Ground gallery — DEEP BLUE */
 #impact .locked-botg-gallery {
   width: min(92%,1240px);
   max-width: 1240px;
@@ -624,7 +622,7 @@ button { font: inherit; }
 }
 #impact .locked-gallery-heading h3 {
   margin: 0;
-  color: #000;
+  color: #fff;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(2rem,3vw,3rem);
   line-height: 1.04;
@@ -632,7 +630,7 @@ button { font: inherit; }
 }
 #impact .locked-gallery-heading p {
   margin: .4rem 0 0;
-  color: #333;
+  color: rgba(255,255,255,.82);
   font-size: clamp(1rem,1.2vw,1.14rem);
   font-weight: 700;
 }
@@ -692,17 +690,17 @@ button { font: inherit; }
   place-items: center;
   border: 0;
   border-radius: 50%;
-  background: var(--impact-blue);
-  color: #fff;
+  background: var(--impact-silver);
+  color: var(--impact-blue);
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
 }
 #impact .botg-arrow:hover,
 #impact .botg-arrow:focus-visible {
-  background: #000;
-  color: #fff;
-  outline: 2px solid #000;
+  background: #fff;
+  color: var(--impact-blue);
+  outline: 2px solid #fff;
   outline-offset: 2px;
 }
 #impact .botg-dots {
@@ -717,10 +715,10 @@ button { font: inherit; }
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: rgba(0,15,74,.28);
+  background: rgba(255,255,255,.34);
   cursor: pointer;
 }
-#impact .botg-dots button.is-active { background: var(--impact-blue); }
+#impact .botg-dots button.is-active { background: var(--impact-silver); }
 
 /* Award lightbox */
 body.impact-award-open { overflow: hidden; }
@@ -1103,7 +1101,7 @@ body { min-height: 100vh; }
 <div class="section-inner impact-partners-section">
 <div class="impact-partners-copy">
 <p class="impact-partners-kicker">COMMUNITY ENGAGEMENT</p>
-<h3>Connecting Harlem to resources that strengthen our community.</h3>
+<h3>Connecting Harlem to Information &amp; Resources</h3>
 <p>Our impact extends beyond the ballot box. D9 Harlem Votes® partners with community-based organizations, city agencies, and state agencies to make information and resources accessible to Harlem residents.</p>
 </div>
 <div aria-label="Community partnership photo story" class="impact-partner-story">
@@ -1114,14 +1112,33 @@ body { min-height: 100vh; }
 <figure class="partner-photo"><img alt="Nonpartisan ranked-choice voting education presentation for Harlem residents" loading="lazy" src="assets/community-impact/community-partners-05.jpg"/></figure>
 </div>
 </div>
-</div><div class="impact-band impact-band-intro">
+</div><div class="impact-band impact-band-stats">
+<div class="section-inner impact-metrics-v3">
+<div class="impact-metrics-heading">
+<p class="impact-stats-kicker">IMPACT TO DATE</p>
+<h3>Measuring our impact.</h3>
+<div aria-hidden="true" class="impact-signature-rule"><span></span><span></span><span></span></div>
+</div>
+<div aria-label="Overall impact totals" class="impact-summary-line">
+<div class="impact-summary-pair"><strong data-impact-count="8">8</strong><span>ACTIVATIONS</span></div>
+<span aria-hidden="true" class="impact-summary-dot">·</span>
+<div class="impact-summary-pair"><strong data-impact-count="31">31</strong><span>TRAINED VOLUNTEERS</span></div>
+</div>
+<div class="impact-conversations"><strong data-impact-count="1640">1,640</strong><span>CONVERSATIONS</span></div>
+<div aria-label="Detailed impact totals" class="impact-detail-line">
+<div><strong data-impact-count="1030">1,030</strong><span>voter engagement actions</span></div>
+<div><strong data-impact-count="85">85</strong><span>completed voter registrations</span></div>
+<div><strong data-impact-count="525">525</strong><span>documented voting plans</span></div>
+</div>
+</div>
+</div><div class="impact-band impact-band-boots">
 <div class="section-inner locked-impact-hero">
 <div class="impact-intro-grid">
 <div class="locked-impact-copy">
 
 
 
-<p class="impact-partners-kicker">IMPACT TO DATE</p><h2>Measuring our impact.</h2><p class="locked-impact-intro">D9 Harlem Votes® Boots on the Ground is our signature voter-registration activation centering conversations about voting and voter rights. Since 2024, D9 Harlem Votes® has been on the ground serving Harlem. Our impact is measured through our tracked engagement with every person we meet. We provide civic and voter education to ineligible, potential, eligible, undecided, and registered voters. We assist in navigating the registration process. Our goal is to keep Harlem informed, prepared, and ready to exercise the power of their vote.</p></div>
+<p class="impact-partners-kicker">BOOTS ON THE GROUND</p><h2>Meeting Harlem where they are.</h2><p class="locked-impact-intro">D9 Harlem Votes® Boots on the Ground is our signature voter-registration activation centering conversations about voting and voter rights. Since 2024, D9 Harlem Votes® has been on the ground serving Harlem. Our impact is measured through our tracked engagement with every person we meet. We provide civic and voter education to ineligible, potential, eligible, undecided, and registered voters. We assist in navigating the registration process. Our goal is to keep Harlem informed, prepared, and ready to exercise the power of their vote.</p></div>
 <figure class="locked-boots-feature">
 <img alt="D9 Harlem Votes® Boots on the Ground voter registration activation signature image" loading="eager" src="assets/community-impact/boots-on-the-ground-feature.jpg"/>
 </figure>
@@ -1139,28 +1156,10 @@ body { min-height: 100vh; }
 </div>
 </div>
 </div>
-</div><div class="impact-band impact-band-stats">
-<div class="section-inner impact-metrics-v3">
-<div class="impact-metrics-heading">
-<h3>Our tracked engagement</h3>
-<div aria-hidden="true" class="impact-signature-rule"><span></span><span></span><span></span></div>
-</div>
-<div aria-label="Overall impact totals" class="impact-summary-line">
-<div class="impact-summary-pair"><strong data-impact-count="8">8</strong><span>ACTIVATIONS</span></div>
-<span aria-hidden="true" class="impact-summary-dot">·</span>
-<div class="impact-summary-pair"><strong data-impact-count="31">31</strong><span>TRAINED VOLUNTEERS</span></div>
-</div>
-<div class="impact-conversations"><strong data-impact-count="1640">1,640</strong><span>CONVERSATIONS</span></div>
-<div aria-label="Detailed impact totals" class="impact-detail-line">
-<div><strong data-impact-count="1030">1,030</strong><span>voter engagement actions</span></div>
-<div><strong data-impact-count="85">85</strong><span>completed voter registrations</span></div>
-<div><strong data-impact-count="525">525</strong><span>documented voting plans</span></div>
-</div>
-</div>
 </div><div class="impact-band impact-band-gallery">
 <div aria-label="D9 Harlem Votes Boots on the Ground photo carousel" class="section-inner locked-botg-gallery">
 <div class="locked-gallery-heading">
-<div><h3>BOOTS ON THE GROUND</h3><p>Meeting Harlem where they are.</p></div>
+<div><h3>BOOTS ON THE GROUND GALLERY</h3></div>
 <div aria-hidden="true" class="locked-gallery-rule"><span></span><span></span><span></span></div>
 </div>
 <div class="botg-carousel" data-botg-carousel="">
@@ -1171,7 +1170,7 @@ body { min-height: 100vh; }
 <div aria-label="Carousel navigation" class="botg-dots"><button aria-label="Show Boots on the Ground photo set 1" class="is-active" data-botg-dot="0" type="button"></button><button aria-label="Show Boots on the Ground photo set 2" class="" data-botg-dot="1" type="button"></button><button aria-label="Show Boots on the Ground photo set 3" class="" data-botg-dot="2" type="button"></button><button aria-label="Show Boots on the Ground photo set 4" class="" data-botg-dot="3" type="button"></button><button aria-label="Show Boots on the Ground photo set 5" class="" data-botg-dot="4" type="button"></button><button aria-label="Show Boots on the Ground photo set 6" class="" data-botg-dot="5" type="button"></button><button aria-label="Show Boots on the Ground photo set 7" class="" data-botg-dot="6" type="button"></button><button aria-label="Show Boots on the Ground photo set 8" class="" data-botg-dot="7" type="button"></button><button aria-label="Show Boots on the Ground photo set 9" class="" data-botg-dot="8" type="button"></button><button aria-label="Show Boots on the Ground photo set 10" class="" data-botg-dot="9" type="button"></button><button aria-label="Show Boots on the Ground photo set 11" class="" data-botg-dot="10" type="button"></button><button aria-label="Show Boots on the Ground photo set 12" class="" data-botg-dot="11" type="button"></button><button aria-label="Show Boots on the Ground photo set 13" class="" data-botg-dot="12" type="button"></button><button aria-label="Show Boots on the Ground photo set 14" class="" data-botg-dot="13" type="button"></button><button aria-label="Show Boots on the Ground photo set 15" class="" data-botg-dot="14" type="button"></button></div>
 </div>
 </div>
-
+<div aria-hidden="true" class="impact-closing-space"></div>
 
 
 

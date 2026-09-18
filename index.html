@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -2350,9 +2351,6 @@
       order: 10 !important;
     }
 
-    .site-nav .nav-links a[href="#for-schools"] {
-      order: 0 !important;
-    }
 
     .site-nav .nav-links .nav-join {
       order: 1 !important;
@@ -2364,12 +2362,6 @@
       margin-right: 0.35rem !important;
     }
 
-    .site-nav .nav-links a[href="#first-time-voter"] { order: 2 !important; }
-    .site-nav .nav-links a[href="#get-involved"] { order: 3 !important; }
-    .site-nav .nav-links a[href="#about"] { order: 4 !important; }
-    .site-nav .nav-links a[href="#impact"] { order: 5 !important; }
-    .site-nav .nav-links a[href="#events"] { order: 6 !important; }
-    .site-nav .nav-links a[href="#contact"] { order: 7 !important; }
 
     .hero .hero-inner {
       max-width: 1320px !important;
@@ -2625,13 +2617,6 @@
       white-space: nowrap !important;
     }
 
-    .site-nav .nav-links a[href="#for-schools"] { order: 0 !important; }
-    .site-nav .nav-links a[href="#about"] { order: 1 !important; }
-    .site-nav .nav-links a[href="#impact"] { order: 2 !important; }
-    .site-nav .nav-links a[href="#first-time-voter"] { order: 3 !important; }
-    .site-nav .nav-links a[href="#get-involved"] { order: 4 !important; }
-    .site-nav .nav-links a[href="#events"] { order: 5 !important; }
-    .site-nav .nav-links a[href="#contact"] { order: 6 !important; }
 
     .site-nav .nav-links a:hover,
     .site-nav .nav-links a[aria-current="page"] {
@@ -6899,6 +6884,16 @@ body.tabbed-site main > #about {
     width: min(82vw, 420px) !important;
   }
 }
+</style>
+<style id="canonical-direct-nav-order">
+/* Canonical multipage navigation order. Prevents legacy tab-order CSS from reordering links. */
+body .site-nav .nav-links a[href="index.html"] { order: 1 !important; }
+body .site-nav .nav-links a[href="community-impact.html"] { order: 2 !important; }
+body .site-nav .nav-links a[href="youth-ready.html"] { order: 3 !important; }
+body .site-nav .nav-links a[href="first-time-voters.html"] { order: 4 !important; }
+body .site-nav .nav-links a[href="get-involved.html"] { order: 5 !important; }
+body .site-nav .nav-links a[href="past-events.html"] { order: 6 !important; }
+body .site-nav .nav-links a[href="contact.html"] { order: 7 !important; }
 </style>
 </head><body class="tabbed-site"><nav aria-label="Main navigation" class="site-nav">
 <div class="nav-inner">

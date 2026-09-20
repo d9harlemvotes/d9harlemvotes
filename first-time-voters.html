@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -3640,7 +3641,6 @@
     }
 
 </style>
-
 <style id="locked-about-impact-repair-css">
 /* Final locked repair: About Us and Community Impact only. */
 .locked-about-page,
@@ -7176,7 +7176,6 @@
 }
 
 </style>
-
 <style id="d9-past-events-v7">
 
 /* =====================================================================
@@ -8208,6 +8207,31 @@
   stroke: #f3c21c !important;
 }
 </style>
+<style id="d9-global-rbg-header-footer-fix-20260916">
+/* Global D9 Harlem Votes® signature rule: equal RED → BLACK → GREEN bands. */
+.site-nav::before,
+.site-nav::after,
+.site-footer::before,
+.site-footer::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 12px !important;
+  background: linear-gradient(
+    to bottom,
+    #e31c24 0 4px,
+    #000000 4px 8px,
+    #0e8f58 8px 12px
+  ) !important;
+  pointer-events: none !important;
+  z-index: 20 !important;
+}
+.site-nav::before, .site-footer::before { top: 0 !important; }
+.site-nav::after, .site-footer::after { bottom: 0 !important; }
+.site-footer { position: relative !important; }
+</style>
 </head>
 <body class="standalone-first-time-voters-page"><nav aria-label="Main navigation" class="site-nav">
 <div class="nav-inner">
@@ -8218,6 +8242,7 @@
 <div class="nav-links" id="nav-links">
 <a href="index.html">About Us</a>
 <a href="community-impact.html">Community Impact</a>
+<a href="why-harlem-matters.html">Why Harlem Matters</a>
 <a href="youth-ready.html">Youth Ready School Campaign</a>
 <a aria-current="page" href="first-time-voters.html">First-Time Voters</a>
 <a href="get-involved.html">Get Involved</a>
@@ -8248,9 +8273,7 @@
 </figure>
 </div>
 </div>
-
-<div class="ftv-blue-bridge" aria-hidden="true"></div>
-
+<div aria-hidden="true" class="ftv-blue-bridge"></div>
 <div class="ftv-band ftv-band-process-v22">
 <div class="ftv-shell ftv-process-v22-grid">
 <figure class="ftv-process-v22-figure">
@@ -8260,55 +8283,53 @@
 <p class="ftv-eyebrow ftv-eyebrow-light">TRANSPARENCY AT EVERY STEP</p>
 <h3>Where are you in the process?</h3>
 <p class="ftv-process-v22-lede">Applying, confirming your registration, preparing, and voting are different stages. Find your stage and take the next step.</p>
-<div class="ftv-process-v22-steps" aria-label="First-time voter process steps">
+<div aria-label="First-time voter process steps" class="ftv-process-v22-steps">
 <div class="ftv-process-v22-step ftv-step-apply">
-<span class="ftv-process-v22-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M18 10h22l10 10v34H18z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M40 10v10h10" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M26 38l16-16 5 5-16 16-8 3z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/></svg></span>
+<span aria-hidden="true" class="ftv-process-v22-icon"><svg focusable="false" viewbox="0 0 64 64"><path d="M18 10h22l10 10v34H18z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path><path d="M40 10v10h10" fill="none" stroke="currentColor" stroke-width="3.2"></path><path d="M26 38l16-16 5 5-16 16-8 3z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path></svg></span>
 <div><strong>APPLY</strong><p>Submit your voter registration application.</p></div>
 </div>
 <div class="ftv-process-v22-step ftv-step-confirm">
-<span class="ftv-process-v22-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="16" y="10" width="32" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M23 40l6 6 12-14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span aria-hidden="true" class="ftv-process-v22-icon"><svg focusable="false" viewbox="0 0 64 64"><rect fill="none" height="44" rx="4" stroke="currentColor" stroke-width="3.2" width="32" x="16" y="10"></rect><path d="M23 40l6 6 12-14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path></svg></span>
 <div><strong>CONFIRM</strong><p>Check that your registration has been processed.</p><a data-goatcounter-click="first-voter-check-status" data-goatcounter-title="First-Time Voters — Check Registration Status" href="https://voterlookup.elections.ny.gov/" rel="noopener noreferrer" target="_blank">Check registration status ↗</a></div>
 </div>
 <div class="ftv-process-v22-step ftv-step-prepare">
-<span class="ftv-process-v22-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="15" y="12" width="34" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M24 24h16M24 32h16M24 40h10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></span>
+<span aria-hidden="true" class="ftv-process-v22-icon"><svg focusable="false" viewbox="0 0 64 64"><rect fill="none" height="40" rx="4" stroke="currentColor" stroke-width="3.2" width="34" x="15" y="12"></rect><path d="M24 24h16M24 32h16M24 40h10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"></path></svg></span>
 <div><strong>PREPARE</strong><p>Know your poll site, ID rules, and ballot before Election Day.</p><div class="ftv-process-v22-links"><a data-goatcounter-click="first-voter-find-poll-site" href="https://www.vote.nyc/page/find-your-poll-site" rel="noopener noreferrer" target="_blank">Poll site ↗</a><a data-goatcounter-click="first-voter-id-rules" href="https://www.vote.nyc/page/voter-id" rel="noopener noreferrer" target="_blank">ID rules ↗</a><a data-goatcounter-click="first-voter-sample-ballot" href="https://findmypollsite.vote.nyc/?lang=en" rel="noopener noreferrer" target="_blank">Sample ballot ↗</a></div></div>
 </div>
 <div class="ftv-process-v22-step ftv-step-vote">
-<span class="ftv-process-v22-icon" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M20 26h24l4 24H16z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M24 26V14h16v12" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M26 18l6 6 12-12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span aria-hidden="true" class="ftv-process-v22-icon"><svg focusable="false" viewbox="0 0 64 64"><path d="M20 26h24l4 24H16z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.2"></path><path d="M24 26V14h16v12" fill="none" stroke="currentColor" stroke-width="3.2"></path><path d="M26 18l6 6 12-12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path></svg></span>
 <div><strong>VOTE</strong><p>Make your voting plan and complete the full ballot.</p></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-
-<div class="ftv-band-transition" aria-hidden="true"><span></span><span></span><span></span></div>
-
+<div aria-hidden="true" class="ftv-band-transition"><span></span><span></span><span></span></div>
 <div class="ftv-band ftv-band-polls-v22">
 <div class="ftv-shell">
 <p class="ftv-eyebrow">AT THE POLLS</p>
 <h3>Knowledge Is Power at the Polls.</h3>
 <div class="ftv-polls-v22-grid">
 <div class="ftv-polls-v22-item">
-<span class="ftv-polls-v22-icon ftv-rights-fist" aria-hidden="true">
-<svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
-<rect x="14" y="15" width="9" height="17" rx="4" fill="currentColor"/>
-<rect x="23" y="10" width="9" height="22" rx="4" fill="currentColor"/>
-<rect x="32" y="11" width="9" height="21" rx="4" fill="currentColor"/>
-<rect x="41" y="15" width="9" height="17" rx="4" fill="currentColor"/>
-<path d="M17 29h34v7c0 6-3 11-8 14v7H25v-7c-5-3-8-8-8-14v-7Z" fill="currentColor"/>
-<path d="M16 31c-3 0-5 2-5 5v3c0 6 4 11 10 13l4-8-2-10c-1-2-4-3-7-3Z" fill="currentColor"/>
+<span aria-hidden="true" class="ftv-polls-v22-icon ftv-rights-fist">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 64 64">
+<rect fill="currentColor" height="17" rx="4" width="9" x="14" y="15"></rect>
+<rect fill="currentColor" height="22" rx="4" width="9" x="23" y="10"></rect>
+<rect fill="currentColor" height="21" rx="4" width="9" x="32" y="11"></rect>
+<rect fill="currentColor" height="17" rx="4" width="9" x="41" y="15"></rect>
+<path d="M17 29h34v7c0 6-3 11-8 14v7H25v-7c-5-3-8-8-8-14v-7Z" fill="currentColor"></path>
+<path d="M16 31c-3 0-5 2-5 5v3c0 6 4 11 10 13l4-8-2-10c-1-2-4-3-7-3Z" fill="currentColor"></path>
 </svg>
 </span>
 <div><h4>If your name is not on the registration list</h4><p>Speak with an election official at the poll site. If you believe you are eligible to vote, you may ask for an <strong>affidavit ballot</strong> or ask about the procedure for seeking a <strong>court order permitting you to vote</strong>.</p><a class="ftv-rights-link" data-goatcounter-click="first-voter-voting-rights" data-goatcounter-title="First-Time Voters — Voting Rights" href="https://www.vote.nyc/page/voters-rights" rel="noopener noreferrer" target="_blank">NYC Voter’s Bill of Rights ↗</a></div>
 </div>
 <div class="ftv-polls-v22-item">
-<span class="ftv-polls-v22-icon ftv-ballot-flip-icon" aria-hidden="true">
-<svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
-<rect x="17" y="10" width="30" height="42" rx="3" fill="none" stroke="currentColor" stroke-width="3.4"/>
-<path d="M24 22h16M24 30h11" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
-<path d="M26 43c4 4 11 5 16 1 3-2 5-5 5-9" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
-<path d="M42 36l5-2 2 5" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<span aria-hidden="true" class="ftv-polls-v22-icon ftv-ballot-flip-icon">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 64 64">
+<rect fill="none" height="42" rx="3" stroke="currentColor" stroke-width="3.4" width="30" x="17" y="10"></rect>
+<path d="M24 22h16M24 30h11" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.4"></path>
+<path d="M26 43c4 4 11 5 16 1 3-2 5-5 5-9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.4"></path>
+<path d="M42 36l5-2 2 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.4"></path>
 </svg>
 </span>
 <div><h4>Flip The Ballot.</h4><p>Local races, judges, and ballot questions may appear farther down or on another side of the ballot. Check the entire ballot before you finish voting.</p><a data-goatcounter-click="first-voter-flip-ballot" data-goatcounter-title="First-Time Voters — Ballot Information" href="https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/" rel="noopener noreferrer" target="_blank">See 2026 ballot information ↗</a></div>

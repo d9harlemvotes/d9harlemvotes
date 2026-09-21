@@ -88,7 +88,7 @@ body.why-harlem-page main {
   isolation: isolate;
   min-height: clamp(570px, 66vw, 780px);
   display: grid;
-  align-items: end;
+  align-items: start;
   overflow: hidden;
   background: var(--whm-blue);
   color: var(--whm-white);
@@ -115,7 +115,7 @@ body.why-harlem-page main {
 .whm-hero-inner {
   width: min(90%, 1240px);
   margin: 0 auto;
-  padding: clamp(4rem, 8vw, 6.4rem) 0 clamp(3.4rem, 6vw, 5rem);
+  padding: clamp(2.75rem, 4.5vw, 4.25rem) 0 clamp(3rem, 5vw, 4rem);
 }
 .whm-hero .whm-kicker,
 .whm-hero h1,
@@ -897,7 +897,7 @@ body.why-harlem-page .site-footer .footer-registered {
 <main>
 <header class="whm-hero">
   <div class="whm-hero-media" aria-hidden="true">
-    <img src="assets/why-harlem-primary-hero.jpg" alt="" onerror="this.onerror=null;this.src='https://d9harlemvotes.github.io/d9harlemvotes/assets/why-harlem-primary-hero.jpg';"/>
+    <img src="assets/why-harlem-primary-hero.jpg?v=3" alt="" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/d9harlemvotes/d9harlemvotes/main/assets/why-harlem-primary-hero.jpg';"/>
   </div>
   <div class="whm-hero-inner">
     <p class="whm-kicker">Nonpartisan Voter Education</p>
@@ -966,25 +966,25 @@ body.why-harlem-page .site-footer .footer-registered {
       <div class="whm-assembly-grid">
         <article class="whm-assembly-card">
           <h4>Assembly District 68</h4>
-          <strong class="whm-assembly-rate">19.4%</strong>
+          <strong class="whm-assembly-rate" data-value="19.4">19.4%</strong>
           <span class="whm-assembly-label">Voter Turnout</span>
           <p class="whm-assembly-explainer"><strong>11,930</strong> of <strong>61,446</strong> registered Democrats voted in the primary.</p>
         </article>
         <article class="whm-assembly-card">
           <h4>Assembly District 69</h4>
-          <strong class="whm-assembly-rate">37.5%</strong>
+          <strong class="whm-assembly-rate" data-value="37.5">37.5%</strong>
           <span class="whm-assembly-label">Voter Turnout</span>
           <p class="whm-assembly-explainer"><strong>26,646</strong> of <strong>71,055</strong> registered Democrats voted in the primary.</p>
         </article>
         <article class="whm-assembly-card">
           <h4>Assembly District 70</h4>
-          <strong class="whm-assembly-rate">24.4%</strong>
+          <strong class="whm-assembly-rate" data-value="24.4">24.4%</strong>
           <span class="whm-assembly-label">Voter Turnout</span>
           <p class="whm-assembly-explainer"><strong>17,163</strong> of <strong>70,476</strong> registered Democrats voted in the primary.</p>
         </article>
         <article class="whm-assembly-card">
           <h4>Assembly District 71</h4>
-          <strong class="whm-assembly-rate">27.5%</strong>
+          <strong class="whm-assembly-rate" data-value="27.5">27.5%</strong>
           <span class="whm-assembly-label">Voter Turnout</span>
           <p class="whm-assembly-explainer"><strong>18,024</strong> of <strong>65,650</strong> registered Democrats voted in the primary.</p>
         </article>
@@ -1055,7 +1055,7 @@ body.why-harlem-page .site-footer .footer-registered {
 <section class="whm-blue" aria-labelledby="whm-hearing-title">
   <div class="whm-shell whm-conversation-grid">
     <figure class="whm-conversation-photo">
-      <img src="assets/why-harlem-community-conversation.jpg" alt="Community conversation about voting and civic participation at an outdoor event"/>
+      <img src="assets/why-harlem-community-conversation.jpg?v=3" alt="Community conversation about voting and civic participation at an outdoor event" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/d9harlemvotes/d9harlemvotes/main/assets/why-harlem-community-conversation.jpg';"/>
       <figcaption>D9 Harlem Votes® community engagement and conversation about voting and civic participation.</figcaption>
     </figure>
 
@@ -1134,12 +1134,100 @@ body.why-harlem-page .site-footer .footer-registered {
     }
   };
 
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.bottom > 0 && rect.top < window.innerHeight;
+  }
+
+  function animatePercentage(el, target) {
+    if (reduceMotion) {
+      el.textContent = target.toFixed(1) + '%';
+      return;
+    }
+
+    const duration = 900;
+    const startTime = performance.now();
+
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = (target * eased).toFixed(1) + '%';
+      if (progress < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  const percentageObserver = (!reduceMotion && 'IntersectionObserver' in window)
+    ? new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          animatePercentage(el, Number(el.dataset.value));
+          observer.unobserve(el);
+        });
+      }, { threshold: 0.35 })
+    : null;
+
+  function primePercentage(el, value) {
+    el.dataset.value = value.toFixed(1);
+
+    if (reduceMotion || !percentageObserver) {
+      el.textContent = value.toFixed(1) + '%';
+      return;
+    }
+
+    percentageObserver.unobserve(el);
+    el.textContent = '0.0%';
+
+    if (isInViewport(el)) {
+      animatePercentage(el, value);
+    } else {
+      percentageObserver.observe(el);
+    }
+  }
+
+  function animateBars(chart) {
+    requestAnimationFrame(() => {
+      chart.querySelectorAll('.whm-bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.width + '%';
+      });
+    });
+  }
+
+  const barObserver = (!reduceMotion && 'IntersectionObserver' in window)
+    ? new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          animateBars(entry.target);
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.2 })
+    : null;
+
+  function primeBars(chart) {
+    chart.querySelectorAll('.whm-bar-fill').forEach(bar => {
+      bar.style.width = reduceMotion ? bar.dataset.width + '%' : '0%';
+    });
+
+    if (reduceMotion || !barObserver) {
+      animateBars(chart);
+    } else if (isInViewport(chart)) {
+      animateBars(chart);
+    } else {
+      barObserver.unobserve(chart);
+      barObserver.observe(chart);
+    }
+  }
+
   function renderCommunity(mode) {
     const modeData = data[mode];
     document.querySelectorAll('.whm-community-card').forEach(card => {
       const key = card.dataset.key;
       const value = modeData.community[key];
-      card.querySelector('.whm-turnout-number').textContent = value.toFixed(1) + '%';
+      primePercentage(card.querySelector('.whm-turnout-number'), value);
       card.querySelector('.whm-turnout-caption').textContent = modeData.label + ' turnout';
     });
   }
@@ -1160,15 +1248,14 @@ body.why-harlem-page .site-footer .footer-registered {
           <div class="whm-bar-track" aria-hidden="true">
             <div class="whm-bar-fill" data-width="${width.toFixed(2)}"></div>
           </div>
-          <div class="whm-bar-value">${value.toFixed(1)}%</div>
+          <div class="whm-bar-value" data-value="${value.toFixed(1)}">${value.toFixed(1)}%</div>
         </div>`;
     }).join('');
 
-    requestAnimationFrame(() => {
-      chart.querySelectorAll('.whm-bar-fill').forEach(bar => {
-        bar.style.width = bar.dataset.width + '%';
-      });
+    chart.querySelectorAll('.whm-bar-value').forEach(valueEl => {
+      primePercentage(valueEl, Number(valueEl.dataset.value));
     });
+    primeBars(chart);
 
     document.getElementById('whm-gap-copy').textContent = data[mode].gap;
   }
@@ -1186,6 +1273,11 @@ body.why-harlem-page .site-footer .footer-registered {
   });
 
   setMode('primary');
+
+  document.querySelectorAll('.whm-assembly-rate').forEach(rate => {
+    const value = Number(rate.dataset.value || rate.textContent.replace('%', ''));
+    primePercentage(rate, value);
+  });
 })();
 </script>
 </body>

@@ -86,7 +86,7 @@ body.why-harlem-page main {
 .whm-hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(570px, 66vw, 780px);
+  min-height: clamp(500px, 55vw, 650px);
   display: grid;
   align-items: start;
   overflow: hidden;
@@ -447,7 +447,7 @@ body.why-harlem-page main {
 }
 .whm-bar-row {
   display: grid;
-  grid-template-columns: minmax(245px, .95fr) minmax(180px, 1.55fr) 86px;
+  grid-template-columns: minmax(300px, 1.15fr) minmax(180px, 1.4fr) 86px;
   gap: 1rem;
   align-items: center;
   padding: .9rem 0;
@@ -463,11 +463,11 @@ body.why-harlem-page main {
   display: block;
   margin-top: .2rem;
   color: rgba(255,255,255,.65);
-  font-size: .66rem;
-  line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: .06em;
-  text-transform: uppercase;
+  font-size: .74rem;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
 }
 .whm-bar-track {
   height: 14px;
@@ -674,7 +674,7 @@ body.why-harlem-page main {
     display: block;
     margin: .25rem 0 0;
   }
-  .whm-hero { min-height: 650px; }
+  .whm-hero { min-height: 600px; }
   .whm-hero-media img { object-position: 60% center; }
   .whm-hero-media::after {
     background: linear-gradient(0deg, rgba(0,15,74,.97) 0%, rgba(0,15,74,.82) 58%, rgba(0,15,74,.38) 100%);
@@ -905,6 +905,7 @@ body.why-harlem-page .site-footer .footer-registered {
     <h1>Why Harlem Matters</h1>
     <p class="whm-hero-copy">D9 Harlem Votes® is a nonpartisan civic-engagement organization. We do not endorse candidates or political parties, distribute campaign materials, or provide candidate lists.</p>
     <p class="whm-hero-copy">We help Harlem voters understand <strong>what offices are on the ballot, what those offices do, and how they affect everyday life.</strong></p>
+    <p class="whm-hero-copy">We use publicly available voter participation data to look at turnout across Harlem and compare it with Manhattan districts where turnout rates are higher.</p>
   </div>
 </header>
 
@@ -914,7 +915,7 @@ body.why-harlem-page .site-footer .footer-registered {
       <p class="whm-kicker">Harlem Voter Participation</p>
       <h2 class="whm-title" id="whm-participation-title">Community Districts 9, 10, and 11</h2>
       <div class="whm-rule" aria-hidden="true"><span></span><span></span><span></span></div>
-      <p>D9 Harlem Votes® centers Black voters in Harlem. We look at publicly available participation data to better understand what is happening across West, Central, and East Harlem. We use that information together with community engagement and feedback to strengthen our voter education and outreach strategies.</p>
+      <p>D9 Harlem Votes® centers Black voters in Harlem. Community District 9 includes Hamilton Heights, Manhattanville, Morningside Heights, Sugar Hill, and West Harlem; Community District 10 is Central Harlem; and Community District 11 is East Harlem. We use turnout data together with community engagement and feedback to strengthen our voter education and outreach strategies.</p>
     </div>
 
     <div class="whm-election-toggle" role="group" aria-label="Choose 2025 election">
@@ -1004,7 +1005,7 @@ body.why-harlem-page .site-footer .footer-registered {
       <p class="whm-kicker">How Harlem Compares</p>
       <h2 class="whm-title" id="whm-compare-title">The same percentage can look different when we add context.</h2>
       <div class="whm-rule" aria-hidden="true"><span></span><span></span><span></span></div>
-      <p>The comparison below places Community Districts 9, 10, and 11 alongside selected Manhattan communities. These are geographic comparisons. The districts are not racially uniform.</p>
+      <p><strong>Why these districts?</strong> We selected Manhattan community districts with higher voter turnout rates to show how Harlem participation compares. These are geographic comparisons, and the districts are not racially uniform.</p>
     </div>
 
     <div class="whm-election-toggle" role="group" aria-label="Choose comparison election">
@@ -1108,13 +1109,13 @@ body.why-harlem-page .site-footer .footer-registered {
       label: '2025 Primary',
       community: { cd9: 34.9, cd10: 32.4, cd11: 28.2 },
       compare: [
-        ['Community District 9, West Harlem', 'Harlem', 34.9],
-        ['Community District 10, Central Harlem', 'Harlem', 32.4],
-        ['Community District 11, East Harlem', 'Harlem', 28.2],
-        ['Community District 1, Financial District and Tribeca', 'Selected Manhattan comparison', 41.1],
-        ['Community District 2, Greenwich Village and SoHo', 'Selected Manhattan comparison', 46.7],
-        ['Community District 7, Upper West Side', 'Selected Manhattan comparison', 51.2],
-        ['Community District 8, Upper East Side and Roosevelt Island', 'Selected Manhattan comparison', 47.5]
+        ['Community District 9', 'Hamilton Heights · Manhattanville · Morningside Heights · Sugar Hill · West Harlem', 34.9],
+        ['Community District 10', 'Central Harlem', 32.4],
+        ['Community District 11', 'East Harlem', 28.2],
+        ['Community District 1', 'Tribeca · Seaport/Civic Center · Financial District · Battery Park City', 41.1],
+        ['Community District 2', 'Greenwich Village · West Village · NoHo · SoHo · Lower East Side · Chinatown · Little Italy', 46.7],
+        ['Community District 7', 'Manhattan Valley · Upper West Side · Lincoln Square', 51.2],
+        ['Community District 8', 'Upper East Side · Lenox Hill · Yorkville · Roosevelt Island', 47.5]
       ],
       gap: "In the 2025 primary, turnout across Community Districts 9, 10, and 11 ranged from 28.2% to 34.9%. In the selected Manhattan comparison communities, turnout ranged from 41.1% to 51.2%. The numbers show a participation gap in this comparison. They do not, by themselves, tell us why that gap exists."
     },
@@ -1122,13 +1123,13 @@ body.why-harlem-page .site-footer .footer-registered {
       label: '2025 General election',
       community: { cd9: 41.1, cd10: 39.9, cd11: 34.9 },
       compare: [
-        ['Community District 9, West Harlem', 'Harlem', 41.1],
-        ['Community District 10, Central Harlem', 'Harlem', 39.9],
-        ['Community District 11, East Harlem', 'Harlem', 34.9],
-        ['Community District 1, Financial District and Tribeca', 'Selected Manhattan comparison', 50.6],
-        ['Community District 2, Greenwich Village and SoHo', 'Selected Manhattan comparison', 54.0],
-        ['Community District 7, Upper West Side', 'Selected Manhattan comparison', 57.5],
-        ['Community District 8, Upper East Side and Roosevelt Island', 'Selected Manhattan comparison', 59.2]
+        ['Community District 9', 'Hamilton Heights · Manhattanville · Morningside Heights · Sugar Hill · West Harlem', 41.1],
+        ['Community District 10', 'Central Harlem', 39.9],
+        ['Community District 11', 'East Harlem', 34.9],
+        ['Community District 1', 'Tribeca · Seaport/Civic Center · Financial District · Battery Park City', 50.6],
+        ['Community District 2', 'Greenwich Village · West Village · NoHo · SoHo · Lower East Side · Chinatown · Little Italy', 54.0],
+        ['Community District 7', 'Manhattan Valley · Upper West Side · Lincoln Square', 57.5],
+        ['Community District 8', 'Upper East Side · Lenox Hill · Yorkville · Roosevelt Island', 59.2]
       ],
       gap: "In the 2025 general election, turnout across Community Districts 9, 10, and 11 ranged from 34.9% to 41.1%. In the selected Manhattan comparison communities, turnout ranged from 50.6% to 59.2%. The numbers show a participation gap in this comparison. They do not, by themselves, tell us why that gap exists."
     }

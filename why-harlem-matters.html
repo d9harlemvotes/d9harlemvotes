@@ -209,45 +209,56 @@ body.why-harlem-page main {
 }
 
 .whm-community-grid {
-  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-top: 2.25rem;
+  padding: 1.7rem 0 1.8rem;
   border-top: 1px solid rgba(0,15,74,.23);
   border-bottom: 1px solid rgba(0,15,74,.23);
 }
 .whm-community-card {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) auto;
-  gap: 1.5rem;
-  align-items: center;
-  padding: 1.15rem 0;
-  border-bottom: 1px solid rgba(0,15,74,.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  min-width: 0;
+  padding: 0;
+  border-bottom: 0;
 }
 .whm-community-card:last-child { border-bottom: 0; }
 .whm-community-label {
+  width: 100%;
   min-width: 0;
 }
 .whm-community-card h3 {
   margin: 0;
   color: var(--whm-blue);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
-  line-height: 1.1;
+  font-size: clamp(1.2rem, 1.55vw, 1.5rem);
+  line-height: 1.08;
 }
 .whm-community-name {
-  display: inline;
-  margin: 0 0 0 .35rem;
+  display: block;
+  margin: .42rem 0 0;
   color: #4a5260;
   font-family: inherit;
-  font-size: .9rem;
+  font-size: .92rem;
   font-weight: 700;
   letter-spacing: 0;
+  line-height: 1.25;
   text-transform: none;
+  white-space: nowrap;
 }
 
 .whm-community-card[data-key="cd11"] .whm-community-name {
   white-space: nowrap;
 }
 .whm-turnout-wrap {
-  text-align: right;
+  width: 100%;
+  margin-top: .15rem;
+  text-align: left;
 }
 .whm-turnout-number {
   display: block;
@@ -578,6 +589,26 @@ body.why-harlem-page main {
 
 @media (max-width: 980px) {
 
+  .whm-community-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+  .whm-community-card {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(0,15,74,.2);
+  }
+  .whm-community-card:last-child { border-bottom: 0; }
+  .whm-turnout-wrap {
+    width: auto;
+    margin-top: 0;
+    text-align: right;
+  }
+
   .whm-assembly-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .whm-assembly-card:nth-child(2) { border-right: 0; }
   .whm-assembly-card:nth-child(-n+2) { border-bottom: 1px solid rgba(0,15,74,.22); }
@@ -639,6 +670,156 @@ body.why-harlem-page main {
     transition: none !important;
   }
 }
+
+
+/* ===== WHY HARLEM MATTERS — TURNOUT LAYOUT FIX =====
+   Keeps the three Harlem districts readable and gives each result room to breathe. */
+@media (min-width: 901px) {
+  body.why-harlem-page .whm-community-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    column-gap: clamp(3rem, 5vw, 5.5rem) !important;
+    row-gap: 0 !important;
+    margin-top: 2.4rem !important;
+    padding: 2.15rem 0 2.25rem !important;
+    border-top: 1px solid rgba(0,15,74,.23) !important;
+    border-bottom: 1px solid rgba(0,15,74,.23) !important;
+  }
+
+  body.why-harlem-page .whm-community-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  body.why-harlem-page .whm-community-label {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+  }
+
+  body.why-harlem-page .whm-community-card h3 {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    color: var(--whm-blue) !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(1.35rem, 1.55vw, 1.6rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.02em !important;
+    text-transform: none !important;
+  }
+
+  body.why-harlem-page .whm-community-name {
+    display: block !important;
+    width: 100% !important;
+    margin: .5rem 0 0 !important;
+    color: #4a5260 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: .95rem !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+  }
+
+  body.why-harlem-page .whm-turnout-wrap {
+    display: block !important;
+    width: 100% !important;
+    margin: 1.55rem 0 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  body.why-harlem-page .whm-turnout-number {
+    display: block !important;
+    margin: 0 !important;
+    color: var(--whm-blue) !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(3.2rem, 4.4vw, 4.35rem) !important;
+    font-weight: 700 !important;
+    line-height: .88 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  body.why-harlem-page .whm-turnout-caption {
+    margin: .55rem 0 0 !important;
+    color: #535b68 !important;
+    font-size: .72rem !important;
+    font-weight: 850 !important;
+    line-height: 1.25 !important;
+    letter-spacing: .07em !important;
+    text-transform: uppercase !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body.why-harlem-page .whm-community-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    margin-top: 2rem !important;
+    padding: 0 !important;
+  }
+  body.why-harlem-page .whm-community-card {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
+    padding: 1.4rem 0 !important;
+    border-bottom: 1px solid rgba(0,15,74,.2) !important;
+  }
+  body.why-harlem-page .whm-community-card:last-child {
+    border-bottom: 0 !important;
+  }
+  body.why-harlem-page .whm-community-label {
+    margin: 0 !important;
+    text-transform: none !important;
+  }
+  body.why-harlem-page .whm-community-card h3 {
+    margin: 0 !important;
+    text-transform: none !important;
+  }
+  body.why-harlem-page .whm-community-name {
+    display: block !important;
+    margin: .35rem 0 0 !important;
+    font-size: .92rem !important;
+    white-space: nowrap !important;
+    text-transform: none !important;
+  }
+  body.why-harlem-page .whm-turnout-wrap {
+    width: auto !important;
+    margin: 0 !important;
+    text-align: right !important;
+  }
+}
+/* ===== END TURNOUT LAYOUT FIX ===== */
+
+/* Why Harlem Matters footer contrast correction */
+body.why-harlem-page .site-footer,
+body.why-harlem-page .site-footer .footer-wordmark,
+body.why-harlem-page .site-footer p,
+body.why-harlem-page .site-footer small {
+  color: #ffffff !important;
+}
+body.why-harlem-page .site-footer .brand-black {
+  color: #e7e9ee !important;
+}
+
 </style>
 </head>
 

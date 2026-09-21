@@ -7705,6 +7705,61 @@ body #contact.final-contact-page .contact-email-clean a:active {
   }
 }
 </style>
+<style id="contact-social-links-20260920">
+/* Contact-only social links: icon-only links beneath the email address. */
+#contact .contact-social-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.9rem !important;
+  margin: 1rem 0 0 !important;
+  padding: 0 !important;
+}
+#contact .contact-social-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  opacity: 0.9 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transition: opacity 160ms ease, transform 160ms ease !important;
+}
+#contact .contact-social-link svg {
+  display: block !important;
+  width: 27px !important;
+  height: 27px !important;
+  fill: none;
+  stroke: currentColor;
+}
+#contact .contact-social-link.facebook svg {
+  fill: currentColor;
+  stroke: none;
+}
+#contact .contact-social-link.youtube .youtube-shell {
+  fill: currentColor;
+  stroke: none;
+}
+#contact .contact-social-link.youtube .youtube-play {
+  fill: #000f4a;
+  stroke: none;
+}
+#contact .contact-social-link:hover,
+#contact .contact-social-link:focus-visible {
+  opacity: 1 !important;
+  transform: translateY(-1px);
+  outline: 2px solid rgba(255,255,255,.75);
+  outline-offset: 4px;
+}
+@media (max-width: 760px) {
+  #contact .contact-social-links { gap: 0.8rem !important; margin-top: 0.9rem !important; }
+  #contact .contact-social-link { width: 32px !important; height: 32px !important; }
+  #contact .contact-social-link svg { width: 25px !important; height: 25px !important; }
+}
+</style>
 <style id="canonical-direct-nav-order">
 /* Canonical multipage navigation order. Prevents legacy tab-order CSS from reordering links. */
 body .site-nav .nav-links a[href="index.html"] { order: 1 !important; }
@@ -7747,6 +7802,17 @@ body .site-nav .nav-links a[href="contact.html"] { order: 8 !important; }
 <div aria-hidden="true" class="brand-rule final-rule"><span></span><span></span><span></span></div>
 <div class="contact-email-clean">
 <a href="mailto:d9harlemvotes@gmail.com">d9harlemvotes@gmail.com</a>
+</div>
+<div aria-label="D9 Harlem Votes® social media" class="contact-social-links">
+<a aria-label="D9 Harlem Votes® on Instagram" class="contact-social-link instagram" href="https://www.instagram.com/d9harlemvotes/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" stroke-width="2"></rect><circle cx="12" cy="12" r="4" stroke-width="2"></circle><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"></circle></svg>
+</a>
+<a aria-label="D9 Harlem Votes® on Facebook" class="contact-social-link facebook" href="https://www.facebook.com/p/D9-Harlem-61575803535004/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.8 22v-8h2.8l.4-3h-3.2V9.1c0-.9.3-1.6 1.7-1.6H17V4.8c-.7-.1-1.5-.2-2.3-.2-2.5 0-4.2 1.5-4.2 4.3V11H8v3h2.5v8h3.3z"></path></svg>
+</a>
+<a aria-label="D9 Harlem Votes® on YouTube" class="contact-social-link youtube" href="https://www.youtube.com/@D9HarlemVotes" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewBox="0 0 24 24"><rect class="youtube-shell" x="2.5" y="6" width="19" height="12" rx="4"></rect><path class="youtube-play" d="M10 9.4v5.2l5-2.6-5-2.6z"></path></svg>
+</a>
 </div>
 <p class="contact-motto-clean">Educate • Engage • Empower • Vote</p>
 </div>

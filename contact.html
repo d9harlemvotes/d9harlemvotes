@@ -2352,6 +2352,9 @@
       order: 10 !important;
     }
 
+    .site-nav .nav-links a[href="#for-schools"] {
+      order: 0 !important;
+    }
 
     .site-nav .nav-links .nav-join {
       order: 1 !important;
@@ -2363,6 +2366,12 @@
       margin-right: 0.35rem !important;
     }
 
+    .site-nav .nav-links a[href="#first-time-voter"] { order: 2 !important; }
+    .site-nav .nav-links a[href="#get-involved"] { order: 3 !important; }
+    .site-nav .nav-links a[href="#about"] { order: 4 !important; }
+    .site-nav .nav-links a[href="#impact"] { order: 5 !important; }
+    .site-nav .nav-links a[href="#events"] { order: 6 !important; }
+    .site-nav .nav-links a[href="#contact"] { order: 7 !important; }
 
     .hero .hero-inner {
       max-width: 1320px !important;
@@ -2618,6 +2627,13 @@
       white-space: nowrap !important;
     }
 
+    .site-nav .nav-links a[href="#for-schools"] { order: 0 !important; }
+    .site-nav .nav-links a[href="#about"] { order: 1 !important; }
+    .site-nav .nav-links a[href="#impact"] { order: 2 !important; }
+    .site-nav .nav-links a[href="#first-time-voter"] { order: 3 !important; }
+    .site-nav .nav-links a[href="#get-involved"] { order: 4 !important; }
+    .site-nav .nav-links a[href="#events"] { order: 5 !important; }
+    .site-nav .nav-links a[href="#contact"] { order: 6 !important; }
 
     .site-nav .nav-links a:hover,
     .site-nav .nav-links a[aria-current="page"] {
@@ -6846,6 +6862,7 @@
 /* ===== END PAST EVENTS V11 ===== */
 
 </style>
+
 <style id="ftv-v30-final-visual-fix">
 @media (min-width: 981px) {
   #first-time-voter .ftv-process-v22-grid {
@@ -6882,6 +6899,7 @@
   fill: none !important;
 }
 </style>
+
 <style id="d9-contact-final-20260914">
 /* CONTACT PAGE — final scoped treatment (2026-09-14).
    Contact only: silver surface, deep-blue structure, restored Power Fist artwork. */
@@ -7109,7 +7127,8 @@
   }
 }
 </style>
-<style id="contact-silver-refresh">
+
+  <style id="contact-silver-refresh">
     /* CONTACT PAGE — approved silver supporting-page treatment.
        Scoped to #contact so closed pages, navigation, and footer remain unchanged. */
 
@@ -7317,6 +7336,7 @@
       }
     }
   </style>
+
 <style id="d9-contact-update-20260915">
 /* CONTACT TAB — 2026-09-15 requested refinements. Scoped to Contact only. */
 #contact.final-contact-page,
@@ -7372,6 +7392,8 @@
   }
 }
 </style>
+
+
 <style id="d9-contact-closing-statement-20260915">
 /* ===== CONTACT PAGE — DEEP BLUE CLOSING STATEMENT (2026-09-15) =====
    Contact-only. Approved closing-statement treatment based on the reviewed mockup. */
@@ -7655,6 +7677,9 @@ body #contact.final-contact-page .contact-email-clean a:active {
 /* ===== END CONTACT PAGE HARD WHITE-TEXT OVERRIDE ===== */
 
 </style>
+
+
+
 <style id="contact-role-compact-update">
 /* Contact-only refinement: seven visible public-facing roles, compact type, press last. */
 #contact .contact-roles-clean ul {
@@ -7705,91 +7730,9 @@ body #contact.final-contact-page .contact-email-clean a:active {
   }
 }
 </style>
-<style id="contact-social-links-20260920">
-/* Contact-only social links: icon-only links beneath the email address. */
-#contact .contact-social-links {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.9rem !important;
-  margin: 1rem 0 0 !important;
-  padding: 0 !important;
-}
-#contact .contact-social-link {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 34px !important;
-  height: 34px !important;
-  text-decoration: none !important;
-  opacity: 1 !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  transition: transform 160ms ease, filter 160ms ease !important;
-}
-#contact .contact-social-link svg {
-  display: block !important;
-  width: 28px !important;
-  height: 28px !important;
-}
-#contact .contact-social-link.instagram .instagram-shell {
-  fill: url(#instagram-gradient) !important;
-  stroke: none !important;
-}
-#contact .contact-social-link.instagram .instagram-camera,
-#contact .contact-social-link.instagram .instagram-lens {
-  fill: none !important;
-  stroke: #ffffff !important;
-}
-#contact .contact-social-link.instagram .instagram-dot {
-  fill: #ffffff !important;
-  stroke: none !important;
-}
-#contact .contact-social-link.facebook .facebook-shell {
-  fill: #1877f2 !important;
-  stroke: none !important;
-}
-#contact .contact-social-link.facebook .facebook-f {
-  fill: #ffffff !important;
-  stroke: none !important;
-}
-#contact .contact-social-link.youtube .youtube-shell {
-  fill: #ff0000 !important;
-  stroke: none !important;
-}
-#contact .contact-social-link.youtube .youtube-play {
-  fill: #ffffff !important;
-  stroke: none !important;
-}
-#contact .contact-social-link:hover,
-#contact .contact-social-link:focus-visible {
-  opacity: 1 !important;
-  transform: translateY(-1px);
-  outline: 2px solid rgba(255,255,255,.75);
-  outline-offset: 4px;
-}
-@media (max-width: 760px) {
-  #contact .contact-social-links { gap: 0.8rem !important; margin-top: 0.9rem !important; }
-  #contact .contact-social-link { width: 32px !important; height: 32px !important; }
-  #contact .contact-social-link svg { width: 25px !important; height: 25px !important; }
-}
-</style>
 
-<style id="contact-phone-20260922">
-/* Contact-only phone number, styled to sit naturally beneath the email address. */
-#contact .contact-phone-link,
-#contact .contact-phone-link:link,
-#contact .contact-phone-link:visited,
-#contact .contact-phone-link:hover,
-#contact .contact-phone-link:focus {
-  display: inline-block !important;
-  margin-top: 0.45rem !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-}
-</style>
-<style id="canonical-direct-nav-order">
-/* Canonical multipage navigation order. Prevents legacy tab-order CSS from reordering links. */
+<style id="contact-current-additions-20260922">
+/* Current Contact page additions and final typography refinement. */
 body .site-nav .nav-links a[href="index.html"] { order: 1 !important; }
 body .site-nav .nav-links a[href="community-impact.html"] { order: 2 !important; }
 body .site-nav .nav-links a[href="why-harlem-matters.html"] { order: 3 !important; }
@@ -7798,7 +7741,396 @@ body .site-nav .nav-links a[href="first-time-voters.html"] { order: 5 !important
 body .site-nav .nav-links a[href="get-involved.html"] { order: 6 !important; }
 body .site-nav .nav-links a[href="past-events.html"] { order: 7 !important; }
 body .site-nav .nav-links a[href="contact.html"] { order: 8 !important; }
-</style></head>
+
+#contact .contact-phone-link,
+#contact .contact-phone-link:link,
+#contact .contact-phone-link:visited,
+#contact .contact-phone-link:hover,
+#contact .contact-phone-link:focus {
+  display: inline-block !important;
+  margin-top: .45rem !important;
+  text-decoration: none !important;
+}
+
+#contact .contact-social-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: .95rem !important;
+  margin-top: 1.05rem !important;
+}
+#contact .contact-social-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+#contact .contact-social-link svg {
+  display: block !important;
+  width: 28px !important;
+  height: 28px !important;
+  overflow: visible !important;
+}
+#contact .contact-social-link.instagram .instagram-shell { fill: url(#instagram-gradient); }
+#contact .contact-social-link.instagram .instagram-camera,
+#contact .contact-social-link.instagram .instagram-lens { fill: none; stroke: #fff; }
+#contact .contact-social-link.instagram .instagram-dot { fill: #fff; }
+#contact .contact-social-link.facebook .facebook-shell { fill: #1877f2; }
+#contact .contact-social-link.facebook .facebook-f { fill: #fff; }
+#contact .contact-social-link.youtube .youtube-shell { fill: #ff0000; }
+#contact .contact-social-link.youtube .youtube-play { fill: #fff; }
+
+/* Soften the bright/heavy contact type without changing layout or content. */
+body #contact.final-contact-page .contact-email-clean a,
+body #contact.final-contact-page .contact-email-clean a:link,
+body #contact.final-contact-page .contact-email-clean a:visited,
+body #contact.final-contact-page .contact-email-clean a:hover,
+body #contact.final-contact-page .contact-email-clean a:focus,
+body #contact.final-contact-page .contact-email-clean a:active,
+body #contact.final-contact-page .contact-phone-link,
+body #contact.final-contact-page .contact-phone-link:link,
+body #contact.final-contact-page .contact-phone-link:visited,
+body #contact.final-contact-page .contact-phone-link:hover,
+body #contact.final-contact-page .contact-phone-link:focus,
+body #contact.final-contact-page .contact-phone-link:active {
+  color: #d7dce5 !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  text-decoration-thickness: 0 !important;
+  text-underline-offset: 0 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 transparent !important;
+  box-shadow: none !important;
+}
+body #contact.final-contact-page .contact-roles-clean li strong {
+  color: #eef1f5 !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 transparent !important;
+}
+body #contact.final-contact-page .contact-roles-clean li span {
+  color: #c5ccd6 !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+body #contact.final-contact-page .contact-roles-clean .kicker,
+body #contact.final-contact-page .final-contact-copy .kicker,
+body #contact.final-contact-page .contact-motto-clean {
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+</style>
+
+<style id="contact-redesign-v3-20260922">
+/* ===== CONTACT PAGE V3 — GENERAL CONTACT + LIGHT PRESS NOTE =====
+   Contact-only redesign. Existing navigation/footer remain locked. */
+body #contact.contact-redesign-v3 {
+  background: #000f4a !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  min-height: calc(100vh - 118px) !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-shell {
+  width: min(90%, 1180px) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: clamp(3.8rem, 7vw, 6.2rem) 0 clamp(3rem, 5vw, 4.4rem) !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(310px, .78fr) !important;
+  gap: clamp(3rem, 7vw, 6.5rem) !important;
+  align-items: center !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-copy,
+body #contact.contact-redesign-v3 .contact-v3-visual {
+  min-width: 0 !important;
+}
+body #contact.contact-redesign-v3 .kicker {
+  margin: 0 0 .9rem !important;
+  color: #c9ced7 !important;
+  font-size: .76rem !important;
+  line-height: 1 !important;
+  font-weight: 650 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+}
+body #contact.contact-redesign-v3 h2 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(3.05rem, 5.6vw, 5.3rem) !important;
+  line-height: .95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -.045em !important;
+  text-shadow: none !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-lede {
+  max-width: 39rem !important;
+  margin: 1.35rem 0 0 !important;
+  color: #eef0f4 !important;
+  font-size: clamp(1.02rem, 1.35vw, 1.22rem) !important;
+  line-height: 1.58 !important;
+  font-weight: 400 !important;
+  text-shadow: none !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-rule {
+  width: min(28rem, 100%) !important;
+  height: 6px !important;
+  margin: 1.75rem 0 2rem !important;
+  gap: 0 !important;
+  background: transparent !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-rule span:nth-child(1) { background: #e31c24 !important; }
+body #contact.contact-redesign-v3 .contact-v3-rule span:nth-child(2) { background: #090909 !important; outline: 0 !important; }
+body #contact.contact-redesign-v3 .contact-v3-rule span:nth-child(3) { background: #0e8f58 !important; }
+body #contact.contact-redesign-v3 .contact-v3-details {
+  display: grid !important;
+  gap: .48rem !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-label {
+  margin: 0 0 .2rem !important;
+  color: #c9ced7 !important;
+  font-size: .73rem !important;
+  font-weight: 650 !important;
+  letter-spacing: .13em !important;
+  text-transform: uppercase !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-email,
+body #contact.contact-redesign-v3 .contact-v3-phone,
+body #contact.contact-redesign-v3 .contact-v3-email:visited,
+body #contact.contact-redesign-v3 .contact-v3-phone:visited {
+  width: fit-content !important;
+  color: #e2e5ea !important;
+  font-size: clamp(1.08rem, 1.5vw, 1.34rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-email:hover,
+body #contact.contact-redesign-v3 .contact-v3-phone:hover,
+body #contact.contact-redesign-v3 .contact-v3-email:focus-visible,
+body #contact.contact-redesign-v3 .contact-v3-phone:focus-visible {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: .22em !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-socials {
+  margin-top: 1.35rem !important;
+}
+
+body #contact.contact-redesign-v3 .contact-v3-press {
+  max-width: 39rem !important;
+  margin-top: 2.25rem !important;
+  padding-top: 1.45rem !important;
+  border-top: 1px solid rgba(226,229,234,.34) !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-press h3 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.35rem, 2vw, 1.75rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 600 !important;
+  letter-spacing: -.015em !important;
+  text-shadow: none !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-press p {
+  margin: .55rem 0 0 !important;
+  color: #d5d9e0 !important;
+  font-size: .95rem !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-press a,
+body #contact.contact-redesign-v3 .contact-v3-press a:visited {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: .2em !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-press a:hover,
+body #contact.contact-redesign-v3 .contact-v3-press a:focus-visible {
+  color: #e2e5ea !important;
+}
+
+body #contact.contact-redesign-v3 .contact-v3-visual {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-fist {
+  width: clamp(285px, 30vw, 410px) !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-fist img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-brand-close {
+  margin-top: 1.7rem !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-service {
+  display: block !important;
+  color: #ffffff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.35rem, 2vw, 1.8rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 600 !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-motto {
+  display: block !important;
+  margin-top: .45rem !important;
+  color: #d8dde5 !important;
+  font-size: clamp(.82rem, 1vw, .95rem) !important;
+  line-height: 1.4 !important;
+  font-weight: 450 !important;
+  letter-spacing: .035em !important;
+}
+
+@media (max-width: 900px) {
+  body #contact.contact-redesign-v3 .contact-v3-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3.5rem !important;
+  }
+  body #contact.contact-redesign-v3 .contact-v3-visual {
+    padding-top: 2.6rem !important;
+    border-top: 1px solid rgba(226,229,234,.34) !important;
+  }
+  body #contact.contact-redesign-v3 .contact-v3-fist {
+    width: min(340px, 76vw) !important;
+  }
+}
+@media (max-width: 620px) {
+  body #contact.contact-redesign-v3 .contact-v3-shell {
+    width: 88% !important;
+    padding: 3rem 0 3.5rem !important;
+  }
+  body #contact.contact-redesign-v3 h2 {
+    font-size: clamp(3rem, 14vw, 4.5rem) !important;
+  }
+}
+/* ===== END CONTACT PAGE V3 ===== */
+</style>
+
+<style id="contact-registered-mark-refinement-20260922">
+/* Registered marks should read as legal marks, not full-size letters. */
+#contact .contact-registered-mark,
+.site-footer .footer-inline-registered-mark {
+  display: inline-block !important;
+  margin-left: 0.03em !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 0.48em !important;
+  font-weight: 500 !important;
+  line-height: 0 !important;
+  vertical-align: super !important;
+  position: relative !important;
+  top: -0.05em !important;
+}
+</style>
+
+
+<style id="contact-final-visual-corrections-20260922">
+/* Contact-only corrections requested after review. */
+body #contact.contact-redesign-v3 .contact-v3-press h3,
+body #contact.contact-redesign-v3 .contact-v3-press h3 * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* Pull the brand statement into the artwork and give it a stronger lockup. */
+body #contact.contact-redesign-v3 .contact-v3-brand-close {
+  margin-top: .35rem !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-service {
+  display: block !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.6rem, 2.35vw, 2.15rem) !important;
+  line-height: 1.02 !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  letter-spacing: -.025em !important;
+  text-shadow: none !important;
+}
+body #contact.contact-redesign-v3 .contact-v3-motto {
+  display: block !important;
+  margin-top: .38rem !important;
+  color: #edf0f4 !important;
+  -webkit-text-fill-color: #edf0f4 !important;
+  font-size: clamp(.84rem, 1.05vw, 1rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+  letter-spacing: .075em !important;
+  text-shadow: none !important;
+}
+</style>
+
+
+<style id="contact-tagline-layout-20260922">
+/* Contact-only refinement: separate the two brand statements and integrate media inquiries. */
+body #contact.contact-redesign-v3 .contact-v3-service-left {
+  margin: .7rem 0 0 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.12rem, 1.5vw, 1.35rem) !important;
+  line-height: 1.15 !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  letter-spacing: -.012em !important;
+  text-align: left !important;
+  text-shadow: none !important;
+}
+
+body #contact.contact-redesign-v3 .contact-v3-brand-close {
+  margin-top: .5rem !important;
+  text-align: center !important;
+}
+
+body #contact.contact-redesign-v3 .contact-v3-brand-close .contact-v3-motto {
+  display: inline-block !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.18rem, 1.8vw, 1.55rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 600 !important;
+  letter-spacing: .015em !important;
+  text-shadow: none !important;
+}
+
+/* No separate press/media panel remains on the Contact page. */
+body #contact.contact-redesign-v3 .contact-v3-press {
+  display: none !important;
+}
+</style>
+
+</head>
+
 <body>
 <nav aria-label="Main navigation" class="site-nav">
 <div class="nav-inner">
@@ -7818,67 +8150,46 @@ body .site-nav .nav-links a[href="contact.html"] { order: 8 !important; }
 </div>
 </div>
 </nav>
-<main><section class="section contact-section final-contact-page" id="contact">
-<div class="section-inner final-contact-layout">
-<div class="final-contact-copy">
-<p class="kicker">CONNECT</p>
-<h2>Connect with Us</h2>
-<p>
-            For school participation, voter education, volunteer engagement, media requests, or community partnerships,
-            contact D9 Harlem Votes®.
-          </p>
-<div aria-hidden="true" class="brand-rule final-rule"><span></span><span></span><span></span></div>
-<div class="contact-email-clean">
-<a href="mailto:d9harlemvotes@gmail.com">d9harlemvotes@gmail.com</a><br/>
-<a class="contact-phone-link" href="tel:+19293995139">929.399.5139</a>
-</div>
-<div aria-label="D9 Harlem Votes® social media" class="contact-social-links">
-<a aria-label="D9 Harlem Votes® on Instagram" class="contact-social-link instagram" href="https://www.instagram.com/d9harlemvotes/" rel="noopener noreferrer" target="_blank">
-<svg aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="instagram-gradient" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffdc80"></stop><stop offset="0.28" stop-color="#fcaf45"></stop><stop offset="0.52" stop-color="#f77737"></stop><stop offset="0.72" stop-color="#e1306c"></stop><stop offset="0.88" stop-color="#c13584"></stop><stop offset="1" stop-color="#833ab4"></stop></linearGradient></defs><rect class="instagram-shell" x="2" y="2" width="20" height="20" rx="5.5"></rect><rect class="instagram-camera" x="6.1" y="6.1" width="11.8" height="11.8" rx="3.5" stroke-width="1.6"></rect><circle class="instagram-lens" cx="12" cy="12" r="2.8" stroke-width="1.6"></circle><circle class="instagram-dot" cx="16.4" cy="7.7" r="1"></circle></svg>
-</a>
-<a aria-label="D9 Harlem Votes® on Facebook" class="contact-social-link facebook" href="https://www.facebook.com/p/D9-Harlem-61575803535004/" rel="noopener noreferrer" target="_blank">
-<svg aria-hidden="true" viewBox="0 0 24 24"><circle class="facebook-shell" cx="12" cy="12" r="10"></circle><path class="facebook-f" d="M13.35 20v-6.5h2.18l.33-2.54h-2.51V9.34c0-.74.2-1.24 1.27-1.24h1.35V5.83c-.23-.03-1.04-.1-1.98-.1-1.96 0-3.3 1.2-3.3 3.4v1.83H8.48v2.54h2.21V20h2.66z"></path></svg>
-</a>
-<a aria-label="D9 Harlem Votes® on YouTube" class="contact-social-link youtube" href="https://www.youtube.com/@D9HarlemVotes" rel="noopener noreferrer" target="_blank">
-<svg aria-hidden="true" viewBox="0 0 24 24"><rect class="youtube-shell" x="2" y="5.2" width="20" height="13.6" rx="4.3"></rect><path class="youtube-play" d="M10 9v6l5.2-3L10 9z"></path></svg>
-</a>
-</div>
-<p class="contact-motto-clean">Educate • Engage • Empower • Vote</p>
-</div>
-<div class="contact-fist-wrap">
-<img alt="Power Fist artwork" src="assets/contact-power-fist.png?v=2"/>
-</div>
-<div aria-label="D9 Harlem Votes® contact roles" class="contact-roles-clean">
-<p class="kicker">CONTACT ROLES</p>
-<ul>
-<li><span>Steering Committee Co-Chair</span><strong>Drew K. Gabriel</strong></li>
-<li><span>Steering Committee Co-Chair</span><strong>Erika L. Ewing, MFA</strong></li>
-<li><span>Civics &amp; Law Research · NYC Board of Elections Liaison &amp; Election Compliance</span><strong>Lisa White-Tingling, MPA</strong></li>
-<li><span>Agency Partnerships &amp; Coalition Relations</span><strong>Gilda D. Gillim, MA</strong></li>
-<li><span>Volunteer and Member Recruitment Lead</span><strong>Aaliyah Brown</strong></li>
-<li><span>Volunteer and Member Engagement Lead</span><strong>Jasmine G. McFarlane-White</strong></li>
-<li><span>Press Contact</span><strong>Shana Harmogoff, JD</strong></li>
-</ul>
-</div>
+<main><section class="section contact-section final-contact-page contact-redesign-v3" id="contact">
+<div class="section-inner contact-v3-shell">
+  <div class="contact-v3-grid">
+    <section class="contact-v3-copy" aria-labelledby="contact-main-title">
+      <p class="kicker">CONNECT</p>
+      <h2 id="contact-main-title">Connect with Us</h2>
+      <p class="contact-v3-lede">For school participation, voter education, volunteer engagement, community partnerships, press and media inquiries, or general questions, contact D9 Harlem Votes<sup class="contact-registered-mark">®</sup>.</p>
+      <p class="contact-v3-service contact-v3-service-left">We Serve Harlem First.</p>
+      <div aria-hidden="true" class="brand-rule final-rule contact-v3-rule"><span></span><span></span><span></span></div>
+
+      <div class="contact-v3-details" aria-label="General contact information">
+        <p class="contact-v3-label">GENERAL INQUIRIES</p>
+        <a class="contact-v3-email" href="mailto:d9harlemvotes@gmail.com">d9harlemvotes@gmail.com</a>
+        <a class="contact-v3-phone" href="tel:+19293995139">929.399.5139</a>
+      </div>
+
+      <div aria-label="D9 Harlem Votes® social media" class="contact-social-links contact-v3-socials">
+        <a aria-label="D9 Harlem Votes® on Instagram" class="contact-social-link instagram" href="https://www.instagram.com/d9harlemvotes/" rel="noopener noreferrer" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="instagram-gradient-v3" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffdc80"></stop><stop offset="0.28" stop-color="#fcaf45"></stop><stop offset="0.52" stop-color="#f77737"></stop><stop offset="0.72" stop-color="#e1306c"></stop><stop offset="0.88" stop-color="#c13584"></stop><stop offset="1" stop-color="#833ab4"></stop></linearGradient></defs><rect class="instagram-shell" x="2" y="2" width="20" height="20" rx="5.5"></rect><rect class="instagram-camera" x="6.1" y="6.1" width="11.8" height="11.8" rx="3.5" stroke-width="1.6"></rect><circle class="instagram-lens" cx="12" cy="12" r="2.8" stroke-width="1.6"></circle><circle class="instagram-dot" cx="16.4" cy="7.7" r="1"></circle></svg>
+        </a>
+        <a aria-label="D9 Harlem Votes® on Facebook" class="contact-social-link facebook" href="https://www.facebook.com/p/D9-Harlem-61575803535004/" rel="noopener noreferrer" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle class="facebook-shell" cx="12" cy="12" r="10"></circle><path class="facebook-f" d="M13.35 20v-6.5h2.18l.33-2.54h-2.51V9.34c0-.74.2-1.24 1.27-1.24h1.35V5.83c-.23-.03-1.04-.1-1.98-.1-1.96 0-3.3 1.2-3.3 3.4v1.83H8.48v2.54h2.21V20h2.66z"></path></svg>
+        </a>
+        <a aria-label="D9 Harlem Votes® on YouTube" class="contact-social-link youtube" href="https://www.youtube.com/@D9HarlemVotes" rel="noopener noreferrer" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><rect class="youtube-shell" x="2" y="5.2" width="20" height="13.6" rx="4.3"></rect><path class="youtube-play" d="M10 9v6l5.2-3L10 9z"></path></svg>
+        </a>
+      </div>
+    </section>
+
+    <aside class="contact-v3-visual" aria-label="D9 Harlem Votes® brand statement">
+      <div class="contact-fist-wrap contact-v3-fist">
+        <img alt="Power Fist artwork" src="assets/contact-power-fist.png?v=2"/>
+      </div>
+      <div class="contact-v3-brand-close">
+        <span class="contact-v3-motto">Your Choice. Your Voice. Your Vote.</span>
+      </div>
+    </aside>
+  </div>
 </div>
 </section></main>
-<footer class="site-footer">
-<div class="footer-inner">
-<img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/>
-<div>
-<span aria-label="D9 Harlem Votes, registered trademark" class="footer-wordmark"><span aria-hidden="true" class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes<span class="footer-registered">®</span></span></span></span>
-<p><span class="footer-service">We Serve Harlem First.</span> <span class="footer-divider">|</span> <span class="footer-motto">Your Choice. Your Voice. Your Vote.</span></p>
-<small>© 2026 D9 Harlem Votes®. All rights reserved. The D9 Harlem Votes® name, logo, campaign graphics and related branding may not be used without permission.</small>
-</div>
-</div>
-</footer>
-<div aria-label="Boots on the Ground activation photo viewer" aria-modal="true" class="botg-lightbox" hidden="" id="botg-lightbox" role="dialog"><button aria-label="Close photo viewer" class="botg-lightbox-close" type="button">×</button><button aria-label="Previous photo" class="botg-lightbox-prev" type="button">‹</button><figure class="botg-lightbox-figure"><img alt="" class="botg-lightbox-image"/><figcaption class="botg-lightbox-caption"></figcaption></figure><button aria-label="Next photo" class="botg-lightbox-next" type="button">›</button></div>
-<div aria-labelledby="impact-award-caption" aria-modal="true" class="impact-award-lightbox" hidden="" id="impact-award-lightbox" role="dialog">
-<div class="impact-award-dialog" role="document">
-<button aria-label="Close award image" class="impact-award-close" type="button">×</button>
-<img alt="" class="impact-award-image" src=""/>
-<p class="impact-award-caption" id="impact-award-caption"></p>
-</div>
-</div>
+<footer class="site-footer"><div class="footer-inner"><img alt="D9 Harlem Votes® logo" src="assets/d9-logo-transparent.png"/><div><span aria-label="D9 Harlem Votes, registered trademark" class="footer-wordmark"><span aria-hidden="true" class="brand-wordmark"><span class="brand-red">D9</span> <span class="brand-black">Harlem</span> <span class="brand-green">Votes<span class="footer-registered">®</span></span></span></span><p><span class="footer-service">We Serve Harlem First.</span> <span class="footer-divider">|</span> <span class="footer-motto">Your Choice. Your Voice. Your Vote.</span></p><small>© 2026 D9 Harlem Votes<sup class="footer-inline-registered-mark">®</sup>. All rights reserved. The D9 Harlem Votes<sup class="footer-inline-registered-mark">®</sup> name, logo, campaign graphics and related branding may not be used without permission.</small></div></div></footer>
 </body>
 </html>

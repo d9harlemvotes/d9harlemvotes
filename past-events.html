@@ -160,6 +160,115 @@ a { color: inherit; }
 .site-nav::after, .site-footer::after { bottom: 0 !important; }
 .site-footer { position: relative !important; }
 </style>
+
+<style id="d9-footer-approved-final">
+.site-footer {
+  background: var(--d9-navy) !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+.site-footer .footer-inner {
+  width: min(90%, 1280px) !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: clamp(1.9rem, 3vw, 2.6rem) 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+  position: relative !important;
+  z-index: 4 !important;
+}
+.site-footer .footer-inner img {
+  display: block !important;
+  width: clamp(92px, 9vw, 135px) !important;
+  height: auto !important;
+  margin: 0 !important;
+  align-self: center !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.site-footer,
+.site-footer strong,
+.site-footer p,
+.site-footer small {
+  font-family: "Helvetica Neue", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.site-footer .footer-wordmark {
+  display: block !important;
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: clamp(1.45rem, 2.15vw, 2rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1 !important;
+}
+.site-footer .footer-wordmark .brand-red,
+.site-footer .footer-wordmark .brand-black,
+.site-footer .footer-wordmark .brand-green {
+  color: #fff !important;
+  font-weight: inherit !important;
+}
+.site-footer .footer-registered {
+  display: inline-block !important;
+  margin-left: 0.08em !important;
+  color: rgba(255,255,255,.82) !important;
+  font-family: inherit !important;
+  font-size: .31em !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  vertical-align: top !important;
+  position: static !important;
+  transform: translateY(.06em) !important;
+}
+.site-footer p {
+  margin: .72rem 0 .55rem !important;
+  color: #fff !important;
+  font-size: clamp(.88rem, 1.05vw, 1rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: -.012em !important;
+  line-height: 1.35 !important;
+}
+.site-footer .footer-service,
+.site-footer .footer-motto {
+  color: #fff !important;
+}
+.site-footer .footer-divider {
+  color: var(--d9-gold) !important;
+  padding: 0 .48rem !important;
+  font-weight: 400 !important;
+}
+.site-footer small {
+  display: block !important;
+  max-width: 72rem !important;
+  color: rgba(255,255,255,.70) !important;
+  font-size: clamp(.7rem, .82vw, .79rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: .005em !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 760px) {
+  .site-footer .footer-inner {
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+  .site-footer .footer-inner img {
+    width: 76px !important;
+  }
+  .site-footer .footer-wordmark {
+    font-size: 1.55rem !important;
+  }
+  .site-footer p {
+    font-size: .88rem !important;
+  }
+}
+</style>
+
 </head>
 <body class="standalone-past-events-page">
 <nav aria-label="Main navigation" class="site-nav">
